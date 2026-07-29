@@ -1,0 +1,86 @@
+{
+  "id": "fifth",
+  "name": "5th Street Gym",
+  "icon": "🌤",
+  "subtitle": "Outdoor",
+  "isGeneric": false,
+  "rooms": [
+    {
+      "id": "main",
+      "name": "5th Street Gym",
+      "icon": "🌤",
+      "machines": [
+        {
+          "id": "f01",
+          "name": "Combined Exerciser",
+          "musclesWorked": "Upper body — pull-ups, leg raises, dips",
+          "image": "MB.7.61 Combined Exerciser.jpg",
+          "logType": "weight"
+        },
+        {
+          "id": "f02",
+          "name": "Decline Bench & Hyperext",
+          "musclesWorked": "Abdominals, back muscles, and glutes using bodyweight",
+          "image": "MB.7.62.Decline Bench.jpg",
+          "logType": "weight"
+        },
+        {
+          "id": "f03",
+          "name": "Situp Bench (Incline)",
+          "musclesWorked": "Abdominals, back muscles, and glutes using bodyweight",
+          "image": "Incline Bench.Situps.jpg",
+          "logType": "weight"
+        },
+        {
+          "id": "f04",
+          "name": "Shoulder Press",
+          "musclesWorked": "Middle deltoids, upper trapezius, and biceps",
+          "image": "MB.7.63.Shoulder Press.jpg",
+          "logType": "weight"
+        },
+        {
+          "id": "f05",
+          "name": "Bench Press",
+          "musclesWorked": "Chest, triceps, and front deltoids — full range of motion",
+          "image": "MB.7.64.Bench Press..jpg",
+          "logType": "weight"
+        },
+        {
+          "id": "f06",
+          "name": "Squat",
+          "musclesWorked": "Quadriceps femoris, gluteus medius, and gluteus maximus",
+          "image": "MB.7.65.Squat.jpg",
+          "logType": "weight"
+        },
+        {
+          "id": "f07",
+          "name": "Combo Lift",
+          "musclesWorked": "Glutes, quads, adductors/abductors, traps, lats, posterior deltoids",
+          "image": "MB.7.62.ComboLift.jpg",
+          "logType": "weight"
+        },
+        {
+          "id": "f08",
+          "name": "Seated Tricep Dips",
+          "musclesWorked": "Deltoid and tricep muscles with variable load",
+          "image": "MB.7.67.Seated Tricep Dips..jpg",
+          "logType": "weight"
+        },
+        {
+          "id": "f09",
+          "name": "Horizontal Leg Press",
+          "musclesWorked": "Quadriceps femoris, gluteus medius, and gluteus maximus",
+          "image": "MB.7.74.Leg Press.jpg",
+          "logType": "weight"
+        },
+        {
+          "id": "f10",
+          "name": "Incline Chest Press",
+          "musclesWorked": "Chest and shoulder muscles with variable load",
+          "image": "MB.7.75.Incline Chest Press.jpg",
+          "logType": "weight"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,261 @@
+{
+  "id": "portofino",
+  "name": "Portofino Gym",
+  "icon": "🏛️",
+  "subtitle": "Indoor",
+  "isGeneric": false,
+  "rooms": [
+    {
+      "id": "machines",
+      "name": "Machines Room",
+      "icon": "⚙️",
+      "machines": [
+        {
+          "id": "pm01",
+          "name": "Adjustable Decline Abdominal Bench",
+          "musclesWorked": "Rectus abdominis (six-pack) and obliques",
+          "image": "1. Adjustable Decline Abdominal Bench.jpg",
+          "logType": "weight"
+        },
+        {
+          "id": "pm02",
+          "name": "Seated Row Machine",
+          "musclesWorked": "Lats, rhomboids, middle trapezius, rear deltoids, biceps",
+          "image": "2. Seated Row Machine.jpg",
+          "logType": "weight"
+        },
+        {
+          "id": "pm03",
+          "name": "Seated Chest Press Machine",
+          "musclesWorked": "Pectoralis major, anterior deltoids, and triceps",
+          "image": "3. Seated Chest Press Machine.jpg",
+          "logType": "weight"
+        },
+        {
+          "id": "pm04",
+          "name": "Pec Fly",
+          "musclesWorked": "Chest",
+          "image": "4. Pec Fly _ Rear Delt Combo.jpg",
+          "logType": "weight"
+        },
+        {
+          "id": "pm05",
+          "name": "Seated Leg Extension Machine",
+          "musclesWorked": "Quadriceps (isolated)",
+          "image": "5.  Seated Leg Extension Machine.jpg",
+          "logType": "weight"
+        },
+        {
+          "id": "pm06",
+          "name": "Seated Leg Curl Machine",
+          "musclesWorked": "Hamstrings (isolated)",
+          "image": "6.  Seated Leg Curl Machine.jpg",
+          "logType": "weight"
+        },
+        {
+          "id": "pm07",
+          "name": "Back Extension Bench",
+          "musclesWorked": "Lower back, glutes, and hamstrings",
+          "image": "7. Back Extension Bench.jpg",
+          "logType": "weight"
+        },
+        {
+          "id": "pm08",
+          "name": "Seated Shoulder Press",
+          "musclesWorked": "Deltoids and triceps",
+          "image": "8. Seated Shoulder Press.jpg",
+          "logType": "weight"
+        },
+        {
+          "id": "pm09",
+          "name": "Functional Trainer (Cable Crossover)",
+          "musclesWorked": "Chest, back, arms, and core — highly versatile",
+          "image": "9. Functional Trainer (Cable Crossover).jpg",
+          "logType": "weight"
+        },
+        {
+          "id": "pm10",
+          "name": "Seated Biceps Curl Machine",
+          "musclesWorked": "Biceps brachii",
+          "image": "10. Seated Biceps Curl Machine.jpg",
+          "logType": "weight"
+        },
+        {
+          "id": "pm11",
+          "name": "Hip Abduction Machine",
+          "musclesWorked": "Outer glutes (gluteus medius) and outer thighs",
+          "image": "11. Hip Abduction Machine.jpg",
+          "logType": "weight"
+        },
+        {
+          "id": "pm12",
+          "name": "Hip Adduction Machine",
+          "musclesWorked": "Inner thigh muscles (adductors)",
+          "image": "12. Hip Adduction Machine.jpg",
+          "logType": "weight"
+        },
+        {
+          "id": "pm13",
+          "name": "Seated Abdominal Crunch Machine",
+          "musclesWorked": "Upper and lower rectus abdominis (six-pack)",
+          "image": "13. Seated Abdominal Crunch Machine.jpg",
+          "logType": "weight"
+        },
+        {
+          "id": "pm14",
+          "name": "Glute Isolator",
+          "musclesWorked": "Glutes and upper hamstrings",
+          "image": "14. Glute Isolator.jpg",
+          "logType": "weight"
+        },
+        {
+          "id": "pm15",
+          "name": "Power Plate Vibration Platform",
+          "musclesWorked": "Core stability, balance, flexibility, and circulation",
+          "image": "15. Power Plate Pro-Series Vibration Platform.jpg",
+          "logType": "weight"
+        },
+        {
+          "id": "pm16",
+          "name": "Pilates Reformer & Tower",
+          "musclesWorked": "Deep core strength, flexibility, and alignment",
+          "image": "16. Pilates Reformer and Tower Machine.jpg",
+          "logType": "weight"
+        },
+        {
+          "id": "pm17",
+          "name": "Speed Bag",
+          "musclesWorked": "Hand-eye coordination, shoulder endurance, and reflexes",
+          "image": "17. Speed Bag.jpg",
+          "logType": "weight"
+        },
+        {
+          "id": "m1782480059048",
+          "name": "Rear Deltoid",
+          "musclesWorked": "Reverse fly: rear delts, rhomboids, mid trapezius",
+          "image": "m1782480059048.jpg",
+          "logType": "weight"
+        }
+      ]
+    },
+    {
+      "id": "weights",
+      "name": "Weight Room",
+      "icon": "🏋️",
+      "machines": [
+        {
+          "id": "pw01",
+          "name": "Assisted Pullup & Dip Machine",
+          "musclesWorked": "Upper body — pull-ups, leg raises, dips",
+          "image": "1. Assisted Pullup and Dip Machine.jpg",
+          "logType": "weight"
+        },
+        {
+          "id": "pw02",
+          "name": "Lat Pulldown Machine",
+          "musclesWorked": "Latissimus dorsi, rhomboids, biceps",
+          "image": "2. Lat Pulldown Machine.jpg",
+          "logType": "weight"
+        },
+        {
+          "id": "pw03",
+          "name": "Seated Cable Row Machine",
+          "musclesWorked": "Upper back — lats, rhomboids, trapezius, rear deltoids, biceps",
+          "image": "3. Seated Cable Row Machine.jpg",
+          "logType": "weight"
+        },
+        {
+          "id": "pw04",
+          "name": "Seated Preacher Curl Bench",
+          "musclesWorked": "Biceps (plate-loaded, elbows locked)",
+          "image": "4. Seated Preacher Curl Bench.jpg",
+          "logType": "weight"
+        },
+        {
+          "id": "pw05",
+          "name": "Adjustable Incline/Decline Benches",
+          "musclesWorked": "Free weight support — chest presses, shoulder presses, rows",
+          "image": "5. Adjustable Incline_Decline Benches.jpg",
+          "logType": "weight"
+        },
+        {
+          "id": "pw06",
+          "name": "Seated Leg Press Machine",
+          "musclesWorked": "Quadriceps, glutes, and hamstrings",
+          "image": "6. Seated Leg Press Machine.jpg",
+          "logType": "weight"
+        },
+        {
+          "id": "pw07",
+          "name": "Bench Press",
+          "musclesWorked": "Chest, triceps, and front deltoids",
+          "image": "7. Bench Press.jpg",
+          "logType": "weight"
+        },
+        {
+          "id": "pw08",
+          "name": "Plate-Loaded Seated Calf Raise",
+          "musclesWorked": "Soleus (lower calf) — isolated ankle extension",
+          "image": "8. Plate-Loaded Seated Calf Raise Machine.jpg",
+          "logType": "weight"
+        }
+      ]
+    },
+    {
+      "id": "aerobic",
+      "name": "Aerobic Room",
+      "icon": "🚴",
+      "machines": [
+        {
+          "id": "pa01",
+          "name": "Stair Climber",
+          "musclesWorked": "Glutes, quadriceps, hamstrings, and calves — high-intensity cardio",
+          "image": "1. Stair Climber.jpg",
+          "logType": "cardio"
+        },
+        {
+          "id": "pa02",
+          "name": "Recumbent Stationary Bike",
+          "musclesWorked": "Quadriceps, hamstrings, glutes, and calves — low-impact cardio",
+          "image": "2. Precor Recumbent Stationary Bike.jpg",
+          "logType": "cardio"
+        },
+        {
+          "id": "pa03",
+          "name": "Hydrow Indoor Rowing Machine",
+          "musclesWorked": "60% legs · 20% core · 20% arms & back — full body cardio",
+          "image": "3. Hydrow Indoor Rowing Machine.jpg",
+          "logType": "cardio"
+        },
+        {
+          "id": "pa04",
+          "name": "Peloton",
+          "musclesWorked": "Cardiovascular conditioning — quadriceps, hamstrings, calves",
+          "image": "4. Peloton.jpg",
+          "logType": "cardio"
+        },
+        {
+          "id": "pa05",
+          "name": "Treadmill",
+          "musclesWorked": "Cardiovascular conditioning — lower body endurance",
+          "image": "5. Treadmill.jpg",
+          "logType": "cardio"
+        },
+        {
+          "id": "pa06",
+          "name": "Elliptical Cross Trainer",
+          "musclesWorked": "Low-impact full-body cardiovascular workout",
+          "image": "6. Elliptical Cross Trainer.jpg",
+          "logType": "cardio"
+        },
+        {
+          "id": "m1783607463121",
+          "name": "Norwegian 4x4",
+          "musclesWorked": "Cardio",
+          "image": null,
+          "logType": "cardio"
+        }
+      ]
+    }
+  ]
+}
