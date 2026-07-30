@@ -549,7 +549,7 @@ function renderDetail(){
     const notes=(sets.find(s=>s.notes)||{}).notes||'';
     const isC=sets[0].duration!=null;
     const rowsH=sets.map(s=>{
-      const v=isC?`${s.duration!=null?s.duration:'—'} min${s.level?' @ lvl '+s.level:''}`:`${s.weight!=null?s.weight:'—'} lbs × ${s.reps!=null?s.reps:'—'}`;
+      const v=isC?[s.duration!=null?s.duration+'min':'—',s.level?s.level+'mph':null,s.incline!=null?s.incline+'% inc':null,s.hr?'HR '+s.hr:null].filter(Boolean).join(' · '):`${s.weight!=null?s.weight:'—'} lbs × ${s.reps!=null?s.reps:'—'}`;
       return`<div class="sr"><span class="sn">Set ${s.set}</span><span class="sv">${v}</span></div>`;
     }).join('');
     return`<div class="hi"><div class="hd"><span>${fmtDateFull(d)}</span><div class="ha"><button onclick="editSess('${d}')" title="Edit">✏️</button><button onclick="delSess('${d}')" title="Delete">🗑️</button></div></div>${rowsH}${notes?`<div class="hn">"${x(notes)}"</div>`:''}</div>`;
@@ -600,11 +600,11 @@ function renderLog(){
 }
 function buildTable(sets,isC){
   const rows=sets.map((s,i)=>buildRow(i+1,s,isC)).join('');
-  const cols=isC?'<th>Duration (min)</th><th>Level</th>':'<th>Weight (lbs)</th><th>Reps</th>';
+  const cols=isC?'<th>Mins</th><th>MPH</th><th>Incline</th><th>HR</th>':'<th>Weight (lbs)</th><th>Reps</th>';
   return`<table class="st"><thead><tr><th>#</th>${cols}<th></th></tr></thead><tbody id="stb">${rows}</tbody></table>`;
 }
 function buildRow(n,s,isC){
-  if(isC)return`<tr><td>${n}</td><td><input type="number" inputmode="decimal" class="sd" placeholder="30" value="${s.duration||''}"></td><td><input type="number" inputmode="decimal" class="sl2" placeholder="5" value="${s.level||''}"></td><td><button class="xb" onclick="rmRow(this)">×</button></td></tr>`;
+  if(isC)return`<tr><td>${n}</td><td><input type="number" inputmode="decimal" class="sd" placeholder="30" value="${s.duration||''}"></td><td><input type="number" inputmode="decimal" class="smph" placeholder="3.5" value="${s.level||''}"></td><td><input type="number" inputmode="decimal" class="sinc" placeholder="0" value="${s.incline!=null?s.incline:''}"></td><td><input type="number" inputmode="decimal" class="shr" placeholder="120" value="${s.hr!=null?s.hr:''}"></td><td><button class="xb" onclick="rmRow(this)">×</button></td></tr>`;
   return`<tr><td>${n}</td><td><input type="number" inputmode="decimal" class="sw" placeholder="0" value="${s.weight!=null&&s.weight!==''?s.weight:''}"></td><td><input type="number" inputmode="decimal" class="srp" placeholder="0" value="${s.reps!=null&&s.reps!==''?s.reps:''}"></td><td><button class="xb" onclick="rmRow(this)">×</button></td></tr>`;
 }
 function setType(t){
@@ -618,7 +618,7 @@ function addRow(){
   const n=tb.querySelectorAll('tr').length+1;
   const tr=document.createElement('tr');
   const isC=A.logType==='cardio';
-  if(isC)tr.innerHTML=`<td>${n}</td><td><input type="number" inputmode="decimal" class="sd" placeholder="30"></td><td><input type="number" inputmode="decimal" class="sl2" placeholder="5"></td><td><button class="xb" onclick="rmRow(this)">×</button></td>`;
+  if(isC)tr.innerHTML=`<td>${n}</td><td><input type="number" inputmode="decimal" class="sd" placeholder="30"></td><td><input type="number" inputmode="decimal" class="smph" placeholder="3.5"></td><td><input type="number" inputmode="decimal" class="sinc" placeholder="0"></td><td><input type="number" inputmode="decimal" class="shr" placeholder="120"></td><td><button class="xb" onclick="rmRow(this)">×</button></td>`;
   else tr.innerHTML=`<td>${n}</td><td><input type="number" inputmode="decimal" class="sw" placeholder="0"></td><td><input type="number" inputmode="decimal" class="srp" placeholder="0"></td><td><button class="xb" onclick="rmRow(this)">×</button></td>`;
   tb.appendChild(tr);renum();
 }
@@ -640,8 +640,12 @@ async function saveSess(){
   rows.forEach((row,i)=>{
     if(isC){
       const dur=parseFloat((row.querySelector('.sd')||{}).value)||null;
-      const lvl=parseFloat((row.querySelector('.sl2')||{}).value)||null;
-      newSets.push({machineId:m.id,machine:m.name,gym:gym.name,room:rm.name,date,set:i+1,weight:null,reps:null,duration:dur,level:lvl,notes:i===0?notes.trim():''});
+      const mph=parseFloat((row.querySelector('.smph')||{}).value)||null;
+      const incV=(row.querySelector('.sinc')||{}).value;
+      const inc=incV!==''&&incV!=null?parseFloat(incV):null;
+      const hrV=(row.querySelector('.shr')||{}).value;
+      const hr=hrV!==''&&hrV!=null?parseFloat(hrV):null;
+      newSets.push({machineId:m.id,machine:m.name,gym:gym.name,room:rm.name,date,set:i+1,weight:null,reps:null,duration:dur,level:mph,incline:isNaN(inc)?null:inc,hr:isNaN(hr)?null:hr,notes:i===0?notes.trim():''});
     }else{
       const wt=parseFloat((row.querySelector('.sw')||{}).value);
       const rp=parseInt((row.querySelector('.srp')||{}).value);
@@ -677,8 +681,8 @@ async function writeLog(entries){
   A.sha.csv=cr.content.sha;
 }
 function toCSV(entries){
-  const h='date,gym,room,machine,machineId,set,weight,reps,duration,level,notes';
-  const rows=entries.map(e=>[e.date,csvEsc(e.gym),csvEsc(e.room),csvEsc(e.machine),e.machineId,e.set,e.weight!=null?e.weight:'',e.reps!=null?e.reps:'',e.duration!=null?e.duration:'',e.level!=null?e.level:'',csvEsc(e.notes||'')].join(','));
+  const h='date,gym,room,machine,machineId,set,weight,reps,duration,level,incline,hr,notes';
+  const rows=entries.map(e=>[e.date,csvEsc(e.gym),csvEsc(e.room),csvEsc(e.machine),e.machineId,e.set,e.weight!=null?e.weight:'',e.reps!=null?e.reps:'',e.duration!=null?e.duration:'',e.level!=null?e.level:'',e.incline!=null?e.incline:'',e.hr!=null?e.hr:'',csvEsc(e.notes||'')].join(','));
   return[h,...rows].join('\n');
 }
 function csvEsc(s){return String(s||'').replace(/[,\n"]/g,' ')}
