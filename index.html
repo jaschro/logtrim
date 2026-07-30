@@ -163,6 +163,10 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,BlinkMacSystemFo
 .pxb{display:block;width:100%;padding:12px;background:var(--accent);color:#000;font-size:15px;font-weight:700;border:none;border-radius:10px;cursor:pointer;margin-top:4px;-webkit-tap-highlight-color:transparent}
 .dismiss{display:block;width:100%;padding:10px;background:none;border:1px solid var(--bdr);border-radius:10px;color:var(--dim);font-size:14px;cursor:pointer;margin-top:8px}
 .planbanner{background:rgba(245,166,35,.12);border:1px solid rgba(245,166,35,.3);border-radius:8px;padding:10px 14px;margin-bottom:14px;font-size:13px;color:var(--accent);line-height:1.4}
+.pxc.done{background:rgba(48,209,88,.08);border:1px solid rgba(48,209,88,.25)}
+.pxc.done .pxn{color:var(--ok)}
+.pprog{font-size:13px;color:var(--dim);padding:10px 16px 0;text-align:right}
+.pprog span{color:var(--ok);font-weight:700}
 </style>
 </head>
 <body>
@@ -454,12 +458,19 @@ function openGym(gid){
 // === TODAY'S PLAN ===
 function renderPlan(){
   const s=A.suggestion;if(!s){back();return}
-  const exH=(s.exercises||[]).map(e=>{
+  const today=new Date().toISOString().split('T')[0];
+  const loggedToday=new Set(A.log.filter(e=>e.date===today).map(e=>e.machineId));
+  const exercises=s.exercises||[];
+  const doneCount=exercises.filter(e=>loggedToday.has(e.machineId)).length;
+  const total=exercises.length;
+  const exH=exercises.map(e=>{
+    const done=loggedToday.has(e.machineId);
     const sets=e.sets||[];
     const sStr=sets.map(s=>`${s.weight}lbs×${s.reps}`).join(', ');
-    return`<div class="pxc" onclick="goLogPlan('${e.machineId}')"><div style="flex:1"><div class="pxn">${x(e.machine)}</div><div style="font-size:12px;color:var(--dim);margin-top:2px">${x(e.gym)}</div>${sStr?`<div class="pxs">${x(sStr)}</div>`:''}${e.note?`<div style="font-size:12px;color:var(--accent);margin-top:2px;font-style:italic">${x(e.note)}</div>`:''}</div><span class="ch">›</span></div>`;
+    return`<div class="pxc${done?' done':''}" onclick="goLogPlan('${e.machineId}')"><div style="flex:1"><div class="pxn">${done?'✓ ':''}${x(e.machine)}</div><div style="font-size:12px;color:var(--dim);margin-top:2px">${x(e.gym)}</div>${sStr?`<div class="pxs">${x(sStr)}</div>`:''}${e.note?`<div style="font-size:12px;color:var(--accent);margin-top:2px;font-style:italic">${x(e.note)}</div>`:''}</div><span class="ch">${done?'✓':'›'}</span></div>`;
   }).join('');
-  g('planbody').innerHTML=`${s.coachNote?`<div class="fs"><p style="font-size:14px;line-height:1.5;color:var(--dim)">${x(s.coachNote)}</p></div>`:''}<div class="sh">EXERCISES — TAP TO LOG</div><div style="padding:0 16px 4px">${exH}</div><div style="padding:8px 16px 24px"><button class="dismiss" onclick="dismissPlan()">✕ Dismiss Plan</button></div>`;
+  const progH=total?`<div class="pprog"><span>${doneCount}</span> of ${total} done</div>`:'';
+  g('planbody').innerHTML=`${s.coachNote?`<div class="fs"><p style="font-size:14px;line-height:1.5;color:var(--dim)">${x(s.coachNote)}</p></div>`:''}${progH}<div class="sh">EXERCISES — TAP TO LOG</div><div style="padding:0 16px 4px">${exH}</div><div style="padding:8px 16px 24px"><button class="dismiss" onclick="dismissPlan()">✕ Dismiss Plan</button></div>`;
 }
 function goLogPlan(machineId){
   for(const g2 of A.gyms){
