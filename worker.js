@@ -1,17 +1,15 @@
 // LogTrim Claude Suggest — Cloudflare Worker
 //
-// Accepts a GET request from Claude and writes suggested-workout.json to GitHub.
+// Endpoints:
+//   GET /log?token=SECRET          — returns workout-log.csv (for Claude to read)
+//   GET /profile?token=SECRET      — returns profile.json (for Claude to read)
+//   GET /?token=SECRET&data=BASE64 — writes suggested-workout.json to GitHub
 //
-// Required environment variables (set in Cloudflare dashboard → Workers → Settings → Variables):
+// Required environment variables:
 //   SECRET_TOKEN  — any string you choose; Claude includes it to authenticate
 //   GITHUB_PAT    — Personal Access Token with repo write access
 //   GITHUB_USER   — your GitHub username (e.g. jaschro)
 //   GITHUB_REPO   — your repo name (e.g. logtrim)
-//
-// Usage from Claude:
-//   https://your-worker.your-subdomain.workers.dev/?token=SECRET&data=BASE64_JSON
-//
-// where BASE64_JSON is btoa(JSON.stringify(suggestionObject))
 
 export default {
   async fetch(request, env) {
@@ -27,12 +25,39 @@ export default {
 
     const url = new URL(request.url);
     const token = url.searchParams.get('token');
-    const data  = url.searchParams.get('data');
 
-    // Authenticate
+    // Authenticate all requests
     if (!token || token !== env.SECRET_TOKEN) {
       return new Response(JSON.stringify({ error: 'Unauthorized' }), { status: 401, headers: cors });
     }
+
+    const ghHeaders = {
+      Authorization: `Bearer ${env.GITHUB_PAT}`,
+      Accept: 'application/vnd.github.v3+json',
+      'User-Agent': 'LogTrim-Suggest-Worker/1.0'
+    };
+    const apiBase = `https://api.github.com/repos/${env.GITHUB_USER}/${env.GITHUB_REPO}/contents`;
+
+    // GET /log — return workout-log.csv for Claude to read
+    if (url.pathname === '/log') {
+      const res = await fetch(`${apiBase}/workout-log.csv`, { headers: ghHeaders });
+      if (!res.ok) return new Response(JSON.stringify({ error: 'Could not fetch log' }), { status: 502, headers: cors });
+      const file = await res.json();
+      const csv = atob(file.content.replace(/\n/g, ''));
+      return new Response(csv, { headers: { ...cors, 'Content-Type': 'text/csv' } });
+    }
+
+    // GET /profile — return profile.json for Claude to read
+    if (url.pathname === '/profile') {
+      const res = await fetch(`${apiBase}/profile.json`, { headers: ghHeaders });
+      if (!res.ok) return new Response(JSON.stringify({ error: 'Could not fetch profile' }), { status: 502, headers: cors });
+      const file = await res.json();
+      const json = atob(file.content.replace(/\n/g, ''));
+      return new Response(json, { headers: { ...cors, 'Content-Type': 'application/json' } });
+    }
+
+    // GET /?token=SECRET&data=BASE64 — push a workout suggestion
+    const data = url.searchParams.get('data');
 
     if (!data) {
       return new Response(JSON.stringify({ error: 'Missing data parameter' }), { status: 400, headers: cors });
@@ -46,14 +71,7 @@ export default {
       return new Response(JSON.stringify({ error: 'Invalid data: ' + e.message }), { status: 400, headers: cors });
     }
 
-    const apiBase = `https://api.github.com/repos/${env.GITHUB_USER}/${env.GITHUB_REPO}/contents`;
     const filePath = 'suggested-workout.json';
-    const ghHeaders = {
-      Authorization: `Bearer ${env.GITHUB_PAT}`,
-      Accept: 'application/vnd.github.v3+json',
-      'Content-Type': 'application/json',
-      'User-Agent': 'LogTrim-Suggest-Worker/1.0'
-    };
 
     // Get current SHA if the file already exists (required to overwrite)
     let sha = null;
@@ -74,7 +92,7 @@ export default {
 
     const putRes = await fetch(`${apiBase}/${filePath}`, {
       method: 'PUT',
-      headers: ghHeaders,
+      headers: { ...ghHeaders, 'Content-Type': 'application/json' },
       body: JSON.stringify(body)
     });
 
