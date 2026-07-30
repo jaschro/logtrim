@@ -60,6 +60,58 @@
     "notes": ""
   },
   {
+    "machineId": "pm02",
+    "machine": "Seated Row Machine",
+    "gym": "Portofino Gym",
+    "room": "Machines Room",
+    "date": "2026-07-30",
+    "set": 1,
+    "weight": 60,
+    "reps": 15,
+    "duration": null,
+    "level": null,
+    "notes": ""
+  },
+  {
+    "machineId": "pm02",
+    "machine": "Seated Row Machine",
+    "gym": "Portofino Gym",
+    "room": "Machines Room",
+    "date": "2026-07-30",
+    "set": 2,
+    "weight": 80,
+    "reps": 12,
+    "duration": null,
+    "level": null,
+    "notes": ""
+  },
+  {
+    "machineId": "pm02",
+    "machine": "Seated Row Machine",
+    "gym": "Portofino Gym",
+    "room": "Machines Room",
+    "date": "2026-07-30",
+    "set": 3,
+    "weight": 105,
+    "reps": 10,
+    "duration": null,
+    "level": null,
+    "notes": ""
+  },
+  {
+    "machineId": "pm02",
+    "machine": "Seated Row Machine",
+    "gym": "Portofino Gym",
+    "room": "Machines Room",
+    "date": "2026-07-30",
+    "set": 4,
+    "weight": 120,
+    "reps": 10,
+    "duration": null,
+    "level": null,
+    "notes": ""
+  },
+  {
     "machineId": "m1785005256712",
     "machine": "Leg Press",
     "gym": "Admirals Cove",
