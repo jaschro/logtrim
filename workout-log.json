@@ -164,6 +164,58 @@
     "notes": ""
   },
   {
+    "machineId": "pm10",
+    "machine": "Seated Biceps Curl Machine",
+    "gym": "Portofino Gym",
+    "room": "Machines Room",
+    "date": "2026-07-30",
+    "set": 1,
+    "weight": 40,
+    "reps": 12,
+    "duration": null,
+    "level": null,
+    "notes": "The geometry of this machine is uncomfortable and I would prefer to use the seated preacher than this machine."
+  },
+  {
+    "machineId": "pm10",
+    "machine": "Seated Biceps Curl Machine",
+    "gym": "Portofino Gym",
+    "room": "Machines Room",
+    "date": "2026-07-30",
+    "set": 2,
+    "weight": 55,
+    "reps": 12,
+    "duration": null,
+    "level": null,
+    "notes": ""
+  },
+  {
+    "machineId": "pm10",
+    "machine": "Seated Biceps Curl Machine",
+    "gym": "Portofino Gym",
+    "room": "Machines Room",
+    "date": "2026-07-30",
+    "set": 3,
+    "weight": 70,
+    "reps": 4,
+    "duration": null,
+    "level": null,
+    "notes": ""
+  },
+  {
+    "machineId": "pm10",
+    "machine": "Seated Biceps Curl Machine",
+    "gym": "Portofino Gym",
+    "room": "Machines Room",
+    "date": "2026-07-30",
+    "set": 4,
+    "weight": null,
+    "reps": null,
+    "duration": null,
+    "level": null,
+    "notes": ""
+  },
+  {
     "machineId": "m1785005256712",
     "machine": "Leg Press",
     "gym": "Admirals Cove",
