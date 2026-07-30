@@ -1,0 +1,7 @@
+# Personal data — written directly by the app via GitHub API
+# These files live in your personal fork (jaschro/logtrim) but are
+# not tracked here so they don't accidentally overwrite template data.
+workout-log.json
+workout-log.csv
+profile.json
+suggested-workout.json
