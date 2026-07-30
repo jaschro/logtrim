@@ -149,6 +149,20 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,BlinkMacSystemFo
 .em p{font-size:15px;line-height:1.5}
 /* Connect button */
 .conbtn{display:block;width:calc(100% - 32px);margin:16px auto;padding:15px;background:var(--accent);color:#000;font-size:16px;font-weight:700;border:none;border-radius:12px;cursor:pointer;text-align:center}
+/* Plan card */
+.pc{background:linear-gradient(135deg,rgba(245,166,35,.12),rgba(245,166,35,.04));border:1px solid rgba(245,166,35,.3);border-radius:12px;margin:6px 16px;padding:16px;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.pc:active{opacity:.8}
+.pch{display:flex;align-items:center;justify-content:space-between;margin-bottom:4px}
+.pcn{font-size:17px;font-weight:700;color:var(--accent)}
+.pct{font-size:12px;color:var(--dim)}
+.pce{font-size:13px;color:var(--dim);margin-top:6px;margin-bottom:10px;line-height:1.4;font-style:italic}
+.pxc{background:var(--card2);border-radius:8px;padding:10px 12px;margin-bottom:6px;display:flex;align-items:center;gap:10px;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.pxc:active{opacity:.7}
+.pxn{font-size:14px;font-weight:600;flex:1}
+.pxs{font-size:12px;color:var(--accent);margin-top:3px}
+.pxb{display:block;width:100%;padding:12px;background:var(--accent);color:#000;font-size:15px;font-weight:700;border:none;border-radius:10px;cursor:pointer;margin-top:4px;-webkit-tap-highlight-color:transparent}
+.dismiss{display:block;width:100%;padding:10px;background:none;border:1px solid var(--bdr);border-radius:10px;color:var(--dim);font-size:14px;cursor:pointer;margin-top:8px}
+.planbanner{background:rgba(245,166,35,.12);border:1px solid rgba(245,166,35,.3);border-radius:8px;padding:10px 14px;margin-bottom:14px;font-size:13px;color:var(--accent);line-height:1.4}
 </style>
 </head>
 <body>
@@ -161,6 +175,7 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,BlinkMacSystemFo
     <button class="nb" onclick="nav('settings')" title="Settings">&#9881;&#65039;</button>
   </div>
   <div class="sc">
+    <div id="planSection"></div>
     <div class="sh">MY GYMS</div>
     <div id="mygyms"></div>
     <div class="sh">GENERIC GYM</div>
@@ -257,6 +272,12 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,BlinkMacSystemFo
   </div>
 </div>
 
+<!-- PLAN -->
+<div id="s-plan" class="scr">
+  <div class="nav"><button class="nb" onclick="back()">&#8249;</button><h1>Today&#8217;s Plan</h1></div>
+  <div class="sc" id="planbody"></div>
+</div>
+
 </div><!-- #app -->
 
 <div id="toast"></div>
@@ -267,8 +288,8 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,BlinkMacSystemFo
 <script>
 // === STATE ===
 const A={
-  gyms:[],log:[],profile:{},
-  sha:{log:null,csv:null,profile:null,gym:{}},
+  gyms:[],log:[],profile:{},suggestion:null,
+  sha:{log:null,csv:null,profile:null,suggestion:null,gym:{}},
   stack:['home'],
   gym:null,room:null,machine:null,
   editDate:null,logType:'weight',
@@ -313,6 +334,11 @@ async function ghPutImg(path,b64,sha){
   if(!r.ok)throw new Error(`GitHub ${r.status}`);
   return r.json();
 }
+async function ghDelete(path,sha,msg){
+  const r=await fetch(`${apiBase()}/${path}`,{method:'DELETE',headers:{Authorization:`Bearer ${A.cfg.pat}`,Accept:'application/vnd.github.v3+json','Content-Type':'application/json'},body:JSON.stringify({message:msg||`Delete ${path}`,sha})});
+  if(!r.ok){const t=await r.text();throw new Error(`GitHub ${r.status}: ${t}`);}
+  return r.json();
+}
 function b64e(s){return btoa(unescape(encodeURIComponent(s)))}
 function b64d(s){return decodeURIComponent(escape(atob(s.replace(/\n/g,''))))}
 
@@ -321,7 +347,7 @@ async function loadAll(){
   if(!hasCfg()){renderHome();return}
   showLd('Loading your data…');
   try{
-    await Promise.all([loadGyms(),loadLog(),loadProfile()]);
+    await Promise.all([loadGyms(),loadLog(),loadProfile(),loadSuggestion()]);
     hideLd();renderHome();
   }catch(e){
     hideLd();toast(`Load error: ${e.message}`,'err');renderHome();
@@ -361,6 +387,12 @@ async function loadProfile(){
     A.profile=JSON.parse(b64d(f.content));A.sha.profile=f.sha;
   }catch(e){console.warn('profile:',e)}
 }
+async function loadSuggestion(){
+  try{
+    const f=await ghGet('suggested-workout.json');
+    A.suggestion=JSON.parse(b64d(f.content));A.sha.suggestion=f.sha;
+  }catch(e){A.suggestion=null;A.sha.suggestion=null;}
+}
 async function reloadData(){await loadAll();toast('Data reloaded','ok')}
 async function connectGH(){
   saveCfg();
@@ -373,6 +405,7 @@ async function connectGH(){
 function nav(id){
   if(id==='equipment')renderEquip();
   if(id==='profile')fillProfile();
+  if(id==='plan')renderPlan();
   if(A.stack[A.stack.length-1]!==id)A.stack.push(id);
   document.querySelectorAll('.scr').forEach(s=>s.classList.remove('on'));
   const el=document.getElementById(`s-${id}`);
@@ -388,12 +421,20 @@ function back(){
 
 // === HOME ===
 function renderHome(){
-  const myEl=g('mygyms'),genEl=g('genGym');
+  const myEl=g('mygyms'),genEl=g('genGym'),planEl=g('planSection');
   const my=A.gyms.filter(x=>!x._gen);
   const gen=A.gyms.find(x=>x._gen);
   if(!hasCfg()){
     myEl.innerHTML='<div class="em"><div class="icon">⚙️</div><p>Tap ⚙️ to connect your GitHub repo.</p></div>';
-    genEl.innerHTML='';return;
+    genEl.innerHTML='';planEl.innerHTML='';return;
+  }
+  // Today's Plan
+  if(A.suggestion){
+    const s=A.suggestion;
+    const exCount=(s.exercises||[]).length;
+    planEl.innerHTML=`<div class="sh">TODAY\'S PLAN</div><div class="pc" onclick="nav(\'plan\')"><div class="pch"><span class="pcn">Workout Ready ✨</span><span class="pct">${x(s.generatedAt||'')}</span></div>${s.coachNote?`<div class="pce">${x(s.coachNote)}</div>`:'<div style="height:8px"></div>'}<div style="font-size:13px;color:var(--dim)">${exCount} exercise${exCount!==1?'s':''} suggested &rsaquo;</div></div>`;
+  }else{
+    planEl.innerHTML='';
   }
   myEl.innerHTML=my.length?my.map(gymCard).join(''):'<div class="em"><div class="icon">🏟️</div><p>No gyms yet.<br>Go to Settings → Manage Equipment.</p></div>';
   genEl.innerHTML=gen?gymCard(gen):'';
@@ -408,6 +449,39 @@ function openGym(gid){
   A.gym=g2;
   if(g2.rooms.length===1){A.room=g2.rooms[0];renderMachines();nav('machines')}
   else{renderRooms();nav('rooms')}
+}
+
+// === TODAY'S PLAN ===
+function renderPlan(){
+  const s=A.suggestion;if(!s){back();return}
+  const exH=(s.exercises||[]).map(e=>{
+    const sets=e.sets||[];
+    const sStr=sets.map(s=>`${s.weight}lbs×${s.reps}`).join(', ');
+    return`<div class="pxc" onclick="goLogPlan('${e.machineId}')"><div style="flex:1"><div class="pxn">${x(e.machine)}</div><div style="font-size:12px;color:var(--dim);margin-top:2px">${x(e.gym)}</div>${sStr?`<div class="pxs">${x(sStr)}</div>`:''}${e.note?`<div style="font-size:12px;color:var(--accent);margin-top:2px;font-style:italic">${x(e.note)}</div>`:''}</div><span class="ch">›</span></div>`;
+  }).join('');
+  g('planbody').innerHTML=`${s.coachNote?`<div class="fs"><p style="font-size:14px;line-height:1.5;color:var(--dim)">${x(s.coachNote)}</p></div>`:''}<div class="sh">EXERCISES — TAP TO LOG</div><div style="padding:0 16px 4px">${exH}</div><div style="padding:8px 16px 24px"><button class="dismiss" onclick="dismissPlan()">✕ Dismiss Plan</button></div>`;
+}
+function goLogPlan(machineId){
+  for(const g2 of A.gyms){
+    for(const r of g2.rooms){
+      const m=r.machines.find(m=>m.id===machineId);
+      if(m){A.gym=g2;A.room=r;A.machine=m;A.editDate=null;renderLog();nav('log');return}
+    }
+  }
+  toast('Machine not found in your equipment','err');
+}
+async function dismissPlan(){
+  if(!hasCfg()||!A.sha.suggestion){A.suggestion=null;A.sha.suggestion=null;renderHome();back();return}
+  showLd('Dismissing plan…');
+  try{
+    await ghDelete('suggested-workout.json',A.sha.suggestion,'Dismiss workout suggestion');
+  }catch(e){console.warn('dismiss:',e)}
+  A.suggestion=null;A.sha.suggestion=null;
+  hideLd();toast('Plan dismissed','ok');
+  A.stack=['home'];
+  document.querySelectorAll('.scr').forEach(s=>s.classList.remove('on'));
+  document.getElementById('s-home').classList.add('on');
+  renderHome();
 }
 
 // === ROOMS ===
@@ -498,13 +572,20 @@ function renderLog(){
     prefill=A.log.filter(e=>e.machineId===m.id&&e.date===A.editDate).sort((a,b)=>a.set-b.set);
     if(prefill.length)defType=prefill[0].duration!=null?'cardio':'weight';
   }else{
-    prefill=lastSess(m.id)||[{set:1,weight:'',reps:'',duration:'',level:''}];
+    const planEx=A.suggestion&&(A.suggestion.exercises||[]).find(e=>e.machineId===m.id);
+    if(planEx&&planEx.sets&&planEx.sets.length){
+      prefill=planEx.sets.map((s,i)=>({...s,set:i+1}));
+    }else{
+      prefill=lastSess(m.id)||[{set:1,weight:'',reps:'',duration:'',level:''}];
+    }
   }
   A.logType=defType;
   const isC=defType==='cardio';
   const hideT=!!m.logType;
   const prevNotes=editing?(A.log.find(e=>e.machineId===m.id&&e.date===A.editDate)||{}).notes||'':'';
-  g('lbody').innerHTML=`
+  const planEx2=!editing&&A.suggestion&&(A.suggestion.exercises||[]).find(e=>e.machineId===m.id);
+  const planBanner=planEx2?`<div class="planbanner">✨ Sets pre-filled from today\'s plan${planEx2.note?' — '+x(planEx2.note):''}</div>`:'';
+  g('lbody').innerHTML=`${planBanner}
     <div class="fs"><h3>Date</h3><input type="date" id="ldate" class="fi" value="${date}" style="width:100%"></div>
     <div class="fs"${hideT?' style="display:none"':''}>
       <h3>Type</h3>
@@ -606,8 +687,8 @@ function csvEsc(s){return String(s||'').replace(/[,\n"]/g,' ')}
 function copyUrl(type){
   if(!A.cfg.user||!A.cfg.repo){toast('Enter username and repo first','err');return}
   const url=type==='csv'
-    ?`https://raw.githubusercontent.com/${A.cfg.user}/${A.cfg.repo}/main/workout-log.csv`
-    :`https://raw.githubusercontent.com/${A.cfg.user}/${A.cfg.repo}/main/profile.json`;
+    ?`https://${A.cfg.user}.github.io/${A.cfg.repo}/workout-log.csv`
+    :`https://${A.cfg.user}.github.io/${A.cfg.repo}/profile.json`;
   navigator.clipboard.writeText(url).then(()=>toast('URL copied!','ok')).catch(()=>prompt('Copy this URL:',url));
 }
 
