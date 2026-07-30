@@ -11,6 +11,10 @@ date,gym,room,machine,machineId,set,weight,reps,duration,level,incline,hr,notes
 2026-07-30,Portofino Gym,Weight Room,Lat Pulldown Machine,pw02,2,65,12,,,,,
 2026-07-30,Portofino Gym,Weight Room,Lat Pulldown Machine,pw02,3,80,10,,,,,
 2026-07-30,Portofino Gym,Weight Room,Lat Pulldown Machine,pw02,4,95,10,,,,,
+2026-07-30,Portofino Gym,Machines Room,Seated Biceps Curl Machine,pm10,1,40,12,,,,,The geometry of this machine is uncomfortable and I would prefer to use the seated preacher than this machine.
+2026-07-30,Portofino Gym,Machines Room,Seated Biceps Curl Machine,pm10,2,55,12,,,,,
+2026-07-30,Portofino Gym,Machines Room,Seated Biceps Curl Machine,pm10,3,70,4,,,,,
+2026-07-30,Portofino Gym,Machines Room,Seated Biceps Curl Machine,pm10,4,,,,,,,
 2026-07-27,Admirals Cove,,Leg Press,m1785005256712,1,80,10,,,,,Three positions each
 2026-07-27,Admirals Cove,,Leg Press,m1785005256712,2,100,10,,,,,
 2026-07-27,Admirals Cove,,Leg Press,m1785005256712,3,120,10,,,,,
