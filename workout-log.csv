@@ -2,6 +2,9 @@ date,gym,room,machine,machineId,set,weight,reps,duration,level,incline,hr,notes
 2026-07-31,Portofino Gym,Weight Room,Seated Leg Press Machine,pw06,1,65,10,,,,,3 positions each: high center  high wide  and low center
 2026-07-31,Portofino Gym,Weight Room,Seated Leg Press Machine,pw06,2,80,10,,,,,
 2026-07-31,Portofino Gym,Weight Room,Seated Leg Press Machine,pw06,3,95,10,,,,,
+2026-07-31,Portofino Gym,Machines Room,Seated Leg Extension Machine,pm05,1,45,15,,,,,
+2026-07-31,Portofino Gym,Machines Room,Seated Leg Extension Machine,pm05,2,65,15,,,,,
+2026-07-31,Portofino Gym,Machines Room,Seated Leg Extension Machine,pm05,3,90,15,,,,,
 2026-07-30,Portofino Gym,Aerobic Room,Treadmill,pa05,1,,,5,3.3,0,86,
 2026-07-30,Portofino Gym,Aerobic Room,Treadmill,pa05,2,,,5,3.5,0,91,
 2026-07-30,Portofino Gym,Aerobic Room,Treadmill,pa05,3,,,5,3.7,0,96,
