@@ -1,180 +1,111 @@
 {
-  "generatedAt": "2026-07-31",
-  "coachNote": "Full leg day plus chest, glutes, core, and calves — legs haven't had a complete pass since 7/14, and calves have been flat since 7/3 so it's a good day to push them.",
+  "generatedAt": "2026-08-01",
+  "coachNote": "Skipping chest and all leg/hip machines to let them recover from the last few days. Prioritizing triceps (untouched since 6/28) and back, plus continuing rear delt and core work.",
   "exercises": [
     {
-      "machineId": "pw06",
-      "machine": "Seated Leg Press Machine",
-      "gym": "Portofino Gym",
-      "room": "Weight Room",
+      "machineId": "m1785006624353",
+      "machine": "Reverse Fly",
+      "gym": "Admirals Cove",
       "sets": [
         {
           "set": 1,
-          "weight": 65,
-          "reps": 15
-        },
-        {
-          "set": 2,
-          "weight": 80,
-          "reps": 15
-        },
-        {
-          "set": 3,
-          "weight": 90,
-          "reps": 15
-        }
-      ],
-      "note": "You topped out at 75x15 on 7/19 — push to 90 for the last set."
-    },
-    {
-      "machineId": "pm05",
-      "machine": "Seated Leg Extension Machine",
-      "gym": "Portofino Gym",
-      "room": "Machines Room",
-      "sets": [
-        {
-          "set": 1,
-          "weight": 45,
-          "reps": 15
-        },
-        {
-          "set": 2,
-          "weight": 65,
-          "reps": 15
-        },
-        {
-          "set": 3,
-          "weight": 90,
-          "reps": 15
-        }
-      ],
-      "note": "Was 45/60/85 on 7/19 — small bump across the board."
-    },
-    {
-      "machineId": "pm06",
-      "machine": "Seated Leg Curl Machine",
-      "gym": "Portofino Gym",
-      "room": "Machines Room",
-      "sets": [
-        {
-          "set": 1,
-          "weight": 50,
+          "weight": 15,
           "reps": 10
         },
         {
           "set": 2,
-          "weight": 55,
+          "weight": 20,
+          "reps": 8
+        },
+        {
+          "set": 3,
+          "weight": 20,
+          "reps": 6
+        }
+      ],
+      "note": "Easing in with a lighter first set this time — last time's single set at 20x6 was tough."
+    },
+    {
+      "machine": "Triceps (Cable Pushdown or Dumbbell Overhead Extension)",
+      "gym": "Admirals Cove",
+      "sets": [
+        {
+          "set": 1,
+          "reps": 15
+        },
+        {
+          "set": 2,
           "reps": 12
         },
         {
           "set": 3,
-          "weight": 65,
+          "reps": 12
+        }
+      ],
+      "note": "First time logging this one here — pick a weight that's challenging by the last set, this becomes the baseline."
+    },
+    {
+      "machine": "Back (Seated Cable Row or Dumbbell Row)",
+      "gym": "Admirals Cove",
+      "sets": [
+        {
+          "set": 1,
+          "reps": 12
+        },
+        {
+          "set": 2,
+          "reps": 10
+        },
+        {
+          "set": 3,
           "reps": 10
         }
       ],
-      "note": "Was 50/55/60 on 7/14 — try 65 on the top set."
+      "note": "New here too — start moderate, we'll calibrate weight from what you log."
     },
     {
-      "machineId": "pm11",
-      "machine": "Hip Abduction Machine",
-      "gym": "Portofino Gym",
-      "room": "Machines Room",
+      "machineId": "m1785006392732",
+      "machine": "Pullups",
+      "gym": "Admirals Cove",
       "sets": [
         {
           "set": 1,
-          "weight": 60,
-          "reps": 15
+          "reps": 5
         },
         {
           "set": 2,
-          "weight": 95,
-          "reps": 15
+          "reps": 5
         },
         {
           "set": 3,
-          "weight": 125,
-          "reps": 15
+          "reps": 5
         }
       ],
-      "note": "You hit 145x15 on 7/9 — building back toward that."
+      "note": "Vertical grip, progressing from 5/5 on 7/25 to a third set."
     },
     {
-      "machineId": "pm12",
-      "machine": "Hip Adduction Machine",
-      "gym": "Portofino Gym",
-      "room": "Machines Room",
+      "machine": "Plank",
+      "gym": "Admirals Cove",
       "sets": [
         {
           "set": 1,
-          "weight": 90,
-          "reps": 15
+          "reps": 30
         },
         {
           "set": 2,
-          "weight": 120,
-          "reps": 15
+          "reps": 40
         },
         {
           "set": 3,
-          "weight": 150,
-          "reps": 15
+          "reps": 45
         }
       ],
-      "note": "Best recent was 145x15 on 7/9 — try 150 on the top set."
+      "note": "Reps here = seconds held. New addition for core stability alongside the situp work."
     },
     {
-      "machineId": "pm03",
-      "machine": "Seated Chest Press Machine",
-      "gym": "Portofino Gym",
-      "room": "Machines Room",
-      "sets": [
-        {
-          "set": 1,
-          "weight": 60,
-          "reps": 15
-        },
-        {
-          "set": 2,
-          "weight": 85,
-          "reps": 15
-        },
-        {
-          "set": 3,
-          "weight": 95,
-          "reps": 10
-        }
-      ],
-      "note": "Topped 90x10 on 7/19 — try 95 for the last set."
-    },
-    {
-      "machineId": "pm14",
-      "machine": "Glute Isolator",
-      "gym": "Portofino Gym",
-      "room": "Machines Room",
-      "sets": [
-        {
-          "set": 1,
-          "weight": 65,
-          "reps": 15
-        },
-        {
-          "set": 2,
-          "weight": 85,
-          "reps": 15
-        },
-        {
-          "set": 3,
-          "weight": 105,
-          "reps": 15
-        }
-      ],
-      "note": "Continuing from 60/80x15 yesterday — add a third set at 105."
-    },
-    {
-      "machineId": "pm01",
-      "machine": "Adjustable Decline Abdominal Bench",
-      "gym": "Portofino Gym",
-      "room": "Machines Room",
+      "machineId": "m1785007780604",
+      "machine": "Decline Ab Bench Situps",
+      "gym": "Admirals Cove",
       "sets": [
         {
           "set": 1,
@@ -189,31 +120,27 @@
           "reps": 25
         }
       ],
-      "note": "Matches yesterday's 20x3 — nudge the last set to 25 reps."
+      "note": "Stable at 20x3 both prior visits — nudging the last set."
     },
     {
-      "machineId": "pw08",
-      "machine": "Plate-Loaded Seated Calf Raise",
-      "gym": "Portofino Gym",
-      "room": "Weight Room",
+      "machineId": "m1785177917318",
+      "machine": "Reverse Situps",
+      "gym": "Admirals Cove",
       "sets": [
         {
           "set": 1,
-          "weight": 15,
-          "reps": 15
+          "reps": 20
         },
         {
           "set": 2,
-          "weight": 20,
-          "reps": 15
+          "reps": 20
         },
         {
           "set": 3,
-          "weight": 25,
-          "reps": 15
+          "reps": 20
         }
       ],
-      "note": "You've been flat at 10/15/20 since 7/3 — time to push past it."
+      "note": "Was 20x2 on 7/27 — adding a third set."
     }
   ]
 }
