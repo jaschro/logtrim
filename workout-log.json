@@ -260,6 +260,45 @@
     "notes": ""
   },
   {
+    "machineId": "pm14",
+    "machine": "Glute Isolator",
+    "gym": "Portofino Gym",
+    "room": "Machines Room",
+    "date": "2026-07-31",
+    "set": 1,
+    "weight": 65,
+    "reps": 15,
+    "duration": null,
+    "level": null,
+    "notes": ""
+  },
+  {
+    "machineId": "pm14",
+    "machine": "Glute Isolator",
+    "gym": "Portofino Gym",
+    "room": "Machines Room",
+    "date": "2026-07-31",
+    "set": 2,
+    "weight": 85,
+    "reps": 15,
+    "duration": null,
+    "level": null,
+    "notes": ""
+  },
+  {
+    "machineId": "pm14",
+    "machine": "Glute Isolator",
+    "gym": "Portofino Gym",
+    "room": "Machines Room",
+    "date": "2026-07-31",
+    "set": 3,
+    "weight": 105,
+    "reps": 15,
+    "duration": null,
+    "level": null,
+    "notes": ""
+  },
+  {
     "machineId": "pa05",
     "machine": "Treadmill",
     "gym": "Portofino Gym",
