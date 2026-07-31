@@ -1,5 +1,44 @@
 [
   {
+    "machineId": "pw06",
+    "machine": "Seated Leg Press Machine",
+    "gym": "Portofino Gym",
+    "room": "Weight Room",
+    "date": "2026-07-31",
+    "set": 1,
+    "weight": 65,
+    "reps": 10,
+    "duration": null,
+    "level": null,
+    "notes": "3 positions each: high center, high wide, and low center"
+  },
+  {
+    "machineId": "pw06",
+    "machine": "Seated Leg Press Machine",
+    "gym": "Portofino Gym",
+    "room": "Weight Room",
+    "date": "2026-07-31",
+    "set": 2,
+    "weight": 80,
+    "reps": 10,
+    "duration": null,
+    "level": null,
+    "notes": ""
+  },
+  {
+    "machineId": "pw06",
+    "machine": "Seated Leg Press Machine",
+    "gym": "Portofino Gym",
+    "room": "Weight Room",
+    "date": "2026-07-31",
+    "set": 3,
+    "weight": 95,
+    "reps": 10,
+    "duration": null,
+    "level": null,
+    "notes": ""
+  },
+  {
     "machineId": "pa05",
     "machine": "Treadmill",
     "gym": "Portofino Gym",
