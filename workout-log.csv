@@ -8,6 +8,10 @@ date,gym,room,machine,machineId,set,weight,reps,duration,level,incline,hr,notes
 2026-07-31,Portofino Gym,Machines Room,Seated Chest Press Machine,pm03,1,60,15,,,,,
 2026-07-31,Portofino Gym,Machines Room,Seated Chest Press Machine,pm03,2,85,15,,,,,
 2026-07-31,Portofino Gym,Machines Room,Seated Chest Press Machine,pm03,3,95,15,,,,,
+2026-07-31,Portofino Gym,Machines Room,Seated Leg Curl Machine,pm06,1,50,10,,,,,65 was a lot
+2026-07-31,Portofino Gym,Machines Room,Seated Leg Curl Machine,pm06,2,55,10,,,,,
+2026-07-31,Portofino Gym,Machines Room,Seated Leg Curl Machine,pm06,3,65,8,,,,,
+2026-07-31,Portofino Gym,Machines Room,Seated Leg Curl Machine,pm06,4,35,5,,,,,
 2026-07-30,Portofino Gym,Aerobic Room,Treadmill,pa05,1,,,5,3.3,0,86,
 2026-07-30,Portofino Gym,Aerobic Room,Treadmill,pa05,2,,,5,3.5,0,91,
 2026-07-30,Portofino Gym,Aerobic Room,Treadmill,pa05,3,,,5,3.7,0,96,
