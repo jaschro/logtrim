@@ -12,6 +12,10 @@ date,gym,room,machine,machineId,set,weight,reps,duration,level,incline,hr,notes
 2026-07-31,Portofino Gym,Machines Room,Seated Leg Curl Machine,pm06,2,55,10,,,,,
 2026-07-31,Portofino Gym,Machines Room,Seated Leg Curl Machine,pm06,3,65,8,,,,,
 2026-07-31,Portofino Gym,Machines Room,Seated Leg Curl Machine,pm06,4,35,5,,,,,
+2026-07-31,Portofino Gym,Machines Room,Hip Abduction Machine,pm11,1,70,10,,,,,Felt fine
+2026-07-31,Portofino Gym,Machines Room,Hip Abduction Machine,pm11,2,100,10,,,,,
+2026-07-31,Portofino Gym,Machines Room,Hip Abduction Machine,pm11,3,130,10,,,,,
+2026-07-31,Portofino Gym,Machines Room,Hip Abduction Machine,pm11,4,145,10,,,,,
 2026-07-30,Portofino Gym,Aerobic Room,Treadmill,pa05,1,,,5,3.3,0,86,
 2026-07-30,Portofino Gym,Aerobic Room,Treadmill,pa05,2,,,5,3.5,0,91,
 2026-07-30,Portofino Gym,Aerobic Room,Treadmill,pa05,3,,,5,3.7,0,96,
