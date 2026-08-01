@@ -167,6 +167,13 @@
           "musclesWorked": "",
           "image": "m1785620334486.jpg",
           "logType": "weight"
+        },
+        {
+          "id": "m1785620353523",
+          "name": "Treadmill",
+          "musclesWorked": "",
+          "image": "m1785620353523.jpg",
+          "logType": "weight"
         }
       ]
     }
