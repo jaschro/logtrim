@@ -121,6 +121,11 @@
           "logType": "weight"
         }
       ]
+    },
+    {
+      "id": "aerobic-area-1785619250364",
+      "name": "Aerobic Area",
+      "machines": []
     }
   ]
 }
