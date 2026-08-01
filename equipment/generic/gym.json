@@ -13,35 +13,35 @@
           "name": "Run",
           "musclesWorked": "Cardiovascular system, legs, glutes, core",
           "image": "run.jpg",
-          "logType": "cardio"
+          "logType": "pace"
         },
         {
           "id": "walk",
           "name": "Walk",
           "musclesWorked": "Cardiovascular system, legs, glutes",
           "image": "walk.jpg",
-          "logType": "cardio"
+          "logType": "pace"
         },
         {
           "id": "bike-ride",
           "name": "Bike Ride",
           "musclesWorked": "Quadriceps, hamstrings, glutes, cardiovascular system",
           "image": "bike-ride.png",
-          "logType": "cardio"
+          "logType": "pace"
         },
         {
           "id": "swim",
           "name": "Swim",
           "musclesWorked": "Full body — arms, legs, core, cardiovascular system",
           "image": "swim.jpg",
-          "logType": "cardio"
+          "logType": "time"
         },
         {
           "id": "jump-rope",
           "name": "Jump Rope",
           "musclesWorked": "Calves, cardiovascular system, coordination, agility",
           "image": "jump-rope.jpg",
-          "logType": "cardio"
+          "logType": "time"
         }
       ]
     },
@@ -89,21 +89,21 @@
           "name": "Elbow Planks",
           "musclesWorked": "Core, transverse abdominis, shoulders",
           "image": "elbow-planks.png",
-          "logType": "weight"
+          "logType": "time"
         },
         {
           "id": "high-planks",
           "name": "High Planks",
           "musclesWorked": "Core, shoulders, triceps, wrists",
           "image": "high-planks.jpg",
-          "logType": "weight"
+          "logType": "time"
         },
         {
           "id": "side-planks",
           "name": "Side Planks",
           "musclesWorked": "Obliques, lateral stabilizers, hip abductors",
           "image": "side-planks.png",
-          "logType": "weight"
+          "logType": "time"
         },
         {
           "id": "bridges",
@@ -117,14 +117,14 @@
           "name": "Wall Sits",
           "musclesWorked": "Quadriceps, glutes, calves (isometric)",
           "image": "wall-sits.jpg",
-          "logType": "weight"
+          "logType": "time"
         },
         {
           "id": "downward-dog",
           "name": "Downward Dog",
           "musclesWorked": "Hamstrings, calves, shoulders, spine (stretch)",
           "image": "downward-dog.jpg",
-          "logType": "weight"
+          "logType": "time"
         }
       ]
     },
@@ -171,49 +171,49 @@
           "name": "Treadmill",
           "musclesWorked": "Cardiovascular system — lower body endurance",
           "image": "treadmill.png",
-          "logType": "cardio"
+          "logType": "pace"
         },
         {
           "id": "elliptical",
           "name": "Elliptical",
           "musclesWorked": "Low-impact full-body cardiovascular workout",
           "image": "elliptical.png",
-          "logType": "cardio"
+          "logType": "pace"
         },
         {
           "id": "peloton",
           "name": "Peloton",
           "musclesWorked": "Cardiovascular conditioning — quadriceps, hamstrings, calves",
           "image": "peloton.png",
-          "logType": "cardio"
+          "logType": "pace"
         },
         {
           "id": "stationary-bike-upright",
           "name": "Stationary Bike (Upright)",
           "musclesWorked": "Cardiovascular system, quadriceps, hamstrings, glutes",
           "image": "stationary-bike-upright.png",
-          "logType": "cardio"
+          "logType": "pace"
         },
         {
           "id": "stationary-bike-recumbent",
           "name": "Stationary Bike (Recumbent)",
           "musclesWorked": "Low-impact cardio — quadriceps, hamstrings, glutes, calves",
           "image": "stationary-bike-recumbent.png",
-          "logType": "cardio"
+          "logType": "pace"
         },
         {
           "id": "rowing-machine",
           "name": "Rowing Machine",
           "musclesWorked": "60% legs · 20% core · 20% arms & back — full body cardio",
           "image": "rowing-machine.png",
-          "logType": "cardio"
+          "logType": "pace"
         },
         {
           "id": "stair-climber",
           "name": "Stair Climber",
           "musclesWorked": "Glutes, quadriceps, hamstrings, calves — high-intensity cardio",
           "image": "stair-climber.png",
-          "logType": "cardio"
+          "logType": "pace"
         }
       ]
     },
