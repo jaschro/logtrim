@@ -139,6 +139,13 @@
           "musclesWorked": "",
           "image": "m1785619397049.jpg",
           "logType": "weight"
+        },
+        {
+          "id": "m1785619527962",
+          "name": "Climb (Stair Climber)",
+          "musclesWorked": "",
+          "image": "m1785619527962.jpg",
+          "logType": "weight"
         }
       ]
     }
