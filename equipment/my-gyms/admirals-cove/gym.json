@@ -125,7 +125,15 @@
     {
       "id": "aerobic-area-1785619250364",
       "name": "Aerobic Area",
-      "machines": []
+      "machines": [
+        {
+          "id": "m1785619284163",
+          "name": "Ski Ergometer",
+          "musclesWorked": "",
+          "image": "m1785619284163.jpg",
+          "logType": "weight"
+        }
+      ]
     }
   ]
 }
