@@ -325,6 +325,19 @@
     "notes": ""
   },
   {
+    "machineId": "elbow-planks",
+    "machine": "Elbow Planks",
+    "gym": "Common Machines",
+    "room": "Bodyweight — No Equipment",
+    "date": "2026-08-01",
+    "set": 1,
+    "weight": null,
+    "reps": 30,
+    "duration": null,
+    "level": null,
+    "notes": "Reps = seconds"
+  },
+  {
     "machineId": "pw06",
     "machine": "Seated Leg Press Machine",
     "gym": "Portofino Gym",
