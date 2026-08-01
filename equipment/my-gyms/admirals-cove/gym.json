@@ -2,13 +2,11 @@
   "id": "gym_1785005216520",
   "name": "Admirals Cove",
   "icon": "🏋️",
-  "subtitle": "Gym",
   "isGeneric": false,
   "rooms": [
     {
       "id": "room_1785005216520",
       "name": "Admirals Cove",
-      "icon": "🏋️",
       "machines": [
         {
           "id": "m1785005256712",
@@ -71,6 +69,13 @@
           "name": "Reverse Sit Ups",
           "musclesWorked": "",
           "image": "m1785177917318.jpg",
+          "logType": "weight"
+        },
+        {
+          "id": "m1785616487088",
+          "name": "Vertical Traction",
+          "musclesWorked": "Shoulders, biceps",
+          "image": "m1785616487088.jpg",
           "logType": "weight"
         }
       ]
