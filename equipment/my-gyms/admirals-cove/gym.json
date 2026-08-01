@@ -77,6 +77,13 @@
           "musclesWorked": "Shoulders, biceps",
           "image": "m1785616487088.jpg",
           "logType": "weight"
+        },
+        {
+          "id": "m1785617007828",
+          "name": "Cable Pulldown",
+          "musclesWorked": "Triceps",
+          "image": "m1785617007828.jpg",
+          "logType": "weight"
         }
       ]
     }
