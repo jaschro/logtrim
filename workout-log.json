@@ -182,6 +182,19 @@
     "notes": ""
   },
   {
+    "machineId": "m1785618032217",
+    "machine": "Skillmill (manual treadmill)",
+    "gym": "Admirals Cove",
+    "room": "Admirals Cove",
+    "date": "2026-08-01",
+    "set": 1,
+    "weight": null,
+    "reps": 1,
+    "duration": null,
+    "level": null,
+    "notes": "This would be more of a timed machine, like a treadmill.  Not sure what to do with this."
+  },
+  {
     "machineId": "pw06",
     "machine": "Seated Leg Press Machine",
     "gym": "Portofino Gym",
