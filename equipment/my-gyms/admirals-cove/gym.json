@@ -132,6 +132,13 @@
           "musclesWorked": "",
           "image": "m1785619284163.jpg",
           "logType": "weight"
+        },
+        {
+          "id": "m1785619397049",
+          "name": "Arm Bike",
+          "musclesWorked": "",
+          "image": "m1785619397049.jpg",
+          "logType": "weight"
         }
       ]
     }
