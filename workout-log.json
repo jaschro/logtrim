@@ -117,6 +117,32 @@
     "notes": ""
   },
   {
+    "machineId": "m1785177917318",
+    "machine": "Reverse Sit Ups",
+    "gym": "Admirals Cove",
+    "room": "Admirals Cove",
+    "date": "2026-08-01",
+    "set": 1,
+    "weight": null,
+    "reps": 20,
+    "duration": null,
+    "level": null,
+    "notes": "Was hurting a little at end of second set"
+  },
+  {
+    "machineId": "m1785177917318",
+    "machine": "Reverse Sit Ups",
+    "gym": "Admirals Cove",
+    "room": "Admirals Cove",
+    "date": "2026-08-01",
+    "set": 2,
+    "weight": null,
+    "reps": 20,
+    "duration": null,
+    "level": null,
+    "notes": ""
+  },
+  {
     "machineId": "pw06",
     "machine": "Seated Leg Press Machine",
     "gym": "Portofino Gym",
