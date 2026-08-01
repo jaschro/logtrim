@@ -1,5 +1,44 @@
 [
   {
+    "machineId": "m1785006624353",
+    "machine": "Reverse Fly",
+    "gym": "Admirals Cove",
+    "room": "Admirals Cove",
+    "date": "2026-08-01",
+    "set": 1,
+    "weight": 15,
+    "reps": 10,
+    "duration": null,
+    "level": null,
+    "notes": ""
+  },
+  {
+    "machineId": "m1785006624353",
+    "machine": "Reverse Fly",
+    "gym": "Admirals Cove",
+    "room": "Admirals Cove",
+    "date": "2026-08-01",
+    "set": 2,
+    "weight": 20,
+    "reps": 10,
+    "duration": null,
+    "level": null,
+    "notes": ""
+  },
+  {
+    "machineId": "m1785006624353",
+    "machine": "Reverse Fly",
+    "gym": "Admirals Cove",
+    "room": "Admirals Cove",
+    "date": "2026-08-01",
+    "set": 3,
+    "weight": 25,
+    "reps": 10,
+    "duration": null,
+    "level": null,
+    "notes": ""
+  },
+  {
     "machineId": "pw06",
     "machine": "Seated Leg Press Machine",
     "gym": "Portofino Gym",
