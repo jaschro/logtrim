@@ -98,6 +98,13 @@
           "musclesWorked": "",
           "image": "m1785618032217.jpg",
           "logType": "weight"
+        },
+        {
+          "id": "m1785618137870",
+          "name": "Hip Thrust",
+          "musclesWorked": "",
+          "image": "m1785618137870.jpg",
+          "logType": "weight"
         }
       ]
     }
