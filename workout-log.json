@@ -247,6 +247,45 @@
     "notes": ""
   },
   {
+    "machineId": "m1785617007828",
+    "machine": "Cable Pulldown",
+    "gym": "Admirals Cove",
+    "room": "Machines",
+    "date": "2026-08-01",
+    "set": 1,
+    "weight": 20,
+    "reps": 20,
+    "duration": null,
+    "level": null,
+    "notes": ""
+  },
+  {
+    "machineId": "m1785617007828",
+    "machine": "Cable Pulldown",
+    "gym": "Admirals Cove",
+    "room": "Machines",
+    "date": "2026-08-01",
+    "set": 2,
+    "weight": 35,
+    "reps": 15,
+    "duration": null,
+    "level": null,
+    "notes": ""
+  },
+  {
+    "machineId": "m1785617007828",
+    "machine": "Cable Pulldown",
+    "gym": "Admirals Cove",
+    "room": "Machines",
+    "date": "2026-08-01",
+    "set": 3,
+    "weight": 50,
+    "reps": 10,
+    "duration": null,
+    "level": null,
+    "notes": ""
+  },
+  {
     "machineId": "pw06",
     "machine": "Seated Leg Press Machine",
     "gym": "Portofino Gym",
