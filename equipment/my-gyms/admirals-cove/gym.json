@@ -105,6 +105,13 @@
           "musclesWorked": "",
           "image": "m1785618137870.jpg",
           "logType": "weight"
+        },
+        {
+          "id": "m1785618228257",
+          "name": "Pull Down",
+          "musclesWorked": "Mid back",
+          "image": "m1785618228257.jpg",
+          "logType": "weight"
         }
       ]
     }
