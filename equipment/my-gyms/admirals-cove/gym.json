@@ -112,6 +112,13 @@
           "musclesWorked": "Mid back",
           "image": "m1785618228257.jpg",
           "logType": "weight"
+        },
+        {
+          "id": "m1785618661120",
+          "name": "Arm Extension",
+          "musclesWorked": "Tricep",
+          "image": "m1785618661120.jpg",
+          "logType": "weight"
         }
       ]
     }
