@@ -21,6 +21,9 @@ date,gym,room,machine,machineId,set,weight,reps,duration,level,incline,hr,notes
 2026-08-01,Admirals Cove,Machines,Cable Pulldown,m1785617007828,1,20,20,,,,,
 2026-08-01,Admirals Cove,Machines,Cable Pulldown,m1785617007828,2,35,15,,,,,
 2026-08-01,Admirals Cove,Machines,Cable Pulldown,m1785617007828,3,50,10,,,,,
+2026-08-01,Admirals Cove,Machines,Low row,m1785617676094,1,60,10,,,,,
+2026-08-01,Admirals Cove,Machines,Low row,m1785617676094,2,70,10,,,,,
+2026-08-01,Admirals Cove,Machines,Low row,m1785617676094,3,80,10,,,,,
 2026-07-31,Portofino Gym,Weight Room,Seated Leg Press Machine,pw06,1,65,10,,,,,3 positions each: high center  high wide  and low center
 2026-07-31,Portofino Gym,Weight Room,Seated Leg Press Machine,pw06,2,80,10,,,,,
 2026-07-31,Portofino Gym,Weight Room,Seated Leg Press Machine,pw06,3,95,10,,,,,
