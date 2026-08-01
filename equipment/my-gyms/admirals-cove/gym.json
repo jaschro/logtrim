@@ -84,6 +84,13 @@
           "musclesWorked": "Triceps",
           "image": "m1785617007828.jpg",
           "logType": "weight"
+        },
+        {
+          "id": "m1785617676094",
+          "name": "Low row",
+          "musclesWorked": "Mid back",
+          "image": "m1785617676094.jpg",
+          "logType": "weight"
         }
       ]
     }
