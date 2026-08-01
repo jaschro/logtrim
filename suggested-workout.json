@@ -1,146 +1,160 @@
 {
-  "generatedAt": "2026-08-01",
-  "coachNote": "Skipping chest and all leg/hip machines to let them recover from the last few days. Prioritizing triceps (untouched since 6/28) and back, plus continuing rear delt and core work.",
+  "generatedAt": "2026-08-02",
+  "coachNote": "Cardio first using Aerobic Area machines you haven't tried yet (~30 min), then legs - recovered since the big 7/31 leg day, chest/back/triceps/rear delt skipped to stay fresh.",
   "exercises": [
     {
-      "machineId": "m1785006624353",
-      "machine": "Reverse Fly",
+      "machineId": "m1785619397049",
+      "machine": "Arm Bike",
       "gym": "Admirals Cove",
       "sets": [
         {
           "set": 1,
-          "weight": 15,
+          "duration": 5
+        }
+      ],
+      "note": "Warm-up, easy effort."
+    },
+    {
+      "machineId": "m1785619713315",
+      "machine": "Slat Belt Treadmill (electric)",
+      "gym": "Admirals Cove",
+      "sets": [
+        {
+          "set": 1,
+          "duration": 4,
+          "incline": "flat"
+        },
+        {
+          "set": 2,
+          "duration": 4,
+          "incline": "steep"
+        },
+        {
+          "set": 3,
+          "duration": 4,
+          "incline": "flat"
+        },
+        {
+          "set": 4,
+          "duration": 4,
+          "incline": "steep"
+        }
+      ],
+      "note": "First time on this one - pick a steep-but-sustainable incline for the steep intervals."
+    },
+    {
+      "machineId": "m1785619527962",
+      "machine": "Climb (Stair Climber)",
+      "gym": "Admirals Cove",
+      "sets": [
+        {
+          "set": 1,
+          "duration": 10
+        }
+      ],
+      "note": "With the cable, if available."
+    },
+    {
+      "machineId": "m1785005256712",
+      "machine": "Leg Press",
+      "gym": "Admirals Cove",
+      "sets": [
+        {
+          "set": 1,
+          "weight": 90,
           "reps": 10
         },
         {
           "set": 2,
-          "weight": 20,
-          "reps": 8
+          "weight": 110,
+          "reps": 10
         },
         {
           "set": 3,
-          "weight": 20,
-          "reps": 6
+          "weight": 130,
+          "reps": 10
         }
       ],
-      "note": "Easing in with a lighter first set this time — last time's single set at 20x6 was tough."
+      "note": "Was 80/100/120x10 on 7/27."
     },
     {
-      "machine": "Triceps (Cable Pushdown or Dumbbell Overhead Extension)",
+      "machineId": "m1785005305369",
+      "machine": "Leg Extension",
       "gym": "Admirals Cove",
       "sets": [
         {
           "set": 1,
+          "weight": 35,
+          "reps": 10
+        },
+        {
+          "set": 2,
+          "weight": 45,
+          "reps": 10
+        },
+        {
+          "set": 3,
+          "weight": 55,
+          "reps": 10
+        },
+        {
+          "set": 4,
+          "weight": 65,
+          "reps": 10
+        }
+      ],
+      "note": "Was 30/40/50/60x10 on 7/27."
+    },
+    {
+      "machineId": "m1785006086200",
+      "machine": "Abductor",
+      "gym": "Admirals Cove",
+      "sets": [
+        {
+          "set": 1,
+          "weight": 55,
+          "reps": 10
+        },
+        {
+          "set": 2,
+          "weight": 65,
+          "reps": 10
+        },
+        {
+          "set": 3,
+          "weight": 75,
+          "reps": 10
+        },
+        {
+          "set": 4,
+          "weight": 85,
+          "reps": 10
+        }
+      ],
+      "note": "Was 50/60/70/80x10 on 7/27."
+    },
+    {
+      "machineId": "m1785006115413",
+      "machine": "Adductor",
+      "gym": "Admirals Cove",
+      "sets": [
+        {
+          "set": 1,
+          "weight": 40,
           "reps": 15
         },
         {
           "set": 2,
-          "reps": 12
-        },
-        {
-          "set": 3,
-          "reps": 12
-        }
-      ],
-      "note": "First time logging this one here — pick a weight that's challenging by the last set, this becomes the baseline."
-    },
-    {
-      "machine": "Back (Seated Cable Row or Dumbbell Row)",
-      "gym": "Admirals Cove",
-      "sets": [
-        {
-          "set": 1,
-          "reps": 12
-        },
-        {
-          "set": 2,
+          "weight": 50,
           "reps": 10
         },
         {
           "set": 3,
+          "weight": 60,
           "reps": 10
         }
       ],
-      "note": "New here too — start moderate, we'll calibrate weight from what you log."
-    },
-    {
-      "machineId": "m1785006392732",
-      "machine": "Pullups",
-      "gym": "Admirals Cove",
-      "sets": [
-        {
-          "set": 1,
-          "reps": 5
-        },
-        {
-          "set": 2,
-          "reps": 5
-        },
-        {
-          "set": 3,
-          "reps": 5
-        }
-      ],
-      "note": "Vertical grip, progressing from 5/5 on 7/25 to a third set."
-    },
-    {
-      "machine": "Plank",
-      "gym": "Admirals Cove",
-      "sets": [
-        {
-          "set": 1,
-          "reps": 30
-        },
-        {
-          "set": 2,
-          "reps": 40
-        },
-        {
-          "set": 3,
-          "reps": 45
-        }
-      ],
-      "note": "Reps here = seconds held. New addition for core stability alongside the situp work."
-    },
-    {
-      "machineId": "m1785007780604",
-      "machine": "Decline Ab Bench Situps",
-      "gym": "Admirals Cove",
-      "sets": [
-        {
-          "set": 1,
-          "reps": 20
-        },
-        {
-          "set": 2,
-          "reps": 20
-        },
-        {
-          "set": 3,
-          "reps": 25
-        }
-      ],
-      "note": "Stable at 20x3 both prior visits — nudging the last set."
-    },
-    {
-      "machineId": "m1785177917318",
-      "machine": "Reverse Situps",
-      "gym": "Admirals Cove",
-      "sets": [
-        {
-          "set": 1,
-          "reps": 20
-        },
-        {
-          "set": 2,
-          "reps": 20
-        },
-        {
-          "set": 3,
-          "reps": 20
-        }
-      ],
-      "note": "Was 20x2 on 7/27 — adding a third set."
+      "note": "Was 35x15/45x10/55x10 on 7/27."
     }
   ]
 }
