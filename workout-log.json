@@ -364,6 +364,32 @@
     "notes": ""
   },
   {
+    "machineId": "pull-ups",
+    "machine": "Pull-ups",
+    "gym": "Common Machines",
+    "room": "Bodyweight — Light Equipment",
+    "date": "2026-08-01",
+    "set": 1,
+    "weight": null,
+    "reps": 5,
+    "duration": null,
+    "level": null,
+    "notes": ""
+  },
+  {
+    "machineId": "pull-ups",
+    "machine": "Pull-ups",
+    "gym": "Common Machines",
+    "room": "Bodyweight — Light Equipment",
+    "date": "2026-08-01",
+    "set": 2,
+    "weight": null,
+    "reps": 3,
+    "duration": null,
+    "level": null,
+    "notes": ""
+  },
+  {
     "machineId": "pw06",
     "machine": "Seated Leg Press Machine",
     "gym": "Portofino Gym",
