@@ -160,6 +160,13 @@
           "musclesWorked": "",
           "image": "m1785620311375.jpg",
           "logType": "weight"
+        },
+        {
+          "id": "m1785620334486",
+          "name": "Peloton",
+          "musclesWorked": "",
+          "image": "m1785620334486.jpg",
+          "logType": "weight"
         }
       ]
     }
