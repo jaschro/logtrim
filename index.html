@@ -296,7 +296,7 @@ const A={
   sha:{log:null,csv:null,profile:null,suggestion:null,gym:{}},
   stack:['home'],
   gym:null,room:null,machine:null,
-  editDate:null,logType:'weight',
+  editDate:null,logType:'weight',fromPlan:false,
   pendingPhoto:null,
   cfg:{user:'',repo:'logtrim',pat:''}
 };
@@ -466,7 +466,7 @@ function renderPlan(){
   const exH=exercises.map(e=>{
     const done=loggedToday.has(e.machineId);
     const sets=e.sets||[];
-    const sStr=sets.map(s=>`${s.weight}lbs×${s.reps}`).join(', ');
+    const sStr=sets.map(s=>s.duration!=null?`${s.duration}sec`:s.weight!=null?`${s.weight}lbs×${s.reps}`:`${s.reps} reps`).join(', ');
     return`<div class="pxc${done?' done':''}" onclick="goLogPlan('${e.machineId}')"><div style="flex:1"><div class="pxn">${done?'✓ ':''}${x(e.machine)}</div><div style="font-size:12px;color:var(--dim);margin-top:2px">${x(e.gym)}</div>${sStr?`<div class="pxs">${x(sStr)}</div>`:''}${e.note?`<div style="font-size:12px;color:var(--accent);margin-top:2px;font-style:italic">${x(e.note)}</div>`:''}</div><span class="ch">${done?'✓':'›'}</span></div>`;
   }).join('');
   const progH=total?`<div class="pprog"><span>${doneCount}</span> of ${total} done</div>`:'';
@@ -476,7 +476,7 @@ function goLogPlan(machineId){
   for(const g2 of A.gyms){
     for(const r of g2.rooms){
       const m=r.machines.find(m=>m.id===machineId);
-      if(m){A.gym=g2;A.room=r;A.machine=m;A.editDate=null;renderLog();nav('log');return}
+      if(m){A.gym=g2;A.room=r;A.machine=m;A.editDate=null;A.fromPlan=true;renderLog();nav('log');return}
     }
   }
   toast('Machine not found in your equipment','err');
@@ -529,7 +529,10 @@ function lastSess(mid){
 function fmtLast(sets){
   const d=fmtDate(sets[0].date),f=sets[0];
   if(f.weight!=null){const mx=Math.max(...sets.map(s=>s.weight||0));return`${d} · ${mx} lbs × ${sets.length} sets`}
-  if(f.duration!=null){const tot=sets.reduce((s,e)=>s+(e.duration||0),0);return`${d} · ${tot} min`}
+  if(f.duration!=null){
+    if(f.level!=null||f.incline!=null||f.hr!=null){const tot=sets.reduce((s,e)=>s+(e.duration||0),0);return`${d} · ${tot} min`}
+    return`${d} · ${sets.length}×${sets[0].duration} sec`;
+  }
   return d;
 }
 function fmtDate(ds){
@@ -558,9 +561,11 @@ function renderDetail(){
   const histH=dates.length?dates.map(d=>{
     const sets=entries.filter(e=>e.date===d).sort((a,b)=>a.set-b.set);
     const notes=(sets.find(s=>s.notes)||{}).notes||'';
-    const isC=sets[0].duration!=null;
+    const f0=sets[0];
+    const isC=f0.duration!=null&&(f0.level!=null||f0.incline!=null||f0.hr!=null);
+    const isT=f0.duration!=null&&!isC;
     const rowsH=sets.map(s=>{
-      const v=isC?[s.duration!=null?s.duration+'min':'—',s.level?s.level+'mph':null,s.incline!=null?s.incline+'% inc':null,s.hr?'HR '+s.hr:null].filter(Boolean).join(' · '):`${s.weight!=null?s.weight:'—'} lbs × ${s.reps!=null?s.reps:'—'}`;
+      const v=isC?[s.duration!=null?s.duration+'min':'—',s.level?s.level+'mph':null,s.incline!=null?s.incline+'% inc':null,s.hr?'HR '+s.hr:null].filter(Boolean).join(' · '):isT?`${s.duration!=null?s.duration:'—'} sec`:`${s.weight!=null?s.weight:'—'} lbs × ${s.reps!=null?s.reps:'—'}`;
       return`<div class="sr"><span class="sn">Set ${s.set}</span><span class="sv">${v}</span></div>`;
     }).join('');
     return`<div class="hi"><div class="hd"><span>${fmtDateFull(d)}</span><div class="ha"><button onclick="editSess('${d}')" title="Edit">✏️</button><button onclick="delSess('${d}')" title="Delete">🗑️</button></div></div>${rowsH}${notes?`<div class="hn">"${x(notes)}"</div>`:''}</div>`;
@@ -569,7 +574,7 @@ function renderDetail(){
 }
 
 // === LOG SESSION ===
-function startLog(ed){A.editDate=ed||null;renderLog();nav('log')}
+function startLog(ed){A.editDate=ed||null;A.fromPlan=false;renderLog();nav('log')}
 function editSess(d){startLog(d)}
 
 function renderLog(){
@@ -581,7 +586,7 @@ function renderLog(){
   let prefill=[];
   if(editing){
     prefill=A.log.filter(e=>e.machineId===m.id&&e.date===A.editDate).sort((a,b)=>a.set-b.set);
-    if(prefill.length)defType=prefill[0].duration!=null?'cardio':'weight';
+    if(prefill.length){const f0=prefill[0];defType=f0.weight!=null?'weight':f0.level!=null||f0.hr!=null||f0.incline!=null?'cardio':f0.duration!=null?'time':'weight';}
   }else{
     const planEx=A.suggestion&&(A.suggestion.exercises||[]).find(e=>e.machineId===m.id);
     if(planEx&&planEx.sets&&planEx.sets.length){
@@ -591,7 +596,6 @@ function renderLog(){
     }
   }
   A.logType=defType;
-  const isC=defType==='cardio';
   const hideT=!!m.logType;
   const prevNotes=editing?(A.log.find(e=>e.machineId===m.id&&e.date===A.editDate)||{}).notes||'':'';
   const planEx2=!editing&&A.suggestion&&(A.suggestion.exercises||[]).find(e=>e.machineId===m.id);
@@ -601,35 +605,42 @@ function renderLog(){
     <div class="fs"${hideT?' style="display:none"':''}>
       <h3>Type</h3>
       <div class="tt">
-        <button id="tw" class="${!isC?'on':''}" onclick="setType('weight')">Weight &amp; Reps</button>
-        <button id="tc" class="${isC?'on':''}" onclick="setType('cardio')">Duration &amp; Level</button>
+        <button id="tw" class="${defType==='weight'?'on':''}" onclick="setType('weight')">Weight &amp; Reps</button>
+        <button id="tc" class="${defType==='cardio'?'on':''}" onclick="setType('cardio')">Cardio</button>
+        <button id="tt3" class="${defType==='time'?'on':''}" onclick="setType('time')">Time (Sets)</button>
       </div>
     </div>
-    <div class="fs"><h3>Sets</h3><div id="swrap">${buildTable(prefill,isC)}</div><button class="ab" onclick="addRow()">＋ Add Set</button></div>
+    <div class="fs"><h3>Sets</h3><div id="swrap">${buildTable(prefill,defType)}</div><button class="ab" onclick="addRow()">＋ Add Set</button></div>
     <div class="fs"><h3>Notes</h3><textarea id="lnotes" class="fi" style="resize:none;height:80px" placeholder="How did it feel?">${x(prevNotes)}</textarea></div>
     <button class="sb" id="svbtn" onclick="saveSess()">Save Session</button>`;
 }
-function buildTable(sets,isC){
-  const rows=sets.map((s,i)=>buildRow(i+1,s,isC)).join('');
-  const cols=isC?'<th>Mins</th><th>MPH</th><th>Incline</th><th>HR</th>':'<th>Weight (lbs)</th><th>Reps</th>';
+function buildTable(sets,type){
+  const isC=type==='cardio'||type===true;
+  const isT=type==='time';
+  const rows=sets.map((s,i)=>buildRow(i+1,s,isC,isT)).join('');
+  const cols=isC?'<th>Mins</th><th>MPH</th><th>Incline</th><th>HR</th>':isT?'<th>Secs</th>':'<th>Weight (lbs)</th><th>Reps</th>';
   return`<table class="st"><thead><tr><th>#</th>${cols}<th></th></tr></thead><tbody id="stb">${rows}</tbody></table>`;
 }
-function buildRow(n,s,isC){
+function buildRow(n,s,isC,isT){
   if(isC)return`<tr><td>${n}</td><td><input type="number" inputmode="decimal" class="sd" placeholder="30" value="${s.duration||''}"></td><td><input type="number" inputmode="decimal" class="smph" placeholder="3.5" value="${s.level||''}"></td><td><input type="number" inputmode="decimal" class="sinc" placeholder="0" value="${s.incline!=null?s.incline:''}"></td><td><input type="number" inputmode="decimal" class="shr" placeholder="120" value="${s.hr!=null?s.hr:''}"></td><td><button class="xb" onclick="rmRow(this)">×</button></td></tr>`;
+  if(isT)return`<tr><td>${n}</td><td><input type="number" inputmode="decimal" class="sd" placeholder="60" value="${s.duration||''}"></td><td><button class="xb" onclick="rmRow(this)">×</button></td></tr>`;
   return`<tr><td>${n}</td><td><input type="number" inputmode="decimal" class="sw" placeholder="0" value="${s.weight!=null&&s.weight!==''?s.weight:''}"></td><td><input type="number" inputmode="decimal" class="srp" placeholder="0" value="${s.reps!=null&&s.reps!==''?s.reps:''}"></td><td><button class="xb" onclick="rmRow(this)">×</button></td></tr>`;
 }
 function setType(t){
   A.logType=t;
   g('tw').className=t==='weight'?'on':'';
   g('tc').className=t==='cardio'?'on':'';
-  g('swrap').innerHTML=buildTable([{set:1}],t==='cardio');
+  if(g('tt3'))g('tt3').className=t==='time'?'on':'';
+  g('swrap').innerHTML=buildTable([{set:1}],t);
 }
 function addRow(){
   const tb=document.getElementById('stb');if(!tb)return;
   const n=tb.querySelectorAll('tr').length+1;
   const tr=document.createElement('tr');
   const isC=A.logType==='cardio';
+  const isT=A.logType==='time';
   if(isC)tr.innerHTML=`<td>${n}</td><td><input type="number" inputmode="decimal" class="sd" placeholder="30"></td><td><input type="number" inputmode="decimal" class="smph" placeholder="3.5"></td><td><input type="number" inputmode="decimal" class="sinc" placeholder="0"></td><td><input type="number" inputmode="decimal" class="shr" placeholder="120"></td><td><button class="xb" onclick="rmRow(this)">×</button></td>`;
+  else if(isT)tr.innerHTML=`<td>${n}</td><td><input type="number" inputmode="decimal" class="sd" placeholder="60"></td><td><button class="xb" onclick="rmRow(this)">×</button></td>`;
   else tr.innerHTML=`<td>${n}</td><td><input type="number" inputmode="decimal" class="sw" placeholder="0"></td><td><input type="number" inputmode="decimal" class="srp" placeholder="0"></td><td><button class="xb" onclick="rmRow(this)">×</button></td>`;
   tb.appendChild(tr);renum();
 }
@@ -646,6 +657,7 @@ async function saveSess(){
   const date=g('ldate').value;
   const notes=(document.getElementById('lnotes')||{}).value||'';
   const isC=A.logType==='cardio';
+  const isT=A.logType==='time';
   const rows=document.querySelectorAll('#stb tr');
   const newSets=[];
   rows.forEach((row,i)=>{
@@ -657,10 +669,13 @@ async function saveSess(){
       const hrV=(row.querySelector('.shr')||{}).value;
       const hr=hrV!==''&&hrV!=null?parseFloat(hrV):null;
       newSets.push({machineId:m.id,machine:m.name,gym:gym.name,room:rm.name,date,set:i+1,weight:null,reps:null,duration:dur,level:mph,incline:isNaN(inc)?null:inc,hr:isNaN(hr)?null:hr,notes:i===0?notes.trim():''});
+    }else if(isT){
+      const dur=parseFloat((row.querySelector('.sd')||{}).value)||null;
+      newSets.push({machineId:m.id,machine:m.name,gym:gym.name,room:rm.name,date,set:i+1,weight:null,reps:null,duration:dur,level:null,incline:null,hr:null,notes:i===0?notes.trim():''});
     }else{
       const wt=parseFloat((row.querySelector('.sw')||{}).value);
       const rp=parseInt((row.querySelector('.srp')||{}).value);
-      newSets.push({machineId:m.id,machine:m.name,gym:gym.name,room:rm.name,date,set:i+1,weight:isNaN(wt)?null:wt,reps:isNaN(rp)?null:rp,duration:null,level:null,notes:i===0?notes.trim():''});
+      newSets.push({machineId:m.id,machine:m.name,gym:gym.name,room:rm.name,date,set:i+1,weight:isNaN(wt)?null:wt,reps:isNaN(rp)?null:rp,duration:null,level:null,incline:null,hr:null,notes:i===0?notes.trim():''});
     }
   });
   if(!newSets.length){toast('Add at least one set','err');return}
@@ -668,7 +683,9 @@ async function saveSess(){
   try{
     const updated=[...A.log.filter(e=>!(e.machineId===m.id&&e.date===date)),...newSets].sort((a,b)=>a.date<b.date?1:a.date>b.date?-1:0);
     await writeLog(updated);A.log=updated;
-    toast('Session saved!','ok');back();renderDetail();
+    toast('Session saved!','ok');
+    if(A.fromPlan){A.fromPlan=false;back();renderPlan();}
+    else{back();renderDetail();}
   }catch(e){toast(`Save failed: ${e.message}`,'err');console.error(e)}
   finally{const b=g('svbtn');if(b){b.disabled=false;b.textContent='Save Session'}}
 }
@@ -835,7 +852,7 @@ function addMachine(){
   modal(`<h2>Add Machine</h2>
     <div class="mr"><label>Name</label><input id="m1" type="text" placeholder="e.g. Chest Press"></div>
     <div class="mr"><label>Muscles Worked</label><input id="m2" type="text" placeholder="e.g. Chest, shoulders, triceps"></div>
-    <div class="mr"><label>Log Type</label><select id="m3"><option value="weight">Weight &amp; Reps</option><option value="cardio">Duration &amp; Level (Cardio)</option></select></div>
+    <div class="mr"><label>Log Type</label><select id="m3"><option value="weight">Weight &amp; Reps</option><option value="cardio">Duration &amp; Level (Cardio)</option><option value="time">Time / Sets (Plank, Holds)</option></select></div>
     <div class="mr"><label>Photo (optional)</label><div class="pa" id="mpa" onclick="trigPhoto()"><span style="font-size:36px">📷</span><span class="ph">Tap to take photo</span></div></div>
     <div class="mbs"><button class="mc2" onclick="closeMod()">Cancel</button><button class="mo" onclick="doAddMachine()">Add</button></div>`);
 }
@@ -864,7 +881,7 @@ function editMachine(mid){
   modal(`<h2>Edit Machine</h2>
     <div class="mr"><label>Name</label><input id="m1" type="text" value="${x(m.name)}"></div>
     <div class="mr"><label>Muscles Worked</label><input id="m2" type="text" value="${x(m.musclesWorked||'')}"></div>
-    <div class="mr"><label>Log Type</label><select id="m3"><option value="weight"${m.logType==='weight'?' selected':''}>Weight &amp; Reps</option><option value="cardio"${m.logType==='cardio'?' selected':''}>Duration &amp; Level (Cardio)</option></select></div>
+    <div class="mr"><label>Log Type</label><select id="m3"><option value="weight"${m.logType==='weight'?' selected':''}>Weight &amp; Reps</option><option value="cardio"${m.logType==='cardio'?' selected':''}>Duration &amp; Level (Cardio)</option><option value="time"${m.logType==='time'?' selected':''}>Time / Sets (Plank, Holds)</option></select></div>
     <div class="mr"><label>Photo</label><div class="pa" id="mpa" onclick="trigPhoto()">${iu?`<img src="${iu}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">`:'<span style="font-size:36px">📷</span>'}<span class="ph">${iu?'Tap to replace':'Tap to add photo'}</span></div></div>
     <div class="mbs"><button class="mc2" onclick="closeMod()">Cancel</button><button class="md2" onclick="doDelMachine('${mid}')">Delete</button><button class="mo" onclick="doEditMachine('${mid}')">Save</button></div>`);
 }

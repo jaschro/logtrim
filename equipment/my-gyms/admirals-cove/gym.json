@@ -11,70 +11,70 @@
         {
           "id": "m1785005256712",
           "name": "Leg Press",
-          "musclesWorked": "Hamstrings, Quads",
+          "musclesWorked": "Quadriceps, hamstrings, glutes, calves",
           "image": "m1785005256712.jpg",
           "logType": "weight"
         },
         {
           "id": "m1785005305369",
           "name": "Leg Extension",
-          "musclesWorked": "",
+          "musclesWorked": "Quadriceps",
           "image": "m1785005305369.jpg",
           "logType": "weight"
         },
         {
           "id": "m1785006086200",
           "name": "Abductor",
-          "musclesWorked": "",
+          "musclesWorked": "Gluteus medius, gluteus minimus, hip abductors, TFL",
           "image": "m1785006086200.jpg",
           "logType": "weight"
         },
         {
           "id": "m1785006115413",
           "name": "Adductor",
-          "musclesWorked": "",
+          "musclesWorked": "Hip adductors, inner thighs, groin",
           "image": "m1785006115413.jpg",
           "logType": "weight"
         },
         {
           "id": "m1785006554823",
           "name": "Chest press",
-          "musclesWorked": "",
+          "musclesWorked": "Pectorals, anterior deltoids, triceps",
           "image": "m1785006554823.jpg",
           "logType": "weight"
         },
         {
           "id": "m1785006589359",
           "name": "Pec Fly",
-          "musclesWorked": "",
+          "musclesWorked": "Pectorals, anterior deltoids",
           "image": "m1785006589359.jpg",
           "logType": "weight"
         },
         {
           "id": "m1785006624353",
           "name": "Reverse Fly",
-          "musclesWorked": "",
+          "musclesWorked": "Rear deltoids, rhomboids, middle trapezius",
           "image": "m1785006624353.jpg",
           "logType": "weight"
         },
         {
           "id": "m1785007780604",
           "name": "Decline Ab Bench Situps",
-          "musclesWorked": "Abs",
+          "musclesWorked": "Rectus abdominis, hip flexors",
           "image": "m1785007780604.jpg",
           "logType": "weight"
         },
         {
           "id": "m1785177917318",
           "name": "Reverse Sit Ups",
-          "musclesWorked": "Lower back",
+          "musclesWorked": "Lower abdominals, hip flexors",
           "image": "m1785177917318.jpg",
           "logType": "weight"
         },
         {
           "id": "m1785616487088",
           "name": "Vertical Traction (like pullups)",
-          "musclesWorked": "Shoulders, biceps",
+          "musclesWorked": "Latissimus dorsi, biceps, rhomboids, middle trapezius",
           "image": "m1785616487088.jpg",
           "logType": "weight"
         },
@@ -88,28 +88,28 @@
         {
           "id": "m1785617676094",
           "name": "Low row",
-          "musclesWorked": "Mid back",
+          "musclesWorked": "Latissimus dorsi, rhomboids, rear deltoids, biceps",
           "image": "m1785617676094.jpg",
           "logType": "weight"
         },
         {
           "id": "m1785618137870",
           "name": "Hip Thrust",
-          "musclesWorked": "",
+          "musclesWorked": "Gluteus maximus, hamstrings, core",
           "image": "m1785618137870.jpg",
           "logType": "weight"
         },
         {
           "id": "m1785618228257",
           "name": "Pull Down",
-          "musclesWorked": "Mid back",
+          "musclesWorked": "Latissimus dorsi, rhomboids, biceps, middle trapezius",
           "image": "m1785618228257.jpg",
           "logType": "weight"
         },
         {
           "id": "m1785618661120",
           "name": "Arm Extension",
-          "musclesWorked": "Tricep",
+          "musclesWorked": "Triceps",
           "image": "m1785618661120.jpg",
           "logType": "weight"
         }
@@ -122,72 +122,72 @@
         {
           "id": "m1785619284163",
           "name": "Ski Ergometer",
-          "musclesWorked": "",
+          "musclesWorked": "Shoulders, core, quadriceps, hamstrings, glutes",
           "image": "m1785619284163.jpg",
-          "logType": "weight"
+          "logType": "cardio"
         },
         {
           "id": "m1785619397049",
           "name": "Arm Bike",
-          "musclesWorked": "",
+          "musclesWorked": "Shoulders, biceps, triceps, chest",
           "image": "m1785619397049.jpg",
-          "logType": "weight"
+          "logType": "cardio"
         },
         {
           "id": "m1785619527962",
           "name": "Climb (Stair Climber)",
-          "musclesWorked": "",
+          "musclesWorked": "Glutes, quadriceps, hamstrings, calves, core",
           "image": "m1785619527962.jpg",
-          "logType": "weight"
+          "logType": "cardio"
         },
         {
           "id": "m1785619713315",
           "name": "Slat Belt Treadmill (electric)",
-          "musclesWorked": "",
+          "musclesWorked": "Quadriceps, hamstrings, glutes, calves",
           "image": "m1785619713315.jpg",
-          "logType": "weight"
+          "logType": "cardio"
         },
         {
           "id": "m1785619763444",
           "name": "Skillmill (manual curved treadmill)",
-          "musclesWorked": "",
+          "musclesWorked": "Quadriceps, hamstrings, glutes, calves, core",
           "image": "m1785619763444.jpg",
-          "logType": "weight"
+          "logType": "cardio"
         },
         {
           "id": "m1785620311375",
           "name": "Continuous Stair Climber",
-          "musclesWorked": "",
+          "musclesWorked": "Glutes, quadriceps, hamstrings, calves",
           "image": "m1785620311375.jpg",
-          "logType": "weight"
+          "logType": "cardio"
         },
         {
           "id": "m1785620334486",
           "name": "Peloton",
-          "musclesWorked": "",
+          "musclesWorked": "Quadriceps, hamstrings, glutes, calves",
           "image": "m1785620334486.jpg",
-          "logType": "weight"
+          "logType": "cardio"
         },
         {
           "id": "m1785620353523",
           "name": "Treadmill",
-          "musclesWorked": "",
+          "musclesWorked": "Quadriceps, hamstrings, glutes, calves",
           "image": "m1785620353523.jpg",
-          "logType": "weight"
+          "logType": "cardio"
         },
         {
           "id": "m1785620387666",
           "name": "Power plate",
-          "musclesWorked": "",
+          "musclesWorked": "Legs, core, stabilizers (whole-body vibration — use for warm-up, cool-down, or stretching)",
           "image": "m1785620387666.jpg",
-          "logType": "weight"
+          "logType": "time"
         },
         {
           "id": "m1785620472687",
           "name": "Elliptical",
-          "musclesWorked": "",
+          "musclesWorked": "Quadriceps, hamstrings, glutes, calves, shoulders, arms",
           "image": "m1785620472687.jpg",
-          "logType": "weight"
+          "logType": "cardio"
         }
       ]
     }
