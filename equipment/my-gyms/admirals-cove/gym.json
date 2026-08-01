@@ -181,6 +181,13 @@
           "musclesWorked": "",
           "image": "m1785620387666.jpg",
           "logType": "weight"
+        },
+        {
+          "id": "m1785620472687",
+          "name": "Elliptical",
+          "musclesWorked": "",
+          "image": "m1785620472687.jpg",
+          "logType": "weight"
         }
       ]
     }
