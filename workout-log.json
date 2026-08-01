@@ -208,6 +208,45 @@
     "notes": "Couldn't figure out what to do with this machine."
   },
   {
+    "machineId": "m1785618661120",
+    "machine": "Arm Extension",
+    "gym": "Admirals Cove",
+    "room": "Admirals Cove",
+    "date": "2026-08-01",
+    "set": 1,
+    "weight": 30,
+    "reps": 20,
+    "duration": null,
+    "level": null,
+    "notes": ""
+  },
+  {
+    "machineId": "m1785618661120",
+    "machine": "Arm Extension",
+    "gym": "Admirals Cove",
+    "room": "Admirals Cove",
+    "date": "2026-08-01",
+    "set": 2,
+    "weight": 50,
+    "reps": 20,
+    "duration": null,
+    "level": null,
+    "notes": ""
+  },
+  {
+    "machineId": "m1785618661120",
+    "machine": "Arm Extension",
+    "gym": "Admirals Cove",
+    "room": "Admirals Cove",
+    "date": "2026-08-01",
+    "set": 3,
+    "weight": 70,
+    "reps": 15,
+    "duration": null,
+    "level": null,
+    "notes": ""
+  },
+  {
     "machineId": "pw06",
     "machine": "Seated Leg Press Machine",
     "gym": "Portofino Gym",
