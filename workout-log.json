@@ -286,6 +286,45 @@
     "notes": ""
   },
   {
+    "machineId": "m1785617676094",
+    "machine": "Low row",
+    "gym": "Admirals Cove",
+    "room": "Machines",
+    "date": "2026-08-01",
+    "set": 1,
+    "weight": 60,
+    "reps": 10,
+    "duration": null,
+    "level": null,
+    "notes": ""
+  },
+  {
+    "machineId": "m1785617676094",
+    "machine": "Low row",
+    "gym": "Admirals Cove",
+    "room": "Machines",
+    "date": "2026-08-01",
+    "set": 2,
+    "weight": 70,
+    "reps": 10,
+    "duration": null,
+    "level": null,
+    "notes": ""
+  },
+  {
+    "machineId": "m1785617676094",
+    "machine": "Low row",
+    "gym": "Admirals Cove",
+    "room": "Machines",
+    "date": "2026-08-01",
+    "set": 3,
+    "weight": 80,
+    "reps": 10,
+    "duration": null,
+    "level": null,
+    "notes": ""
+  },
+  {
     "machineId": "pw06",
     "machine": "Seated Leg Press Machine",
     "gym": "Portofino Gym",
