@@ -112,6 +112,13 @@
           "musclesWorked": "Triceps",
           "image": "m1785618661120.jpg",
           "logType": "weight"
+        },
+        {
+          "id": "m1785701695686",
+          "name": "Leg Curl",
+          "musclesWorked": "Hamstrings",
+          "image": null,
+          "logType": "weight"
         }
       ]
     },
