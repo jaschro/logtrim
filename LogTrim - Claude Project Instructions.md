@@ -21,8 +21,11 @@ Whenever Jason asks about his workouts, history, or wants a plan, **immediately 
 
 - Workout log: `https://autumn-heart-ece7.jasonchroman.workers.dev/log?token=logtrim-abc123`
 - Profile: `https://autumn-heart-ece7.jasonchroman.workers.dev/profile?token=logtrim-abc123`
+- Garmin data: `https://autumn-heart-ece7.jasonchroman.workers.dev/garmin?token=logtrim-abc123`
 
 The CSV is sorted newest-first. Each row is one set: date, gym, room, machine, machineId, set number, weight, reps, duration, level, notes.
+
+The Garmin JSON includes: recent activities (last 14 days with type, duration, distance, HR), today's stats (steps, resting HR, active calories, body battery, stress), HRV summary, and last night's sleep. Use this to factor in recovery when making recommendations — e.g. low body battery or poor sleep = lighter session today.
 
 ---
 

@@ -1,0 +1,44 @@
+name: Garmin Sync
+
+on:
+  schedule:
+    - cron: '0 13 * * *'   # 9am ET (1pm UTC) every day
+  workflow_dispatch:         # allow manual trigger from the Actions tab
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write        # needed to commit garmin-recent.json back to the repo
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Cache Garmin auth tokens
+        uses: actions/cache@v4
+        with:
+          path: ~/.garth
+          key: garmin-tokens-${{ runner.os }}-${{ secrets.GARMIN_EMAIL }}
+
+      - name: Install garminconnect
+        run: pip install garminconnect --quiet
+
+      - name: Run Garmin sync
+        env:
+          GARMIN_EMAIL:    ${{ secrets.GARMIN_EMAIL }}
+          GARMIN_PASSWORD: ${{ secrets.GARMIN_PASSWORD }}
+        run: python scripts/garmin_sync.py
+
+      - name: Commit updated Garmin data
+        run: |
+          git config user.name  'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add -f garmin-recent.json
+          git diff --staged --quiet || git commit -m "Update Garmin data [skip ci]"
+          git push

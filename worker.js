@@ -56,6 +56,15 @@ export default {
       return new Response(json, { headers: { ...cors, 'Content-Type': 'application/json' } });
     }
 
+    // GET /garmin — return garmin-recent.json for Claude to read
+    if (url.pathname === '/garmin') {
+      const res = await fetch(`${apiBase}/garmin-recent.json`, { headers: ghHeaders });
+      if (!res.ok) return new Response(JSON.stringify({ error: 'No Garmin data found — has the sync run yet?' }), { status: 404, headers: cors });
+      const file = await res.json();
+      const json = atob(file.content.replace(/\n/g, ''));
+      return new Response(json, { headers: { ...cors, 'Content-Type': 'application/json' } });
+    }
+
     // GET /?token=SECRET&data=BASE64 — push a workout suggestion
     const data = url.searchParams.get('data');
 
