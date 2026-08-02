@@ -3,13 +3,20 @@
 Fetches recent Garmin Connect data and writes garmin-recent.json to the repo.
 Runs via GitHub Actions on a daily schedule.
 
-Required GitHub Secrets:
-  GARMIN_EMAIL    — your Garmin Connect email
-  GARMIN_PASSWORD — your Garmin Connect password
+Authentication (preferred):
+  Set GARMIN_TOKENS — a base64-encoded tarball of ~/.garth tokens generated
+  locally by running: python scripts/garmin_auth_setup.py
+  Store the output as a GitHub Actions secret named GARMIN_TOKENS.
+
+Fallback (local only — blocked in CI by Garmin rate-limiting):
+  GARMIN_EMAIL + GARMIN_PASSWORD
 """
-import os
+import base64
+import io
 import json
+import os
 import sys
+import tarfile
 from datetime import date, timedelta, datetime
 
 try:
@@ -28,23 +35,55 @@ def safe_get(fn, *args, default=None, **kwargs):
 
 
 def main():
-    email    = os.environ.get("GARMIN_EMAIL", "")
-    password = os.environ.get("GARMIN_PASSWORD", "")
-    if not email or not password:
-        print("ERROR: GARMIN_EMAIL and GARMIN_PASSWORD must be set.")
-        sys.exit(1)
-
-    token_dir = os.path.expanduser("~/.garth")
+    token_dir  = os.path.expanduser("~/.garth")
+    tokens_b64 = os.environ.get("GARMIN_TOKENS", "")
 
     print("Connecting to Garmin Connect…")
-    garmin = garminconnect.Garmin(email=email, password=password)
-    try:
-        # Resume cached session if available
-        garmin.login(garth_home=token_dir)
-    except Exception:
+
+    if tokens_b64:
+        # Restore pre-authenticated tokens — avoids email/password + MFA in CI
+        print("  Restoring tokens from GARMIN_TOKENS secret…")
+        buf = io.BytesIO(base64.b64decode(tokens_b64))
+        with tarfile.open(fileobj=buf, mode='r:gz') as tar:
+            tar.extractall(os.path.expanduser("~"))
+        garmin = garminconnect.Garmin()
+        # garminconnect API varies by version — try each possible attribute path
+        for getter in [
+            lambda: garmin.garth,
+            lambda: garmin.client.garth,
+            lambda: garmin.client,
+        ]:
+            try:
+                obj = getter()
+                if hasattr(obj, 'load'):
+                    obj.load(token_dir)
+                    break
+                elif hasattr(obj, 'resume'):
+                    obj.resume(token_dir)
+                    break
+            except AttributeError:
+                continue
+    else:
+        # Fallback: direct login (works locally; blocked in CI by Garmin rate-limiting)
+        email    = os.environ.get("GARMIN_EMAIL", "")
+        password = os.environ.get("GARMIN_PASSWORD", "")
+        if not email or not password:
+            print("ERROR: Set GARMIN_TOKENS (preferred) or GARMIN_EMAIL + GARMIN_PASSWORD.")
+            sys.exit(1)
+        garmin = garminconnect.Garmin(email=email, password=password)
         garmin.login()
+
+    # Persist refreshed tokens for next run
     try:
-        garmin.garth.dump(token_dir)   # Save/refresh tokens for next run
+        os.makedirs(token_dir, exist_ok=True)
+        for getter in [lambda: garmin.garth, lambda: garmin.client.garth, lambda: garmin.client]:
+            try:
+                obj = getter()
+                if hasattr(obj, 'dump'):
+                    obj.dump(token_dir)
+                    break
+            except AttributeError:
+                continue
     except Exception:
         pass
 

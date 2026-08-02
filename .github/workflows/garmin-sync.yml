@@ -20,19 +20,12 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Cache Garmin auth tokens
-        uses: actions/cache@v4
-        with:
-          path: ~/.garth
-          key: garmin-tokens-${{ runner.os }}-${{ secrets.GARMIN_EMAIL }}
-
       - name: Install garminconnect
         run: pip install garminconnect --quiet
 
       - name: Run Garmin sync
         env:
-          GARMIN_EMAIL:    ${{ secrets.GARMIN_EMAIL }}
-          GARMIN_PASSWORD: ${{ secrets.GARMIN_PASSWORD }}
+          GARMIN_TOKENS: ${{ secrets.GARMIN_TOKENS }}
         run: python scripts/garmin_sync.py
 
       - name: Commit updated Garmin data
