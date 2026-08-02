@@ -1,0 +1,117 @@
+{
+  "fetchedAt": "2026-08-02T16:45:19Z",
+  "today": "2026-08-02",
+  "recentActivities": [
+    {
+      "date": "2026-07-31",
+      "type": "walking",
+      "name": "Walking",
+      "durationMins": 33.9,
+      "distanceMiles": 1.62,
+      "avgHR": 118.0,
+      "maxHR": 157.0,
+      "calories": 248.0
+    },
+    {
+      "date": "2026-07-30",
+      "type": "walking",
+      "name": "Walking",
+      "durationMins": 24.5,
+      "distanceMiles": 0.94,
+      "avgHR": 93.0,
+      "maxHR": 106.0,
+      "calories": 135.0
+    },
+    {
+      "date": "2026-07-28",
+      "type": "walking",
+      "name": "Miami Beach Walking",
+      "durationMins": 20.6,
+      "distanceMiles": 1.19,
+      "avgHR": 87.0,
+      "maxHR": 112.0,
+      "calories": 126.0
+    },
+    {
+      "date": "2026-07-26",
+      "type": "walking",
+      "name": "Jupiter Walking",
+      "durationMins": 18.0,
+      "distanceMiles": 0.97,
+      "avgHR": 88.0,
+      "maxHR": 94.0,
+      "calories": 100.0
+    },
+    {
+      "date": "2026-07-25",
+      "type": "walking",
+      "name": "Jupiter Walking",
+      "durationMins": 31.3,
+      "distanceMiles": 1.14,
+      "avgHR": 125.0,
+      "maxHR": 160.0,
+      "calories": 261.0
+    },
+    {
+      "date": "2026-07-23",
+      "type": "walking",
+      "name": "Miami Beach Walking",
+      "durationMins": 50.3,
+      "distanceMiles": 3.17,
+      "avgHR": 100.0,
+      "maxHR": 125.0,
+      "calories": 340.0
+    },
+    {
+      "date": "2026-07-22",
+      "type": "walking",
+      "name": "Miami Beach Walking",
+      "durationMins": 22.1,
+      "distanceMiles": 1.26,
+      "avgHR": 93.0,
+      "maxHR": 103.0,
+      "calories": 131.0
+    },
+    {
+      "date": "2026-07-22",
+      "type": "walking",
+      "name": "Miami Beach Walking",
+      "durationMins": 30.5,
+      "distanceMiles": 1.84,
+      "avgHR": 91.0,
+      "maxHR": 116.0,
+      "calories": 197.0
+    },
+    {
+      "date": "2026-07-19",
+      "type": "walking",
+      "name": "Denver Walking",
+      "durationMins": 27.4,
+      "distanceMiles": 1.48,
+      "avgHR": 91.0,
+      "maxHR": 103.0,
+      "calories": 156.0
+    }
+  ],
+  "todayStats": {
+    "steps": null,
+    "restingHR": null,
+    "activeCalories": null,
+    "bodyBattery": null,
+    "stressAvg": 14
+  },
+  "hrv": {
+    "weeklyAvg": 47,
+    "lastNight": null,
+    "status": "BALANCED"
+  },
+  "sleep": {
+    "date": "2026-08-01",
+    "durationHours": 3.0,
+    "score": 39,
+    "deepSleepMins": 83,
+    "lightSleepMins": 96,
+    "remSleepMins": 0,
+    "awakeMins": 1
+  }
+}
