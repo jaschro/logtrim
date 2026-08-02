@@ -15,6 +15,10 @@ date,gym,room,machine,machineId,set,weight,reps,duration,level,incline,hr,notes
 2026-08-02,Admirals Cove,Machines,Adductor,m1785006115413,1,45,15,,,,,
 2026-08-02,Admirals Cove,Machines,Adductor,m1785006115413,2,55,10,,,,,
 2026-08-02,Admirals Cove,Machines,Adductor,m1785006115413,3,50,10,,,,,
+2026-08-02,Admirals Cove,Machines,Abductor,m1785006086200,1,55,10,,,,,85 was too much. Not great form
+2026-08-02,Admirals Cove,Machines,Abductor,m1785006086200,2,65,10,,,,,
+2026-08-02,Admirals Cove,Machines,Abductor,m1785006086200,3,75,10,,,,,
+2026-08-02,Admirals Cove,Machines,Abductor,m1785006086200,4,85,10,,,,,
 2026-08-01,Admirals Cove,Admirals Cove,Reverse Fly,m1785006624353,1,15,10,,,,,
 2026-08-01,Admirals Cove,Admirals Cove,Reverse Fly,m1785006624353,2,20,10,,,,,
 2026-08-01,Admirals Cove,Admirals Cove,Reverse Fly,m1785006624353,3,25,10,,,,,
