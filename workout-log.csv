@@ -9,6 +9,9 @@ date,gym,room,machine,machineId,set,weight,reps,duration,level,incline,hr,notes
 2026-08-02,Admirals Cove,Machines,Leg Curl,m1785701695686,1,20,10,,,,,Seat at 3  lever at 8
 2026-08-02,Admirals Cove,Machines,Leg Curl,m1785701695686,2,30,10,,,,,
 2026-08-02,Admirals Cove,Machines,Leg Curl,m1785701695686,3,40,10,,,,,
+2026-08-02,Admirals Cove,Machines,Leg Press,m1785005256712,1,80,15,,,,,3 positions
+2026-08-02,Admirals Cove,Machines,Leg Press,m1785005256712,2,100,10,,,,,
+2026-08-02,Admirals Cove,Machines,Leg Press,m1785005256712,3,120,10,,,,,
 2026-08-01,Admirals Cove,Admirals Cove,Reverse Fly,m1785006624353,1,15,10,,,,,
 2026-08-01,Admirals Cove,Admirals Cove,Reverse Fly,m1785006624353,2,20,10,,,,,
 2026-08-01,Admirals Cove,Admirals Cove,Reverse Fly,m1785006624353,3,25,10,,,,,
