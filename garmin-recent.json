@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-03T15:46:00Z",
+  "fetchedAt": "2026-08-03T16:26:18Z",
   "today": "2026-08-03",
   "recentActivities": [
     {
@@ -253,9 +253,9 @@
     "weeklySteps": 90552
   },
   "trainingReadiness": {
-    "score": null,
-    "level": null,
-    "feedback": null
+    "score": 14,
+    "level": "POOR",
+    "feedback": "LET_YOUR_BODY_RECOVER"
   },
   "vo2max": {
     "vo2max": 41.0,
@@ -283,7 +283,7 @@
   },
   "spo2Avg": 94.0,
   "respiration": {
-    "avgWaking": 11.0,
+    "avgWaking": 10.0,
     "avgSleep": 15.0
   }
 }
