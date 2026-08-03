@@ -311,20 +311,16 @@ def main():
     # ── Training readiness ────────────────────────────────────────────────────
     print("Fetching training readiness…")
     tr_raw = safe_get(garmin.get_training_readiness, today_str, default=None)
-    print(f"  RAW training readiness: {tr_raw}")
     if not tr_raw:
         tr_raw = safe_get(garmin.get_training_status, today_str, default=None)
-        print(f"  RAW training status: {tr_raw}")
     training_readiness = None
     if tr_raw:
         entry = tr_raw[0] if isinstance(tr_raw, list) and tr_raw else tr_raw
         if isinstance(entry, dict):
             training_readiness = {
-                "score":    (entry.get("trainingReadinessScore")
-                             or entry.get("trainingReadiness")),
-                "level":    (entry.get("trainingReadinessLevel")
-                             or entry.get("trainingReadinessLabel")),
-                "feedback": entry.get("trainingReadinessFeedbackShort"),
+                "score":    entry.get("score"),
+                "level":    entry.get("level"),
+                "feedback": entry.get("feedbackShort"),
             }
 
     # ── VO2 max / fitness age ─────────────────────────────────────────────────
