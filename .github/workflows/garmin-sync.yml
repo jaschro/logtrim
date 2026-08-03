@@ -26,6 +26,7 @@ jobs:
       - name: Run Garmin sync
         env:
           GARMIN_TOKENS: ${{ secrets.GARMIN_TOKENS }}
+          GARMIN_DISPLAY_NAME: ${{ secrets.GARMIN_DISPLAY_NAME }}
         run: python scripts/garmin_sync.py
 
       - name: Commit updated Garmin data
