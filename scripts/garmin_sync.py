@@ -226,7 +226,7 @@ def main():
 
     # ── Weekly intensity minutes ───────────────────────────────────────────────
     print("Fetching intensity minutes…")
-    intensity_raw = safe_get(garmin.get_intensity_minutes_week, today_str, default=None)
+    intensity_raw = safe_get(garmin.get_intensity_minutes_data, today_str, default=None)
     intensity_minutes = None
     if intensity_raw:
         intensity_minutes = {
