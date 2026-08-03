@@ -151,13 +151,14 @@ def main():
             except AttributeError:
                 continue
 
-    # 3. Call user profile API — extracts PK for direct stats fallback; checks userData too
+    # 3. Call user profile API — extracts PK; checks userData for display_name
     try:
         _api_profile = garmin.get_user_profile()
         if isinstance(_api_profile, dict):
             _user_pk = _api_profile.get("id") or _api_profile.get("userProfileId")
+            _ud = _api_profile.get("userData") or {}
+            print(f"  DEBUG userData: {_ud}")
             if not getattr(garmin, 'display_name', None):
-                _ud = _api_profile.get("userData") or {}
                 _dn = (
                     (_ud.get("displayName") or _ud.get("userName") if isinstance(_ud, dict) else None)
                     or _api_profile.get("displayName") or _api_profile.get("userName")
@@ -168,6 +169,20 @@ def main():
                     print(f"  display_name set from profile API: {_dn}")
     except Exception as _e:
         print(f"  Warning: could not fetch user profile — {_e}")
+
+    # 4. Try the social profile endpoint (same one garth uses during login)
+    if not getattr(garmin, 'display_name', None) and hasattr(garmin, 'connectapi'):
+        try:
+            _sp = garmin.connectapi("/userprofile-service/socialProfile")
+            if isinstance(_sp, dict):
+                print(f"  DEBUG socialProfile keys: {list(_sp.keys())}")
+                _dn = _sp.get("displayName") or _sp.get("userName") or _sp.get("screenName")
+                print(f"  DEBUG socialProfile displayName={_dn!r}")
+                if _dn:
+                    garmin.display_name = _dn
+                    print(f"  display_name set from socialProfile: {_dn}")
+        except Exception as _e:
+            print(f"  Warning: socialProfile call failed — {_e}")
 
     print(f"  userProfilePK: {_user_pk}, display_name: '{getattr(garmin, 'display_name', None)}'")
 
