@@ -1,195 +1,173 @@
 {
   "generatedAt": "2026-08-04",
-  "coachNote": "Chest, rear delt, and triceps day (both machine and dumbbell for triceps - light baseline on the dumbbell version), finishing the Stair Climber from last time, plus a dumbbell bicep baseline and steady ab work.",
+  "coachNote": "No-weights day to rotate away from yesterday's chest/triceps/biceps/abs work into legs, back, and obliques (side planks for the love-handles work), plus an easy Zone 2 walk instead of another hard cardio push. Pull-ups are new to the log so treating that as baseline-setting.",
   "exercises": [
     {
-      "machineId": "m1785006554823",
-      "machine": "Chest Press",
-      "gym": "Admirals Cove",
+      "machineId": "squats",
+      "machine": "Squats",
+      "gym": "Portofino Gym",
       "sets": [
         {
           "set": 1,
-          "weight": 55,
+          "reps": 15
+        },
+        {
+          "set": 2,
+          "reps": 15
+        },
+        {
+          "set": 3,
+          "reps": 15
+        }
+      ],
+      "note": "Bodyweight."
+    },
+    {
+      "machineId": "lunges",
+      "machine": "Lunges",
+      "gym": "Portofino Gym",
+      "sets": [
+        {
+          "set": 1,
           "reps": 10
         },
         {
           "set": 2,
-          "weight": 75,
           "reps": 10
         },
         {
           "set": 3,
-          "weight": 95,
-          "reps": 10
-        },
-        {
-          "set": 4,
-          "weight": 115,
           "reps": 10
         }
       ],
-      "note": "Was 50/70/90/110x10 on 7/27."
+      "note": "10 reps per leg."
     },
     {
-      "machineId": "m1785006589359",
-      "machine": "Pec Fly",
-      "gym": "Admirals Cove",
+      "machineId": "wall-sits",
+      "machine": "Wall Sits",
+      "gym": "Portofino Gym",
       "sets": [
         {
           "set": 1,
-          "weight": 30,
-          "reps": 10
+          "duration": 30
         },
         {
           "set": 2,
-          "weight": 40,
-          "reps": 10
+          "duration": 30
         },
         {
           "set": 3,
-          "weight": 50,
-          "reps": 10
+          "duration": 30
         }
       ],
-      "note": "Was 30/40/45x8 on 7/27."
+      "note": "Seconds, isometric hold."
     },
     {
-      "machineId": "m1785006624353",
-      "machine": "Reverse Fly",
-      "gym": "Admirals Cove",
+      "machineId": "bridges",
+      "machine": "Bridges",
+      "gym": "Portofino Gym",
       "sets": [
         {
           "set": 1,
-          "weight": 20,
-          "reps": 10
+          "reps": 15
         },
         {
           "set": 2,
-          "weight": 25,
-          "reps": 10
+          "reps": 15
         },
         {
           "set": 3,
-          "weight": 30,
-          "reps": 10
+          "reps": 15
         }
-      ],
-      "note": "Was 15/20/25x10 on 8/1."
+      ]
     },
     {
-      "machineId": "m1785618661120",
-      "machine": "Arm Extension",
-      "gym": "Admirals Cove",
+      "machineId": "pull-ups",
+      "machine": "Pull-ups",
+      "gym": "Portofino Gym",
       "sets": [
         {
           "set": 1,
-          "weight": 35,
-          "reps": 20
+          "reps": 5
         },
         {
           "set": 2,
-          "weight": 55,
-          "reps": 20
+          "reps": 4
         },
         {
           "set": 3,
-          "weight": 75,
-          "reps": 12
+          "reps": 3
         }
       ],
-      "note": "Was 30/50/70x20/20/15 on 8/1."
+      "note": "First time logging these - target only, do as many as comfortable."
     },
     {
-      "machine": "Overhead Tricep Extension (dumbbell)",
-      "gym": "Admirals Cove",
+      "machineId": "side-planks",
+      "machine": "Side Planks",
+      "gym": "Portofino Gym",
       "sets": [
         {
           "set": 1,
-          "weight": 10,
-          "reps": 12
+          "duration": 25
         },
         {
           "set": 2,
-          "weight": 12,
-          "reps": 10
+          "duration": 25
         },
         {
           "set": 3,
-          "weight": 15,
-          "reps": 8
+          "duration": 25
         }
       ],
-      "note": "First time on this one - keeping it light to set a baseline. A bit redundant with Arm Extension but that's fine, different long-head emphasis."
+      "note": "Seconds per side."
     },
     {
-      "machineId": "m1785619527962",
-      "machine": "Climb (Stair Climber)",
-      "gym": "Admirals Cove",
+      "machineId": "high-planks",
+      "machine": "High Planks",
+      "gym": "Portofino Gym",
       "sets": [
         {
           "set": 1,
-          "duration": 10
-        }
-      ],
-      "note": "Finishing what got skipped on 8/2. Keep it steady given the Arm Bike HR reading last time."
-    },
-    {
-      "machine": "Standing Dumbbell Curl",
-      "gym": "Admirals Cove",
-      "sets": [
-        {
-          "set": 1,
-          "weight": 15,
-          "reps": 12
+          "duration": 35
         },
         {
           "set": 2,
-          "weight": 20,
-          "reps": 10
+          "duration": 35
         },
         {
           "set": 3,
-          "weight": 20,
-          "reps": 10
+          "duration": 35
         }
       ],
-      "note": "First time on this variation vs. the seated machine - baseline set, adjust weight as needed."
+      "note": "Seconds."
     },
     {
-      "machineId": "m1785007780604",
-      "machine": "Decline Ab Bench Situps",
-      "gym": "Admirals Cove",
+      "machineId": "walk",
+      "machine": "Walk",
+      "gym": "Portofino Gym",
       "sets": [
         {
           "set": 1,
-          "reps": 20
-        },
-        {
-          "set": 2,
-          "reps": 20
-        },
-        {
-          "set": 3,
-          "reps": 20
+          "duration": 22
         }
       ],
-      "note": "Holding steady, same as 8/1."
+      "note": "Easy Zone 2 pace, ~20-25 min."
     },
     {
-      "machineId": "m1785177917318",
-      "machine": "Reverse Situps",
-      "gym": "Admirals Cove",
+      "machineId": "downward-dog",
+      "machine": "Downward Dog",
+      "gym": "Portofino Gym",
       "sets": [
         {
           "set": 1,
-          "reps": 20
+          "duration": 30
         },
         {
           "set": 2,
-          "reps": 20
+          "duration": 30
         }
       ],
-      "note": "Keeping at 2 sets like 8/1 rather than pushing to 3, since that's where it got uncomfortable last time."
+      "note": "Mobility/stretch to close out."
     }
   ]
 }
