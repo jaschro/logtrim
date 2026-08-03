@@ -249,14 +249,13 @@ def main():
 
     # ── Body battery ──────────────────────────────────────────────────────────
     print("Fetching body battery…")
-    # Try both calling conventions (API varies by version)
     bb_raw = safe_get(garmin.get_body_battery, today_str, today_str, default=None)
     if not bb_raw:
         bb_raw = safe_get(garmin.get_body_battery, [today_str, today_str], default=None)
+    print(f"  RAW body battery: {bb_raw}")
     body_battery = None
     if bb_raw and isinstance(bb_raw, list) and len(bb_raw) > 0:
         entry = bb_raw[0] if isinstance(bb_raw[0], dict) else {}
-        # Try several known field names
         body_battery = (
             entry.get("charged")
             or entry.get("endBatteryLevel")
