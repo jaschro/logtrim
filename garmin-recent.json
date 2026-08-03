@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-03T03:45:42Z",
+  "fetchedAt": "2026-08-03T03:54:41Z",
   "today": "2026-08-03",
   "recentActivities": [
     {
@@ -253,7 +253,10 @@
     "weeklySteps": 88105
   },
   "trainingReadiness": null,
-  "vo2max": null,
+  "vo2max": {
+    "vo2max": 41.0,
+    "fitnessAge": null
+  },
   "intensityMinutes": {
     "moderate": null,
     "vigorous": null
