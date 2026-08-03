@@ -73,6 +73,20 @@ def main():
         garmin = garminconnect.Garmin(email=email, password=password)
         garmin.login()
 
+    # Populate display_name so get_stats works (skipped when restoring tokens)
+    try:
+        if not getattr(garmin, 'display_name', None):
+            profile = garmin.get_user_profile()
+            if profile:
+                garmin.display_name = (
+                    profile.get("displayName")
+                    or profile.get("userName")
+                    or str(profile.get("userProfileId", ""))
+                )
+                print(f"  display_name set to: {garmin.display_name}")
+    except Exception as e:
+        print(f"  Warning: could not fetch user profile — {e}")
+
     # Persist refreshed tokens for next run
     try:
         os.makedirs(token_dir, exist_ok=True)
@@ -201,19 +215,21 @@ def main():
     # ── Training readiness ────────────────────────────────────────────────────
     print("Fetching training readiness…")
     tr_raw = safe_get(garmin.get_training_readiness, today_str, default=None)
+    print(f"  RAW training readiness: {tr_raw}")
     training_readiness = None
     if tr_raw:
         entry = tr_raw[0] if isinstance(tr_raw, list) and tr_raw else tr_raw
         if isinstance(entry, dict):
             training_readiness = {
                 "score":    entry.get("trainingReadinessScore"),
-                "level":    entry.get("trainingReadinessLevel"),    # e.g. "GOOD", "PRIME"
+                "level":    entry.get("trainingReadinessLevel"),
                 "feedback": entry.get("trainingReadinessFeedbackShort"),
             }
 
     # ── VO2 max / fitness age ─────────────────────────────────────────────────
     print("Fetching VO2 max…")
     vo2_raw = safe_get(garmin.get_max_metrics, today_str, default=None)
+    print(f"  RAW vo2max: {vo2_raw}")
     vo2max = None
     if vo2_raw:
         entry = vo2_raw[0] if isinstance(vo2_raw, list) and vo2_raw else vo2_raw
@@ -227,6 +243,7 @@ def main():
     # ── Weekly intensity minutes ───────────────────────────────────────────────
     print("Fetching intensity minutes…")
     intensity_raw = safe_get(garmin.get_intensity_minutes_data, today_str, default=None)
+    print(f"  RAW intensity minutes: {intensity_raw}")
     intensity_minutes = None
     if intensity_raw:
         intensity_minutes = {
