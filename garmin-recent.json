@@ -1,8 +1,9 @@
 {
-  "fetchedAt": "2026-08-03T02:14:17Z",
+  "fetchedAt": "2026-08-03T03:04:46Z",
   "today": "2026-08-03",
   "recentActivities": [
     {
+      "activityId": 23829610466,
       "date": "2026-08-02",
       "type": "walking",
       "name": "Jupiter Walking",
@@ -10,9 +11,34 @@
       "distanceMiles": 0.16,
       "avgHR": 113.0,
       "maxHR": 153.0,
-      "calories": 168.0
+      "calories": 168.0,
+      "elevationGain": 1.0,
+      "avgPace": 0.1739999949932098,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 719.951
+        },
+        {
+          "zone": 2,
+          "secsInZone": 248.976
+        },
+        {
+          "zone": 3,
+          "secsInZone": 168.019
+        },
+        {
+          "zone": 4,
+          "secsInZone": 290.994
+        },
+        {
+          "zone": 5,
+          "secsInZone": 0.0
+        }
+      ]
     },
     {
+      "activityId": 23829041007,
       "date": "2026-08-02",
       "type": "indoor_cardio",
       "name": "Cardio",
@@ -20,9 +46,34 @@
       "distanceMiles": null,
       "avgHR": 156.0,
       "maxHR": 202.0,
-      "calories": 89.0
+      "calories": 89.0,
+      "elevationGain": null,
+      "avgPace": 0.0,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 27.001
+        },
+        {
+          "zone": 2,
+          "secsInZone": 16.999
+        },
+        {
+          "zone": 3,
+          "secsInZone": 43.0
+        },
+        {
+          "zone": 4,
+          "secsInZone": 124.418
+        },
+        {
+          "zone": 5,
+          "secsInZone": 202.0
+        }
+      ]
     },
     {
+      "activityId": 23802235492,
       "date": "2026-07-31",
       "type": "walking",
       "name": "Walking",
@@ -30,9 +81,34 @@
       "distanceMiles": 1.62,
       "avgHR": 118.0,
       "maxHR": 157.0,
-      "calories": 248.0
+      "calories": 248.0,
+      "elevationGain": 2.0,
+      "avgPace": 1.284999966621399,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 457.935
+        },
+        {
+          "zone": 2,
+          "secsInZone": 521.998
+        },
+        {
+          "zone": 3,
+          "secsInZone": 350.0
+        },
+        {
+          "zone": 4,
+          "secsInZone": 466.981
+        },
+        {
+          "zone": 5,
+          "secsInZone": 0.0
+        }
+      ]
     },
     {
+      "activityId": 23794066632,
       "date": "2026-07-30",
       "type": "walking",
       "name": "Walking",
@@ -40,9 +116,34 @@
       "distanceMiles": 0.94,
       "avgHR": 93.0,
       "maxHR": 106.0,
-      "calories": 135.0
+      "calories": 135.0,
+      "elevationGain": 1.0,
+      "avgPace": 1.027999997138977,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 1130.076
+        },
+        {
+          "zone": 2,
+          "secsInZone": 3.0
+        },
+        {
+          "zone": 3,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 4,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 5,
+          "secsInZone": 0.0
+        }
+      ]
     },
     {
+      "activityId": 23763581619,
       "date": "2026-07-28",
       "type": "walking",
       "name": "Miami Beach Walking",
@@ -50,9 +151,34 @@
       "distanceMiles": 1.19,
       "avgHR": 87.0,
       "maxHR": 112.0,
-      "calories": 126.0
+      "calories": 126.0,
+      "elevationGain": 9.0,
+      "avgPace": 1.5440000295639038,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 630.53
+        },
+        {
+          "zone": 2,
+          "secsInZone": 29.0
+        },
+        {
+          "zone": 3,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 4,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 5,
+          "secsInZone": 0.0
+        }
+      ]
     },
     {
+      "activityId": 23743325623,
       "date": "2026-07-26",
       "type": "walking",
       "name": "Jupiter Walking",
@@ -60,9 +186,12 @@
       "distanceMiles": 0.97,
       "avgHR": 88.0,
       "maxHR": 94.0,
-      "calories": 100.0
+      "calories": 100.0,
+      "elevationGain": 0.0,
+      "avgPace": 1.4420000314712524
     },
     {
+      "activityId": 23730840726,
       "date": "2026-07-25",
       "type": "walking",
       "name": "Jupiter Walking",
@@ -70,9 +199,12 @@
       "distanceMiles": 1.14,
       "avgHR": 125.0,
       "maxHR": 160.0,
-      "calories": 261.0
+      "calories": 261.0,
+      "elevationGain": 5.0,
+      "avgPace": 0.9779999852180482
     },
     {
+      "activityId": 23709957270,
       "date": "2026-07-23",
       "type": "walking",
       "name": "Miami Beach Walking",
@@ -80,9 +212,12 @@
       "distanceMiles": 3.17,
       "avgHR": 100.0,
       "maxHR": 125.0,
-      "calories": 340.0
+      "calories": 340.0,
+      "elevationGain": 21.0,
+      "avgPace": 1.690999984741211
     },
     {
+      "activityId": 23697093763,
       "date": "2026-07-22",
       "type": "walking",
       "name": "Miami Beach Walking",
@@ -90,9 +225,12 @@
       "distanceMiles": 1.26,
       "avgHR": 93.0,
       "maxHR": 103.0,
-      "calories": 131.0
+      "calories": 131.0,
+      "elevationGain": 1.0,
+      "avgPace": 1.5219999551773071
     },
     {
+      "activityId": 23692150044,
       "date": "2026-07-22",
       "type": "walking",
       "name": "Miami Beach Walking",
@@ -100,17 +238,31 @@
       "distanceMiles": 1.84,
       "avgHR": 91.0,
       "maxHR": 116.0,
-      "calories": 197.0
+      "calories": 197.0,
+      "elevationGain": 8.0,
+      "avgPace": 1.6239999532699585
     }
   ],
   "todayStats": {
     "steps": null,
+    "floors": null,
     "restingHR": null,
     "activeCalories": null,
     "bodyBattery": null,
-    "stressAvg": null
+    "stressAvg": null,
+    "weeklySteps": 88105
   },
-  "hrv": null,
+  "trainingReadiness": null,
+  "vo2max": null,
+  "intensityMinutes": {
+    "moderate": null,
+    "vigorous": null
+  },
+  "hrv": {
+    "weeklyAvg": 47,
+    "lastNight": null,
+    "status": "BALANCED"
+  },
   "sleep": {
     "date": "2026-08-02",
     "durationHours": 8.1,
@@ -118,6 +270,13 @@
     "deepSleepMins": 103,
     "lightSleepMins": 272,
     "remSleepMins": 113,
-    "awakeMins": 3
+    "awakeMins": 3,
+    "avgRespirationRate": 14.0,
+    "avgSpO2": 92.0
+  },
+  "spo2Avg": null,
+  "respiration": {
+    "avgWaking": null,
+    "avgSleep": null
   }
 }
