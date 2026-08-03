@@ -252,15 +252,15 @@ def main():
     bb_raw = safe_get(garmin.get_body_battery, today_str, today_str, default=None)
     if not bb_raw:
         bb_raw = safe_get(garmin.get_body_battery, [today_str, today_str], default=None)
-    print(f"  RAW body battery: {bb_raw}")
     body_battery = None
     if bb_raw and isinstance(bb_raw, list) and len(bb_raw) > 0:
         entry = bb_raw[0] if isinstance(bb_raw[0], dict) else {}
-        body_battery = (
-            entry.get("charged")
-            or entry.get("endBatteryLevel")
-            or (entry.get("bodyBatteryStatList") or [None])[0]
-        )
+        # bodyBatteryValuesArray is [[timestamp, level], ...] — last entry is most recent level
+        vals = entry.get("bodyBatteryValuesArray") or []
+        if vals and isinstance(vals[-1], (list, tuple)) and len(vals[-1]) > 1:
+            body_battery = vals[-1][1]
+        else:
+            body_battery = entry.get("endBatteryLevel") or entry.get("charged")
 
     # ── HRV ───────────────────────────────────────────────────────────────────
     print("Fetching HRV…")
@@ -311,13 +311,19 @@ def main():
     # ── Training readiness ────────────────────────────────────────────────────
     print("Fetching training readiness…")
     tr_raw = safe_get(garmin.get_training_readiness, today_str, default=None)
+    # Venu 4 returns [] from get_training_readiness; try get_training_status instead
+    if not tr_raw:
+        tr_raw = safe_get(garmin.get_training_status, today_str, default=None)
+        print(f"  RAW training status: {tr_raw}")
     training_readiness = None
     if tr_raw:
         entry = tr_raw[0] if isinstance(tr_raw, list) and tr_raw else tr_raw
         if isinstance(entry, dict):
             training_readiness = {
-                "score":    entry.get("trainingReadinessScore"),
-                "level":    entry.get("trainingReadinessLevel"),
+                "score":    (entry.get("trainingReadinessScore")
+                             or entry.get("trainingReadiness")),
+                "level":    (entry.get("trainingReadinessLevel")
+                             or entry.get("trainingReadinessLabel")),
                 "feedback": entry.get("trainingReadinessFeedbackShort"),
             }
 
