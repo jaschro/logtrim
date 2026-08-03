@@ -114,6 +114,13 @@ def main():
     _user_pk = None
 
     if not getattr(garmin, 'display_name', None):
+        # 0. GARMIN_DISPLAY_NAME env var / secret (quickest override)
+        _dn = os.environ.get("GARMIN_DISPLAY_NAME", "").strip()
+        if _dn:
+            garmin.display_name = _dn
+            print(f"  display_name set from GARMIN_DISPLAY_NAME: {_dn}")
+
+    if not getattr(garmin, 'display_name', None):
         # 1a. Read display_name.json saved explicitly by garmin_auth_setup.py
         _dn_file = os.path.join(token_dir, "display_name.json")
         if os.path.exists(_dn_file):
@@ -151,40 +158,27 @@ def main():
             except AttributeError:
                 continue
 
-    # 3. Call user profile API — extracts PK; checks userData for display_name
+    # 3. Call user profile API — extracts PK and userData (contains vo2MaxRunning etc.)
+    _user_data = {}
     try:
         _api_profile = garmin.get_user_profile()
         if isinstance(_api_profile, dict):
             _user_pk = _api_profile.get("id") or _api_profile.get("userProfileId")
-            _ud = _api_profile.get("userData") or {}
-            print(f"  DEBUG userData: {_ud}")
-            if not getattr(garmin, 'display_name', None):
-                _dn = (
-                    (_ud.get("displayName") or _ud.get("userName") if isinstance(_ud, dict) else None)
-                    or _api_profile.get("displayName") or _api_profile.get("userName")
-                    or _api_profile.get("screenName")
-                )
-                if _dn:
-                    garmin.display_name = _dn
-                    print(f"  display_name set from profile API: {_dn}")
+            _user_data = _api_profile.get("userData") or {}
     except Exception as _e:
         print(f"  Warning: could not fetch user profile — {_e}")
 
-    # 4. Try the social profile endpoint (same one garth uses during login)
+    # 4. Try the social profile endpoint (same one garth uses during login for display_name)
     if not getattr(garmin, 'display_name', None) and hasattr(garmin, 'connectapi'):
         try:
             _sp = garmin.connectapi("/userprofile-service/socialProfile")
             if isinstance(_sp, dict):
-                print(f"  DEBUG socialProfile keys: {list(_sp.keys())}")
                 _dn = _sp.get("displayName") or _sp.get("userName") or _sp.get("screenName")
-                print(f"  DEBUG socialProfile displayName={_dn!r}")
                 if _dn:
                     garmin.display_name = _dn
                     print(f"  display_name set from socialProfile: {_dn}")
         except Exception as _e:
             print(f"  Warning: socialProfile call failed — {_e}")
-
-    print(f"  userProfilePK: {_user_pk}, display_name: '{getattr(garmin, 'display_name', None)}'")
 
     # Persist refreshed tokens for next run
     try:
@@ -318,7 +312,6 @@ def main():
     # ── Training readiness ────────────────────────────────────────────────────
     print("Fetching training readiness…")
     tr_raw = safe_get(garmin.get_training_readiness, today_str, default=None)
-    print(f"  RAW training readiness: {tr_raw}")
     training_readiness = None
     if tr_raw:
         entry = tr_raw[0] if isinstance(tr_raw, list) and tr_raw else tr_raw
@@ -330,23 +323,16 @@ def main():
             }
 
     # ── VO2 max / fitness age ─────────────────────────────────────────────────
-    print("Fetching VO2 max…")
-    vo2_raw = safe_get(garmin.get_max_metrics, today_str, default=None)
-    print(f"  RAW vo2max: {vo2_raw}")
+    # get_max_metrics returns [] for Venu 4; use userData from get_user_profile instead
     vo2max = None
-    if vo2_raw:
-        entry = vo2_raw[0] if isinstance(vo2_raw, list) and vo2_raw else vo2_raw
-        if isinstance(entry, dict):
-            generic = entry.get("generic") or entry
-            vo2max = {
-                "vo2max":      generic.get("vo2MaxValue") or entry.get("vo2MaxValue"),
-                "fitnessAge":  generic.get("biologicalAgeInYears") or entry.get("biologicalAgeInYears"),
-            }
+    if isinstance(_user_data, dict):
+        _v = _user_data.get("vo2MaxRunning") or _user_data.get("vo2MaxCycling")
+        if _v:
+            vo2max = {"vo2max": _v, "fitnessAge": None}  # fitnessAge not in userData
 
     # ── Weekly intensity minutes ───────────────────────────────────────────────
     print("Fetching intensity minutes…")
     intensity_raw = safe_get(garmin.get_intensity_minutes_data, today_str, default=None)
-    print(f"  RAW intensity minutes: {intensity_raw}")
     intensity_minutes = None
     if intensity_raw:
         intensity_minutes = {
