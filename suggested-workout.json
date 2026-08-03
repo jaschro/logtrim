@@ -1,46 +1,125 @@
 {
-  "generatedAt": "2026-08-02",
-  "coachNote": "Cardio first using Aerobic Area machines you haven't tried yet (~30 min), then legs - recovered since the big 7/31 leg day, chest/back/triceps/rear delt skipped to stay fresh.",
+  "generatedAt": "2026-08-04",
+  "coachNote": "Chest, rear delt, and triceps day (both machine and dumbbell for triceps - light baseline on the dumbbell version), finishing the Stair Climber from last time, plus a dumbbell bicep baseline and steady ab work.",
   "exercises": [
     {
-      "machineId": "m1785619397049",
-      "machine": "Arm Bike",
+      "machineId": "m1785006554823",
+      "machine": "Chest Press",
       "gym": "Admirals Cove",
       "sets": [
         {
           "set": 1,
-          "duration": 5
-        }
-      ],
-      "note": "Warm-up, easy effort."
-    },
-    {
-      "machineId": "m1785619713315",
-      "machine": "Slat Belt Treadmill (electric)",
-      "gym": "Admirals Cove",
-      "sets": [
-        {
-          "set": 1,
-          "duration": 4,
-          "incline": "flat"
+          "weight": 55,
+          "reps": 10
         },
         {
           "set": 2,
-          "duration": 4,
-          "incline": "steep"
+          "weight": 75,
+          "reps": 10
         },
         {
           "set": 3,
-          "duration": 4,
-          "incline": "flat"
+          "weight": 95,
+          "reps": 10
         },
         {
           "set": 4,
-          "duration": 4,
-          "incline": "steep"
+          "weight": 115,
+          "reps": 10
         }
       ],
-      "note": "First time on this one - pick a steep-but-sustainable incline for the steep intervals."
+      "note": "Was 50/70/90/110x10 on 7/27."
+    },
+    {
+      "machineId": "m1785006589359",
+      "machine": "Pec Fly",
+      "gym": "Admirals Cove",
+      "sets": [
+        {
+          "set": 1,
+          "weight": 30,
+          "reps": 10
+        },
+        {
+          "set": 2,
+          "weight": 40,
+          "reps": 10
+        },
+        {
+          "set": 3,
+          "weight": 50,
+          "reps": 10
+        }
+      ],
+      "note": "Was 30/40/45x8 on 7/27."
+    },
+    {
+      "machineId": "m1785006624353",
+      "machine": "Reverse Fly",
+      "gym": "Admirals Cove",
+      "sets": [
+        {
+          "set": 1,
+          "weight": 20,
+          "reps": 10
+        },
+        {
+          "set": 2,
+          "weight": 25,
+          "reps": 10
+        },
+        {
+          "set": 3,
+          "weight": 30,
+          "reps": 10
+        }
+      ],
+      "note": "Was 15/20/25x10 on 8/1."
+    },
+    {
+      "machineId": "m1785618661120",
+      "machine": "Arm Extension",
+      "gym": "Admirals Cove",
+      "sets": [
+        {
+          "set": 1,
+          "weight": 35,
+          "reps": 20
+        },
+        {
+          "set": 2,
+          "weight": 55,
+          "reps": 20
+        },
+        {
+          "set": 3,
+          "weight": 75,
+          "reps": 12
+        }
+      ],
+      "note": "Was 30/50/70x20/20/15 on 8/1."
+    },
+    {
+      "machine": "Overhead Tricep Extension (dumbbell)",
+      "gym": "Admirals Cove",
+      "sets": [
+        {
+          "set": 1,
+          "weight": 10,
+          "reps": 12
+        },
+        {
+          "set": 2,
+          "weight": 12,
+          "reps": 10
+        },
+        {
+          "set": 3,
+          "weight": 15,
+          "reps": 8
+        }
+      ],
+      "note": "First time on this one - keeping it light to set a baseline. A bit redundant with Arm Extension but that's fine, different long-head emphasis."
     },
     {
       "machineId": "m1785619527962",
@@ -52,109 +131,65 @@
           "duration": 10
         }
       ],
-      "note": "With the cable, if available."
+      "note": "Finishing what got skipped on 8/2. Keep it steady given the Arm Bike HR reading last time."
     },
     {
-      "machineId": "m1785005256712",
-      "machine": "Leg Press",
+      "machine": "Standing Dumbbell Curl",
       "gym": "Admirals Cove",
       "sets": [
         {
           "set": 1,
-          "weight": 90,
-          "reps": 10
+          "weight": 15,
+          "reps": 12
         },
         {
           "set": 2,
-          "weight": 110,
+          "weight": 20,
           "reps": 10
         },
         {
           "set": 3,
-          "weight": 130,
+          "weight": 20,
           "reps": 10
         }
       ],
-      "note": "Was 80/100/120x10 on 7/27."
+      "note": "First time on this variation vs. the seated machine - baseline set, adjust weight as needed."
     },
     {
-      "machineId": "m1785005305369",
-      "machine": "Leg Extension",
+      "machineId": "m1785007780604",
+      "machine": "Decline Ab Bench Situps",
       "gym": "Admirals Cove",
       "sets": [
         {
           "set": 1,
-          "weight": 35,
-          "reps": 10
+          "reps": 20
         },
         {
           "set": 2,
-          "weight": 45,
-          "reps": 10
+          "reps": 20
         },
         {
           "set": 3,
-          "weight": 55,
-          "reps": 10
-        },
-        {
-          "set": 4,
-          "weight": 65,
-          "reps": 10
+          "reps": 20
         }
       ],
-      "note": "Was 30/40/50/60x10 on 7/27."
+      "note": "Holding steady, same as 8/1."
     },
     {
-      "machineId": "m1785006086200",
-      "machine": "Abductor",
+      "machineId": "m1785177917318",
+      "machine": "Reverse Situps",
       "gym": "Admirals Cove",
       "sets": [
         {
           "set": 1,
-          "weight": 55,
-          "reps": 10
+          "reps": 20
         },
         {
           "set": 2,
-          "weight": 65,
-          "reps": 10
-        },
-        {
-          "set": 3,
-          "weight": 75,
-          "reps": 10
-        },
-        {
-          "set": 4,
-          "weight": 85,
-          "reps": 10
+          "reps": 20
         }
       ],
-      "note": "Was 50/60/70/80x10 on 7/27."
-    },
-    {
-      "machineId": "m1785006115413",
-      "machine": "Adductor",
-      "gym": "Admirals Cove",
-      "sets": [
-        {
-          "set": 1,
-          "weight": 40,
-          "reps": 15
-        },
-        {
-          "set": 2,
-          "weight": 50,
-          "reps": 10
-        },
-        {
-          "set": 3,
-          "weight": 60,
-          "reps": 10
-        }
-      ],
-      "note": "Was 35x15/45x10/55x10 on 7/27."
+      "note": "Keeping at 2 sets like 8/1 rather than pushing to 3, since that's where it got uncomfortable last time."
     }
   ]
 }
