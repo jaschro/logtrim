@@ -37,32 +37,34 @@ def safe_get(fn, *args, default=None, **kwargs):
 def get_stats_for_date(garmin, date_str, user_pk=None):
     """Fetch daily summary stats.
     Tries get_stats() first; if display_name is not set, falls back to a
-    direct garth API call using the numeric userProfilePK."""
+    direct API call using the numeric userProfilePK."""
     result = safe_get(garmin.get_stats, date_str, default=None)
     if result is not None:
         return result
     if not user_pk:
         return {}
-    # display_name not available — call the endpoint directly with PK.
-    # Try every known attribute path for the garth session object.
-    for getter in [
-        lambda: garmin.garth,
-        lambda: garmin.client.garth,
-        lambda: garmin.client,
-    ]:
+    path = f"/usersummary-service/usersummary/daily/{user_pk}?calendarDate={date_str}"
+    # Try every known way to call the Connect API directly
+    attempts = [
+        ("garmin.connectapi",            lambda: garmin.connectapi(path)),
+        ("garmin.client.connectapi",     lambda: garmin.client.connectapi(path)),
+        ("garmin.client.garth.connectapi", lambda: garmin.client.garth.connectapi(path)),
+        ("garmin.client.get",            lambda: garmin.client.get("connectapi", path).json()),
+        ("garmin.client.garth.get",      lambda: garmin.client.garth.get("connectapi", path).json()),
+        ("garmin.garth.connectapi",      lambda: garmin.garth.connectapi(path)),
+        ("garmin.garth.get",             lambda: garmin.garth.get("connectapi", path).json()),
+    ]
+    for label, attempt in attempts:
         try:
-            obj = getter()
-            if not hasattr(obj, 'get'):
-                continue
-            return obj.get(
-                "connectapi",
-                f"/usersummary-service/usersummary/daily/{user_pk}?calendarDate={date_str}",
-            ).json()
+            result = attempt()
+            print(f"  Got stats via {label}")
+            return result if isinstance(result, dict) else result.json()
         except AttributeError:
-            continue          # attribute path doesn't exist — try next
+            continue                       # this path doesn't exist — try next
         except Exception as e:
-            print(f"  Warning: direct stats call (pk={user_pk}) failed — {e}")
-            break
+            print(f"  Warning: {label} failed — {e}")
+            break                          # path exists but API error — stop
+    print(f"  Warning: all direct stats paths failed for pk={user_pk}")
     return {}
 
 
