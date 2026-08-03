@@ -43,14 +43,23 @@ def get_stats_for_date(garmin, date_str, user_pk=None):
         return result
     if not user_pk:
         return {}
-    # display_name not available — call the endpoint directly with PK
-    for getter in [lambda: garmin.garth, lambda: garmin.client.garth]:
+    # display_name not available — call the endpoint directly with PK.
+    # Try every known attribute path for the garth session object.
+    for getter in [
+        lambda: garmin.garth,
+        lambda: garmin.client.garth,
+        lambda: garmin.client,
+    ]:
         try:
             obj = getter()
+            if not hasattr(obj, 'get'):
+                continue
             return obj.get(
                 "connectapi",
                 f"/usersummary-service/usersummary/daily/{user_pk}?calendarDate={date_str}",
             ).json()
+        except AttributeError:
+            continue          # attribute path doesn't exist — try next
         except Exception as e:
             print(f"  Warning: direct stats call (pk={user_pk}) failed — {e}")
             break
