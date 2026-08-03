@@ -311,7 +311,7 @@ def main():
     # ── Training readiness ────────────────────────────────────────────────────
     print("Fetching training readiness…")
     tr_raw = safe_get(garmin.get_training_readiness, today_str, default=None)
-    # Venu 4 returns [] from get_training_readiness; try get_training_status instead
+    print(f"  RAW training readiness: {tr_raw}")
     if not tr_raw:
         tr_raw = safe_get(garmin.get_training_status, today_str, default=None)
         print(f"  RAW training status: {tr_raw}")
