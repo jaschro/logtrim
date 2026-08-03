@@ -56,6 +56,14 @@ for getter in [
     except AttributeError:
         continue
 
+# Also save display_name explicitly so garmin_sync.py can restore it without re-login
+display_name = getattr(g, 'display_name', None)
+if display_name:
+    import json as _json
+    with open(os.path.join(token_dir, "display_name.json"), "w") as _f:
+        _json.dump({"display_name": display_name}, _f)
+    print(f"Saved display_name: {display_name}")
+
 if not saved:
     # garth may have auto-saved tokens to ~/.garth during login
     files = os.listdir(token_dir) if os.path.exists(token_dir) else []

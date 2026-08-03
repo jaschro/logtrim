@@ -34,6 +34,29 @@ def safe_get(fn, *args, default=None, **kwargs):
         return default
 
 
+def get_stats_for_date(garmin, date_str, user_pk=None):
+    """Fetch daily summary stats.
+    Tries get_stats() first; if display_name is not set, falls back to a
+    direct garth API call using the numeric userProfilePK."""
+    result = safe_get(garmin.get_stats, date_str, default=None)
+    if result is not None:
+        return result
+    if not user_pk:
+        return {}
+    # display_name not available — call the endpoint directly with PK
+    for getter in [lambda: garmin.garth, lambda: garmin.client.garth]:
+        try:
+            obj = getter()
+            return obj.get(
+                "connectapi",
+                f"/usersummary-service/usersummary/daily/{user_pk}?calendarDate={date_str}",
+            ).json()
+        except Exception as e:
+            print(f"  Warning: direct stats call (pk={user_pk}) failed — {e}")
+            break
+    return {}
+
+
 def main():
     token_dir  = os.path.expanduser("~/.garth")
     tokens_b64 = os.environ.get("GARMIN_TOKENS", "")
@@ -73,11 +96,24 @@ def main():
         garmin = garminconnect.Garmin(email=email, password=password)
         garmin.login()
 
-    # Populate display_name so get_stats works (skipped when restoring tokens).
-    # get_user_profile() returns empty displayName when profile is private ("Only Me"),
-    # so we try garth's own profile.json first (saved during initial login).
+    # Resolve display_name and userProfilePK.
+    # display_name is set during login but not restored with tokens.
+    # Garmin privacy settings make the social profile API return an empty displayName,
+    # so we try multiple sources. userProfilePK is a reliable fallback for stats calls.
+    _user_pk = None
+
     if not getattr(garmin, 'display_name', None):
-        # 1. Read garth's saved profile.json directly
+        # 1a. Read display_name.json saved explicitly by garmin_auth_setup.py
+        _dn_file = os.path.join(token_dir, "display_name.json")
+        if os.path.exists(_dn_file):
+            with open(_dn_file) as _f:
+                _dn = json.load(_f).get("display_name")
+            if _dn:
+                garmin.display_name = _dn
+                print(f"  display_name set from display_name.json: {_dn}")
+
+    if not getattr(garmin, 'display_name', None):
+        # 1b. Read garth's saved profile.json (present when garth >= 0.4 was used for auth)
         _profile_json = os.path.join(token_dir, "profile.json")
         if os.path.exists(_profile_json):
             with open(_profile_json) as _f:
@@ -88,7 +124,7 @@ def main():
                 print(f"  display_name set from profile.json: {_dn}")
 
     if not getattr(garmin, 'display_name', None):
-        # 2. Try garth in-memory profile attribute
+        # 2. Try garth in-memory profile object
         for _getter in [lambda: garmin.garth, lambda: garmin.client.garth, lambda: garmin.client]:
             try:
                 _obj = _getter()
@@ -104,21 +140,25 @@ def main():
             except AttributeError:
                 continue
 
-    if not getattr(garmin, 'display_name', None):
-        # 3. Fall back to API; print all keys so we can debug if still empty
-        try:
-            _api_profile = garmin.get_user_profile()
-            if isinstance(_api_profile, dict):
-                print(f"  DEBUG profile keys: {list(_api_profile.keys())}")
-                _dn = (_api_profile.get("displayName") or _api_profile.get("userName")
-                       or _api_profile.get("screenName") or _api_profile.get("userHandle"))
+    # 3. Call user profile API — extracts PK for direct stats fallback; checks userData too
+    try:
+        _api_profile = garmin.get_user_profile()
+        if isinstance(_api_profile, dict):
+            _user_pk = _api_profile.get("id") or _api_profile.get("userProfileId")
+            if not getattr(garmin, 'display_name', None):
+                _ud = _api_profile.get("userData") or {}
+                _dn = (
+                    (_ud.get("displayName") or _ud.get("userName") if isinstance(_ud, dict) else None)
+                    or _api_profile.get("displayName") or _api_profile.get("userName")
+                    or _api_profile.get("screenName")
+                )
                 if _dn:
                     garmin.display_name = _dn
-                    print(f"  display_name set from user profile API: {_dn}")
-        except Exception as _e:
-            print(f"  Warning: could not fetch user profile — {_e}")
+                    print(f"  display_name set from profile API: {_dn}")
+    except Exception as _e:
+        print(f"  Warning: could not fetch user profile — {_e}")
 
-    print(f"  display_name = '{getattr(garmin, 'display_name', None)}'")
+    print(f"  userProfilePK: {_user_pk}, display_name: '{getattr(garmin, 'display_name', None)}'")
 
     # Persist refreshed tokens for next run
     try:
@@ -181,13 +221,11 @@ def main():
 
     # ── Daily stats (today) ───────────────────────────────────────────────────
     print("Fetching daily stats…")
-    stats = safe_get(garmin.get_stats, today_str, default={}) or {}
+    stats = get_stats_for_date(garmin, today_str, _user_pk)
     if not stats.get("totalSteps") and not stats.get("restingHeartRate"):
-        # Workflow may run near midnight UTC where today has no data yet; fall back
-        _stats_yd = safe_get(garmin.get_stats, yesterday_str, default={}) or {}
-        if _stats_yd.get("totalSteps") or _stats_yd.get("restingHeartRate"):
-            stats = _stats_yd
-            print(f"  Using yesterday's stats (today had no data)")
+        # Workflow can run near midnight UTC before today's data exists; try yesterday
+        print("  No data for today yet — trying yesterday")
+        stats = get_stats_for_date(garmin, yesterday_str, _user_pk)
 
     # ── Body battery ──────────────────────────────────────────────────────────
     print("Fetching body battery…")
