@@ -1,7 +1,27 @@
 {
-  "fetchedAt": "2026-08-02T16:45:19Z",
-  "today": "2026-08-02",
+  "fetchedAt": "2026-08-03T02:14:17Z",
+  "today": "2026-08-03",
   "recentActivities": [
+    {
+      "date": "2026-08-02",
+      "type": "walking",
+      "name": "Jupiter Walking",
+      "durationMins": 24.7,
+      "distanceMiles": 0.16,
+      "avgHR": 113.0,
+      "maxHR": 153.0,
+      "calories": 168.0
+    },
+    {
+      "date": "2026-08-02",
+      "type": "indoor_cardio",
+      "name": "Cardio",
+      "durationMins": 7.0,
+      "distanceMiles": null,
+      "avgHR": 156.0,
+      "maxHR": 202.0,
+      "calories": 89.0
+    },
     {
       "date": "2026-07-31",
       "type": "walking",
@@ -81,16 +101,6 @@
       "avgHR": 91.0,
       "maxHR": 116.0,
       "calories": 197.0
-    },
-    {
-      "date": "2026-07-19",
-      "type": "walking",
-      "name": "Denver Walking",
-      "durationMins": 27.4,
-      "distanceMiles": 1.48,
-      "avgHR": 91.0,
-      "maxHR": 103.0,
-      "calories": 156.0
     }
   ],
   "todayStats": {
@@ -98,20 +108,16 @@
     "restingHR": null,
     "activeCalories": null,
     "bodyBattery": null,
-    "stressAvg": 14
+    "stressAvg": null
   },
-  "hrv": {
-    "weeklyAvg": 47,
-    "lastNight": null,
-    "status": "BALANCED"
-  },
+  "hrv": null,
   "sleep": {
-    "date": "2026-08-01",
-    "durationHours": 3.0,
-    "score": 39,
-    "deepSleepMins": 83,
-    "lightSleepMins": 96,
-    "remSleepMins": 0,
-    "awakeMins": 1
+    "date": "2026-08-02",
+    "durationHours": 8.1,
+    "score": 96,
+    "deepSleepMins": 103,
+    "lightSleepMins": 272,
+    "remSleepMins": 113,
+    "awakeMins": 3
   }
 }
