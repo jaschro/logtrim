@@ -73,19 +73,52 @@ def main():
         garmin = garminconnect.Garmin(email=email, password=password)
         garmin.login()
 
-    # Populate display_name so get_stats works (skipped when restoring tokens)
-    try:
-        if not getattr(garmin, 'display_name', None):
-            profile = garmin.get_user_profile()
-            if profile:
-                garmin.display_name = (
-                    profile.get("displayName")
-                    or profile.get("userName")
-                    or str(profile.get("userProfileId", ""))
-                )
-                print(f"  display_name set to: {garmin.display_name}")
-    except Exception as e:
-        print(f"  Warning: could not fetch user profile — {e}")
+    # Populate display_name so get_stats works (skipped when restoring tokens).
+    # get_user_profile() returns empty displayName when profile is private ("Only Me"),
+    # so we try garth's own profile.json first (saved during initial login).
+    if not getattr(garmin, 'display_name', None):
+        # 1. Read garth's saved profile.json directly
+        _profile_json = os.path.join(token_dir, "profile.json")
+        if os.path.exists(_profile_json):
+            with open(_profile_json) as _f:
+                _prof = json.load(_f)
+            _dn = _prof.get("display_name") or _prof.get("displayName") or _prof.get("userName")
+            if _dn:
+                garmin.display_name = _dn
+                print(f"  display_name set from profile.json: {_dn}")
+
+    if not getattr(garmin, 'display_name', None):
+        # 2. Try garth in-memory profile attribute
+        for _getter in [lambda: garmin.garth, lambda: garmin.client.garth, lambda: garmin.client]:
+            try:
+                _obj = _getter()
+                _p = getattr(_obj, 'profile', None)
+                if _p:
+                    _dn = getattr(_p, 'display_name', None)
+                    if not _dn and hasattr(_p, 'get'):
+                        _dn = _p.get('display_name') or _p.get('displayName')
+                    if _dn:
+                        garmin.display_name = _dn
+                        print(f"  display_name set from garth.profile: {_dn}")
+                        break
+            except AttributeError:
+                continue
+
+    if not getattr(garmin, 'display_name', None):
+        # 3. Fall back to API; print all keys so we can debug if still empty
+        try:
+            _api_profile = garmin.get_user_profile()
+            if isinstance(_api_profile, dict):
+                print(f"  DEBUG profile keys: {list(_api_profile.keys())}")
+                _dn = (_api_profile.get("displayName") or _api_profile.get("userName")
+                       or _api_profile.get("screenName") or _api_profile.get("userHandle"))
+                if _dn:
+                    garmin.display_name = _dn
+                    print(f"  display_name set from user profile API: {_dn}")
+        except Exception as _e:
+            print(f"  Warning: could not fetch user profile — {_e}")
+
+    print(f"  display_name = '{getattr(garmin, 'display_name', None)}'")
 
     # Persist refreshed tokens for next run
     try:
@@ -149,6 +182,12 @@ def main():
     # ── Daily stats (today) ───────────────────────────────────────────────────
     print("Fetching daily stats…")
     stats = safe_get(garmin.get_stats, today_str, default={}) or {}
+    if not stats.get("totalSteps") and not stats.get("restingHeartRate"):
+        # Workflow may run near midnight UTC where today has no data yet; fall back
+        _stats_yd = safe_get(garmin.get_stats, yesterday_str, default={}) or {}
+        if _stats_yd.get("totalSteps") or _stats_yd.get("restingHeartRate"):
+            stats = _stats_yd
+            print(f"  Using yesterday's stats (today had no data)")
 
     # ── Body battery ──────────────────────────────────────────────────────────
     print("Fetching body battery…")
@@ -248,12 +287,14 @@ def main():
     if intensity_raw:
         intensity_minutes = {
             "moderate": (
-                intensity_raw.get("weeklyModerateIntensityMinutes")
-                or intensity_raw.get("moderateIntensityMinutes")
+                intensity_raw.get("weeklyModerate")           # actual field name
+                or intensity_raw.get("moderateMinutes")
+                or intensity_raw.get("weeklyModerateIntensityMinutes")
             ),
             "vigorous": (
-                intensity_raw.get("weeklyVigorousIntensityMinutes")
-                or intensity_raw.get("vigorousIntensityMinutes")
+                intensity_raw.get("weeklyVigorous")           # actual field name
+                or intensity_raw.get("vigorousMinutes")
+                or intensity_raw.get("weeklyVigorousIntensityMinutes")
             ),
         }
 
