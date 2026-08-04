@@ -360,6 +360,21 @@
     "notes": ""
   },
   {
+    "machineId": "walk",
+    "machine": "Walk",
+    "gym": "Common Machines",
+    "room": "Outdoor Activities",
+    "date": "2026-08-04",
+    "set": 1,
+    "weight": null,
+    "reps": null,
+    "duration": 49.21,
+    "level": 3.44,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
     "machineId": "m1785620353523",
     "machine": "Treadmill",
     "gym": "Admirals Cove",
