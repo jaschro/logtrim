@@ -20,7 +20,7 @@
           "name": "Walk",
           "musclesWorked": "Cardiovascular system, legs, glutes",
           "image": "walk.jpg",
-          "logType": "pace"
+          "logType": "walk"
         },
         {
           "id": "bike-ride",
