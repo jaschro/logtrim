@@ -45,6 +45,36 @@
     "notes": ""
   },
   {
+    "machineId": "pa06",
+    "machine": "Elliptical Cross Trainer",
+    "gym": "Portofino Gym",
+    "room": "Aerobic Room",
+    "date": "2026-08-05",
+    "set": 1,
+    "weight": null,
+    "reps": null,
+    "duration": 20,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": "Avg 109 bpm"
+  },
+  {
+    "machineId": "pa06",
+    "machine": "Elliptical Cross Trainer",
+    "gym": "Portofino Gym",
+    "room": "Aerobic Room",
+    "date": "2026-08-05",
+    "set": 2,
+    "weight": null,
+    "reps": null,
+    "duration": 5,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
     "machineId": "squats",
     "machine": "Squats",
     "gym": "Common Machines",
