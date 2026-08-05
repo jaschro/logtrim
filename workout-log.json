@@ -1575,6 +1575,21 @@
     "notes": ""
   },
   {
+    "machineId": "meditation",
+    "machine": "Meditation",
+    "gym": "Common Machines",
+    "room": "Bodyweight — No Equipment",
+    "date": "2026-08-03",
+    "set": 1,
+    "weight": null,
+    "reps": null,
+    "duration": null,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
     "machineId": "m1785619397049",
     "machine": "Arm Bike",
     "gym": "Admirals Cove",
