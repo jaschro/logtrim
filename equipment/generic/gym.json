@@ -125,6 +125,13 @@
           "musclesWorked": "Hamstrings, calves, shoulders, spine (stretch)",
           "image": "downward-dog.jpg",
           "logType": "time"
+        },
+        {
+          "id": "meditation",
+          "name": "Meditation",
+          "musclesWorked": "Mindfulness, stress reduction, focus",
+          "image": "Meditation.jpg",
+          "logType": "time"
         }
       ]
     },
