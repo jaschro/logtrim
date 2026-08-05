@@ -555,12 +555,28 @@ function fmtWalkPace(dist,dur){
   const s=Math.round((mpm-m)*60);
   return`${m}:${String(s).padStart(2,'0')}/mi`;
 }
+function parseMinutes(val){
+  if(!val&&val!==0)return null;
+  const str=String(val).trim();
+  if(str.includes(':')){
+    const parts=str.split(':');
+    if(parts.length===3)return parseFloat(parts[0])*60+parseFloat(parts[1]||0)+parseFloat(parts[2]||0)/60;
+    return parseFloat(parts[0]||0)+parseFloat(parts[1]||0)/60;
+  }
+  return parseFloat(str)||null;
+}
+function fmtDuration(mins){
+  if(!mins&&mins!==0)return'';
+  const m=Math.floor(mins);
+  const s=Math.round((mins-m)*60);
+  return s>0?`${m}:${String(s).padStart(2,'0')}`:String(m);
+}
 function computeWalkPace(input){
   const row=input.closest('tr');
   const distEl=row.querySelector('.sdist');
   const durEl=row.querySelector('.sd');
   const cell=row.querySelector('.spacecell');
-  if(cell)cell.textContent=fmtWalkPace(parseFloat(distEl&&distEl.value),parseFloat(durEl&&durEl.value));
+  if(cell)cell.textContent=fmtWalkPace(parseFloat(distEl&&distEl.value),parseMinutes(durEl&&durEl.value));
 }
 function fmtDate(ds){
   const d=new Date(ds+'T12:00:00'),t=new Date();t.setHours(12,0,0,0);
@@ -664,7 +680,7 @@ function buildTable(sets,type){
 }
 function buildRow(n,s,isC,isT,isP,isW){
   if(isC)return`<tr><td>${n}</td><td><input type="number" inputmode="decimal" class="sd" placeholder="30" value="${s.duration||''}"></td><td><input type="number" inputmode="decimal" class="smph" placeholder="3.5" value="${s.level||''}"></td><td><input type="number" inputmode="decimal" class="sinc" placeholder="0" value="${s.incline!=null?s.incline:''}"></td><td><input type="number" inputmode="decimal" class="shr" placeholder="120" value="${s.hr!=null?s.hr:''}"></td><td><button class="xb" onclick="rmRow(this)">×</button></td></tr>`;
-  if(isW)return`<tr><td>${n}</td><td><input type="number" inputmode="decimal" class="sdist" placeholder="1.5" value="${s.level!=null?s.level:''}" oninput="computeWalkPace(this)"></td><td><input type="number" inputmode="decimal" class="sd" placeholder="30" value="${s.duration||''}" oninput="computeWalkPace(this)"></td><td class="spacecell" style="color:var(--dim);font-size:13px;white-space:nowrap">${s.level&&s.duration?fmtWalkPace(s.level,s.duration):'—'}</td><td><button class="xb" onclick="rmRow(this)">×</button></td></tr>`;
+  if(isW)return`<tr><td>${n}</td><td><input type="number" inputmode="decimal" class="sdist" placeholder="1.5" value="${s.level!=null?s.level:''}" oninput="computeWalkPace(this)"></td><td><input type="text" inputmode="text" class="sd" placeholder="30:00" value="${s.duration!=null?fmtDuration(s.duration):''}" oninput="computeWalkPace(this)"></td><td class="spacecell" style="color:var(--dim);font-size:13px;white-space:nowrap">${s.level&&s.duration?fmtWalkPace(s.level,s.duration):'—'}</td><td><button class="xb" onclick="rmRow(this)">×</button></td></tr>`;
   if(isP)return`<tr><td>${n}</td><td><input type="number" inputmode="decimal" class="sd" placeholder="30" value="${s.duration||''}"></td><td><input type="number" inputmode="decimal" class="smph" placeholder="3.5" value="${s.level||''}" oninput="computePace(this)"></td><td class="spacecell" style="color:var(--dim);font-size:13px;white-space:nowrap">${s.level?fmtPace(s.level):'—'}</td><td><button class="xb" onclick="rmRow(this)">×</button></td></tr>`;
   if(isT)return`<tr><td>${n}</td><td><input type="number" inputmode="decimal" class="sd" placeholder="60" value="${s.duration||''}"></td><td><button class="xb" onclick="rmRow(this)">×</button></td></tr>`;
   return`<tr><td>${n}</td><td><input type="number" inputmode="decimal" class="sw" placeholder="0" value="${s.weight!=null&&s.weight!==''?s.weight:''}"></td><td><input type="number" inputmode="decimal" class="srp" placeholder="0" value="${s.reps!=null&&s.reps!==''?s.reps:''}"></td><td><button class="xb" onclick="rmRow(this)">×</button></td></tr>`;
@@ -686,7 +702,7 @@ function addRow(){
   const isT=A.logType==='time';
   const isW=A.logType==='walk';
   if(isC)tr.innerHTML=`<td>${n}</td><td><input type="number" inputmode="decimal" class="sd" placeholder="30"></td><td><input type="number" inputmode="decimal" class="smph" placeholder="3.5"></td><td><input type="number" inputmode="decimal" class="sinc" placeholder="0"></td><td><input type="number" inputmode="decimal" class="shr" placeholder="120"></td><td><button class="xb" onclick="rmRow(this)">×</button></td>`;
-  else if(isW)tr.innerHTML=`<td>${n}</td><td><input type="number" inputmode="decimal" class="sdist" placeholder="1.5" oninput="computeWalkPace(this)"></td><td><input type="number" inputmode="decimal" class="sd" placeholder="30" oninput="computeWalkPace(this)"></td><td class="spacecell" style="color:var(--dim);font-size:13px;white-space:nowrap">—</td><td><button class="xb" onclick="rmRow(this)">×</button></td>`;
+  else if(isW)tr.innerHTML=`<td>${n}</td><td><input type="number" inputmode="decimal" class="sdist" placeholder="1.5" oninput="computeWalkPace(this)"></td><td><input type="text" inputmode="text" class="sd" placeholder="30:00" oninput="computeWalkPace(this)"></td><td class="spacecell" style="color:var(--dim);font-size:13px;white-space:nowrap">—</td><td><button class="xb" onclick="rmRow(this)">×</button></td>`;
   else if(isP)tr.innerHTML=`<td>${n}</td><td><input type="number" inputmode="decimal" class="sd" placeholder="30"></td><td><input type="number" inputmode="decimal" class="smph" placeholder="3.5" oninput="computePace(this)"></td><td class="spacecell" style="color:var(--dim);font-size:13px;white-space:nowrap">—</td><td><button class="xb" onclick="rmRow(this)">×</button></td>`;
   else if(isT)tr.innerHTML=`<td>${n}</td><td><input type="number" inputmode="decimal" class="sd" placeholder="60"></td><td><button class="xb" onclick="rmRow(this)">×</button></td>`;
   else tr.innerHTML=`<td>${n}</td><td><input type="number" inputmode="decimal" class="sw" placeholder="0"></td><td><input type="number" inputmode="decimal" class="srp" placeholder="0"></td><td><button class="xb" onclick="rmRow(this)">×</button></td>`;
@@ -713,7 +729,7 @@ async function saveSess(){
   rows.forEach((row,i)=>{
     if(isW){
       const dist=parseFloat((row.querySelector('.sdist')||{}).value)||null;
-      const dur=parseFloat((row.querySelector('.sd')||{}).value)||null;
+      const dur=parseMinutes((row.querySelector('.sd')||{}).value);
       newSets.push({machineId:m.id,machine:m.name,gym:gym.name,room:rm.name,date,set:i+1,weight:null,reps:null,duration:dur,level:dist,incline:null,hr:null,notes:i===0?notes.trim():''});
     }else if(isC){
       const dur=parseFloat((row.querySelector('.sd')||{}).value)||null;
@@ -739,7 +755,18 @@ async function saveSess(){
   if(!newSets.length){toast('Add at least one set','err');return}
   const btn=g('svbtn');btn.disabled=true;btn.textContent='Saving…';
   try{
-    const updated=[...A.log.filter(e=>!(e.machineId===m.id&&e.date===date)),...newSets].sort((a,b)=>a.date<b.date?1:a.date>b.date?-1:0);
+    let updated;
+    if(A.editDate){
+      // editing: replace all entries for this machine+date
+      updated=[...A.log.filter(e=>!(e.machineId===m.id&&e.date===date)),...newSets];
+    }else{
+      // new session: append, renumber sets after existing ones
+      const existing=A.log.filter(e=>e.machineId===m.id&&e.date===date);
+      const start=existing.length+1;
+      newSets.forEach((s,i)=>{s.set=start+i;});
+      updated=[...A.log,...newSets];
+    }
+    updated=updated.sort((a,b)=>a.date<b.date?1:a.date>b.date?-1:0);
     await writeLog(updated);A.log=updated;
     toast('Session saved!','ok');
     if(A.fromPlan){A.fromPlan=false;back();renderPlan();}
