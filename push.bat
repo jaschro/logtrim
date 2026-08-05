@@ -11,7 +11,7 @@ if %ERRORLEVEL% neq 0 (
 )
 echo Committing changes...
 git add -A
-git commit -m "Add unit tests and extract utils.js"
+git commit -m "Add Meditation to generic gym"
 echo Pulling and pushing to personal (jaschro/logtrim)...
 git pull personal main --rebase -X theirs
 git push personal main
