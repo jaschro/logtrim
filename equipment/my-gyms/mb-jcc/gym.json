@@ -28,6 +28,13 @@
           "musclesWorked": "",
           "image": "m1786027278972.jpg",
           "logType": "weight"
+        },
+        {
+          "id": "m1786027312288",
+          "name": "Stationary Bike",
+          "musclesWorked": "",
+          "image": "m1786027312288.jpg",
+          "logType": "weight"
         }
       ]
     },
