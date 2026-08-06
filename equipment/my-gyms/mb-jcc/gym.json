@@ -5,11 +5,6 @@
   "isGeneric": false,
   "rooms": [
     {
-      "id": "main",
-      "name": "MB JCC",
-      "machines": []
-    },
-    {
       "id": "aerobic-machines-1786026379720",
       "name": "Aerobic Machines",
       "machines": [
