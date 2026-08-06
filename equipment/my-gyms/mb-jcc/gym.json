@@ -62,6 +62,13 @@
           "musclesWorked": "",
           "image": "m1786027107204.jpg",
           "logType": "weight"
+        },
+        {
+          "id": "m1786027148284",
+          "name": "Leg Press",
+          "musclesWorked": "",
+          "image": "m1786027148284.jpg",
+          "logType": "weight"
         }
       ]
     }
