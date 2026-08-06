@@ -27,7 +27,15 @@
     {
       "id": "weight-machines-1786026388213",
       "name": "Weight Machines",
-      "machines": []
+      "machines": [
+        {
+          "id": "m1786026962087",
+          "name": "Chest Press (True Palladium)",
+          "musclesWorked": "",
+          "image": "m1786026962087.jpg",
+          "logType": "weight"
+        }
+      ]
     }
   ]
 }
