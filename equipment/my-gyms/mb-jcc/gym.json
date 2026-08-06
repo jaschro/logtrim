@@ -118,6 +118,13 @@
           "musclesWorked": "",
           "image": "m1786029637068.jpg",
           "logType": "weight"
+        },
+        {
+          "id": "m1786029912579",
+          "name": "Knee Lift",
+          "musclesWorked": "",
+          "image": "m1786029912579.jpg",
+          "logType": "weight"
         }
       ]
     }
