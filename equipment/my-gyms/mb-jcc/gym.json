@@ -76,6 +76,13 @@
           "musclesWorked": "",
           "image": "m1786027189881.jpg",
           "logType": "weight"
+        },
+        {
+          "id": "m1786027213090",
+          "name": "Glute Press",
+          "musclesWorked": "",
+          "image": "m1786027213090.jpg",
+          "logType": "weight"
         }
       ]
     }
