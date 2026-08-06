@@ -1,7 +1,77 @@
 {
-  "fetchedAt": "2026-08-05T15:05:25Z",
-  "today": "2026-08-05",
+  "fetchedAt": "2026-08-06T15:03:46Z",
+  "today": "2026-08-06",
   "recentActivities": [
+    {
+      "activityId": 23869209428,
+      "date": "2026-08-05",
+      "type": "walking",
+      "name": "Miami Beach Walking",
+      "durationMins": 39.0,
+      "distanceMiles": 2.19,
+      "avgHR": 97.0,
+      "maxHR": 123.0,
+      "calories": 234.0,
+      "elevationGain": 9.0,
+      "avgPace": 1.503999948501587,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 621.002
+        },
+        {
+          "zone": 2,
+          "secsInZone": 1660.854
+        },
+        {
+          "zone": 3,
+          "secsInZone": 58.0
+        },
+        {
+          "zone": 4,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 5,
+          "secsInZone": 0.0
+        }
+      ]
+    },
+    {
+      "activityId": 23867475861,
+      "date": "2026-08-05",
+      "type": "elliptical",
+      "name": "Elliptical",
+      "durationMins": 25.0,
+      "distanceMiles": null,
+      "avgHR": 109.0,
+      "maxHR": 180.0,
+      "calories": 199.0,
+      "elevationGain": null,
+      "avgPace": 0.0,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 51.741
+        },
+        {
+          "zone": 2,
+          "secsInZone": 1112.08
+        },
+        {
+          "zone": 3,
+          "secsInZone": 154.001
+        },
+        {
+          "zone": 4,
+          "secsInZone": 147.0
+        },
+        {
+          "zone": 5,
+          "secsInZone": 36.0
+        }
+      ]
+    },
     {
       "activityId": 23856401509,
       "date": "2026-08-04",
@@ -118,29 +188,7 @@
       "maxHR": 111.0,
       "calories": 331.0,
       "elevationGain": 14.0,
-      "avgPace": 1.4869999885559082,
-      "hrZones": [
-        {
-          "zone": 1,
-          "secsInZone": 3245.896
-        },
-        {
-          "zone": 2,
-          "secsInZone": 25.997
-        },
-        {
-          "zone": 3,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 4,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 5,
-          "secsInZone": 0.0
-        }
-      ]
+      "avgPace": 1.4869999885559082
     },
     {
       "activityId": 23829610466,
@@ -153,29 +201,7 @@
       "maxHR": 153.0,
       "calories": 168.0,
       "elevationGain": 1.0,
-      "avgPace": 0.1739999949932098,
-      "hrZones": [
-        {
-          "zone": 1,
-          "secsInZone": 719.951
-        },
-        {
-          "zone": 2,
-          "secsInZone": 248.976
-        },
-        {
-          "zone": 3,
-          "secsInZone": 168.019
-        },
-        {
-          "zone": 4,
-          "secsInZone": 290.994
-        },
-        {
-          "zone": 5,
-          "secsInZone": 0.0
-        }
-      ]
+      "avgPace": 0.1739999949932098
     },
     {
       "activityId": 23829041007,
@@ -267,72 +293,49 @@
       "calories": 340.0,
       "elevationGain": 21.0,
       "avgPace": 1.690999984741211
-    },
-    {
-      "activityId": 23697093763,
-      "date": "2026-07-22",
-      "type": "walking",
-      "name": "Miami Beach Walking",
-      "durationMins": 22.1,
-      "distanceMiles": 1.26,
-      "avgHR": 93.0,
-      "maxHR": 103.0,
-      "calories": 131.0,
-      "elevationGain": 1.0,
-      "avgPace": 1.5219999551773071
-    },
-    {
-      "activityId": 23692150044,
-      "date": "2026-07-22",
-      "type": "walking",
-      "name": "Miami Beach Walking",
-      "durationMins": 30.5,
-      "distanceMiles": 1.84,
-      "avgHR": 91.0,
-      "maxHR": 116.0,
-      "calories": 197.0,
-      "elevationGain": 8.0,
-      "avgPace": 1.6239999532699585
     }
   ],
   "todayStats": {
-    "steps": 1395,
+    "steps": 938,
     "floors": 0.0,
-    "restingHR": 48,
+    "restingHR": 47,
     "activeCalories": 12.0,
-    "bodyBattery": 75,
-    "stressAvg": 22,
-    "weeklySteps": 107724
+    "bodyBattery": 82,
+    "stressAvg": 18,
+    "weeklySteps": 114680
   },
   "trainingReadiness": {
-    "score": 50,
-    "level": "MODERATE",
-    "feedback": "RECOVERED_AND_READY"
+    "score": 40,
+    "level": "LOW",
+    "feedback": "BALANCE_YOUR_TRAINING_LOAD"
   },
-  "vo2max": null,
+  "vo2max": {
+    "vo2max": 40.0,
+    "fitnessAge": null
+  },
   "intensityMinutes": {
-    "moderate": 174,
-    "vigorous": 6
+    "moderate": 237,
+    "vigorous": 15
   },
   "hrv": {
-    "weeklyAvg": 52,
+    "weeklyAvg": 50,
     "lastNight": null,
     "status": "BALANCED"
   },
   "sleep": {
-    "date": "2026-08-05",
-    "durationHours": 6.7,
-    "score": 82,
-    "deepSleepMins": 67,
-    "lightSleepMins": 239,
-    "remSleepMins": 98,
-    "awakeMins": 0,
-    "avgRespirationRate": 14.0,
-    "avgSpO2": 91.0
+    "date": "2026-08-06",
+    "durationHours": 7.7,
+    "score": 85,
+    "deepSleepMins": 63,
+    "lightSleepMins": 226,
+    "remSleepMins": 173,
+    "awakeMins": 1,
+    "avgRespirationRate": 13.0,
+    "avgSpO2": 96.0
   },
-  "spo2Avg": 91.0,
+  "spo2Avg": 95.0,
   "respiration": {
-    "avgWaking": 13.0,
-    "avgSleep": 14.0
+    "avgWaking": 14.0,
+    "avgSleep": 13.0
   }
 }
