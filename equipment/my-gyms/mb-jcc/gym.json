@@ -42,6 +42,13 @@
           "musclesWorked": "",
           "image": "m1786027351545.jpg",
           "logType": "weight"
+        },
+        {
+          "id": "m1786027400495",
+          "name": "Recumbent Bike (True)",
+          "musclesWorked": "",
+          "image": "m1786027400495.jpg",
+          "logType": "weight"
         }
       ]
     },
