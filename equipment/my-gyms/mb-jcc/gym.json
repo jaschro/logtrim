@@ -69,6 +69,13 @@
           "musclesWorked": "",
           "image": "m1786027148284.jpg",
           "logType": "weight"
+        },
+        {
+          "id": "m1786027189881",
+          "name": "Seated Leg Curl",
+          "musclesWorked": "",
+          "image": "m1786027189881.jpg",
+          "logType": "weight"
         }
       ]
     }
