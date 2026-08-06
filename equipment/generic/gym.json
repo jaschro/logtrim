@@ -140,6 +140,13 @@
       "name": "Bodyweight — Light Equipment",
       "machines": [
         {
+          "id": "knee-lifts",
+          "name": "Knee Lifts",
+          "musclesWorked": "Lower abdominals, hip flexors, core",
+          "image": "knee lifts.jpg",
+          "logType": "weight"
+        },
+        {
           "id": "pull-ups",
           "name": "Pull-ups",
           "musclesWorked": "Latissimus dorsi, biceps, rhomboids, rear deltoids",
