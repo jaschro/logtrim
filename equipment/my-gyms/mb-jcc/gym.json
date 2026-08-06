@@ -12,7 +12,15 @@
     {
       "id": "aerobic-machines-1786026379720",
       "name": "Aerobic Machines",
-      "machines": []
+      "machines": [
+        {
+          "id": "m1786026454342",
+          "name": "Elliptical (TechnoGym)",
+          "musclesWorked": "",
+          "image": "m1786026454342.jpg",
+          "logType": "weight"
+        }
+      ]
     },
     {
       "id": "weight-machines-1786026388213",
