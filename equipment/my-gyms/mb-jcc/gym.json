@@ -13,6 +13,11 @@
       "id": "aerobic-machines-1786026379720",
       "name": "Aerobic Machines",
       "machines": []
+    },
+    {
+      "id": "weight-machines-1786026388213",
+      "name": "Weight Machines",
+      "machines": []
     }
   ]
 }
