@@ -1,0 +1,13 @@
+{
+  "id": "mb-jcc",
+  "name": "MB JCC",
+  "icon": "🏋️",
+  "isGeneric": false,
+  "rooms": [
+    {
+      "id": "main",
+      "name": "MB JCC",
+      "machines": []
+    }
+  ]
+}
