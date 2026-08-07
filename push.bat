@@ -11,7 +11,7 @@ if %ERRORLEVEL% neq 0 (
 )
 echo Committing changes...
 git add -A
-git commit -m "Add datetime column to CSV; fix UTC date bug"
+git commit -m "Add datetime to CSV, fix UTC date bug, sync Garmin every 3 hours"
 echo Pulling and pushing to personal (jaschro/logtrim)...
 git pull personal main --rebase -X theirs
 git push personal main
