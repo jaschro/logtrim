@@ -65,6 +65,23 @@ export default {
       return new Response(json, { headers: { ...cors, 'Content-Type': 'application/json' } });
     }
 
+    // GET /trigger-sync — dispatch the Garmin sync workflow on GitHub Actions
+    if (url.pathname === '/trigger-sync') {
+      const dispatchRes = await fetch(
+        `https://api.github.com/repos/${env.GITHUB_USER}/${env.GITHUB_REPO}/actions/workflows/garmin-sync.yml/dispatches`,
+        {
+          method: 'POST',
+          headers: { ...ghHeaders, 'Content-Type': 'application/json' },
+          body: JSON.stringify({ ref: 'main' })
+        }
+      );
+      if (!dispatchRes.ok) {
+        const errText = await dispatchRes.text();
+        return new Response(JSON.stringify({ error: `Dispatch failed: ${dispatchRes.status}`, detail: errText }), { status: 502, headers: cors });
+      }
+      return new Response(JSON.stringify({ ok: true, message: 'Sync triggered — data will be ready in ~60 seconds.' }), { headers: cors });
+    }
+
     // GET /?token=SECRET&data=BASE64 — push a workout suggestion
     const data = url.searchParams.get('data');
 
