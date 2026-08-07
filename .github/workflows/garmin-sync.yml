@@ -8,6 +8,7 @@ on:
 jobs:
   sync:
     runs-on: ubuntu-latest
+    if: github.repository == 'jaschro/logtrim'
     permissions:
       contents: write        # needed to commit garmin-recent.json back to the repo
 
