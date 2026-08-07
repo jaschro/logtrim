@@ -459,7 +459,7 @@ function openGym(gid){
 // === TODAY'S PLAN ===
 function renderPlan(){
   const s=A.suggestion;if(!s){back();return}
-  const today=new Date().toISOString().split('T')[0];
+  const _td=new Date(),today=`${_td.getFullYear()}-${String(_td.getMonth()+1).padStart(2,'0')}-${String(_td.getDate()).padStart(2,'0')}`;
   const loggedToday=new Set(A.log.filter(e=>e.date===today).map(e=>e.machineId));
   const exercises=s.exercises||[];
   const doneCount=exercises.filter(e=>loggedToday.has(e.machineId)).length;
@@ -580,7 +580,7 @@ function editSess(d){startLog(d)}
 function renderLog(){
   const m=A.machine,editing=!!A.editDate;
   g('lttl').textContent=editing?'Edit Session':m.name;
-  const today=new Date().toISOString().split('T')[0];
+  const _td=new Date(),today=`${_td.getFullYear()}-${String(_td.getMonth()+1).padStart(2,'0')}-${String(_td.getDate()).padStart(2,'0')}`;
   const date=A.editDate||today;
   let defType=m.logType||'weight';
   let prefill=[];
@@ -675,12 +675,13 @@ async function saveSess(){
   const isT=A.logType==='time';
   const isW=A.logType==='walk';
   const rows=document.querySelectorAll('#stb tr');
+  const datetime=date+' '+new Date().toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit',second:'2-digit'});
   const newSets=[];
   rows.forEach((row,i)=>{
     if(isW){
       const dist=parseFloat((row.querySelector('.sdist')||{}).value)||null;
       const dur=parseMinutes((row.querySelector('.sd')||{}).value);
-      newSets.push({machineId:m.id,machine:m.name,gym:gym.name,room:rm.name,date,set:i+1,weight:null,reps:null,duration:dur,level:dist,incline:null,hr:null,notes:i===0?notes.trim():''});
+      newSets.push({machineId:m.id,machine:m.name,gym:gym.name,room:rm.name,date,datetime,set:i+1,weight:null,reps:null,duration:dur,level:dist,incline:null,hr:null,notes:i===0?notes.trim():''});
     }else if(isC){
       const dur=parseFloat((row.querySelector('.sd')||{}).value)||null;
       const mph=parseFloat((row.querySelector('.smph')||{}).value)||null;
@@ -688,18 +689,18 @@ async function saveSess(){
       const inc=incV!==''&&incV!=null?parseFloat(incV):null;
       const hrV=(row.querySelector('.shr')||{}).value;
       const hr=hrV!==''&&hrV!=null?parseFloat(hrV):null;
-      newSets.push({machineId:m.id,machine:m.name,gym:gym.name,room:rm.name,date,set:i+1,weight:null,reps:null,duration:dur,level:mph,incline:isNaN(inc)?null:inc,hr:isNaN(hr)?null:hr,notes:i===0?notes.trim():''});
+      newSets.push({machineId:m.id,machine:m.name,gym:gym.name,room:rm.name,date,datetime,set:i+1,weight:null,reps:null,duration:dur,level:mph,incline:isNaN(inc)?null:inc,hr:isNaN(hr)?null:hr,notes:i===0?notes.trim():''});
     }else if(isP){
       const dur=parseFloat((row.querySelector('.sd')||{}).value)||null;
       const mph=parseFloat((row.querySelector('.smph')||{}).value)||null;
-      newSets.push({machineId:m.id,machine:m.name,gym:gym.name,room:rm.name,date,set:i+1,weight:null,reps:null,duration:dur,level:mph,incline:null,hr:null,notes:i===0?notes.trim():''});
+      newSets.push({machineId:m.id,machine:m.name,gym:gym.name,room:rm.name,date,datetime,set:i+1,weight:null,reps:null,duration:dur,level:mph,incline:null,hr:null,notes:i===0?notes.trim():''});
     }else if(isT){
       const dur=parseFloat((row.querySelector('.sd')||{}).value)||null;
-      newSets.push({machineId:m.id,machine:m.name,gym:gym.name,room:rm.name,date,set:i+1,weight:null,reps:null,duration:dur,level:null,incline:null,hr:null,notes:i===0?notes.trim():''});
+      newSets.push({machineId:m.id,machine:m.name,gym:gym.name,room:rm.name,date,datetime,set:i+1,weight:null,reps:null,duration:dur,level:null,incline:null,hr:null,notes:i===0?notes.trim():''});
     }else{
       const wt=parseFloat((row.querySelector('.sw')||{}).value);
       const rp=parseInt((row.querySelector('.srp')||{}).value);
-      newSets.push({machineId:m.id,machine:m.name,gym:gym.name,room:rm.name,date,set:i+1,weight:isNaN(wt)?null:wt,reps:isNaN(rp)?null:rp,duration:null,level:null,incline:null,hr:null,notes:i===0?notes.trim():''});
+      newSets.push({machineId:m.id,machine:m.name,gym:gym.name,room:rm.name,date,datetime,set:i+1,weight:isNaN(wt)?null:wt,reps:isNaN(rp)?null:rp,duration:null,level:null,incline:null,hr:null,notes:i===0?notes.trim():''});
     }
   });
   if(!newSets.length){toast('Add at least one set','err');return}

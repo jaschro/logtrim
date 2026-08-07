@@ -41,7 +41,7 @@ test('round-trip "32:45"',  () => assert.equal(fmtDuration(parseMinutes('32:45')
 test('round-trip "30:00"',  () => assert.equal(fmtDuration(parseMinutes('30:00')), '30'));
 
 // ─── fmtLast ─────────────────────────────────────────────────────────────────
-const today = new Date().toISOString().split('T')[0];
+const _td = new Date(), today = `${_td.getFullYear()}-${String(_td.getMonth()+1).padStart(2,'0')}-${String(_td.getDate()).padStart(2,'0')}`;
 
 test('fmtLast: weight — shows max weight and set count', () => {
   const sets = [
@@ -86,12 +86,12 @@ test('csvEsc: null → empty string',           () => assert.equal(csvEsc(null),
 // ─── toCSV ───────────────────────────────────────────────────────────────────
 test('toCSV: header row is correct', () => {
   const csv = toCSV([]);
-  assert.equal(csv, 'date,gym,room,machine,machineId,set,weight,reps,duration,level,incline,hr,notes');
+  assert.equal(csv, 'datetime,gym,room,machine,machineId,set,weight,reps,duration,level,incline,hr,notes');
 });
 
 test('toCSV: walk entry — distance in level column', () => {
   const entries = [{
-    date: today, gym: 'Home', room: 'Outdoor', machine: 'Walk', machineId: 'walk',
+    date: today, datetime: today + ' 08:30:00 PM', gym: 'Home', room: 'Outdoor', machine: 'Walk', machineId: 'walk',
     set: 1, weight: null, reps: null, duration: 30, level: 1.5, incline: null, hr: null, notes: ''
   }];
   const lines = toCSV(entries).split('\n');
@@ -103,7 +103,7 @@ test('toCSV: walk entry — distance in level column', () => {
 
 test('toCSV: weight entry — nulls become empty strings', () => {
   const entries = [{
-    date: today, gym: 'Gym', room: 'Weights', machine: 'Bench Press', machineId: 'bench',
+    date: today, datetime: today + ' 10:15:00 AM', gym: 'Gym', room: 'Weights', machine: 'Bench Press', machineId: 'bench',
     set: 1, weight: 135, reps: 10, duration: null, level: null, incline: null, hr: null, notes: ''
   }];
   const lines = toCSV(entries).split('\n');
