@@ -72,9 +72,9 @@
   function csvEsc(s) { return String(s || '').replace(/[,\n"]/g, ' '); }
 
   function toCSV(entries) {
-    const h = 'date,gym,room,machine,machineId,set,weight,reps,duration,level,incline,hr,notes';
+    const h = 'datetime,gym,room,machine,machineId,set,weight,reps,duration,level,incline,hr,notes';
     const rows = entries.map(e => [
-      e.date, csvEsc(e.gym), csvEsc(e.room), csvEsc(e.machine), e.machineId, e.set,
+      csvEsc(e.datetime||e.date), csvEsc(e.gym), csvEsc(e.room), csvEsc(e.machine), e.machineId, e.set,
       e.weight != null ? e.weight : '', e.reps != null ? e.reps : '',
       e.duration != null ? e.duration : '', e.level != null ? e.level : '',
       e.incline != null ? e.incline : '', e.hr != null ? e.hr : '',
