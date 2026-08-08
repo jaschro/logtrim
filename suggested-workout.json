@@ -1,7 +1,113 @@
 {
-  "generatedAt": "2026-08-05",
-  "coachNote": "Legs, calves, and shoulder press day at Portofino - corrected to progress from your actual 7/31 (and 7/30 shoulder press) numbers rather than treating these as new machines. Easing leg curl back toward 60 since 65 was noted as a lot last time. Elliptical to close as an easy Zone 2 finisher.",
+  "generatedAt": "2026-08-08",
+  "coachNote": "Nice-weather outdoor walk/jog to start the morning, then Portofino: back and biceps get real machine work for the first time in a while (only bodyweight pull-ups since 8/4), legs kept to light maintenance since they were hit hard Monday and again Wednesday, closing with easy Zone 2 cardio.",
   "exercises": [
+    {
+      "machineId": "run",
+      "machine": "Outdoor Walk/Jog",
+      "gym": "Common Machines",
+      "room": "Outdoor Activities",
+      "sets": [
+        {
+          "set": 1,
+          "distance": 1
+        }
+      ],
+      "note": "About a mile, easy effort - walk or jog pace, whatever feels good this morning."
+    },
+    {
+      "machineId": "pw02",
+      "machine": "Lat Pulldown Machine",
+      "gym": "Portofino Gym",
+      "room": "Weight Room",
+      "sets": [
+        {
+          "set": 1,
+          "weight": 50,
+          "reps": 10
+        },
+        {
+          "set": 2,
+          "weight": 60,
+          "reps": 10
+        },
+        {
+          "set": 3,
+          "weight": 70,
+          "reps": 10
+        }
+      ],
+      "note": "First time on this machine - baseline."
+    },
+    {
+      "machineId": "pw03",
+      "machine": "Seated Cable Row Machine",
+      "gym": "Portofino Gym",
+      "room": "Weight Room",
+      "sets": [
+        {
+          "set": 1,
+          "weight": 50,
+          "reps": 10
+        },
+        {
+          "set": 2,
+          "weight": 60,
+          "reps": 10
+        },
+        {
+          "set": 3,
+          "weight": 70,
+          "reps": 10
+        }
+      ],
+      "note": "First time on this machine - baseline."
+    },
+    {
+      "machineId": "pw01",
+      "machine": "Assisted Pullup & Dip Machine",
+      "gym": "Portofino Gym",
+      "room": "Weight Room",
+      "sets": [
+        {
+          "set": 1,
+          "reps": 8
+        },
+        {
+          "set": 2,
+          "reps": 8
+        },
+        {
+          "set": 3,
+          "reps": 8
+        }
+      ],
+      "note": "First time - use a moderate assist level, target ~8-10 reps, adjust assist as needed."
+    },
+    {
+      "machineId": "pw04",
+      "machine": "Seated Preacher Curl Bench",
+      "gym": "Portofino Gym",
+      "room": "Weight Room",
+      "sets": [
+        {
+          "set": 1,
+          "weight": 30,
+          "reps": 10
+        },
+        {
+          "set": 2,
+          "weight": 40,
+          "reps": 10
+        },
+        {
+          "set": 3,
+          "weight": 50,
+          "reps": 10
+        }
+      ],
+      "note": "First time on this machine - baseline."
+    },
     {
       "machineId": "pw06",
       "machine": "Seated Leg Press Machine",
@@ -24,31 +130,7 @@
           "reps": 10
         }
       ],
-      "note": "Was 65/80/95x10 on 7/31."
-    },
-    {
-      "machineId": "pm05",
-      "machine": "Seated Leg Extension Machine",
-      "gym": "Portofino Gym",
-      "room": "Machines Room",
-      "sets": [
-        {
-          "set": 1,
-          "weight": 50,
-          "reps": 15
-        },
-        {
-          "set": 2,
-          "weight": 70,
-          "reps": 15
-        },
-        {
-          "set": 3,
-          "weight": 95,
-          "reps": 15
-        }
-      ],
-      "note": "Was 45/65/90x15 on 7/31."
+      "note": "Same as 8/5 - maintenance only, not progressing since legs need recovery."
     },
     {
       "machineId": "pm06",
@@ -59,149 +141,65 @@
         {
           "set": 1,
           "weight": 50,
-          "reps": 10
+          "reps": 15
         },
         {
           "set": 2,
           "weight": 55,
-          "reps": 10
+          "reps": 15
         },
         {
           "set": 3,
           "weight": 60,
-          "reps": 10
+          "reps": 15
         }
       ],
-      "note": "Was 50/55/65/35 on 7/31 - you noted 65 was a lot, easing toward 60 as the top this time."
+      "note": "Same as 8/5 - maintenance only."
     },
     {
-      "machineId": "pm11",
-      "machine": "Hip Abduction Machine",
+      "machineId": "pm01",
+      "machine": "Adjustable Decline Abdominal Bench",
       "gym": "Portofino Gym",
       "room": "Machines Room",
       "sets": [
         {
           "set": 1,
-          "weight": 75,
-          "reps": 10
+          "reps": 20
         },
         {
           "set": 2,
-          "weight": 105,
-          "reps": 10
+          "reps": 20
         },
         {
           "set": 3,
-          "weight": 135,
-          "reps": 10
-        },
-        {
-          "set": 4,
-          "weight": 150,
-          "reps": 10
+          "reps": 20
         }
-      ],
-      "note": "Was 70/100/130/145x10 on 7/31, felt fine."
+      ]
     },
     {
-      "machineId": "pm12",
-      "machine": "Hip Adduction Machine",
+      "machineId": "pm13",
+      "machine": "Seated Abdominal Crunch Machine",
       "gym": "Portofino Gym",
       "room": "Machines Room",
       "sets": [
         {
           "set": 1,
-          "weight": 95,
           "reps": 15
         },
         {
           "set": 2,
-          "weight": 125,
-          "reps": 15
+          "reps": 18
         },
         {
           "set": 3,
-          "weight": 155,
-          "reps": 15
+          "reps": 20
         }
       ],
-      "note": "Was 90/120/150x15 on 7/31."
+      "note": "First time - new variety."
     },
     {
-      "machineId": "pm14",
-      "machine": "Glute Isolator",
-      "gym": "Portofino Gym",
-      "room": "Machines Room",
-      "sets": [
-        {
-          "set": 1,
-          "weight": 70,
-          "reps": 15
-        },
-        {
-          "set": 2,
-          "weight": 90,
-          "reps": 15
-        },
-        {
-          "set": 3,
-          "weight": 110,
-          "reps": 15
-        }
-      ],
-      "note": "Was 65/85/105x15 on 7/31."
-    },
-    {
-      "machineId": "pw08",
-      "machine": "Plate-Loaded Seated Calf Raise",
-      "gym": "Portofino Gym",
-      "room": "Weight Room",
-      "sets": [
-        {
-          "set": 1,
-          "weight": 20,
-          "reps": 15
-        },
-        {
-          "set": 2,
-          "weight": 25,
-          "reps": 15
-        },
-        {
-          "set": 3,
-          "weight": 30,
-          "reps": 15
-        }
-      ],
-      "note": "Was 15/20/25x15 on 7/31."
-    },
-    {
-      "machineId": "pm08",
-      "machine": "Seated Shoulder Press",
-      "gym": "Portofino Gym",
-      "room": "Machines Room",
-      "sets": [
-        {
-          "set": 1,
-          "weight": 35,
-          "reps": 10
-        },
-        {
-          "set": 2,
-          "weight": 50,
-          "reps": 10
-        },
-        {
-          "set": 3,
-          "weight": 60,
-          "reps": 10
-        }
-      ],
-      "note": "Was 30/45/60x10 on 7/30. Keep hands in vertical position."
-    },
-    {
-      "machineId": "pa06",
-      "machine": "Elliptical Cross Trainer",
+      "machineId": "pa01",
+      "machine": "Stair Climber",
       "gym": "Portofino Gym",
       "room": "Aerobic Room",
       "sets": [
