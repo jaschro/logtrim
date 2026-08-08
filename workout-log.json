@@ -160,6 +160,38 @@
     "notes": ""
   },
   {
+    "machineId": "pw04",
+    "machine": "Seated Preacher Curl Bench",
+    "gym": "Portofino Gym",
+    "room": "Weight Room",
+    "date": "2026-08-08",
+    "datetime": "2026-08-08 10:11:38 AM",
+    "set": 1,
+    "weight": 20,
+    "reps": 10,
+    "duration": null,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": "Excluding the weight of the bar"
+  },
+  {
+    "machineId": "pw04",
+    "machine": "Seated Preacher Curl Bench",
+    "gym": "Portofino Gym",
+    "room": "Weight Room",
+    "date": "2026-08-08",
+    "datetime": "2026-08-08 10:11:38 AM",
+    "set": 2,
+    "weight": 30,
+    "reps": 9,
+    "duration": null,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
     "machineId": "m1786026962087",
     "machine": "Chest Press (True Palladium)",
     "gym": "MB JCC",
