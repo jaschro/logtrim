@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-08T04:09:37Z",
+  "fetchedAt": "2026-08-08T06:49:03Z",
   "today": "2026-08-08",
   "recentActivities": [
     {
@@ -314,13 +314,13 @@
     "restingHR": 46,
     "activeCalories": 423.0,
     "bodyBattery": null,
-    "stressAvg": 24,
+    "stressAvg": 26,
     "weeklySteps": 107696
   },
   "trainingReadiness": {
-    "score": null,
-    "level": null,
-    "feedback": null
+    "score": 57,
+    "level": "MODERATE",
+    "feedback": "WORKING_HARD"
   },
   "vo2max": {
     "vo2max": 39.0,
