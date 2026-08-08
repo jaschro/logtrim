@@ -1,7 +1,42 @@
 {
-  "fetchedAt": "2026-08-08T12:42:44Z",
+  "fetchedAt": "2026-08-08T15:26:51Z",
   "today": "2026-08-08",
   "recentActivities": [
+    {
+      "activityId": 23899540352,
+      "date": "2026-08-08",
+      "type": "running",
+      "name": "Miami Beach Running",
+      "durationMins": 13.3,
+      "distanceMiles": 1.2,
+      "avgHR": 131.0,
+      "maxHR": 168.0,
+      "calories": 152.0,
+      "elevationGain": 8.0,
+      "avgPace": 2.4170000553131104,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 28.936
+        },
+        {
+          "zone": 2,
+          "secsInZone": 76.999
+        },
+        {
+          "zone": 3,
+          "secsInZone": 242.821
+        },
+        {
+          "zone": 4,
+          "secsInZone": 138.997
+        },
+        {
+          "zone": 5,
+          "secsInZone": 303.983
+        }
+      ]
+    },
     {
       "activityId": 23892359300,
       "date": "2026-08-07",
@@ -153,29 +188,7 @@
       "maxHR": 138.0,
       "calories": 287.0,
       "elevationGain": 8.0,
-      "avgPace": 1.63100004196167,
-      "hrZones": [
-        {
-          "zone": 1,
-          "secsInZone": 100.791
-        },
-        {
-          "zone": 2,
-          "secsInZone": 1909.859
-        },
-        {
-          "zone": 3,
-          "secsInZone": 249.005
-        },
-        {
-          "zone": 4,
-          "secsInZone": 276.479
-        },
-        {
-          "zone": 5,
-          "secsInZone": 0.0
-        }
-      ]
+      "avgPace": 1.63100004196167
     },
     {
       "activityId": 23854320649,
@@ -309,26 +322,26 @@
     }
   ],
   "todayStats": {
-    "steps": 135,
-    "floors": 0.0,
+    "steps": 2931,
+    "floors": 2.72867,
     "restingHR": 44,
-    "activeCalories": 1.0,
-    "bodyBattery": 87,
-    "stressAvg": 17,
-    "weeklySteps": 107831
+    "activeCalories": 151.0,
+    "bodyBattery": 90,
+    "stressAvg": 16,
+    "weeklySteps": 110627
   },
   "trainingReadiness": {
-    "score": 68,
-    "level": "MODERATE",
-    "feedback": "RECOVERED_AND_READY"
+    "score": 43,
+    "level": "LOW",
+    "feedback": "BALANCE_YOUR_TRAINING_LOAD"
   },
   "vo2max": {
     "vo2max": 39.0,
     "fitnessAge": null
   },
   "intensityMinutes": {
-    "moderate": 296,
-    "vigorous": 15
+    "moderate": 298,
+    "vigorous": 28
   },
   "hrv": {
     "weeklyAvg": 49,
@@ -346,9 +359,9 @@
     "avgRespirationRate": 13.0,
     "avgSpO2": 94.0
   },
-  "spo2Avg": 90.0,
+  "spo2Avg": 93.0,
   "respiration": {
-    "avgWaking": 14.0,
+    "avgWaking": 13.0,
     "avgSleep": 13.0
   }
 }
