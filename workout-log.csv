@@ -6,11 +6,10 @@ datetime,gym,room,machine,machineId,set,weight,reps,duration,level,incline,hr,no
 2026-08-08 10:03:33 AM,Portofino Gym,Weight Room,Seated Cable Row Machine,pw03,1,27.5,10,,,,,Weights are per arm  so 27.5 * 2 = 55
 2026-08-08 10:03:33 AM,Portofino Gym,Weight Room,Seated Cable Row Machine,pw03,2,35,10,,,,,
 2026-08-08 10:03:33 AM,Portofino Gym,Weight Room,Seated Cable Row Machine,pw03,3,42.5,7,,,,,
-2026-08-08 10:09:34 AM,Portofino Gym,Weight Room,Assisted Pullup & Dip Machine,pw01,1,-100,8,,,,,Harder than I anticipate
-2026-08-08 10:09:34 AM,Portofino Gym,Weight Room,Assisted Pullup & Dip Machine,pw01,2,-100,8,,,,,
-2026-08-08 10:09:34 AM,Portofino Gym,Weight Room,Assisted Pullup & Dip Machine,pw01,3,-100,8,,,,,
 2026-08-08 10:11:38 AM,Portofino Gym,Weight Room,Seated Preacher Curl Bench,pw04,1,20,10,,,,,Excluding the weight of the bar
 2026-08-08 10:11:38 AM,Portofino Gym,Weight Room,Seated Preacher Curl Bench,pw04,2,30,9,,,,,
+2026-08-08 10:12:12 AM,Portofino Gym,Weight Room,Assisted Pullup & Dip Machine,pw01,1,-100,8,,,,,Harder than I anticipate
+2026-08-08 10:12:12 AM,Portofino Gym,Weight Room,Assisted Pullup & Dip Machine,pw01,2,-100,8,,,,,
 2026-08-06,MB JCC,Weight Machines,Chest Press (True Palladium),m1786026962087,1,40,15,,,,,
 2026-08-06,MB JCC,Weight Machines,Chest Press (True Palladium),m1786026962087,2,55,15,,,,,
 2026-08-06,MB JCC,Weight Machines,Chest Press (True Palladium),m1786026962087,3,70,15,,,,,
