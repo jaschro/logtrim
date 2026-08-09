@@ -13,7 +13,7 @@
           "name": "Run",
           "musclesWorked": "Cardiovascular system, legs, glutes, core",
           "image": "run.jpg",
-          "logType": "pace"
+          "logType": "walk"
         },
         {
           "id": "walk",
@@ -27,7 +27,7 @@
           "name": "Bike Ride",
           "musclesWorked": "Quadriceps, hamstrings, glutes, cardiovascular system",
           "image": "bike-ride.png",
-          "logType": "pace"
+          "logType": "walk"
         },
         {
           "id": "swim",
