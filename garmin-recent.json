@@ -1,7 +1,42 @@
 {
-  "fetchedAt": "2026-08-09T01:28:39Z",
+  "fetchedAt": "2026-08-09T04:16:40Z",
   "today": "2026-08-09",
   "recentActivities": [
+    {
+      "activityId": 23905728620,
+      "date": "2026-08-08",
+      "type": "walking",
+      "name": "Jupiter Walking",
+      "durationMins": 61.0,
+      "distanceMiles": 3.15,
+      "avgHR": 85.0,
+      "maxHR": 91.0,
+      "calories": 321.0,
+      "elevationGain": 2.0,
+      "avgPace": 1.3849999904632566,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 3508.494
+        },
+        {
+          "zone": 2,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 3,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 4,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 5,
+          "secsInZone": 0.0
+        }
+      ]
+    },
     {
       "activityId": 23899540352,
       "date": "2026-08-08",
@@ -153,29 +188,7 @@
       "maxHR": 180.0,
       "calories": 199.0,
       "elevationGain": null,
-      "avgPace": 0.0,
-      "hrZones": [
-        {
-          "zone": 1,
-          "secsInZone": 51.741
-        },
-        {
-          "zone": 2,
-          "secsInZone": 1112.08
-        },
-        {
-          "zone": 3,
-          "secsInZone": 154.001
-        },
-        {
-          "zone": 4,
-          "secsInZone": 147.0
-        },
-        {
-          "zone": 5,
-          "secsInZone": 36.0
-        }
-      ]
+      "avgPace": 0.0
     },
     {
       "activityId": 23856401509,
@@ -309,13 +322,13 @@
     }
   ],
   "todayStats": {
-    "steps": 5026,
-    "floors": 3.49475,
+    "steps": 15139,
+    "floors": 9.75033,
     "restingHR": 44,
-    "activeCalories": 244.0,
+    "activeCalories": 530.0,
     "bodyBattery": null,
-    "stressAvg": 24,
-    "weeklySteps": 105246
+    "stressAvg": 26,
+    "weeklySteps": 115359
   },
   "trainingReadiness": {
     "score": null,
@@ -327,7 +340,7 @@
     "fitnessAge": null
   },
   "intensityMinutes": {
-    "moderate": 302,
+    "moderate": 363,
     "vigorous": 30
   },
   "hrv": {
