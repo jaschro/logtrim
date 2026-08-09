@@ -54,11 +54,11 @@ test('fmtLast: weight — shows max weight and set count', () => {
 });
 
 test('fmtLast: walk — shows distance, time, pace', () => {
-  const sets = [{ date: today, level: 1.5, duration: 30 }];
+  const sets = [{ date: today, level: 1.5, duration: 32.75 }];
   const result = fmtLast(sets, 'walk');
   assert.ok(result.includes('1.5mi'), result);
-  assert.ok(result.includes('30min'), result);
-  assert.ok(result.includes('20:00/mi'), result);
+  assert.ok(result.includes('32:45min'), result);
+  assert.ok(result.includes('21:50/mi'), result);
 });
 
 test('fmtLast: pace — shows mph and pace', () => {

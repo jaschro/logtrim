@@ -562,7 +562,7 @@ function renderDetail(){
     const isT=(logT==='time')&&!isC&&!isP&&!isW;
     const rowsH=sets.map(s=>{
       const v=isC?[s.duration!=null?s.duration+'min':'—',s.level?s.level+'mph':null,s.incline!=null?s.incline+'% inc':null,s.hr?'HR '+s.hr:null].filter(Boolean).join(' · '):
-               isW?`${s.level!=null?s.level:'—'}mi in ${s.duration!=null?s.duration:'—'}min — ${fmtWalkPace(s.level,s.duration)}`:
+               isW?`${s.level!=null?s.level:'—'}mi in ${s.duration!=null?fmtDuration(s.duration):'—'}min — ${fmtWalkPace(s.level,s.duration)}`:
                isP?`${s.duration!=null?s.duration:'—'}min @ ${s.level||'?'}mph — ${fmtPace(s.level)}`:
                isT?`${s.duration!=null?s.duration:'—'} sec`:
                `${s.weight!=null?s.weight:'—'} lbs × ${s.reps!=null?s.reps:'—'}`;

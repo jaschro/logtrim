@@ -11,7 +11,7 @@ if %ERRORLEVEL% neq 0 (
 )
 echo Committing changes...
 git add -A
-git commit -m "Restrict Garmin sync to jaschro/logtrim fork only"
+git commit -m "Fix walk duration display — show M:SS not decimal minutes"
 echo Pulling and pushing to personal (jaschro/logtrim)...
 git pull personal main --rebase -X theirs
 git push personal main

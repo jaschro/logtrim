@@ -61,7 +61,7 @@
     const d = fmtDate(sets[0].date), f = sets[0];
     if (f.weight != null) { const mx = Math.max(...sets.map(s => s.weight || 0)); return `${d} · ${mx} lbs × ${sets.length} sets`; }
     if (f.duration != null) {
-      if (logType === 'walk' && f.level && f.duration) { return `${d} · ${f.level}mi in ${f.duration}min (${fmtWalkPace(f.level, f.duration)})`; }
+      if (logType === 'walk' && f.level && f.duration) { return `${d} · ${f.level}mi in ${fmtDuration(f.duration)}min (${fmtWalkPace(f.level, f.duration)})`; }
       if (logType === 'pace' && f.level) { return `${d} · ${f.duration}min @ ${f.level}mph (${fmtPace(f.level)})`; }
       if (logType === 'time') { return `${d} · ${sets.length}×${f.duration} sec`; }
       const tot = sets.reduce((s, e) => s + (e.duration || 0), 0); return `${d} · ${tot} min`;
