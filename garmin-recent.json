@@ -1,6 +1,6 @@
 {
-  "fetchedAt": "2026-08-08T21:27:48Z",
-  "today": "2026-08-08",
+  "fetchedAt": "2026-08-09T01:28:39Z",
+  "today": "2026-08-09",
   "recentActivities": [
     {
       "activityId": 23899540352,
@@ -306,19 +306,6 @@
       "calories": 100.0,
       "elevationGain": 0.0,
       "avgPace": 1.4420000314712524
-    },
-    {
-      "activityId": 23730840726,
-      "date": "2026-07-25",
-      "type": "walking",
-      "name": "Jupiter Walking",
-      "durationMins": 31.3,
-      "distanceMiles": 1.14,
-      "avgHR": 125.0,
-      "maxHR": 160.0,
-      "calories": 261.0,
-      "elevationGain": 5.0,
-      "avgPace": 0.9779999852180482
     }
   ],
   "todayStats": {
@@ -326,14 +313,14 @@
     "floors": 3.49475,
     "restingHR": 44,
     "activeCalories": 244.0,
-    "bodyBattery": 56,
+    "bodyBattery": null,
     "stressAvg": 24,
-    "weeklySteps": 112722
+    "weeklySteps": 105246
   },
   "trainingReadiness": {
-    "score": 51,
-    "level": "MODERATE",
-    "feedback": "BOOSTED_BY_NAPPING"
+    "score": null,
+    "level": null,
+    "feedback": null
   },
   "vo2max": {
     "vo2max": 39.0,
@@ -359,9 +346,9 @@
     "avgRespirationRate": 13.0,
     "avgSpO2": 94.0
   },
-  "spo2Avg": 93.0,
+  "spo2Avg": null,
   "respiration": {
-    "avgWaking": 14.0,
-    "avgSleep": 13.0
+    "avgWaking": null,
+    "avgSleep": null
   }
 }
