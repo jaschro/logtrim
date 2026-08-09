@@ -1,207 +1,224 @@
 {
-  "generatedAt": "2026-08-08",
-  "coachNote": "Nice-weather outdoor walk/jog to start the morning, then Portofino: back and biceps get real machine work for the first time in a while (only bodyweight pull-ups since 8/4), legs kept to light maintenance since they were hit hard Monday and again Wednesday, closing with easy Zone 2 cardio.",
+  "generatedAt": "2026-08-09",
+  "coachNote": "Chest, shoulders (via Reverse Fly since Admirals Cove has no dedicated shoulder press), triceps, and legs - rebuilt for Admirals Cove using your actual machines and prior progression there. Swapped Leg Press for Hip Thrust since you already did leg press today. Progressing from your 8/3 numbers on chest/pec fly/reverse fly/arm extension and your most recent leg extension/abductor/adductor numbers.",
   "exercises": [
     {
-      "machineId": "run",
-      "machine": "Outdoor Walk/Jog",
-      "gym": "Common Machines",
-      "room": "Outdoor Activities",
+      "machineId": "m1785006554823",
+      "machine": "Chest press",
+      "gym": "Admirals Cove",
+      "room": "Machines",
       "sets": [
         {
           "set": 1,
-          "distance": 1
-        }
-      ],
-      "note": "About a mile, easy effort - walk or jog pace, whatever feels good this morning."
-    },
-    {
-      "machineId": "pw02",
-      "machine": "Lat Pulldown Machine",
-      "gym": "Portofino Gym",
-      "room": "Weight Room",
-      "sets": [
-        {
-          "set": 1,
-          "weight": 50,
-          "reps": 10
-        },
-        {
-          "set": 2,
           "weight": 60,
           "reps": 10
         },
         {
-          "set": 3,
-          "weight": 70,
-          "reps": 10
-        }
-      ],
-      "note": "First time on this machine - baseline."
-    },
-    {
-      "machineId": "pw03",
-      "machine": "Seated Cable Row Machine",
-      "gym": "Portofino Gym",
-      "room": "Weight Room",
-      "sets": [
-        {
-          "set": 1,
-          "weight": 50,
-          "reps": 10
-        },
-        {
           "set": 2,
-          "weight": 60,
-          "reps": 10
-        },
-        {
-          "set": 3,
-          "weight": 70,
-          "reps": 10
-        }
-      ],
-      "note": "First time on this machine - baseline."
-    },
-    {
-      "machineId": "pw01",
-      "machine": "Assisted Pullup & Dip Machine",
-      "gym": "Portofino Gym",
-      "room": "Weight Room",
-      "sets": [
-        {
-          "set": 1,
-          "reps": 8
-        },
-        {
-          "set": 2,
-          "reps": 8
-        },
-        {
-          "set": 3,
-          "reps": 8
-        }
-      ],
-      "note": "First time - use a moderate assist level, target ~8-10 reps, adjust assist as needed."
-    },
-    {
-      "machineId": "pw04",
-      "machine": "Seated Preacher Curl Bench",
-      "gym": "Portofino Gym",
-      "room": "Weight Room",
-      "sets": [
-        {
-          "set": 1,
-          "weight": 30,
-          "reps": 10
-        },
-        {
-          "set": 2,
-          "weight": 40,
-          "reps": 10
-        },
-        {
-          "set": 3,
-          "weight": 50,
-          "reps": 10
-        }
-      ],
-      "note": "First time on this machine - baseline."
-    },
-    {
-      "machineId": "pw06",
-      "machine": "Seated Leg Press Machine",
-      "gym": "Portofino Gym",
-      "room": "Weight Room",
-      "sets": [
-        {
-          "set": 1,
-          "weight": 70,
-          "reps": 10
-        },
-        {
-          "set": 2,
-          "weight": 85,
+          "weight": 80,
           "reps": 10
         },
         {
           "set": 3,
           "weight": 100,
           "reps": 10
+        },
+        {
+          "set": 4,
+          "weight": 120,
+          "reps": 10
         }
       ],
-      "note": "Same as 8/5 - maintenance only, not progressing since legs need recovery."
+      "note": "Was 55/75/95/115/125x10 on 8/3."
     },
     {
-      "machineId": "pm06",
-      "machine": "Seated Leg Curl Machine",
-      "gym": "Portofino Gym",
-      "room": "Machines Room",
+      "machineId": "m1785006589359",
+      "machine": "Pec Fly",
+      "gym": "Admirals Cove",
+      "room": "Machines",
       "sets": [
         {
           "set": 1,
+          "weight": 35,
+          "reps": 10
+        },
+        {
+          "set": 2,
+          "weight": 45,
+          "reps": 10
+        },
+        {
+          "set": 3,
+          "weight": 55,
+          "reps": 10
+        }
+      ],
+      "note": "Was 30/40/50x10 on 8/3."
+    },
+    {
+      "machineId": "m1785006624353",
+      "machine": "Reverse Fly",
+      "gym": "Admirals Cove",
+      "room": "Machines",
+      "sets": [
+        {
+          "set": 1,
+          "weight": 25,
+          "reps": 10
+        },
+        {
+          "set": 2,
+          "weight": 30,
+          "reps": 10
+        },
+        {
+          "set": 3,
+          "weight": 35,
+          "reps": 10
+        }
+      ],
+      "note": "Was 20/25/30x10 on 8/3. Standing in for shoulder work - no shoulder press machine at this gym."
+    },
+    {
+      "machineId": "m1785618661120",
+      "machine": "Arm Extension",
+      "gym": "Admirals Cove",
+      "room": "Machines",
+      "sets": [
+        {
+          "set": 1,
+          "weight": 40,
+          "reps": 10
+        },
+        {
+          "set": 2,
+          "weight": 60,
+          "reps": 10
+        },
+        {
+          "set": 3,
+          "weight": 80,
+          "reps": 10
+        },
+        {
+          "set": 4,
+          "weight": 100,
+          "reps": 10
+        }
+      ],
+      "note": "Was 35/55/75/95x10 on 8/3."
+    },
+    {
+      "machineId": "m1785618137870",
+      "machine": "Hip Thrust",
+      "gym": "Admirals Cove",
+      "room": "Machines",
+      "sets": [
+        {
+          "set": 1,
+          "weight": 40,
+          "reps": 10
+        },
+        {
+          "set": 2,
+          "weight": 60,
+          "reps": 10
+        },
+        {
+          "set": 3,
+          "weight": 80,
+          "reps": 10
+        }
+      ],
+      "note": "First time on this machine - baseline. Swapped in for Leg Press since you already did that today."
+    },
+    {
+      "machineId": "m1785005305369",
+      "machine": "Leg Extension",
+      "gym": "Admirals Cove",
+      "room": "Machines",
+      "sets": [
+        {
+          "set": 1,
+          "weight": 40,
+          "reps": 10
+        },
+        {
+          "set": 2,
           "weight": 50,
+          "reps": 10
+        },
+        {
+          "set": 3,
+          "weight": 60,
+          "reps": 10
+        },
+        {
+          "set": 4,
+          "weight": 70,
+          "reps": 10
+        }
+      ],
+      "note": "Was 35/45/55/65x10 most recently."
+    },
+    {
+      "machineId": "m1785006086200",
+      "machine": "Abductor",
+      "gym": "Admirals Cove",
+      "room": "Machines",
+      "sets": [
+        {
+          "set": 1,
+          "weight": 60,
+          "reps": 10
+        },
+        {
+          "set": 2,
+          "weight": 70,
+          "reps": 10
+        },
+        {
+          "set": 3,
+          "weight": 80,
+          "reps": 10
+        },
+        {
+          "set": 4,
+          "weight": 90,
+          "reps": 10
+        }
+      ],
+      "note": "Was 55/65/75/85x10 most recently."
+    },
+    {
+      "machineId": "m1785006115413",
+      "machine": "Adductor",
+      "gym": "Admirals Cove",
+      "room": "Machines",
+      "sets": [
+        {
+          "set": 1,
+          "weight": 45,
           "reps": 15
         },
         {
           "set": 2,
           "weight": 55,
-          "reps": 15
+          "reps": 10
         },
         {
           "set": 3,
-          "weight": 60,
-          "reps": 15
+          "weight": 65,
+          "reps": 10
         }
       ],
-      "note": "Same as 8/5 - maintenance only."
+      "note": "Was 40/50/60x15/10/10 most recently."
     },
     {
-      "machineId": "pm01",
-      "machine": "Adjustable Decline Abdominal Bench",
-      "gym": "Portofino Gym",
-      "room": "Machines Room",
-      "sets": [
-        {
-          "set": 1,
-          "reps": 20
-        },
-        {
-          "set": 2,
-          "reps": 20
-        },
-        {
-          "set": 3,
-          "reps": 20
-        }
-      ]
-    },
-    {
-      "machineId": "pm13",
-      "machine": "Seated Abdominal Crunch Machine",
-      "gym": "Portofino Gym",
-      "room": "Machines Room",
-      "sets": [
-        {
-          "set": 1,
-          "reps": 15
-        },
-        {
-          "set": 2,
-          "reps": 18
-        },
-        {
-          "set": 3,
-          "reps": 20
-        }
-      ],
-      "note": "First time - new variety."
-    },
-    {
-      "machineId": "pa01",
-      "machine": "Stair Climber",
-      "gym": "Portofino Gym",
-      "room": "Aerobic Room",
+      "machineId": "m1785620472687",
+      "machine": "Elliptical",
+      "gym": "Admirals Cove",
+      "room": "Aerobic Area",
       "sets": [
         {
           "set": 1,
