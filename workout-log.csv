@@ -1,5 +1,8 @@
 datetime,gym,room,machine,machineId,set,weight,reps,duration,level,incline,hr,notes
 2026-08-10 01:35:34 PM,Admirals Cove,Aerobic Area,Elliptical,m1785620472687,1,,,25,,5,110,Zone 1: 1:59 Zone 2: 11:29 Zone 3: 11:48 Zone 4: 0:10
+2026-08-10 01:45:21 PM,Admirals Cove,Machines,Leg Press,m1785005256712,1,80,10,,,,,
+2026-08-10 01:45:21 PM,Admirals Cove,Machines,Leg Press,m1785005256712,2,100,10,,,,,
+2026-08-10 01:45:21 PM,Admirals Cove,Machines,Leg Press,m1785005256712,3,120,15,,,,,
 2026-08-09 10:21:17 PM,Common Machines,Bodyweight — No Equipment,Push Ups,push-ups,1,,20,,,,,
 2026-08-09 10:21:17 PM,Common Machines,Bodyweight — No Equipment,Push Ups,push-ups,2,,20,,,,,
 2026-08-09 10:21:34 PM,Common Machines,Bodyweight — No Equipment,Squats,squats,1,,10,,,,,
