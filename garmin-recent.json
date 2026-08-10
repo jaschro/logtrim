@@ -1,7 +1,42 @@
 {
-  "fetchedAt": "2026-08-10T01:38:39Z",
+  "fetchedAt": "2026-08-10T04:28:19Z",
   "today": "2026-08-10",
   "recentActivities": [
+    {
+      "activityId": 23917913237,
+      "date": "2026-08-09",
+      "type": "walking",
+      "name": "Jupiter Walking",
+      "durationMins": 53.4,
+      "distanceMiles": 2.65,
+      "avgHR": 93.0,
+      "maxHR": 125.0,
+      "calories": 287.0,
+      "elevationGain": 4.0,
+      "avgPace": 1.3300000429153442,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 2613.582
+        },
+        {
+          "zone": 2,
+          "secsInZone": 542.824
+        },
+        {
+          "zone": 3,
+          "secsInZone": 45.823
+        },
+        {
+          "zone": 4,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 5,
+          "secsInZone": 0.0
+        }
+      ]
+    },
     {
       "activityId": 23905728620,
       "date": "2026-08-08",
@@ -153,29 +188,7 @@
       "maxHR": 123.0,
       "calories": 234.0,
       "elevationGain": 9.0,
-      "avgPace": 1.503999948501587,
-      "hrZones": [
-        {
-          "zone": 1,
-          "secsInZone": 621.002
-        },
-        {
-          "zone": 2,
-          "secsInZone": 1660.854
-        },
-        {
-          "zone": 3,
-          "secsInZone": 58.0
-        },
-        {
-          "zone": 4,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 5,
-          "secsInZone": 0.0
-        }
-      ]
+      "avgPace": 1.503999948501587
     },
     {
       "activityId": 23867475861,
@@ -309,13 +322,13 @@
     }
   ],
   "todayStats": {
-    "steps": 3203,
-    "floors": 3.75394,
+    "steps": 12021,
+    "floors": 6.17913,
     "restingHR": 44,
-    "activeCalories": 39.0,
+    "activeCalories": 336.0,
     "bodyBattery": null,
-    "stressAvg": 19,
-    "weeklySteps": 109658
+    "stressAvg": 22,
+    "weeklySteps": 118476
   },
   "trainingReadiness": {
     "score": null,
