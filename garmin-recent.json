@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-10T18:54:27Z",
+  "fetchedAt": "2026-08-10T21:39:06Z",
   "today": "2026-08-10",
   "recentActivities": [
     {
@@ -344,9 +344,9 @@
     "weeklySteps": 122335
   },
   "trainingReadiness": {
-    "score": 73,
-    "level": "MODERATE",
-    "feedback": "RECOVERED_AND_READY"
+    "score": 75,
+    "level": "HIGH",
+    "feedback": "RESTED_AND_READY"
   },
   "vo2max": {
     "vo2max": 39.0,
