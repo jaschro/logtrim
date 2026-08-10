@@ -80,6 +80,22 @@
     "notes": ""
   },
   {
+    "machineId": "lunges",
+    "machine": "Lunges",
+    "gym": "Common Machines",
+    "room": "Bodyweight — No Equipment",
+    "date": "2026-08-09",
+    "datetime": "2026-08-09 10:22:26 PM",
+    "set": 1,
+    "weight": null,
+    "reps": 10,
+    "duration": null,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": "10 fwd (5R & 5L), 10 reverse"
+  },
+  {
     "machineId": "walk",
     "machine": "Walk",
     "gym": "Common Machines",
