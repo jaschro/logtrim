@@ -96,6 +96,38 @@
     "notes": "10 fwd (5R & 5L), 10 reverse"
   },
   {
+    "machineId": "high-planks",
+    "machine": "High Planks",
+    "gym": "Common Machines",
+    "room": "Bodyweight — No Equipment",
+    "date": "2026-08-09",
+    "datetime": "2026-08-09 10:38:49 PM",
+    "set": 1,
+    "weight": null,
+    "reps": null,
+    "duration": 45,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
+    "machineId": "high-planks",
+    "machine": "High Planks",
+    "gym": "Common Machines",
+    "room": "Bodyweight — No Equipment",
+    "date": "2026-08-09",
+    "datetime": "2026-08-09 10:38:49 PM",
+    "set": 2,
+    "weight": null,
+    "reps": null,
+    "duration": 45,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
     "machineId": "walk",
     "machine": "Walk",
     "gym": "Common Machines",
