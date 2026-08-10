@@ -1,5 +1,21 @@
 [
   {
+    "machineId": "m1785620472687",
+    "machine": "Elliptical",
+    "gym": "Admirals Cove",
+    "room": "Aerobic Area",
+    "date": "2026-08-10",
+    "datetime": "2026-08-10 01:35:34 PM",
+    "set": 1,
+    "weight": null,
+    "reps": null,
+    "duration": 25,
+    "level": null,
+    "incline": 5,
+    "hr": 110,
+    "notes": "Zone 1: 1:59\nZone 2: 11:29\nZone 3: 11:48\nZone 4: 0:10"
+  },
+  {
     "machineId": "push-ups",
     "machine": "Push Ups",
     "gym": "Common Machines",
