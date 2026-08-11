@@ -1,7 +1,42 @@
 {
-  "fetchedAt": "2026-08-11T18:59:18Z",
+  "fetchedAt": "2026-08-11T21:43:47Z",
   "today": "2026-08-11",
   "recentActivities": [
+    {
+      "activityId": 23942001318,
+      "date": "2026-08-11",
+      "type": "treadmill_running",
+      "name": "Treadmill Running",
+      "durationMins": 25.0,
+      "distanceMiles": 1.28,
+      "avgHR": 96.0,
+      "maxHR": 107.0,
+      "calories": 150.0,
+      "elevationGain": null,
+      "avgPace": 1.3760000467300415,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 684.723
+        },
+        {
+          "zone": 2,
+          "secsInZone": 801.981
+        },
+        {
+          "zone": 3,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 4,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 5,
+          "secsInZone": 0.0
+        }
+      ]
+    },
     {
       "activityId": 23930362697,
       "date": "2026-08-10",
@@ -153,29 +188,7 @@
       "maxHR": 168.0,
       "calories": 152.0,
       "elevationGain": 8.0,
-      "avgPace": 2.4170000553131104,
-      "hrZones": [
-        {
-          "zone": 1,
-          "secsInZone": 28.936
-        },
-        {
-          "zone": 2,
-          "secsInZone": 76.999
-        },
-        {
-          "zone": 3,
-          "secsInZone": 242.821
-        },
-        {
-          "zone": 4,
-          "secsInZone": 138.997
-        },
-        {
-          "zone": 5,
-          "secsInZone": 303.983
-        }
-      ]
+      "avgPace": 2.4170000553131104
     },
     {
       "activityId": 23892359300,
@@ -348,16 +361,16 @@
     }
   ],
   "todayStats": {
-    "steps": 182,
-    "floors": 0.0,
+    "steps": 7308,
+    "floors": 2.0,
     "restingHR": 46,
-    "activeCalories": 0.0,
-    "bodyBattery": 87,
-    "stressAvg": 19,
-    "weeklySteps": 118998
+    "activeCalories": 177.0,
+    "bodyBattery": 47,
+    "stressAvg": 24,
+    "weeklySteps": 126124
   },
   "trainingReadiness": {
-    "score": 82,
+    "score": 83,
     "level": "HIGH",
     "feedback": "WELL_RECOVERED"
   },
@@ -366,7 +379,7 @@
     "fitnessAge": null
   },
   "intensityMinutes": {
-    "moderate": 66,
+    "moderate": 91,
     "vigorous": 22
   },
   "hrv": {
@@ -387,7 +400,7 @@
   },
   "spo2Avg": 95.0,
   "respiration": {
-    "avgWaking": 12.0,
+    "avgWaking": 14.0,
     "avgSleep": 14.0
   }
 }
