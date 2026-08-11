@@ -639,7 +639,7 @@
     "gym": "Common Machines",
     "room": "Outdoor Activities",
     "date": "2026-08-09",
-    "datetime": "2026-08-09 10:54:40 PM",
+    "datetime": "2026-08-09 12:32:11 AM",
     "set": 1,
     "weight": null,
     "reps": null,
@@ -647,7 +647,12 @@
     "level": 2.65,
     "incline": null,
     "hr": null,
-    "notes": ""
+    "notes": "",
+    "zone1": 43.56666666666667,
+    "zone2": 9.05,
+    "zone3": 0.7666666666666667,
+    "zone4": null,
+    "zone5": null
   },
   {
     "machineId": "walk",
