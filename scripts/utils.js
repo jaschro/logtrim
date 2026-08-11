@@ -72,13 +72,16 @@
   function csvEsc(s) { return String(s || '').replace(/[,\n"]/g, ' '); }
 
   function toCSV(entries) {
-    const h = 'datetime,gym,room,machine,machineId,set,weight,reps,duration,level,incline,hr,notes';
+    const h = 'datetime,gym,room,machine,machineId,set,weight,reps,duration,level,incline,hr,notes,zone1,zone2,zone3,zone4,zone5';
     const rows = entries.map(e => [
       csvEsc(e.datetime||e.date), csvEsc(e.gym), csvEsc(e.room), csvEsc(e.machine), e.machineId, e.set,
       e.weight != null ? e.weight : '', e.reps != null ? e.reps : '',
       e.duration != null ? e.duration : '', e.level != null ? e.level : '',
       e.incline != null ? e.incline : '', e.hr != null ? e.hr : '',
-      csvEsc(e.notes || '')
+      csvEsc(e.notes || ''),
+      e.zone1 != null ? e.zone1 : '', e.zone2 != null ? e.zone2 : '',
+      e.zone3 != null ? e.zone3 : '', e.zone4 != null ? e.zone4 : '',
+      e.zone5 != null ? e.zone5 : ''
     ].join(','));
     return [h, ...rows].join('\n');
   }

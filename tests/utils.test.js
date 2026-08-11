@@ -86,7 +86,7 @@ test('csvEsc: null → empty string',           () => assert.equal(csvEsc(null),
 // ─── toCSV ───────────────────────────────────────────────────────────────────
 test('toCSV: header row is correct', () => {
   const csv = toCSV([]);
-  assert.equal(csv, 'datetime,gym,room,machine,machineId,set,weight,reps,duration,level,incline,hr,notes');
+  assert.equal(csv, 'datetime,gym,room,machine,machineId,set,weight,reps,duration,level,incline,hr,notes,zone1,zone2,zone3,zone4,zone5');
 });
 
 test('toCSV: walk entry — distance in level column', () => {

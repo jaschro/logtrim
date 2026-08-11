@@ -11,7 +11,7 @@ if %ERRORLEVEL% neq 0 (
 )
 echo Committing changes...
 git add -A
-git commit -m "Run and Bike Ride use distance+time entry like Walk; fix duration display"
+git commit -m "Add HR zone fields to aerobic exercises (walk/pace/cardio)"
 echo Pulling and pushing to personal (jaschro/logtrim)...
 git pull personal main --rebase -X theirs
 git push personal main
