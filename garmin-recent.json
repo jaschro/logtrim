@@ -1,7 +1,42 @@
 {
-  "fetchedAt": "2026-08-11T01:28:16Z",
+  "fetchedAt": "2026-08-11T04:17:56Z",
   "today": "2026-08-11",
   "recentActivities": [
+    {
+      "activityId": 23930362697,
+      "date": "2026-08-10",
+      "type": "walking",
+      "name": "Jupiter Walking",
+      "durationMins": 60.4,
+      "distanceMiles": 3.44,
+      "avgHR": 101.0,
+      "maxHR": 132.0,
+      "calories": 366.0,
+      "elevationGain": 3.0,
+      "avgPace": 1.5290000438690188,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 279.931
+        },
+        {
+          "zone": 2,
+          "secsInZone": 3034.931
+        },
+        {
+          "zone": 3,
+          "secsInZone": 295.001
+        },
+        {
+          "zone": 4,
+          "secsInZone": 12.0
+        },
+        {
+          "zone": 5,
+          "secsInZone": 0.0
+        }
+      ]
+    },
     {
       "activityId": 23925931913,
       "date": "2026-08-10",
@@ -153,29 +188,7 @@
       "maxHR": 101.0,
       "calories": 77.0,
       "elevationGain": 1.0,
-      "avgPace": 1.5230000019073486,
-      "hrZones": [
-        {
-          "zone": 1,
-          "secsInZone": 529.135
-        },
-        {
-          "zone": 2,
-          "secsInZone": 230.727
-        },
-        {
-          "zone": 3,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 4,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 5,
-          "secsInZone": 0.0
-        }
-      ]
+      "avgPace": 1.5230000019073486
     },
     {
       "activityId": 23882010483,
@@ -335,13 +348,13 @@
     }
   ],
   "todayStats": {
-    "steps": 3719,
-    "floors": 1.0,
+    "steps": 15514,
+    "floors": 3.71424,
     "restingHR": 44,
-    "activeCalories": 216.0,
+    "activeCalories": 586.0,
     "bodyBattery": null,
-    "stressAvg": 21,
-    "weeklySteps": 106490
+    "stressAvg": 29,
+    "weeklySteps": 118285
   },
   "trainingReadiness": {
     "score": null,
@@ -353,8 +366,8 @@
     "fitnessAge": null
   },
   "intensityMinutes": {
-    "moderate": 10,
-    "vigorous": 18
+    "moderate": 66,
+    "vigorous": 22
   },
   "hrv": {
     "weeklyAvg": 48,
