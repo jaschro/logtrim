@@ -568,7 +568,7 @@ function renderDetail(){
                `${s.weight!=null?s.weight:'—'} lbs × ${s.reps!=null?s.reps:'—'}`;
       return`<div class="sr"><span class="sn">Set ${s.set}</span><span class="sv">${v}</span></div>`;
     }).join('');
-    const zRow=(isW||isC||isP)&&[1,2,3,4,5].some(i=>f0['zone'+i]!=null)?`<div class="sr" style="font-size:12px;color:var(--dim)">${[1,2,3,4,5].map(i=>`Z${i}:${f0['zone'+i]!=null?f0['zone'+i]+'m':'—'}`).join(' · ')}</div>`:'';
+    const zRow=(isW||isC||isP)&&[1,2,3,4,5].some(i=>f0['zone'+i]!=null)?`<div class="sr" style="font-size:12px;color:var(--dim)">${[1,2,3,4,5].map(i=>`Z${i}:${f0['zone'+i]!=null?fmtDuration(f0['zone'+i])+'m':'—'}`).join(' · ')}</div>`:'';
     return`<div class="hi"><div class="hd"><span>${fmtDateFull(d)}</span><div class="ha"><button onclick="editSess('${d}')" title="Edit">✏️</button><button onclick="delSess('${d}')" title="Delete">🗑️</button></div></div>${rowsH}${zRow}${notes?`<div class="hn">"${x(notes)}"</div>`:''}</div>`;
   }).join(''):`<div class="em" style="padding:28px 24px"><div class="icon">📋</div><p>No sessions logged yet.</p></div>`;
   g('dbody').innerHTML=`${heroH}<div class="dm"><h2>${x(m.name)}</h2>${m.musclesWorked?`<p class="mu">${x(m.musclesWorked)}</p>`:''}</div><button class="lb" onclick="startLog()">Log Today</button><div class="sh">HISTORY</div>${histH}`;
@@ -613,7 +613,7 @@ function renderLog(){
         <table class="st" style="width:auto">
           <thead><tr><th style="width:80px">Zone</th><th>Min</th></tr></thead>
           <tbody>
-            ${[1,2,3,4,5].map(i=>`<tr><td>Zone ${i}</td><td><input type="number" inputmode="decimal" id="z${i}" placeholder="0" value="${zSrc['zone'+i]!=null?zSrc['zone'+i]:''}" style="width:80px"></td></tr>`).join('')}
+            ${[1,2,3,4,5].map(i=>`<tr><td>Zone ${i}</td><td><input type="text" inputmode="text" id="z${i}" placeholder="0:00" value="${zSrc['zone'+i]!=null?fmtDuration(zSrc['zone'+i]):''}" style="width:80px"></td></tr>`).join('')}
           </tbody>
         </table>
       </div>
@@ -732,7 +732,7 @@ async function saveSess(){
   });
   if(!newSets.length){toast('Add at least one set','err');return}
   if((isC||isP||isW)&&newSets.length){
-    const zv=[1,2,3,4,5].map(i=>{ const v=parseFloat((document.getElementById('z'+i)||{}).value); return isNaN(v)?null:v; });
+    const zv=[1,2,3,4,5].map(i=>parseMinutes((document.getElementById('z'+i)||{}).value));
     if(zv.some(z=>z!=null)){ [1,2,3,4,5].forEach((z,i)=>{newSets[0]['zone'+z]=zv[i];}); }
   }
   const btn=g('svbtn');btn.disabled=true;btn.textContent='Saving…';
