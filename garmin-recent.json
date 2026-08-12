@@ -1,7 +1,42 @@
 {
-  "fetchedAt": "2026-08-12T01:46:20Z",
+  "fetchedAt": "2026-08-12T04:25:14Z",
   "today": "2026-08-12",
   "recentActivities": [
+    {
+      "activityId": 23943963158,
+      "date": "2026-08-11",
+      "type": "walking",
+      "name": "Jupiter Walking",
+      "durationMins": 52.0,
+      "distanceMiles": 2.69,
+      "avgHR": 87.0,
+      "maxHR": 98.0,
+      "calories": 277.0,
+      "elevationGain": 4.0,
+      "avgPace": 1.3880000114440918,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 3042.959
+        },
+        {
+          "zone": 2,
+          "secsInZone": 39.999
+        },
+        {
+          "zone": 3,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 4,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 5,
+          "secsInZone": 0.0
+        }
+      ]
+    },
     {
       "activityId": 23942001318,
       "date": "2026-08-11",
@@ -153,29 +188,7 @@
       "maxHR": 91.0,
       "calories": 321.0,
       "elevationGain": 2.0,
-      "avgPace": 1.3849999904632566,
-      "hrZones": [
-        {
-          "zone": 1,
-          "secsInZone": 3508.494
-        },
-        {
-          "zone": 2,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 3,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 4,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 5,
-          "secsInZone": 0.0
-        }
-      ]
+      "avgPace": 1.3849999904632566
     },
     {
       "activityId": 23899540352,
@@ -348,13 +361,13 @@
     }
   ],
   "todayStats": {
-    "steps": 7997,
-    "floors": 4.0,
+    "steps": 14663,
+    "floors": 6.43799,
     "restingHR": 46,
-    "activeCalories": 191.0,
+    "activeCalories": 413.0,
     "bodyBattery": null,
-    "stressAvg": 25,
-    "weeklySteps": 100156
+    "stressAvg": 26,
+    "weeklySteps": 106822
   },
   "trainingReadiness": {
     "score": null,
@@ -366,7 +379,7 @@
     "fitnessAge": null
   },
   "intensityMinutes": {
-    "moderate": 91,
+    "moderate": 143,
     "vigorous": 22
   },
   "hrv": {
