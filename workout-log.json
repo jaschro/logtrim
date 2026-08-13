@@ -1630,6 +1630,22 @@
     "notes": ""
   },
   {
+    "machineId": "meditation",
+    "machine": "Meditation",
+    "gym": "Common Machines",
+    "room": "Bodyweight — No Equipment",
+    "date": "2026-08-08",
+    "datetime": "2026-08-08 09:55:48 PM",
+    "set": 1,
+    "weight": null,
+    "reps": null,
+    "duration": null,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
     "machineId": "m1786026962087",
     "machine": "Chest Press (True Palladium)",
     "gym": "MB JCC",
