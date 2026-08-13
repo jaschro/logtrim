@@ -331,6 +331,13 @@
           "musclesWorked": "Cardiovascular system, quadriceps, hamstrings, glutes, calves",
           "image": "spin-class.jpg",
           "logType": "mins"
+        },
+        {
+          "id": "zumba-class",
+          "name": "Zumba",
+          "musclesWorked": "Cardiovascular system, full body, coordination, core",
+          "image": "zumba-class.jpg",
+          "logType": "mins"
         }
       ]
     },
