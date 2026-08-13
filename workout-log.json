@@ -16,6 +16,27 @@
     "notes": ""
   },
   {
+    "machineId": "walk",
+    "machine": "Walk",
+    "gym": "Common Machines",
+    "room": "Outdoor Activities",
+    "date": "2026-08-12",
+    "datetime": "2026-08-12 10:50:28 PM",
+    "set": 1,
+    "weight": null,
+    "reps": null,
+    "duration": 32.016666666666666,
+    "level": 2.06,
+    "incline": null,
+    "hr": null,
+    "notes": "",
+    "zone1": 1.4333333333333333,
+    "zone2": 12.8,
+    "zone3": 16.633333333333333,
+    "zone4": 1.05,
+    "zone5": null
+  },
+  {
     "machineId": "m1785005305369",
     "machine": "Leg Extension",
     "gym": "Admirals Cove",
