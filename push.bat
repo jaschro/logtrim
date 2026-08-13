@@ -11,7 +11,7 @@ if %ERRORLEVEL% neq 0 (
 )
 echo Committing changes...
 git add -A
-git commit -m "Add HR zone fields to aerobic exercises; text keyboard for zone/duration entry"
+git commit -m "Add Classes category (Yoga, Spin); new mins logType with zone support"
 echo Pulling and pushing to personal (jaschro/logtrim)...
 git pull personal main --rebase -X theirs
 git push personal main

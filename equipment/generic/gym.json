@@ -315,6 +315,26 @@
       ]
     },
     {
+      "id": "classes",
+      "name": "Classes",
+      "machines": [
+        {
+          "id": "yoga-class",
+          "name": "Yoga Class",
+          "musclesWorked": "Flexibility, balance, core, mindfulness",
+          "image": "yoga-class.jpg",
+          "logType": "mins"
+        },
+        {
+          "id": "spin-class",
+          "name": "Spin Class",
+          "musclesWorked": "Cardiovascular system, quadriceps, hamstrings, glutes, calves",
+          "image": "spin-class.jpg",
+          "logType": "mins"
+        }
+      ]
+    },
+    {
       "id": "selectorized-machines",
       "name": "Selectorized Machines",
       "machines": [

@@ -560,15 +560,17 @@ function renderDetail(){
     const isC=logT==='cardio'||(f0.incline!=null||f0.hr!=null);
     const isP=logT==='pace'&&!isC&&!isW;
     const isT=(logT==='time')&&!isC&&!isP&&!isW;
+    const isMn=logT==='mins';
     const rowsH=sets.map(s=>{
       const v=isC?[s.duration!=null?s.duration+'min':'—',s.level?s.level+'mph':null,s.incline!=null?s.incline+'% inc':null,s.hr?'HR '+s.hr:null].filter(Boolean).join(' · '):
                isW?`${s.level!=null?s.level:'—'}mi in ${s.duration!=null?fmtDuration(s.duration):'—'}min — ${fmtWalkPace(s.level,s.duration)}`:
                isP?`${s.duration!=null?s.duration:'—'}min @ ${s.level||'?'}mph — ${fmtPace(s.level)}`:
                isT?`${s.duration!=null?s.duration:'—'} sec`:
+               isMn?`${s.duration!=null?fmtDuration(s.duration):'—'} min`:
                `${s.weight!=null?s.weight:'—'} lbs × ${s.reps!=null?s.reps:'—'}`;
       return`<div class="sr"><span class="sn">Set ${s.set}</span><span class="sv">${v}</span></div>`;
     }).join('');
-    const zRow=(isW||isC||isP)&&[1,2,3,4,5].some(i=>f0['zone'+i]!=null)?`<div class="sr" style="font-size:12px;color:var(--dim)">${[1,2,3,4,5].map(i=>`Z${i}:${f0['zone'+i]!=null?fmtDuration(f0['zone'+i])+'m':'—'}`).join(' · ')}</div>`:'';
+    const zRow=(isW||isC||isP||isMn)&&[1,2,3,4,5].some(i=>f0['zone'+i]!=null)?`<div class="sr" style="font-size:12px;color:var(--dim)">${[1,2,3,4,5].map(i=>`Z${i}:${f0['zone'+i]!=null?fmtDuration(f0['zone'+i])+'m':'—'}`).join(' · ')}</div>`:'';
     return`<div class="hi"><div class="hd"><span>${fmtDateFull(d)}</span><div class="ha"><button onclick="editSess('${d}')" title="Edit">✏️</button><button onclick="delSess('${d}')" title="Delete">🗑️</button></div></div>${rowsH}${zRow}${notes?`<div class="hn">"${x(notes)}"</div>`:''}</div>`;
   }).join(''):`<div class="em" style="padding:28px 24px"><div class="icon">📋</div><p>No sessions logged yet.</p></div>`;
   g('dbody').innerHTML=`${heroH}<div class="dm"><h2>${x(m.name)}</h2>${m.musclesWorked?`<p class="mu">${x(m.musclesWorked)}</p>`:''}</div><button class="lb" onclick="startLog()">Log Today</button><div class="sh">HISTORY</div>${histH}`;
@@ -601,7 +603,7 @@ function renderLog(){
   const prevNotes=editing?(A.log.find(e=>e.machineId===m.id&&e.date===A.editDate)||{}).notes||'':'';
   const planEx2=!editing&&A.suggestion&&(A.suggestion.exercises||[]).find(e=>e.machineId===m.id);
   const planBanner=planEx2?`<div class="planbanner">✨ Sets pre-filled from today\'s plan${planEx2.note?' — '+x(planEx2.note):''}</div>`:'';
-  const isAerobic=defType==='walk'||defType==='pace'||defType==='cardio';
+  const isAerobic=defType==='walk'||defType==='pace'||defType==='cardio'||defType==='mins';
   const zSrc=editing&&prefill.length?prefill[0]:{};
   const hasZones=[1,2,3,4,5].some(i=>zSrc['zone'+i]!=null);
   const zoneSection=isAerobic?`
@@ -639,19 +641,22 @@ function buildTable(sets,type){
   const isP=type==='pace';
   const isT=type==='time';
   const isW=type==='walk';
-  const rows=sets.map((s,i)=>buildRow(i+1,s,isC,isT,isP,isW)).join('');
+  const isMn=type==='mins';
+  const rows=sets.map((s,i)=>buildRow(i+1,s,isC,isT,isP,isW,isMn)).join('');
   const cols=isC?'<th>Mins</th><th>MPH</th><th>Incline</th><th>HR</th>':
              isW?'<th>Distance (mi)</th><th>Time (min)</th><th>Pace</th>':
              isP?'<th>Mins</th><th>MPH</th><th>Avg Pace</th>':
              isT?'<th>Secs</th>':
+             isMn?'<th>Duration (min)</th>':
              '<th>Weight (lbs)</th><th>Reps</th>';
   return`<table class="st"><thead><tr><th>#</th>${cols}<th></th></tr></thead><tbody id="stb">${rows}</tbody></table>`;
 }
-function buildRow(n,s,isC,isT,isP,isW){
+function buildRow(n,s,isC,isT,isP,isW,isMn){
   if(isC)return`<tr><td>${n}</td><td><input type="number" inputmode="decimal" class="sd" placeholder="30" value="${s.duration||''}"></td><td><input type="number" inputmode="decimal" class="smph" placeholder="3.5" value="${s.level||''}"></td><td><input type="number" inputmode="decimal" class="sinc" placeholder="0" value="${s.incline!=null?s.incline:''}"></td><td><input type="number" inputmode="decimal" class="shr" placeholder="120" value="${s.hr!=null?s.hr:''}"></td><td><button class="xb" onclick="rmRow(this)">×</button></td></tr>`;
   if(isW)return`<tr><td>${n}</td><td><input type="number" inputmode="decimal" class="sdist" placeholder="1.5" value="${s.level!=null?s.level:''}" oninput="computeWalkPace(this)"></td><td><input type="text" inputmode="text" class="sd" placeholder="30:00" value="${s.duration!=null?fmtDuration(s.duration):''}" oninput="computeWalkPace(this)"></td><td class="spacecell" style="color:var(--dim);font-size:13px;white-space:nowrap">${s.level&&s.duration?fmtWalkPace(s.level,s.duration):'—'}</td><td><button class="xb" onclick="rmRow(this)">×</button></td></tr>`;
   if(isP)return`<tr><td>${n}</td><td><input type="number" inputmode="decimal" class="sd" placeholder="30" value="${s.duration||''}"></td><td><input type="number" inputmode="decimal" class="smph" placeholder="3.5" value="${s.level||''}" oninput="computePace(this)"></td><td class="spacecell" style="color:var(--dim);font-size:13px;white-space:nowrap">${s.level?fmtPace(s.level):'—'}</td><td><button class="xb" onclick="rmRow(this)">×</button></td></tr>`;
   if(isT)return`<tr><td>${n}</td><td><input type="number" inputmode="decimal" class="sd" placeholder="60" value="${s.duration||''}"></td><td><button class="xb" onclick="rmRow(this)">×</button></td></tr>`;
+  if(isMn)return`<tr><td>${n}</td><td><input type="text" inputmode="text" class="sd" placeholder="45:00" value="${s.duration!=null?fmtDuration(s.duration):''}"></td><td><button class="xb" onclick="rmRow(this)">×</button></td></tr>`;
   return`<tr><td>${n}</td><td><input type="number" inputmode="decimal" class="sw" placeholder="0" value="${s.weight!=null&&s.weight!==''?s.weight:''}"></td><td><input type="number" inputmode="decimal" class="srp" placeholder="0" value="${s.reps!=null&&s.reps!==''?s.reps:''}"></td><td><button class="xb" onclick="rmRow(this)">×</button></td></tr>`;
 }
 function setType(t){
@@ -670,10 +675,12 @@ function addRow(){
   const isP=A.logType==='pace';
   const isT=A.logType==='time';
   const isW=A.logType==='walk';
+  const isMn=A.logType==='mins';
   if(isC)tr.innerHTML=`<td>${n}</td><td><input type="number" inputmode="decimal" class="sd" placeholder="30"></td><td><input type="number" inputmode="decimal" class="smph" placeholder="3.5"></td><td><input type="number" inputmode="decimal" class="sinc" placeholder="0"></td><td><input type="number" inputmode="decimal" class="shr" placeholder="120"></td><td><button class="xb" onclick="rmRow(this)">×</button></td>`;
   else if(isW)tr.innerHTML=`<td>${n}</td><td><input type="number" inputmode="decimal" class="sdist" placeholder="1.5" oninput="computeWalkPace(this)"></td><td><input type="text" inputmode="text" class="sd" placeholder="30:00" oninput="computeWalkPace(this)"></td><td class="spacecell" style="color:var(--dim);font-size:13px;white-space:nowrap">—</td><td><button class="xb" onclick="rmRow(this)">×</button></td>`;
   else if(isP)tr.innerHTML=`<td>${n}</td><td><input type="number" inputmode="decimal" class="sd" placeholder="30"></td><td><input type="number" inputmode="decimal" class="smph" placeholder="3.5" oninput="computePace(this)"></td><td class="spacecell" style="color:var(--dim);font-size:13px;white-space:nowrap">—</td><td><button class="xb" onclick="rmRow(this)">×</button></td>`;
   else if(isT)tr.innerHTML=`<td>${n}</td><td><input type="number" inputmode="decimal" class="sd" placeholder="60"></td><td><button class="xb" onclick="rmRow(this)">×</button></td>`;
+  else if(isMn)tr.innerHTML=`<td>${n}</td><td><input type="text" inputmode="text" class="sd" placeholder="45:00"></td><td><button class="xb" onclick="rmRow(this)">×</button></td>`;
   else tr.innerHTML=`<td>${n}</td><td><input type="number" inputmode="decimal" class="sw" placeholder="0"></td><td><input type="number" inputmode="decimal" class="srp" placeholder="0"></td><td><button class="xb" onclick="rmRow(this)">×</button></td>`;
   tb.appendChild(tr);renum();
 }
@@ -701,6 +708,7 @@ async function saveSess(){
   const isP=A.logType==='pace';
   const isT=A.logType==='time';
   const isW=A.logType==='walk';
+  const isMn=A.logType==='mins';
   const rows=document.querySelectorAll('#stb tr');
   const datetime=date+' '+new Date().toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit',second:'2-digit'});
   const newSets=[];
@@ -724,6 +732,9 @@ async function saveSess(){
     }else if(isT){
       const dur=parseFloat((row.querySelector('.sd')||{}).value)||null;
       newSets.push({machineId:m.id,machine:m.name,gym:gym.name,room:rm.name,date,datetime,set:i+1,weight:null,reps:null,duration:dur,level:null,incline:null,hr:null,notes:i===0?notes.trim():''});
+    }else if(isMn){
+      const dur=parseMinutes((row.querySelector('.sd')||{}).value);
+      newSets.push({machineId:m.id,machine:m.name,gym:gym.name,room:rm.name,date,datetime,set:i+1,weight:null,reps:null,duration:dur,level:null,incline:null,hr:null,notes:i===0?notes.trim():''});
     }else{
       const wt=parseFloat((row.querySelector('.sw')||{}).value);
       const rp=parseInt((row.querySelector('.srp')||{}).value);
@@ -731,7 +742,7 @@ async function saveSess(){
     }
   });
   if(!newSets.length){toast('Add at least one set','err');return}
-  if((isC||isP||isW)&&newSets.length){
+  if((isC||isP||isW||isMn)&&newSets.length){
     const zv=[1,2,3,4,5].map(i=>parseMinutes((document.getElementById('z'+i)||{}).value));
     if(zv.some(z=>z!=null)){ [1,2,3,4,5].forEach((z,i)=>{newSets[0]['zone'+z]=zv[i];}); }
   }
@@ -913,7 +924,7 @@ function addMachine(){
   modal(`<h2>Add Machine</h2>
     <div class="mr"><label>Name</label><input id="m1" type="text" placeholder="e.g. Chest Press"></div>
     <div class="mr"><label>Muscles Worked</label><input id="m2" type="text" placeholder="e.g. Chest, shoulders, triceps"></div>
-    <div class="mr"><label>Log Type</label><select id="m3"><option value="weight">Weight &amp; Reps</option><option value="cardio">Incline Training</option><option value="pace">Duration &amp; Level</option><option value="walk">Distance &amp; Time</option><option value="time">Time Only</option></select></div>
+    <div class="mr"><label>Log Type</label><select id="m3"><option value="weight">Weight &amp; Reps</option><option value="cardio">Incline Training</option><option value="pace">Duration &amp; Level</option><option value="walk">Distance &amp; Time</option><option value="time">Time (Secs)</option><option value="mins">Time (Mins)</option></select></div>
     <div class="mr"><label>Photo (optional)</label><div class="pa" id="mpa" onclick="trigPhoto()"><span style="font-size:36px">📷</span><span class="ph">Tap to take photo</span></div></div>
     <div class="mbs"><button class="mc2" onclick="closeMod()">Cancel</button><button class="mo" onclick="doAddMachine()">Add</button></div>`);
 }
@@ -942,7 +953,7 @@ function editMachine(mid){
   modal(`<h2>Edit Machine</h2>
     <div class="mr"><label>Name</label><input id="m1" type="text" value="${x(m.name)}"></div>
     <div class="mr"><label>Muscles Worked</label><input id="m2" type="text" value="${x(m.musclesWorked||'')}"></div>
-    <div class="mr"><label>Log Type</label><select id="m3"><option value="weight"${m.logType==='weight'?' selected':''}>Weight &amp; Reps</option><option value="cardio"${m.logType==='cardio'?' selected':''}>Incline Training</option><option value="pace"${m.logType==='pace'?' selected':''}>Duration &amp; Level</option><option value="walk"${m.logType==='walk'?' selected':''}>Distance &amp; Time</option><option value="time"${m.logType==='time'?' selected':''}>Time Only</option></select></div>
+    <div class="mr"><label>Log Type</label><select id="m3"><option value="weight"${m.logType==='weight'?' selected':''}>Weight &amp; Reps</option><option value="cardio"${m.logType==='cardio'?' selected':''}>Incline Training</option><option value="pace"${m.logType==='pace'?' selected':''}>Duration &amp; Level</option><option value="walk"${m.logType==='walk'?' selected':''}>Distance &amp; Time</option><option value="time"${m.logType==='time'?' selected':''}>Time (Secs)</option><option value="mins"${m.logType==='mins'?' selected':''}>Time (Mins)</option></select></div>
     <div class="mr"><label>Photo</label><div class="pa" id="mpa" onclick="trigPhoto()">${iu?`<img src="${iu}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">`:'<span style="font-size:36px">📷</span>'}<span class="ph">${iu?'Tap to replace':'Tap to add photo'}</span></div></div>
     <div class="mbs"><button class="mc2" onclick="closeMod()">Cancel</button><button class="md2" onclick="doDelMachine('${mid}')">Delete</button><button class="mo" onclick="doEditMachine('${mid}')">Save</button></div>`);
 }
