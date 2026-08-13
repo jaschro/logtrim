@@ -1,89 +1,60 @@
 {
   "generatedAt": "2026-08-13",
-  "coachNote": "MB JCC session: work in 35-40 min of steady Zone 2 cardio (treadmill/elliptical/bike, whatever's free) to close this week's Zone 2 gap, plus a run through your MB JCC machine circuit from Aug 6 with small progressive bumps.",
+  "coachNote": "Swapped from MB JCC to Portofino since MB JCC wasn't reachable today - same chest/back/rear-delt/glutes/abs focus as the original plan, plus 35-40 min of steady Zone 2 cardio on the elliptical to close this week's Zone 2 gap.",
   "exercises": [
     {
-      "machineId": "m1786026962087",
-      "machine": "Chest Press (True Palladium)",
-      "gym": "MB JCC",
-      "room": "Weight Machines",
+      "machineId": "pm03",
+      "machine": "Seated Chest Press Machine",
+      "gym": "Portofino Gym",
+      "room": "Machines Room",
       "sets": [
         {
           "set": 1,
-          "weight": 45,
-          "reps": 15
+          "weight": 55,
+          "reps": 10
         },
         {
           "set": 2,
-          "weight": 60,
-          "reps": 15
+          "weight": 70,
+          "reps": 10
         },
         {
           "set": 3,
-          "weight": 75,
-          "reps": 15
+          "weight": 85,
+          "reps": 10
+        }
+      ],
+      "note": "First time on this machine at Portofino - baseline."
+    },
+    {
+      "machineId": "pw02",
+      "machine": "Lat Pulldown Machine",
+      "gym": "Portofino Gym",
+      "room": "Weight Room",
+      "sets": [
+        {
+          "set": 1,
+          "weight": 60,
+          "reps": 10
         },
         {
-          "set": 4,
+          "set": 2,
+          "weight": 75,
+          "reps": 10
+        },
+        {
+          "set": 3,
           "weight": 90,
-          "reps": 12
-        }
-      ],
-      "note": "You hit 85x15 on the top set Aug 6 - try 90 today."
-    },
-    {
-      "machineId": "m1786027045955",
-      "machine": "Lat Pulldown (True Palladium)",
-      "gym": "MB JCC",
-      "room": "Weight Machines",
-      "sets": [
-        {
-          "set": 1,
-          "weight": 45,
-          "reps": 15
-        },
-        {
-          "set": 2,
-          "weight": 60,
-          "reps": 15
-        },
-        {
-          "set": 3,
-          "weight": 75,
           "reps": 10
         }
       ],
-      "note": "Topped out at 70x10 last time - push to 75."
+      "note": "Was 55/70/85x10 on 8/8."
     },
     {
-      "machineId": "m1786027107204",
-      "machine": "Ready Delt",
-      "gym": "MB JCC",
-      "room": "Weight Machines",
-      "sets": [
-        {
-          "set": 1,
-          "weight": 40,
-          "reps": 10
-        },
-        {
-          "set": 2,
-          "weight": 55,
-          "reps": 7
-        },
-        {
-          "set": 3,
-          "weight": 55,
-          "reps": 7
-        }
-      ],
-      "note": "55 was tough last time (only 5 reps) - just aim for a couple more reps at the same weight."
-    },
-    {
-      "machineId": "m1786027213090",
-      "machine": "Glute Press",
-      "gym": "MB JCC",
-      "room": "Weight Machines",
+      "machineId": "m1782480059048",
+      "machine": "Rear Deltoid",
+      "gym": "Portofino Gym",
+      "room": "Machines Room",
       "sets": [
         {
           "set": 1,
@@ -92,22 +63,70 @@
         },
         {
           "set": 2,
-          "weight": 45,
+          "weight": 40,
+          "reps": 10
+        },
+        {
+          "set": 3,
+          "weight": 50,
+          "reps": 10
+        }
+      ],
+      "note": "First time on this machine at Portofino - baseline."
+    },
+    {
+      "machineId": "pm14",
+      "machine": "Glute Isolator",
+      "gym": "Portofino Gym",
+      "room": "Machines Room",
+      "sets": [
+        {
+          "set": 1,
+          "weight": 70,
+          "reps": 15
+        },
+        {
+          "set": 2,
+          "weight": 90,
           "reps": 15
         },
         {
           "set": 3,
-          "weight": 60,
+          "weight": 115,
           "reps": 10
         }
       ],
-      "note": "Small bump across all three sets from Aug 6 (25/40/55)."
+      "note": "Was 70/90/110x15/15/10 on 8/5."
     },
     {
-      "machineId": "m1786029912579",
-      "machine": "Knee Lift",
-      "gym": "MB JCC",
-      "room": "Weight Machines",
+      "machineId": "pm01",
+      "machine": "Adjustable Decline Abdominal Bench",
+      "gym": "Portofino Gym",
+      "room": "Machines Room",
+      "sets": [
+        {
+          "set": 1,
+          "weight": 60,
+          "reps": 10
+        },
+        {
+          "set": 2,
+          "weight": 75,
+          "reps": 10
+        },
+        {
+          "set": 3,
+          "weight": 90,
+          "reps": 10
+        }
+      ],
+      "note": "Was 55/70/85x10 on 8/8."
+    },
+    {
+      "machineId": "leg-lifts",
+      "machine": "Leg Lifts",
+      "gym": "Common Machines",
+      "room": "Bodyweight - No Equipment",
       "sets": [
         {
           "set": 1,
@@ -122,7 +141,20 @@
           "reps": 20
         }
       ],
-      "note": "Bodyweight - push reps up from 15/15/15 last time."
+      "note": "Hip flexors/lower abs - standing in for Knee Lift."
+    },
+    {
+      "machineId": "pa06",
+      "machine": "Elliptical Cross Trainer",
+      "gym": "Portofino Gym",
+      "room": "Aerobic Room",
+      "sets": [
+        {
+          "set": 1,
+          "duration": 38
+        }
+      ],
+      "note": "35-40 min steady Zone 2 to close this week's Zone 2 gap."
     }
   ]
 }
