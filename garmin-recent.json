@@ -1,7 +1,42 @@
 {
-  "fetchedAt": "2026-08-13T19:00:37Z",
+  "fetchedAt": "2026-08-13T21:42:05Z",
   "today": "2026-08-13",
   "recentActivities": [
+    {
+      "activityId": 23967461714,
+      "date": "2026-08-13",
+      "type": "treadmill_running",
+      "name": "Treadmill Running",
+      "durationMins": 40.0,
+      "distanceMiles": 2.07,
+      "avgHR": 101.0,
+      "maxHR": 117.0,
+      "calories": 263.0,
+      "elevationGain": null,
+      "avgPace": 1.3860000371932983,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 720.635
+        },
+        {
+          "zone": 2,
+          "secsInZone": 1356.98
+        },
+        {
+          "zone": 3,
+          "secsInZone": 293.002
+        },
+        {
+          "zone": 4,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 5,
+          "secsInZone": 0.0
+        }
+      ]
+    },
     {
       "activityId": 23956874801,
       "date": "2026-08-12",
@@ -153,29 +188,7 @@
       "maxHR": 129.0,
       "calories": 214.0,
       "elevationGain": null,
-      "avgPace": 0.0,
-      "hrZones": [
-        {
-          "zone": 1,
-          "secsInZone": 118.515
-        },
-        {
-          "zone": 2,
-          "secsInZone": 689.0
-        },
-        {
-          "zone": 3,
-          "secsInZone": 708.0
-        },
-        {
-          "zone": 4,
-          "secsInZone": 9.773
-        },
-        {
-          "zone": 5,
-          "secsInZone": 0.0
-        }
-      ]
+      "avgPace": 0.0
     },
     {
       "activityId": 23917913237,
@@ -374,26 +387,26 @@
     }
   ],
   "todayStats": {
-    "steps": 4305,
-    "floors": 0.0,
+    "steps": 10887,
+    "floors": 0.67815,
     "restingHR": 48,
-    "activeCalories": 91.0,
-    "bodyBattery": 50,
-    "stressAvg": 27,
-    "weeklySteps": 102834
+    "activeCalories": 338.0,
+    "bodyBattery": 38,
+    "stressAvg": 29,
+    "weeklySteps": 109416
   },
   "trainingReadiness": {
-    "score": 77,
-    "level": "HIGH",
-    "feedback": "WELL_RECOVERED"
+    "score": 69,
+    "level": "MODERATE",
+    "feedback": "WELL_RESTED"
   },
   "vo2max": {
     "vo2max": 39.0,
     "fitnessAge": null
   },
   "intensityMinutes": {
-    "moderate": 177,
-    "vigorous": 31
+    "moderate": 206,
+    "vigorous": 39
   },
   "hrv": {
     "weeklyAvg": 47,
@@ -413,7 +426,7 @@
   },
   "spo2Avg": 92.0,
   "respiration": {
-    "avgWaking": 14.0,
+    "avgWaking": 15.0,
     "avgSleep": 14.0
   }
 }
