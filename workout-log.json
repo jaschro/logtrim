@@ -1,5 +1,21 @@
 [
   {
+    "machineId": "meditation",
+    "machine": "Meditation",
+    "gym": "Common Machines",
+    "room": "Bodyweight — No Equipment",
+    "date": "2026-08-12",
+    "datetime": "2026-08-12 09:56:00 PM",
+    "set": 1,
+    "weight": null,
+    "reps": null,
+    "duration": null,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
     "machineId": "m1785005305369",
     "machine": "Leg Extension",
     "gym": "Admirals Cove",
