@@ -1,70 +1,12 @@
 {
-  "generatedAt": "2026-08-12",
-  "coachNote": "Finishing the leg exercises deferred from the last Admirals Cove visit (Leg Press has been done twice recently, but Extension/Abductor/Adductor/Hip Thrust haven't), plus abs, plus a deliberate incline-treadmill block aimed at sustained Zone 2 rather than pushing into Zone 4 like the 8/3 ramp. Log the zone breakdown on the treadmill afterward if you can, so we can see whether the incline structure is working.",
+  "generatedAt": "2026-08-13",
+  "coachNote": "MB JCC session: work in 35-40 min of steady Zone 2 cardio (treadmill/elliptical/bike, whatever's free) to close this week's Zone 2 gap, plus a run through your MB JCC machine circuit from Aug 6 with small progressive bumps.",
   "exercises": [
     {
-      "machineId": "m1785005305369",
-      "machine": "Leg Extension",
-      "gym": "Admirals Cove",
-      "room": "Machines",
-      "sets": [
-        {
-          "set": 1,
-          "weight": 40,
-          "reps": 10
-        },
-        {
-          "set": 2,
-          "weight": 50,
-          "reps": 10
-        },
-        {
-          "set": 3,
-          "weight": 60,
-          "reps": 10
-        },
-        {
-          "set": 4,
-          "weight": 70,
-          "reps": 10
-        }
-      ],
-      "note": "Was 35/45/55/65x10 most recently (kg)."
-    },
-    {
-      "machineId": "m1785006086200",
-      "machine": "Abductor",
-      "gym": "Admirals Cove",
-      "room": "Machines",
-      "sets": [
-        {
-          "set": 1,
-          "weight": 60,
-          "reps": 10
-        },
-        {
-          "set": 2,
-          "weight": 70,
-          "reps": 10
-        },
-        {
-          "set": 3,
-          "weight": 80,
-          "reps": 10
-        },
-        {
-          "set": 4,
-          "weight": 90,
-          "reps": 10
-        }
-      ],
-      "note": "Was 55/65/75/85x10 most recently (kg)."
-    },
-    {
-      "machineId": "m1785006115413",
-      "machine": "Adductor",
-      "gym": "Admirals Cove",
-      "room": "Machines",
+      "machineId": "m1786026962087",
+      "machine": "Chest Press (True Palladium)",
+      "gym": "MB JCC",
+      "room": "Weight Machines",
       "sets": [
         {
           "set": 1,
@@ -73,22 +15,51 @@
         },
         {
           "set": 2,
-          "weight": 55,
-          "reps": 10
+          "weight": 60,
+          "reps": 15
         },
         {
           "set": 3,
-          "weight": 65,
+          "weight": 75,
+          "reps": 15
+        },
+        {
+          "set": 4,
+          "weight": 90,
+          "reps": 12
+        }
+      ],
+      "note": "You hit 85x15 on the top set Aug 6 - try 90 today."
+    },
+    {
+      "machineId": "m1786027045955",
+      "machine": "Lat Pulldown (True Palladium)",
+      "gym": "MB JCC",
+      "room": "Weight Machines",
+      "sets": [
+        {
+          "set": 1,
+          "weight": 45,
+          "reps": 15
+        },
+        {
+          "set": 2,
+          "weight": 60,
+          "reps": 15
+        },
+        {
+          "set": 3,
+          "weight": 75,
           "reps": 10
         }
       ],
-      "note": "Was 40/50/60x15/10/10 most recently (kg)."
+      "note": "Topped out at 70x10 last time - push to 75."
     },
     {
-      "machineId": "m1785618137870",
-      "machine": "Hip Thrust",
-      "gym": "Admirals Cove",
-      "room": "Machines",
+      "machineId": "m1786027107204",
+      "machine": "Ready Delt",
+      "gym": "MB JCC",
+      "room": "Weight Machines",
       "sets": [
         {
           "set": 1,
@@ -97,42 +68,46 @@
         },
         {
           "set": 2,
-          "weight": 60,
-          "reps": 10
+          "weight": 55,
+          "reps": 7
         },
         {
           "set": 3,
-          "weight": 80,
-          "reps": 10
+          "weight": 55,
+          "reps": 7
         }
       ],
-      "note": "First time on this machine - baseline (kg)."
+      "note": "55 was tough last time (only 5 reps) - just aim for a couple more reps at the same weight."
     },
     {
-      "machineId": "m1785007780604",
-      "machine": "Decline Ab Bench Situps",
-      "gym": "Admirals Cove",
-      "room": "Machines",
+      "machineId": "m1786027213090",
+      "machine": "Glute Press",
+      "gym": "MB JCC",
+      "room": "Weight Machines",
       "sets": [
         {
           "set": 1,
-          "reps": 15
+          "weight": 30,
+          "reps": 10
         },
         {
           "set": 2,
+          "weight": 45,
           "reps": 15
         },
         {
           "set": 3,
-          "reps": 15
+          "weight": 60,
+          "reps": 10
         }
-      ]
+      ],
+      "note": "Small bump across all three sets from Aug 6 (25/40/55)."
     },
     {
-      "machineId": "m1785177917318",
-      "machine": "Reverse Sit Ups",
-      "gym": "Admirals Cove",
-      "room": "Machines",
+      "machineId": "m1786029912579",
+      "machine": "Knee Lift",
+      "gym": "MB JCC",
+      "room": "Weight Machines",
       "sets": [
         {
           "set": 1,
@@ -146,46 +121,8 @@
           "set": 3,
           "reps": 20
         }
-      ]
-    },
-    {
-      "machineId": "m1785619713315",
-      "machine": "Slat Belt Treadmill (electric)",
-      "gym": "Admirals Cove",
-      "room": "Aerobic Area",
-      "sets": [
-        {
-          "set": 1,
-          "duration": 5,
-          "level": 3,
-          "incline": 3
-        },
-        {
-          "set": 2,
-          "duration": 5,
-          "level": 3,
-          "incline": 5
-        },
-        {
-          "set": 3,
-          "duration": 5,
-          "level": 3,
-          "incline": 7
-        },
-        {
-          "set": 4,
-          "duration": 5,
-          "level": 3,
-          "incline": 5
-        },
-        {
-          "set": 5,
-          "duration": 5,
-          "level": 3,
-          "incline": 3
-        }
       ],
-      "note": "Speed ~3.0 mph throughout, incline ramp 3/5/7/5/3% - aiming for sustained Zone 2 with only a brief Zone 3 touch at the peak."
+      "note": "Bodyweight - push reps up from 15/15/15 last time."
     }
   ]
 }
