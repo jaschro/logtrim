@@ -37,6 +37,22 @@
     "zone5": null
   },
   {
+    "machineId": "yoga-class",
+    "machine": "Yoga Class",
+    "gym": "Common Machines",
+    "room": "Classes",
+    "date": "2026-08-12",
+    "datetime": "2026-08-12 01:36:50 AM",
+    "set": 1,
+    "weight": null,
+    "reps": null,
+    "duration": 45,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
     "machineId": "m1785005305369",
     "machine": "Leg Extension",
     "gym": "Admirals Cove",
