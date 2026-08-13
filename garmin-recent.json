@@ -1,7 +1,42 @@
 {
-  "fetchedAt": "2026-08-13T01:48:17Z",
+  "fetchedAt": "2026-08-13T04:49:42Z",
   "today": "2026-08-13",
   "recentActivities": [
+    {
+      "activityId": 23956874801,
+      "date": "2026-08-12",
+      "type": "walking",
+      "name": "Miami Beach Walking",
+      "durationMins": 32.0,
+      "distanceMiles": 2.06,
+      "avgHR": 111.0,
+      "maxHR": 132.0,
+      "calories": 231.0,
+      "elevationGain": 14.0,
+      "avgPace": 1.7269999980926514,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 86.0
+        },
+        {
+          "zone": 2,
+          "secsInZone": 767.763
+        },
+        {
+          "zone": 3,
+          "secsInZone": 997.998
+        },
+        {
+          "zone": 4,
+          "secsInZone": 62.999
+        },
+        {
+          "zone": 5,
+          "secsInZone": 0.0
+        }
+      ]
+    },
     {
       "activityId": 23943963158,
       "date": "2026-08-11",
@@ -153,29 +188,7 @@
       "maxHR": 125.0,
       "calories": 287.0,
       "elevationGain": 4.0,
-      "avgPace": 1.3300000429153442,
-      "hrZones": [
-        {
-          "zone": 1,
-          "secsInZone": 2613.582
-        },
-        {
-          "zone": 2,
-          "secsInZone": 542.824
-        },
-        {
-          "zone": 3,
-          "secsInZone": 45.823
-        },
-        {
-          "zone": 4,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 5,
-          "secsInZone": 0.0
-        }
-      ]
+      "avgPace": 1.3300000429153442
     },
     {
       "activityId": 23905728620,
@@ -361,13 +374,13 @@
     }
   ],
   "todayStats": {
-    "steps": 1090,
-    "floors": 3.32152,
+    "steps": 11532,
+    "floors": 10.58629,
     "restingHR": 46,
-    "activeCalories": 15.0,
+    "activeCalories": 378.0,
     "bodyBattery": null,
-    "stressAvg": 20,
-    "weeklySteps": 87888
+    "stressAvg": 31,
+    "weeklySteps": 98330
   },
   "trainingReadiness": {
     "score": null,
@@ -379,8 +392,8 @@
     "fitnessAge": null
   },
   "intensityMinutes": {
-    "moderate": 143,
-    "vigorous": 22
+    "moderate": 175,
+    "vigorous": 28
   },
   "hrv": {
     "weeklyAvg": 46,
