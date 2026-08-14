@@ -1,4 +1,9 @@
 datetime,gym,room,machine,machineId,set,weight,reps,duration,level,incline,hr,notes,zone1,zone2,zone3,zone4,zone5
+2026-08-14 04:24:18 PM,Admirals Cove,Machines,Leg Extension,m1785005305369,1,25,10,,,,,65 is challenging,,,,,
+2026-08-14 04:24:18 PM,Admirals Cove,Machines,Leg Extension,m1785005305369,2,35,10,,,,,,,,,,
+2026-08-14 04:24:18 PM,Admirals Cove,Machines,Leg Extension,m1785005305369,3,45,10,,,,,,,,,,
+2026-08-14 04:24:18 PM,Admirals Cove,Machines,Leg Extension,m1785005305369,4,55,10,,,,,,,,,,
+2026-08-14 04:24:18 PM,Admirals Cove,Machines,Leg Extension,m1785005305369,5,65,10,,,,,,,,,,
 2026-08-13 05:44:44 PM,Portofino Gym,Aerobic Room,Treadmill,pa05,1,,,5,3,4,85,,12.016666666666667,22.616666666666667,4.883333333333333,,
 2026-08-13 05:44:44 PM,Portofino Gym,Aerobic Room,Treadmill,pa05,2,,,5,3,6,92,,,,,,
 2026-08-13 05:44:44 PM,Portofino Gym,Aerobic Room,Treadmill,pa05,3,,,5,3,8,103,,,,,,
