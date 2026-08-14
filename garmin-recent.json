@@ -1,6 +1,6 @@
 {
-  "fetchedAt": "2026-08-13T21:42:05Z",
-  "today": "2026-08-13",
+  "fetchedAt": "2026-08-14T01:46:13Z",
+  "today": "2026-08-14",
   "recentActivities": [
     {
       "activityId": 23967461714,
@@ -371,34 +371,21 @@
       "calories": 248.0,
       "elevationGain": 2.0,
       "avgPace": 1.284999966621399
-    },
-    {
-      "activityId": 23794066632,
-      "date": "2026-07-30",
-      "type": "walking",
-      "name": "Walking",
-      "durationMins": 24.5,
-      "distanceMiles": 0.94,
-      "avgHR": 93.0,
-      "maxHR": 106.0,
-      "calories": 135.0,
-      "elevationGain": 1.0,
-      "avgPace": 1.027999997138977
     }
   ],
   "todayStats": {
-    "steps": 10887,
-    "floors": 0.67815,
+    "steps": 13649,
+    "floors": 3.5128,
     "restingHR": 48,
-    "activeCalories": 338.0,
-    "bodyBattery": 38,
-    "stressAvg": 29,
-    "weeklySteps": 109416
+    "activeCalories": 388.0,
+    "bodyBattery": null,
+    "stressAvg": 33,
+    "weeklySteps": 99827
   },
   "trainingReadiness": {
-    "score": 69,
-    "level": "MODERATE",
-    "feedback": "WELL_RESTED"
+    "score": null,
+    "level": null,
+    "feedback": null
   },
   "vo2max": {
     "vo2max": 39.0,
@@ -424,9 +411,9 @@
     "avgRespirationRate": 14.0,
     "avgSpO2": 93.0
   },
-  "spo2Avg": 92.0,
+  "spo2Avg": null,
   "respiration": {
-    "avgWaking": 15.0,
-    "avgSleep": 14.0
+    "avgWaking": null,
+    "avgSleep": null
   }
 }
