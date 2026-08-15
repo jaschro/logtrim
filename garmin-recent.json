@@ -1,7 +1,42 @@
 {
-  "fetchedAt": "2026-08-15T01:06:21Z",
+  "fetchedAt": "2026-08-15T03:36:32Z",
   "today": "2026-08-15",
   "recentActivities": [
+    {
+      "activityId": 23980844191,
+      "date": "2026-08-14",
+      "type": "walking",
+      "name": "Jupiter Walking",
+      "durationMins": 32.5,
+      "distanceMiles": 1.62,
+      "avgHR": 87.0,
+      "maxHR": 90.0,
+      "calories": 166.0,
+      "elevationGain": 2.0,
+      "avgPace": 1.3320000171661377,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 1951.823
+        },
+        {
+          "zone": 2,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 3,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 4,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 5,
+          "secsInZone": 0.0
+        }
+      ]
+    },
     {
       "activityId": 23979087800,
       "date": "2026-08-14",
@@ -153,29 +188,7 @@
       "maxHR": 107.0,
       "calories": 150.0,
       "elevationGain": null,
-      "avgPace": 1.3760000467300415,
-      "hrZones": [
-        {
-          "zone": 1,
-          "secsInZone": 684.723
-        },
-        {
-          "zone": 2,
-          "secsInZone": 801.981
-        },
-        {
-          "zone": 3,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 4,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 5,
-          "secsInZone": 0.0
-        }
-      ]
+      "avgPace": 1.3760000467300415
     },
     {
       "activityId": 23930362697,
@@ -374,13 +387,13 @@
     }
   ],
   "todayStats": {
-    "steps": 7786,
-    "floors": 4.22638,
+    "steps": 15476,
+    "floors": 7.05217,
     "restingHR": 47,
-    "activeCalories": 299.0,
+    "activeCalories": 527.0,
     "bodyBattery": null,
-    "stressAvg": 27,
-    "weeklySteps": 91595
+    "stressAvg": 31,
+    "weeklySteps": 99285
   },
   "trainingReadiness": {
     "score": null,
@@ -392,7 +405,7 @@
     "fitnessAge": null
   },
   "intensityMinutes": {
-    "moderate": 228,
+    "moderate": 260,
     "vigorous": 54
   },
   "hrv": {
