@@ -437,6 +437,27 @@
     "notes": ""
   },
   {
+    "machineId": "walk",
+    "machine": "Walk",
+    "gym": "Common Machines",
+    "room": "Outdoor Activities",
+    "date": "2026-08-14",
+    "datetime": "2026-08-14 11:44:43 PM",
+    "set": 1,
+    "weight": null,
+    "reps": null,
+    "duration": 32.53333333333333,
+    "level": 1.62,
+    "incline": null,
+    "hr": null,
+    "notes": "",
+    "zone1": 32.53333333333333,
+    "zone2": null,
+    "zone3": null,
+    "zone4": null,
+    "zone5": null
+  },
+  {
     "machineId": "pa05",
     "machine": "Treadmill",
     "gym": "Portofino Gym",
