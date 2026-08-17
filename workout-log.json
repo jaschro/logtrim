@@ -288,6 +288,22 @@
     "notes": ""
   },
   {
+    "machineId": "m1787006387384",
+    "machine": "Recumbent Bike",
+    "gym": "Admirals Cove",
+    "room": "Aerobic Area",
+    "date": "2026-08-17",
+    "datetime": "2026-08-17 06:42:11 PM",
+    "set": 1,
+    "weight": null,
+    "reps": null,
+    "duration": null,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": "5 min 95 bpm\n5 min 105 bpm\n5 min 90 bpm\n5 min 105 bpm\n5 min 95 bpm\n5 min 108 bpm"
+  },
+  {
     "machineId": "m1785620353523",
     "machine": "Treadmill",
     "gym": "Admirals Cove",
