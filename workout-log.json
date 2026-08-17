@@ -256,6 +256,38 @@
     "notes": ""
   },
   {
+    "machineId": "pull-ups",
+    "machine": "Pull-ups",
+    "gym": "Common Machines",
+    "room": "Bodyweight — Light Equipment",
+    "date": "2026-08-17",
+    "datetime": "2026-08-17 05:51:31 PM",
+    "set": 1,
+    "weight": null,
+    "reps": 7,
+    "duration": null,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
+    "machineId": "pull-ups",
+    "machine": "Pull-ups",
+    "gym": "Common Machines",
+    "room": "Bodyweight — Light Equipment",
+    "date": "2026-08-17",
+    "datetime": "2026-08-17 05:51:31 PM",
+    "set": 2,
+    "weight": null,
+    "reps": 4,
+    "duration": null,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
     "machineId": "m1785620353523",
     "machine": "Treadmill",
     "gym": "Admirals Cove",
