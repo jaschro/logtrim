@@ -195,6 +195,13 @@
           "musclesWorked": "Quadriceps, hamstrings, glutes, calves, shoulders, arms",
           "image": "m1785620472687.jpg",
           "logType": "cardio"
+        },
+        {
+          "id": "m1787006387384",
+          "name": "Recumbent Bike",
+          "musclesWorked": "",
+          "image": "m1787006387384.jpg",
+          "logType": "weight"
         }
       ]
     }
