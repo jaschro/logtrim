@@ -1,6 +1,6 @@
 {
-  "fetchedAt": "2026-08-16T21:17:34Z",
-  "today": "2026-08-16",
+  "fetchedAt": "2026-08-17T01:07:57Z",
+  "today": "2026-08-17",
   "recentActivities": [
     {
       "activityId": 23999760455,
@@ -371,32 +371,6 @@
       "calories": 331.0,
       "elevationGain": 14.0,
       "avgPace": 1.4869999885559082
-    },
-    {
-      "activityId": 23829610466,
-      "date": "2026-08-02",
-      "type": "walking",
-      "name": "Jupiter Walking",
-      "durationMins": 24.7,
-      "distanceMiles": 0.16,
-      "avgHR": 113.0,
-      "maxHR": 153.0,
-      "calories": 168.0,
-      "elevationGain": 1.0,
-      "avgPace": 0.1739999949932098
-    },
-    {
-      "activityId": 23829041007,
-      "date": "2026-08-02",
-      "type": "indoor_cardio",
-      "name": "Cardio",
-      "durationMins": 7.0,
-      "distanceMiles": null,
-      "avgHR": 156.0,
-      "maxHR": 202.0,
-      "calories": 89.0,
-      "elevationGain": null,
-      "avgPace": 0.0
     }
   ],
   "todayStats": {
@@ -404,22 +378,22 @@
     "floors": 5.0,
     "restingHR": 47,
     "activeCalories": 191.0,
-    "bodyBattery": 49,
+    "bodyBattery": null,
     "stressAvg": 28,
-    "weeklySteps": 100272
+    "weeklySteps": 88111
   },
   "trainingReadiness": {
-    "score": 85,
-    "level": "HIGH",
-    "feedback": "WELL_RECOVERED"
+    "score": null,
+    "level": null,
+    "feedback": null
   },
   "vo2max": {
     "vo2max": 39.0,
     "fitnessAge": null
   },
   "intensityMinutes": {
-    "moderate": 274,
-    "vigorous": 58
+    "moderate": null,
+    "vigorous": null
   },
   "hrv": {
     "weeklyAvg": 46,
@@ -437,9 +411,9 @@
     "avgRespirationRate": 14.0,
     "avgSpO2": 94.0
   },
-  "spo2Avg": 93.0,
+  "spo2Avg": null,
   "respiration": {
-    "avgWaking": 16.0,
-    "avgSleep": 14.0
+    "avgWaking": null,
+    "avgSleep": null
   }
 }
