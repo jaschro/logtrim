@@ -32,12 +32,12 @@ jobs:
 
       - name: Commit if changed
         run: |
-          if git diff --quiet -- cardio-minutes.csv; then
+          git add cardio-minutes.csv
+          if git diff --cached --quiet; then
             echo "No changes."
             exit 0
           fi
           git config user.name "cardio-minutes-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add cardio-minutes.csv
           git commit -m "cardio-minutes: update $(date -u +%F)"
           git push
