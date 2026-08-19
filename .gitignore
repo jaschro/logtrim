@@ -8,3 +8,6 @@ suggested-workout.json
 garmin-recent.json
 z.*/
 *Claude Project Instructions*
+
+# Garmin auth tokens — never commit (live blob is in the GARMIN_MINUTES Actions secret)
+garmin_tokens.json
