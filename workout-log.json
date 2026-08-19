@@ -1,5 +1,26 @@
 [
   {
+    "machineId": "m1787177783082",
+    "machine": "Lower Loop",
+    "gym": "Specific Courses (Runs/Walks)",
+    "room": "MV",
+    "date": "2026-08-19",
+    "datetime": "2026-08-19 04:35:00 PM",
+    "set": 1,
+    "weight": null,
+    "reps": null,
+    "duration": 41.81666666666667,
+    "level": 4.29,
+    "incline": null,
+    "hr": 117,
+    "notes": "West Tisbury Lower Loop (Garmin walk 24042101553; 2.99 mi; +63 ft). Karvonen zones from cardio-minutes (RHR 46 / max 170); warmup below Z1 counted in zone1.",
+    "zone1": 14.216666666666667,
+    "zone2": 16.166666666666668,
+    "zone3": 9,
+    "zone4": 3,
+    "zone5": null
+  },
+  {
     "machineId": "m1785620353523",
     "machine": "Treadmill",
     "gym": "Admirals Cove",
