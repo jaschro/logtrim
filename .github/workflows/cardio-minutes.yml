@@ -27,7 +27,7 @@ jobs:
 
       - name: Update cardio-minutes.csv
         env:
-          GARMIN_TOKENS: ${{ secrets.GARMIN_TOKENS }}
+          GARMIN_TOKENS: ${{ secrets.GARMIN_MINUTES }}
         run: python cardio-minutes-pipeline/cardio_minutes.py
 
       - name: Commit if changed
