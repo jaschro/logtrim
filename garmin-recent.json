@@ -1,6 +1,6 @@
 {
-  "fetchedAt": "2026-08-18T21:21:45Z",
-  "today": "2026-08-18",
+  "fetchedAt": "2026-08-19T01:06:32Z",
+  "today": "2026-08-19",
   "recentActivities": [
     {
       "activityId": 24027271633,
@@ -358,60 +358,21 @@
       "calories": 199.0,
       "elevationGain": null,
       "avgPace": 0.0
-    },
-    {
-      "activityId": 23856401509,
-      "date": "2026-08-04",
-      "type": "walking",
-      "name": "Miami Beach Walking",
-      "durationMins": 42.3,
-      "distanceMiles": 2.57,
-      "avgHR": 109.0,
-      "maxHR": 138.0,
-      "calories": 287.0,
-      "elevationGain": 8.0,
-      "avgPace": 1.63100004196167
-    },
-    {
-      "activityId": 23854320649,
-      "date": "2026-08-04",
-      "type": "walking",
-      "name": "Walking",
-      "durationMins": 0.9,
-      "distanceMiles": 0.04,
-      "avgHR": 89.0,
-      "maxHR": 92.0,
-      "calories": 5.0,
-      "elevationGain": 0.0,
-      "avgPace": 1.2630000114440916
-    },
-    {
-      "activityId": 23851312429,
-      "date": "2026-08-04",
-      "type": "walking",
-      "name": "Miami Beach Walking",
-      "durationMins": 49.4,
-      "distanceMiles": 2.82,
-      "avgHR": 96.0,
-      "maxHR": 117.0,
-      "calories": 297.0,
-      "elevationGain": 9.0,
-      "avgPace": 1.534999966621399
     }
   ],
   "todayStats": {
-    "steps": 10173,
+    "steps": 10845,
     "floors": 3.07251,
     "restingHR": 46,
-    "activeCalories": 424.0,
-    "bodyBattery": 45,
-    "stressAvg": 28,
-    "weeklySteps": 96723
+    "activeCalories": 455.0,
+    "bodyBattery": null,
+    "stressAvg": 30,
+    "weeklySteps": 82721
   },
   "trainingReadiness": {
-    "score": 78,
-    "level": "HIGH",
-    "feedback": "ENERGIZED_BY_GOOD_SLEEP"
+    "score": null,
+    "level": null,
+    "feedback": null
   },
   "vo2max": {
     "vo2max": 39.0,
@@ -437,9 +398,9 @@
     "avgRespirationRate": 14.0,
     "avgSpO2": 95.0
   },
-  "spo2Avg": 93.0,
+  "spo2Avg": null,
   "respiration": {
-    "avgWaking": 15.0,
-    "avgSleep": 14.0
+    "avgWaking": null,
+    "avgSleep": null
   }
 }
