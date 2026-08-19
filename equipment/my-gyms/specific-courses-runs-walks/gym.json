@@ -7,7 +7,15 @@
     {
       "id": "mv-lower-loop-1787177743113",
       "name": "MV",
-      "machines": []
+      "machines": [
+        {
+          "id": "m1787177783082",
+          "name": "Lower Loop",
+          "musclesWorked": "",
+          "image": null,
+          "logType": "pace"
+        }
+      ]
     }
   ]
 }
