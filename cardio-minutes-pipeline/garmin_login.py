@@ -24,11 +24,24 @@ def main() -> None:
     g = Garmin(email=email, password=password, return_on_mfa=True)
     result1, result2 = g.login()
     if result1 == "needs_mfa":
-        code = input("MFA code: ").strip()
+        code = input("MFA code (check your email if you don't use an authenticator): ").strip()
         g.resume_login(result2, code)
-    blob = g.garth.dumps()
+
+    # garminconnect >= 0.3.10 exposes tokens on g.client; older versions on g.garth
+    if hasattr(g, "client") and hasattr(g.client, "dumps"):
+        blob = g.client.dumps()
+    else:
+        blob = g.garth.dumps()
+
+    # Belt and suspenders: also save to a local file so a copy/paste mishap
+    # or console crash can't lose the hard-won tokens.
+    with open("garmin_tokens.json", "w") as f:
+        f.write(blob)
+
     print("\n--- GARMIN_TOKENS (copy everything below into the secret) ---\n")
     print(blob)
+    print("\n(Also saved to garmin_tokens.json in the current directory.")
+    print(" Delete that file after you've added the GitHub secret.)")
 
 
 if __name__ == "__main__":
