@@ -1,0 +1,13 @@
+{
+  "id": "specific-courses-runs-walks",
+  "name": "Specific Courses (Runs/Walks)",
+  "icon": "🏋️",
+  "isGeneric": false,
+  "rooms": [
+    {
+      "id": "main",
+      "name": "Specific Courses (Runs/Walks)",
+      "machines": []
+    }
+  ]
+}
