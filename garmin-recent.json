@@ -1,7 +1,42 @@
 {
-  "fetchedAt": "2026-08-21T21:22:03Z",
+  "fetchedAt": "2026-08-21T22:55:25Z",
   "today": "2026-08-21",
   "recentActivities": [
+    {
+      "activityId": 24065482935,
+      "date": "2026-08-21",
+      "type": "running",
+      "name": "West Tisbury Running",
+      "durationMins": 33.3,
+      "distanceMiles": 2.56,
+      "avgHR": 125.0,
+      "maxHR": 167.0,
+      "calories": 318.0,
+      "elevationGain": 45.0,
+      "avgPace": 2.062999963760376,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 132.0
+        },
+        {
+          "zone": 2,
+          "secsInZone": 208.0
+        },
+        {
+          "zone": 3,
+          "secsInZone": 1166.706
+        },
+        {
+          "zone": 4,
+          "secsInZone": 427.001
+        },
+        {
+          "zone": 5,
+          "secsInZone": 46.0
+        }
+      ]
+    },
     {
       "activityId": 24055433932,
       "date": "2026-08-20",
@@ -153,29 +188,7 @@
       "maxHR": 114.0,
       "calories": 190.0,
       "elevationGain": null,
-      "avgPace": 0.0,
-      "hrZones": [
-        {
-          "zone": 1,
-          "secsInZone": 629.55
-        },
-        {
-          "zone": 2,
-          "secsInZone": 1085.575
-        },
-        {
-          "zone": 3,
-          "secsInZone": 11.191
-        },
-        {
-          "zone": 4,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 5,
-          "secsInZone": 0.0
-        }
-      ]
+      "avgPace": 0.0
     },
     {
       "activityId": 23999760455,
@@ -348,26 +361,26 @@
     }
   ],
   "todayStats": {
-    "steps": 1617,
-    "floors": 1.0,
+    "steps": 9975,
+    "floors": 16.146,
     "restingHR": 46,
-    "activeCalories": 7.0,
-    "bodyBattery": 84,
-    "stressAvg": 16,
-    "weeklySteps": 88436
+    "activeCalories": 311.0,
+    "bodyBattery": 47,
+    "stressAvg": 20,
+    "weeklySteps": 96794
   },
   "trainingReadiness": {
-    "score": 87,
-    "level": "HIGH",
-    "feedback": "WELL_RECOVERED"
+    "score": 69,
+    "level": "MODERATE",
+    "feedback": "RECOVERY_IN_PROGRESS"
   },
   "vo2max": {
-    "vo2max": 39.0,
+    "vo2max": 40.0,
     "fitnessAge": null
   },
   "intensityMinutes": {
-    "moderate": 159,
-    "vigorous": 56
+    "moderate": 166,
+    "vigorous": 84
   },
   "hrv": {
     "weeklyAvg": 45,
@@ -387,7 +400,7 @@
   },
   "spo2Avg": 95.0,
   "respiration": {
-    "avgWaking": 12.0,
+    "avgWaking": 13.0,
     "avgSleep": 13.0
   }
 }
