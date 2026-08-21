@@ -9,5 +9,5 @@ garmin-recent.json
 z.*/
 *Claude Project Instructions*
 
-# Garmin auth tokens — never commit (live blob is in the GARMIN_MINUTES Actions secret)
+# Garmin auth tokens — NEVER commit
 garmin_tokens.json
