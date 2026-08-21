@@ -11,3 +11,7 @@ z.*/
 
 # Garmin auth tokens — NEVER commit
 garmin_tokens.json
+
+# Local-only scripts containing credentials
+purge-template.bat
+purge-tokens.bat
