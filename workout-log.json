@@ -1,5 +1,26 @@
 [
   {
+    "machineId": "run",
+    "machine": "Run",
+    "gym": "Common Machines",
+    "room": "Outdoor Activities",
+    "date": "2026-08-21",
+    "datetime": "2026-08-21 04:53:00 PM",
+    "set": 1,
+    "weight": null,
+    "reps": null,
+    "duration": 33.3,
+    "level": 2.56,
+    "incline": null,
+    "hr": 125,
+    "notes": "West Tisbury run (Garmin 24065482935; 2.56 mi; +45 ft). Karvonen zones from cardio-minutes (RHR 46 / max 170); warmup below Z1 counted in zone1.",
+    "zone1": 6.816666666666666,
+    "zone2": 19.633333333333333,
+    "zone3": 5,
+    "zone4": 2,
+    "zone5": null
+  },
+  {
     "machineId": "walk",
     "machine": "Walk",
     "gym": "Common Machines",
