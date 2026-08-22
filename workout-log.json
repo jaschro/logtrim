@@ -160,6 +160,22 @@
     "notes": "0% incline"
   },
   {
+    "machineId": "lunges",
+    "machine": "Lunges",
+    "gym": "Common Machines",
+    "room": "Bodyweight — No Equipment",
+    "date": "2026-08-22",
+    "datetime": "2026-08-22 06:23:49 PM",
+    "set": 1,
+    "weight": null,
+    "reps": 10,
+    "duration": null,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
     "machineId": "run",
     "machine": "Run",
     "gym": "Common Machines",
