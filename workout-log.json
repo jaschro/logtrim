@@ -192,6 +192,22 @@
     "notes": ""
   },
   {
+    "machineId": "high-planks",
+    "machine": "High Planks",
+    "gym": "Common Machines",
+    "room": "Bodyweight — No Equipment",
+    "date": "2026-08-22",
+    "datetime": "2026-08-22 06:27:13 PM",
+    "set": 1,
+    "weight": null,
+    "reps": null,
+    "duration": 50,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
     "machineId": "run",
     "machine": "Run",
     "gym": "Common Machines",
