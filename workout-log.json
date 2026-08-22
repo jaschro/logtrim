@@ -112,6 +112,38 @@
     "notes": ""
   },
   {
+    "machineId": "standing-dumbbell-curl",
+    "machine": "Standing Dumbbell Curl",
+    "gym": "Common Machines",
+    "room": "Free Weights",
+    "date": "2026-08-22",
+    "datetime": "2026-08-22 06:20:21 PM",
+    "set": 1,
+    "weight": 20,
+    "reps": 10,
+    "duration": null,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
+    "machineId": "standing-dumbbell-curl",
+    "machine": "Standing Dumbbell Curl",
+    "gym": "Common Machines",
+    "room": "Free Weights",
+    "date": "2026-08-22",
+    "datetime": "2026-08-22 06:20:21 PM",
+    "set": 2,
+    "weight": 20,
+    "reps": 10,
+    "duration": null,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
     "machineId": "run",
     "machine": "Run",
     "gym": "Common Machines",
