@@ -378,6 +378,22 @@
     "zone5": null
   },
   {
+    "machineId": "meditation",
+    "machine": "Meditation",
+    "gym": "Common Machines",
+    "room": "Bodyweight — No Equipment",
+    "date": "2026-08-20",
+    "datetime": "2026-08-20 06:54:15 PM",
+    "set": 1,
+    "weight": null,
+    "reps": null,
+    "duration": null,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
     "machineId": "m1787177783082",
     "machine": "Lower Loop",
     "gym": "Specific Courses (Runs/Walks)",
