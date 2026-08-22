@@ -6,6 +6,8 @@ datetime,gym,room,machine,machineId,set,weight,reps,duration,level,incline,hr,no
 2026-08-22 06:14:06 PM,Common Machines,Bodyweight — No Equipment,Bridges,bridges,1,,20,,,,,,,,,,
 2026-08-22 06:15:30 PM,Common Machines,Bodyweight — No Equipment,Elbow Planks,elbow-planks,1,,,45,,,,,,,,,
 2026-08-22 06:15:30 PM,Common Machines,Bodyweight — No Equipment,Elbow Planks,elbow-planks,2,,,,,,,,,,,,
+2026-08-22 06:20:21 PM,Common Machines,Free Weights,Standing Dumbbell Curl,standing-dumbbell-curl,1,20,10,,,,,,,,,,
+2026-08-22 06:20:21 PM,Common Machines,Free Weights,Standing Dumbbell Curl,standing-dumbbell-curl,2,20,10,,,,,,,,,,
 2026-08-21 04:53:00 PM,Common Machines,Outdoor Activities,Run,run,1,,,33.3,2.56,,125,West Tisbury run (Garmin 24065482935; 2.56 mi; +45 ft). Karvonen zones from cardio-minutes (RHR 46 / max 170); warmup below Z1 counted in zone1.,6.816666666666666,19.633333333333333,5,2,
 2026-08-20 07:47:00 PM,Common Machines,Outdoor Activities,Walk,walk,1,,,60.48333333333333,2.95,,86,West Tisbury walk (Garmin 24055433932; 2.95 mi). All Zone 1 - max minute HR ~101 (Karvonen RHR 46 / max 170).,60.48333333333333,,,,
 2026-08-19 04:35:00 PM,Specific Courses (Runs/Walks),MV,Lower Loop,m1787177783082,1,,,41.81666666666667,4.29,,117,West Tisbury Lower Loop (Garmin walk 24042101553; 2.99 mi; +63 ft). Karvonen zones from cardio-minutes (RHR 46 / max 170); warmup below Z1 counted in zone1.,14.216666666666667,16.166666666666668,9,3,
