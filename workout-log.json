@@ -144,6 +144,22 @@
     "notes": ""
   },
   {
+    "machineId": "dumbbell-incline-press",
+    "machine": "Dumbbell Incline Press",
+    "gym": "Common Machines",
+    "room": "Free Weights",
+    "date": "2026-08-22",
+    "datetime": "2026-08-22 06:20:45 PM",
+    "set": 1,
+    "weight": 20,
+    "reps": 20,
+    "duration": null,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": "0% incline"
+  },
+  {
     "machineId": "run",
     "machine": "Run",
     "gym": "Common Machines",
