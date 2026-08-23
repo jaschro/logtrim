@@ -20,9 +20,9 @@ echo Pulling and pushing to personal (jaschro/logtrim)...
 git pull personal main --rebase -X theirs
 git push personal main
 echo.
-echo Pulling and pushing to origin (logtrim/logtrim)...
-git pull origin main --rebase -X theirs
-git push origin main
+echo NOTE: This does NOT push to origin (logtrim/logtrim).
+echo That repo is a clean template - personal data must never
+echo go there. Publish template changes deliberately.
 echo.
 echo Done! Check above for any errors.
 pause

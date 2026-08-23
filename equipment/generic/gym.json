@@ -278,6 +278,20 @@
           "logType": "weight"
         },
         {
+          "id": "dumbbell-flys",
+          "name": "Dumbbell Flys",
+          "musclesWorked": "Pectoralis major (stretch and squeeze), anterior deltoids",
+          "image": "dumbbell-flys.jpg",
+          "logType": "weight"
+        },
+        {
+          "id": "dumbbell-press",
+          "name": "Dumbbell Press",
+          "musclesWorked": "Chest (pectoralis major), triceps, anterior deltoids",
+          "image": "dumbbell-press.jpg",
+          "logType": "weight"
+        },
+        {
           "id": "dumbbell-incline-press",
           "name": "Dumbbell Incline Press",
           "musclesWorked": "Upper chest, anterior deltoids, triceps",
