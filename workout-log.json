@@ -1,5 +1,21 @@
 [
   {
+    "machineId": "meditation",
+    "machine": "Meditation",
+    "gym": "Common Machines",
+    "room": "Bodyweight — No Equipment",
+    "date": "2026-08-23",
+    "datetime": "2026-08-23 01:06:33 AM",
+    "set": 1,
+    "weight": null,
+    "reps": null,
+    "duration": null,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
     "machineId": "bridges",
     "machine": "Bridges",
     "gym": "Common Machines",
