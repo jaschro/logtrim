@@ -32,7 +32,7 @@ jobs:
 
       - name: Update cardio-minutes.csv
         env:
-          GARMIN_TOKENS: ${{ secrets.GARMIN_MINUTES }}
+          GARMIN_TOKENS: ${{ secrets.GARMIN_TOKENS }}
           ACTIVITY_FETCH_LIMIT: ${{ inputs.fetch_limit || '30' }}
         run: python cardio-minutes-pipeline/cardio_minutes.py
 

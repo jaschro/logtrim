@@ -232,7 +232,9 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,BlinkMacSystemFo
       <div class="sl" onclick="nav('equipment')"><span>Manage Equipment</span><span class="ch">&#8250;</span></div>
       <div class="sl" onclick="nav('profile')"><span>My Profile</span><span class="ch">&#8250;</span></div>
       <div class="sl" onclick="reloadData()"><span>Reload Data from GitHub</span><span class="ch">&#8250;</span></div>
+      <div class="sl" onclick="runAppUpdate()"><span>Update App from Template</span><span class="ch">&#8250;</span></div>
     </div>
+    <div id="updstatus" style="padding:8px 16px;font-size:13px;color:var(--dim)"></div>
   </div>
 </div>
 
@@ -290,6 +292,7 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,BlinkMacSystemFo
 <input type="file" id="photoin" accept="image/*" capture="environment" style="display:none">
 
 <script src="scripts/utils.js"></script>
+<script src="scripts/updater.js"></script>
 <script>
 // === STATE ===
 const A={
@@ -316,6 +319,17 @@ function saveCfg(){
   localStorage.setItem('lt-cfg',JSON.stringify(A.cfg));
 }
 function hasCfg(){return!!(A.cfg.user&&A.cfg.repo&&A.cfg.pat)}
+async function runAppUpdate(){
+  if(!hasCfg()){toast('Set up GitHub in Settings first','err');return}
+  const el=g('updstatus');
+  try{
+    const res=await LogTrimUpdater.checkForUpdates(A.cfg,m=>{el.textContent=m});
+    if(res.updated>0)toast(`${res.updated} file(s) updated`,'ok');
+  }catch(e){
+    el.textContent='';
+    toast(`Update failed: ${e.message}`,'err');
+  }
+}
 function rawBase(){return`https://raw.githubusercontent.com/${A.cfg.user}/${A.cfg.repo}/main`}
 function apiBase(){return`https://api.github.com/repos/${A.cfg.user}/${A.cfg.repo}/contents`}
 

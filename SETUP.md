@@ -145,6 +145,31 @@ This is the fiddliest part of setup — feel free to skip it, or ask Claude to w
 
 ---
 
+## Getting Updates
+
+LogTrim improves over time. How you update depends on how your copy was created:
+
+**If you forked** (your repo page says "forked from logtrim/logtrim" under the name):
+1. Open your repo on GitHub
+2. If updates are available you'll see "This branch is N commits behind logtrim/logtrim:main"
+3. Click **Sync fork** → **Update branch**
+4. Wait a minute or two for GitHub Pages to rebuild, then hard-refresh the app
+
+**If your repo is a standalone copy** (no "forked from" note), update from a computer with git:
+
+```
+cd path\to\your\logtrim
+git remote add template https://github.com/logtrim/logtrim.git   (first time only)
+git pull template main
+git push origin main
+```
+
+Your personal data (workout logs, profile, custom gyms) is never touched by updates — it lives in files the template doesn't include.
+
+After any update, hard-refresh the app (Ctrl+Shift+R on desktop; on phone, fully close and reopen the browser or home-screen app).
+
+---
+
 ## Troubleshooting
 
 - **App shows old version after an update:** hard-refresh (Ctrl+Shift+R on desktop; on phone, close the tab fully and reopen)
