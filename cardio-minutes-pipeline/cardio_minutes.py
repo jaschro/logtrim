@@ -121,14 +121,43 @@ def activity_to_rows(activity_id, activity_type, samples):
 
 
 def garmin_client():
+    """
+    Log in with the GARMIN_TOKENS env var, accepting EITHER token format:
+      * a garth dumps() base64 string blob (garmin_login.py format), or
+      * a base64 gzipped tarball of the ~/.garth directory
+        (scripts/garmin_auth_setup.py format — the same secret the
+        garmin-sync workflow uses, so one secret serves both workflows).
+    Falls back to ~/.garminconnect when GARMIN_TOKENS is unset (local use).
+    """
+    import base64
+    import io
+    import tarfile
+    import tempfile
+
     from garminconnect import Garmin
 
     tokens = os.environ.get("GARMIN_TOKENS", "").strip()
-    g = Garmin()
-    if tokens:
-        g.login(tokens)                       # base64 token blob
-    else:
+    if not tokens:
+        g = Garmin()
         g.login("~/.garminconnect")           # local token directory
+        return g
+
+    # Gzip magic bytes (1f 8b) base64-encode to "H4sI" — that means the
+    # secret is the tarball format; otherwise assume the string blob.
+    if not tokens.startswith("H4sI"):
+        g = Garmin()
+        g.login(tokens)                       # garth dumps() base64 blob
+        return g
+
+    buf = io.BytesIO(base64.b64decode(tokens))
+    tmp = tempfile.mkdtemp(prefix="garth-")
+    with tarfile.open(fileobj=buf, mode="r:gz") as tar:
+        tar.extractall(tmp)
+    token_dir = os.path.join(tmp, ".garth")
+    if not os.path.isdir(token_dir):
+        token_dir = tmp                       # tarball without .garth/ prefix
+    g = Garmin()
+    g.login(token_dir)                        # resume from extracted directory
     return g
 
 
