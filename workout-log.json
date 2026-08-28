@@ -32,6 +32,22 @@
     "notes": ""
   },
   {
+    "machineId": "m1787931012328",
+    "machine": "Row",
+    "gym": "Equinox 67th NYC",
+    "room": "Weight Machines",
+    "date": "2026-08-28",
+    "datetime": "2026-08-28 11:35:34 AM",
+    "set": 1,
+    "weight": 20,
+    "reps": 20,
+    "duration": null,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
     "machineId": "run",
     "machine": "Run",
     "gym": "Common Machines",
