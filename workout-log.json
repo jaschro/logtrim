@@ -16,6 +16,22 @@
     "notes": ""
   },
   {
+    "machineId": "m1787930991678",
+    "machine": "Shoulder Press",
+    "gym": "Equinox 67th NYC",
+    "room": "Weight Machines",
+    "date": "2026-08-28",
+    "datetime": "2026-08-28 11:34:18 AM",
+    "set": 1,
+    "weight": 50,
+    "reps": 10,
+    "duration": null,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
     "machineId": "run",
     "machine": "Run",
     "gym": "Common Machines",
