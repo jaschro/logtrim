@@ -48,6 +48,22 @@
     "notes": ""
   },
   {
+    "machineId": "m1787931386718",
+    "machine": "Bosu Leg Lift",
+    "gym": "Equinox 67th NYC",
+    "room": "Weight Machines",
+    "date": "2026-08-28",
+    "datetime": "2026-08-28 11:37:21 AM",
+    "set": 1,
+    "weight": null,
+    "reps": 15,
+    "duration": null,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
     "machineId": "run",
     "machine": "Run",
     "gym": "Common Machines",
