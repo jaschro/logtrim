@@ -33,6 +33,13 @@
           "musclesWorked": "",
           "image": "m1787931012328.jpg",
           "logType": "weight"
+        },
+        {
+          "id": "m1787931030542",
+          "name": "Pulldown",
+          "musclesWorked": "",
+          "image": "m1787931030542.jpg",
+          "logType": "weight"
         }
       ]
     }
