@@ -40,6 +40,13 @@
           "musclesWorked": "",
           "image": "m1787931030542.jpg",
           "logType": "weight"
+        },
+        {
+          "id": "m1787931097899",
+          "name": "Tricep Press",
+          "musclesWorked": "",
+          "image": "m1787931097899.jpg",
+          "logType": "weight"
         }
       ]
     }
