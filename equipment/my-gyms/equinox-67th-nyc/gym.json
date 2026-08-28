@@ -12,7 +12,15 @@
     {
       "id": "weight-machines-1787930911975",
       "name": "Weight Machines",
-      "machines": []
+      "machines": [
+        {
+          "id": "m1787930967814",
+          "name": "Chest Press (Life Fitness)",
+          "musclesWorked": "",
+          "image": "m1787930967814.jpg",
+          "logType": "weight"
+        }
+      ]
     }
   ]
 }
