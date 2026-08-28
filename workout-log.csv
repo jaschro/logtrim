@@ -1,10 +1,12 @@
 datetime,gym,room,machine,machineId,set,weight,reps,duration,level,incline,hr,notes,zone1,zone2,zone3,zone4,zone5
-2026-08-28 11:34:18 AM,Equinox 67th NYC,Weight Machines,Shoulder Press,m1787930991678,1,50,10,,,,,,,,,,
 2026-08-28 11:35:34 AM,Equinox 67th NYC,Weight Machines,Row,m1787931012328,1,20,20,,,,,,,,,,
 2026-08-28 11:37:21 AM,Equinox 67th NYC,Weight Machines,Bosu Leg Lift,m1787931386718,1,,15,,,,,,,,,,
 2026-08-28 11:39:53 AM,Equinox 67th NYC,Weight Machines,Chest Press (Life Fitness),m1787930967814,1,30,10,,,,,,,,,,
 2026-08-28 11:39:53 AM,Equinox 67th NYC,Weight Machines,Chest Press (Life Fitness),m1787930967814,2,50,15,,,,,,,,,,
 2026-08-28 11:39:53 AM,Equinox 67th NYC,Weight Machines,Chest Press (Life Fitness),m1787930967814,3,70,20,,,,,,,,,,
+2026-08-28 11:42:35 AM,Equinox 67th NYC,Weight Machines,Shoulder Press,m1787930991678,1,50,10,,,,,,,,,,
+2026-08-28 11:42:35 AM,Equinox 67th NYC,Weight Machines,Shoulder Press,m1787930991678,2,70,10,,,,,,,,,,
+2026-08-28 11:42:35 AM,Equinox 67th NYC,Weight Machines,Shoulder Press,m1787930991678,3,80,10,,,,,,,,,,
 2026-08-25 12:02:00 PM,Common Machines,Outdoor Activities,Run,run,1,,,46.5,3.36,,128,West Tisbury run (Garmin 24112640806; 3.36 mi; +66 ft). Karvonen zones from cardio-minutes (RHR 46 / max 168); warmup below Z1 counted in zone1.,5.533333333333333,20.966666666666665,19,1,
 2026-08-24 09:58:54 AM,Common Machines,Bodyweight — No Equipment,Meditation,meditation,1,,,,,,,,,,,,
 2026-08-24 04:26:00 PM,Common Machines,Outdoor Activities,Bike Ride,bike-ride,1,,,83.23333333333333,14.55,,105,West Tisbury ride (Garmin 24102789581; 14.55 mi; +196 ft). Karvonen zones from cardio-minutes (RHR 46 / max 168); warmup below Z1 counted in zone1.,75.23333333333333,7,1,,
