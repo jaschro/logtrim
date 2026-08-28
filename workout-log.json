@@ -1,5 +1,21 @@
 [
   {
+    "machineId": "m1787930967814",
+    "machine": "Chest Press (Life Fitness)",
+    "gym": "Equinox 67th NYC",
+    "room": "Weight Machines",
+    "date": "2026-08-28",
+    "datetime": "2026-08-28 11:33:29 AM",
+    "set": 1,
+    "weight": 30,
+    "reps": 10,
+    "duration": null,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
     "machineId": "run",
     "machine": "Run",
     "gym": "Common Machines",
