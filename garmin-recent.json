@@ -1,6 +1,6 @@
 {
-  "fetchedAt": "2026-08-27T13:46:33Z",
-  "today": "2026-08-27",
+  "fetchedAt": "2026-08-28T00:13:59Z",
+  "today": "2026-08-28",
   "recentActivities": [
     {
       "activityId": 24112640806,
@@ -280,34 +280,21 @@
       "calories": 299.0,
       "elevationGain": null,
       "avgPace": 1.437000036239624
-    },
-    {
-      "activityId": 23967461714,
-      "date": "2026-08-13",
-      "type": "treadmill_running",
-      "name": "Treadmill Running",
-      "durationMins": 40.0,
-      "distanceMiles": 2.07,
-      "avgHR": 101.0,
-      "maxHR": 117.0,
-      "calories": 263.0,
-      "elevationGain": null,
-      "avgPace": 1.3860000371932983
     }
   ],
   "todayStats": {
-    "steps": 16,
-    "floors": 0.0,
-    "restingHR": 49,
-    "activeCalories": 0.0,
-    "bodyBattery": 47,
-    "stressAvg": 21,
-    "weeklySteps": 79353
+    "steps": 15352,
+    "floors": 11.54265,
+    "restingHR": 45,
+    "activeCalories": 409.0,
+    "bodyBattery": null,
+    "stressAvg": 26,
+    "weeklySteps": 83602
   },
   "trainingReadiness": {
-    "score": 73,
-    "level": "MODERATE",
-    "feedback": "GOOD_SLEEP_HISTORY"
+    "score": null,
+    "level": null,
+    "feedback": null
   },
   "vo2max": {
     "vo2max": 40.0,
@@ -318,24 +305,24 @@
     "vigorous": 59
   },
   "hrv": {
-    "weeklyAvg": 41,
+    "weeklyAvg": 42,
     "lastNight": null,
     "status": "BALANCED"
   },
   "sleep": {
-    "date": "2026-08-26",
-    "durationHours": 6.2,
-    "score": 79,
-    "deepSleepMins": 101,
-    "lightSleepMins": 199,
-    "remSleepMins": 74,
-    "awakeMins": 1,
-    "avgRespirationRate": 15.0,
-    "avgSpO2": 97.0
+    "date": "2026-08-27",
+    "durationHours": 7.6,
+    "score": 90,
+    "deepSleepMins": 76,
+    "lightSleepMins": 279,
+    "remSleepMins": 101,
+    "awakeMins": 10,
+    "avgRespirationRate": 14.0,
+    "avgSpO2": 94.0
   },
-  "spo2Avg": 95.0,
+  "spo2Avg": null,
   "respiration": {
-    "avgWaking": 15.0,
-    "avgSleep": 9.0
+    "avgWaking": null,
+    "avgSleep": null
   }
 }
