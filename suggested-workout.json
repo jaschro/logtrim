@@ -1,113 +1,92 @@
 {
-  "generatedAt": "2026-08-16",
-  "coachNote": "Upper-body push/pull day to rotate off Aug 14's leg session at AC. Small kg bumps on the machines, holding Pec Fly's top set at 50 (you flagged 55 as too much) and Reverse Fly at 20/25/30 per your own note. Added pull-ups to close out - you've been steady around 5-6 reps per set the last few times, so just aiming to hold or nudge that.",
+  "generatedAt": "2026-08-29",
+  "coachNote": "Lower-body day at Equinox to rotate off Thursday's upper-body session. Equinox's leg machines aren't in your catalog yet, so these use the generic list - treat set 1 on each machine as calibration (new brands feel different) and adjust up/down from there. Weights anchored to your Portofino numbers. Cardio bookends: easy spin to open, stair climber in Zone 2 (HR 119-131) to close.",
   "exercises": [
     {
-      "machineId": "m1785006554823",
-      "machine": "Chest press",
-      "gym": "Admirals Cove",
-      "room": "Machines",
+      "machineId": "stationary-bike-upright",
+      "machine": "Stationary Bike (Upright)",
+      "gym": "Common Machines",
+      "room": "Cardio",
+      "sets": [],
+      "note": "Warmup: 10 min easy spin, HR under ~119 (Zone 1) - like Thursday's spins, just longer."
+    },
+    {
+      "machineId": "leg-press",
+      "machine": "Leg Press",
+      "gym": "Common Machines",
+      "room": "Selectorized Machines",
       "sets": [
         {
           "set": 1,
-          "weight": 65,
+          "weight": 70,
           "reps": 12
         },
         {
           "set": 2,
           "weight": 90,
-          "reps": 12
-        },
-        {
-          "set": 3,
-          "weight": 115,
-          "reps": 10
-        }
-      ],
-      "note": "Up from 60/85/110 on Aug 10."
-    },
-    {
-      "machineId": "m1785006589359",
-      "machine": "Pec Fly",
-      "gym": "Admirals Cove",
-      "room": "Machines",
-      "sets": [
-        {
-          "set": 1,
-          "weight": 35,
-          "reps": 10
-        },
-        {
-          "set": 2,
-          "weight": 45,
           "reps": 10
         },
         {
           "set": 3,
-          "weight": 50,
-          "reps": 8
-        }
-      ],
-      "note": "Holding top set at 50, not 55 - you noted 55 was too much last time."
-    },
-    {
-      "machineId": "m1785006624353",
-      "machine": "Reverse Fly",
-      "gym": "Admirals Cove",
-      "room": "Machines",
-      "sets": [
-        {
-          "set": 1,
-          "weight": 20,
-          "reps": 10
-        },
-        {
-          "set": 2,
-          "weight": 25,
-          "reps": 10
-        },
-        {
-          "set": 3,
-          "weight": 30,
-          "reps": 8
-        }
-      ],
-      "note": "Per your note last time - start at 20kg, cap at 30kg."
-    },
-    {
-      "machineId": "m1785616487088",
-      "machine": "Vertical Traction (like pullups)",
-      "gym": "Admirals Cove",
-      "room": "Machines",
-      "sets": [
-        {
-          "set": 1,
-          "weight": 75,
-          "reps": 10
-        },
-        {
-          "set": 2,
-          "weight": 85,
-          "reps": 10
-        },
-        {
-          "set": 3,
-          "weight": 95,
-          "reps": 10
-        },
-        {
-          "set": 4,
           "weight": 105,
-          "reps": 8
+          "reps": 10
         }
       ],
-      "note": "Up from 70/80/90/100 on Aug 10."
+      "note": "You did 70/85/100x10 at Portofino Aug 8 - if set 1 feels light on the Equinox machine, jump set 3 to 115."
     },
     {
-      "machineId": "m1785617676094",
-      "machine": "Low row",
-      "gym": "Admirals Cove",
-      "room": "Machines",
+      "machineId": "leg-extension",
+      "machine": "Leg Extension",
+      "gym": "Common Machines",
+      "room": "Selectorized Machines",
+      "sets": [
+        {
+          "set": 1,
+          "weight": 50,
+          "reps": 12
+        },
+        {
+          "set": 2,
+          "weight": 70,
+          "reps": 12
+        },
+        {
+          "set": 3,
+          "weight": 90,
+          "reps": 10
+        }
+      ],
+      "note": "Portofino baseline 50/70/95x15 on Aug 5."
+    },
+    {
+      "machineId": "leg-curl",
+      "machine": "Leg Curl",
+      "gym": "Common Machines",
+      "room": "Selectorized Machines",
+      "sets": [
+        {
+          "set": 1,
+          "weight": 45,
+          "reps": 12
+        },
+        {
+          "set": 2,
+          "weight": 55,
+          "reps": 12
+        },
+        {
+          "set": 3,
+          "weight": 65,
+          "reps": 10
+        }
+      ],
+      "note": "Nudge up from Portofino's 40/50/60x15."
+    },
+    {
+      "machineId": "hip-abduction",
+      "machine": "Hip Abduction (open)",
+      "gym": "Common Machines",
+      "room": "Selectorized Machines",
       "sets": [
         {
           "set": 1,
@@ -116,37 +95,101 @@
         },
         {
           "set": 2,
-          "weight": 85,
-          "reps": 10
+          "weight": 105,
+          "reps": 12
         },
         {
           "set": 3,
-          "weight": 95,
+          "weight": 130,
           "reps": 10
         }
       ],
-      "note": "Up from 70/80/90 on Aug 10."
+      "note": "You handled 150 at Portofino Aug 5 - room to climb if the machine feels similar."
     },
     {
-      "machineId": "pull-ups",
-      "machine": "Pull-ups",
+      "machineId": "hip-adduction",
+      "machine": "Hip Adduction",
       "gym": "Common Machines",
-      "room": "Bodyweight — Light Equipment",
+      "room": "Selectorized Machines",
       "sets": [
         {
           "set": 1,
-          "reps": 6
+          "weight": 90,
+          "reps": 12
         },
         {
           "set": 2,
-          "reps": 6
+          "weight": 120,
+          "reps": 12
         },
         {
           "set": 3,
-          "reps": 5
+          "weight": 145,
+          "reps": 10
         }
       ],
-      "note": "You've been steady around 5-6 reps the last few sessions - aiming to hold that."
+      "note": "Portofino baseline 95/125/155."
+    },
+    {
+      "machineId": "dumbbell-lunges",
+      "machine": "Dumbbell Lunges",
+      "gym": "Common Machines",
+      "room": "Free Weights",
+      "sets": [
+        {
+          "set": 1,
+          "weight": 15,
+          "reps": 10
+        },
+        {
+          "set": 2,
+          "weight": 15,
+          "reps": 10
+        }
+      ],
+      "note": "10 per leg. You've been doing bodyweight lunges 3x10 - 15 lb dumbbells is the next step."
+    },
+    {
+      "machineId": "squats",
+      "machine": "Squats",
+      "gym": "Common Machines",
+      "room": "Bodyweight — No Equipment",
+      "sets": [
+        {
+          "set": 1,
+          "reps": 20
+        },
+        {
+          "set": 2,
+          "reps": 20
+        }
+      ],
+      "note": "Matching your 2x20 from Aug 22."
+    },
+    {
+      "machineId": "wall-sits",
+      "machine": "Wall Sits",
+      "gym": "Common Machines",
+      "room": "Bodyweight — No Equipment",
+      "sets": [
+        {
+          "set": 1,
+          "duration": 45
+        },
+        {
+          "set": 2,
+          "duration": 60
+        }
+      ],
+      "note": "You hit 70 sec on Aug 22 - hold 60 on set 2, more if you've got it."
+    },
+    {
+      "machineId": "stair-climber",
+      "machine": "Stair Climber",
+      "gym": "Common Machines",
+      "room": "Cardio",
+      "sets": [],
+      "note": "Finisher: 8-10 min steady, HR in Zone 2 (119-131). Counts toward your cardio minutes."
     }
   ]
 }
