@@ -47,6 +47,13 @@
           "musclesWorked": "",
           "image": "m1787931097899.jpg",
           "logType": "weight"
+        },
+        {
+          "id": "m1787931121575",
+          "name": "Bicep Press",
+          "musclesWorked": "",
+          "image": "m1787931121575.jpg",
+          "logType": "weight"
         }
       ]
     }
