@@ -1,7 +1,112 @@
 {
-  "fetchedAt": "2026-08-28T14:53:28Z",
+  "fetchedAt": "2026-08-28T21:25:01Z",
   "today": "2026-08-28",
   "recentActivities": [
+    {
+      "activityId": 24151204147,
+      "date": "2026-08-28",
+      "type": "indoor_cycling",
+      "name": "Indoor Cycling",
+      "durationMins": 5.1,
+      "distanceMiles": null,
+      "avgHR": 97.0,
+      "maxHR": 109.0,
+      "calories": 33.0,
+      "elevationGain": null,
+      "avgPace": 0.0,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 204.135
+        },
+        {
+          "zone": 2,
+          "secsInZone": 81.997
+        },
+        {
+          "zone": 3,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 4,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 5,
+          "secsInZone": 0.0
+        }
+      ]
+    },
+    {
+      "activityId": 24151106382,
+      "date": "2026-08-28",
+      "type": "indoor_cycling",
+      "name": "Indoor Cycling",
+      "durationMins": 5.1,
+      "distanceMiles": null,
+      "avgHR": 101.0,
+      "maxHR": 114.0,
+      "calories": 36.0,
+      "elevationGain": null,
+      "avgPace": 0.0,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 86.0
+        },
+        {
+          "zone": 2,
+          "secsInZone": 208.362
+        },
+        {
+          "zone": 3,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 4,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 5,
+          "secsInZone": 0.0
+        }
+      ]
+    },
+    {
+      "activityId": 24151105820,
+      "date": "2026-08-28",
+      "type": "indoor_cycling",
+      "name": "Indoor Cycling",
+      "durationMins": 5.5,
+      "distanceMiles": null,
+      "avgHR": 96.0,
+      "maxHR": 108.0,
+      "calories": 35.0,
+      "elevationGain": null,
+      "avgPace": 0.0,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 129.159
+        },
+        {
+          "zone": 2,
+          "secsInZone": 165.0
+        },
+        {
+          "zone": 3,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 4,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 5,
+          "secsInZone": 0.0
+        }
+      ]
+    },
     {
       "activityId": 24112640806,
       "date": "2026-08-25",
@@ -83,29 +188,7 @@
       "maxHR": 139.0,
       "calories": 501.0,
       "elevationGain": 196.0,
-      "avgPace": 4.745999813079834,
-      "hrZones": [
-        {
-          "zone": 1,
-          "secsInZone": 1379.004
-        },
-        {
-          "zone": 2,
-          "secsInZone": 2572.51
-        },
-        {
-          "zone": 3,
-          "secsInZone": 840.024
-        },
-        {
-          "zone": 4,
-          "secsInZone": 30.0
-        },
-        {
-          "zone": 5,
-          "secsInZone": 0.0
-        }
-      ]
+      "avgPace": 4.745999813079834
     },
     {
       "activityId": 24078932823,
@@ -118,29 +201,7 @@
       "maxHR": 116.0,
       "calories": 53.0,
       "elevationGain": 3.0,
-      "avgPace": 1.5429999828338625,
-      "hrZones": [
-        {
-          "zone": 1,
-          "secsInZone": 179.747
-        },
-        {
-          "zone": 2,
-          "secsInZone": 307.678
-        },
-        {
-          "zone": 3,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 4,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 5,
-          "secsInZone": 0.0
-        }
-      ]
+      "avgPace": 1.5429999828338625
     },
     {
       "activityId": 24065482935,
@@ -153,29 +214,7 @@
       "maxHR": 167.0,
       "calories": 318.0,
       "elevationGain": 45.0,
-      "avgPace": 2.062999963760376,
-      "hrZones": [
-        {
-          "zone": 1,
-          "secsInZone": 132.0
-        },
-        {
-          "zone": 2,
-          "secsInZone": 208.0
-        },
-        {
-          "zone": 3,
-          "secsInZone": 1166.706
-        },
-        {
-          "zone": 4,
-          "secsInZone": 427.001
-        },
-        {
-          "zone": 5,
-          "secsInZone": 46.0
-        }
-      ]
+      "avgPace": 2.062999963760376
     },
     {
       "activityId": 24055433932,
@@ -283,25 +322,25 @@
     }
   ],
   "todayStats": {
-    "steps": 280,
-    "floors": 0.0,
+    "steps": 4764,
+    "floors": 5.2021,
     "restingHR": 45,
-    "activeCalories": 1.0,
-    "bodyBattery": 85,
-    "stressAvg": 17,
-    "weeklySteps": 93296
+    "activeCalories": 167.0,
+    "bodyBattery": 60,
+    "stressAvg": 23,
+    "weeklySteps": 97780
   },
   "trainingReadiness": {
-    "score": null,
-    "level": null,
-    "feedback": null
+    "score": 80,
+    "level": "HIGH",
+    "feedback": "WELL_RECOVERED"
   },
   "vo2max": {
     "vo2max": 40.0,
     "fitnessAge": null
   },
   "intensityMinutes": {
-    "moderate": 76,
+    "moderate": 90,
     "vigorous": 59
   },
   "hrv": {
@@ -310,19 +349,19 @@
     "status": "BALANCED"
   },
   "sleep": {
-    "date": "2026-08-27",
-    "durationHours": 7.6,
-    "score": 90,
-    "deepSleepMins": 76,
-    "lightSleepMins": 279,
-    "remSleepMins": 101,
-    "awakeMins": 10,
+    "date": "2026-08-28",
+    "durationHours": 7.9,
+    "score": 86,
+    "deepSleepMins": 111,
+    "lightSleepMins": 262,
+    "remSleepMins": 100,
+    "awakeMins": 39,
     "avgRespirationRate": 14.0,
-    "avgSpO2": 94.0
+    "avgSpO2": 96.0
   },
   "spo2Avg": 95.0,
   "respiration": {
-    "avgWaking": 14.0,
-    "avgSleep": 8.0
+    "avgWaking": 16.0,
+    "avgSleep": 14.0
   }
 }
