@@ -19,6 +19,13 @@
           "musclesWorked": "",
           "image": "m1787930967814.jpg",
           "logType": "weight"
+        },
+        {
+          "id": "m1787930991678",
+          "name": "Shoulder Press",
+          "musclesWorked": "",
+          "image": "m1787930991678.jpg",
+          "logType": "weight"
         }
       ]
     }
