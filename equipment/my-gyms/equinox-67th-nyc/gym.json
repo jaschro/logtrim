@@ -1,0 +1,13 @@
+{
+  "id": "equinox-67th-nyc",
+  "name": "Equinox 67th NYC",
+  "icon": "🏋️",
+  "isGeneric": false,
+  "rooms": [
+    {
+      "id": "main",
+      "name": "Equinox 67th NYC",
+      "machines": []
+    }
+  ]
+}
