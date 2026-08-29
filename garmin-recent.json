@@ -1,6 +1,6 @@
 {
-  "fetchedAt": "2026-08-28T23:51:30Z",
-  "today": "2026-08-28",
+  "fetchedAt": "2026-08-29T05:39:50Z",
+  "today": "2026-08-29",
   "recentActivities": [
     {
       "activityId": 24151204147,
@@ -293,47 +293,21 @@
       "calories": 181.0,
       "elevationGain": null,
       "avgPace": 1.4780000448226929
-    },
-    {
-      "activityId": 23980844191,
-      "date": "2026-08-14",
-      "type": "walking",
-      "name": "Jupiter Walking",
-      "durationMins": 32.5,
-      "distanceMiles": 1.62,
-      "avgHR": 87.0,
-      "maxHR": 90.0,
-      "calories": 166.0,
-      "elevationGain": 2.0,
-      "avgPace": 1.3320000171661377
-    },
-    {
-      "activityId": 23979087800,
-      "date": "2026-08-14",
-      "type": "treadmill_running",
-      "name": "Treadmill Running",
-      "durationMins": 40.0,
-      "distanceMiles": 2.14,
-      "avgHR": 108.0,
-      "maxHR": 128.0,
-      "calories": 299.0,
-      "elevationGain": null,
-      "avgPace": 1.437000036239624
     }
   ],
   "todayStats": {
-    "steps": 9240,
-    "floors": 7.6706,
-    "restingHR": 45,
-    "activeCalories": 263.0,
-    "bodyBattery": 48,
-    "stressAvg": 24,
-    "weeklySteps": 102256
+    "steps": 1805,
+    "floors": 3.33235,
+    "restingHR": 49,
+    "activeCalories": 54.0,
+    "bodyBattery": 29,
+    "stressAvg": 38,
+    "weeklySteps": 98499
   },
   "trainingReadiness": {
-    "score": 80,
-    "level": "HIGH",
-    "feedback": "WELL_RECOVERED"
+    "score": null,
+    "level": null,
+    "feedback": null
   },
   "vo2max": {
     "vo2max": 40.0,
@@ -361,7 +335,7 @@
   },
   "spo2Avg": 95.0,
   "respiration": {
-    "avgWaking": 15.0,
-    "avgSleep": 14.0
+    "avgWaking": 17.0,
+    "avgSleep": 11.0
   }
 }
