@@ -67,7 +67,15 @@
     {
       "id": "5th-floor-machines-1788047845719",
       "name": "5th Floor Machines",
-      "machines": []
+      "machines": [
+        {
+          "id": "m1788047901383",
+          "name": "Leg Press",
+          "musclesWorked": "",
+          "image": "m1788047901383.jpg",
+          "logType": "weight"
+        }
+      ]
     }
   ]
 }
