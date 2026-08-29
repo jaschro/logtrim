@@ -63,6 +63,11 @@
           "logType": "weight"
         }
       ]
+    },
+    {
+      "id": "5th-floor-machines-1788047845719",
+      "name": "5th Floor Machines",
+      "machines": []
     }
   ]
 }
