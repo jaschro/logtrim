@@ -1,7 +1,42 @@
 {
-  "fetchedAt": "2026-08-30T20:34:05Z",
+  "fetchedAt": "2026-08-30T23:10:15Z",
   "today": "2026-08-30",
   "recentActivities": [
+    {
+      "activityId": 24177411517,
+      "date": "2026-08-30",
+      "type": "walking",
+      "name": "New York Walking",
+      "durationMins": 30.9,
+      "distanceMiles": 1.59,
+      "avgHR": 91.0,
+      "maxHR": 101.0,
+      "calories": 171.0,
+      "elevationGain": 9.0,
+      "avgPace": 1.3839999437332153,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 1814.349
+        },
+        {
+          "zone": 2,
+          "secsInZone": 24.0
+        },
+        {
+          "zone": 3,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 4,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 5,
+          "secsInZone": 0.0
+        }
+      ]
+    },
     {
       "activityId": 24165818334,
       "date": "2026-08-29",
@@ -153,29 +188,7 @@
       "maxHR": 151.0,
       "calories": 429.0,
       "elevationGain": 66.0,
-      "avgPace": 1.9390000104904175,
-      "hrZones": [
-        {
-          "zone": 1,
-          "secsInZone": 111.0
-        },
-        {
-          "zone": 2,
-          "secsInZone": 198.0
-        },
-        {
-          "zone": 3,
-          "secsInZone": 1498.889
-        },
-        {
-          "zone": 4,
-          "secsInZone": 955.986
-        },
-        {
-          "zone": 5,
-          "secsInZone": 14.0
-        }
-      ]
+      "avgPace": 1.9390000104904175
     },
     {
       "activityId": 24103319711,
@@ -309,13 +322,13 @@
     }
   ],
   "todayStats": {
-    "steps": 326,
-    "floors": 0.0,
+    "steps": 8153,
+    "floors": 5.0082,
     "restingHR": 46,
-    "activeCalories": 3.0,
-    "bodyBattery": 89,
-    "stressAvg": 20,
-    "weeklySteps": 104898
+    "activeCalories": 207.0,
+    "bodyBattery": 57,
+    "stressAvg": 23,
+    "weeklySteps": 112725
   },
   "trainingReadiness": {
     "score": 85,
@@ -327,7 +340,7 @@
     "fitnessAge": null
   },
   "intensityMinutes": {
-    "moderate": 93,
+    "moderate": 125,
     "vigorous": 72
   },
   "hrv": {
