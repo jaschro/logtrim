@@ -176,6 +176,38 @@
     "notes": ""
   },
   {
+    "machineId": "m1788049350908",
+    "machine": "Reverse Situp",
+    "gym": "Equinox 67th NYC",
+    "room": "5th floor free weight room",
+    "date": "2026-08-29",
+    "datetime": "2026-08-29 08:33:39 PM",
+    "set": 1,
+    "weight": null,
+    "reps": 15,
+    "duration": null,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
+    "machineId": "m1788049350908",
+    "machine": "Reverse Situp",
+    "gym": "Equinox 67th NYC",
+    "room": "5th floor free weight room",
+    "date": "2026-08-29",
+    "datetime": "2026-08-29 08:33:39 PM",
+    "set": 2,
+    "weight": null,
+    "reps": 15,
+    "duration": null,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
     "machineId": "m1787930967814",
     "machine": "Chest Press (Life Fitness)",
     "gym": "Equinox 67th NYC",
