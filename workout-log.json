@@ -480,6 +480,38 @@
     "notes": ""
   },
   {
+    "machineId": "m1788047963696",
+    "machine": "Leg Curl",
+    "gym": "Equinox 67th NYC",
+    "room": "5th Floor Machines",
+    "date": "2026-08-29",
+    "datetime": "2026-08-29 08:52:02 PM",
+    "set": 1,
+    "weight": 20,
+    "reps": 10,
+    "duration": null,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
+    "machineId": "m1788047963696",
+    "machine": "Leg Curl",
+    "gym": "Equinox 67th NYC",
+    "room": "5th Floor Machines",
+    "date": "2026-08-29",
+    "datetime": "2026-08-29 08:52:02 PM",
+    "set": 2,
+    "weight": 30,
+    "reps": 10,
+    "duration": null,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
     "machineId": "m1787930967814",
     "machine": "Chest Press (Life Fitness)",
     "gym": "Equinox 67th NYC",
