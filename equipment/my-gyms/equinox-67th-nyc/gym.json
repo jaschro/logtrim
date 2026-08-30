@@ -122,6 +122,13 @@
           "musclesWorked": "",
           "image": "m1788049323161.jpg",
           "logType": "weight"
+        },
+        {
+          "id": "m1788049350908",
+          "name": "Reverse Situp",
+          "musclesWorked": "",
+          "image": "m1788049350908.jpg",
+          "logType": "weight"
         }
       ]
     }
