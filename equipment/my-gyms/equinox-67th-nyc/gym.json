@@ -136,6 +136,13 @@
           "musclesWorked": "",
           "image": "m1788049373367.jpg",
           "logType": "weight"
+        },
+        {
+          "id": "m1788049577310",
+          "name": "Seated Preacher Curl",
+          "musclesWorked": "",
+          "image": null,
+          "logType": "weight"
         }
       ]
     }
