@@ -143,6 +143,13 @@
           "musclesWorked": "",
           "image": "m1788049577310.jpg",
           "logType": "weight"
+        },
+        {
+          "id": "m1788049634899",
+          "name": "Decline Chest Press",
+          "musclesWorked": "",
+          "image": "m1788049634899.jpg",
+          "logType": "weight"
         }
       ]
     }
