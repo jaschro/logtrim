@@ -150,6 +150,13 @@
           "musclesWorked": "",
           "image": "m1788049634899.jpg",
           "logType": "weight"
+        },
+        {
+          "id": "m1788049658494",
+          "name": "Incline Chest Press",
+          "musclesWorked": "",
+          "image": "m1788049658494.jpg",
+          "logType": "weight"
         }
       ]
     }
