@@ -272,6 +272,38 @@
     "notes": ""
   },
   {
+    "machineId": "squats",
+    "machine": "Squats",
+    "gym": "Common Machines",
+    "room": "Bodyweight — No Equipment",
+    "date": "2026-08-29",
+    "datetime": "2026-08-29 08:36:00 PM",
+    "set": 1,
+    "weight": null,
+    "reps": 20,
+    "duration": null,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": "On Bosu (20 ea side)"
+  },
+  {
+    "machineId": "squats",
+    "machine": "Squats",
+    "gym": "Common Machines",
+    "room": "Bodyweight — No Equipment",
+    "date": "2026-08-29",
+    "datetime": "2026-08-29 08:36:00 PM",
+    "set": 2,
+    "weight": null,
+    "reps": 20,
+    "duration": null,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
     "machineId": "m1787930967814",
     "machine": "Chest Press (Life Fitness)",
     "gym": "Equinox 67th NYC",
