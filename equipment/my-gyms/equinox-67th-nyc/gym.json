@@ -129,6 +129,13 @@
           "musclesWorked": "",
           "image": "m1788049350908.jpg",
           "logType": "weight"
+        },
+        {
+          "id": "m1788049373367",
+          "name": "Leg Lift",
+          "musclesWorked": "",
+          "image": "m1788049373367.jpg",
+          "logType": "weight"
         }
       ]
     }
