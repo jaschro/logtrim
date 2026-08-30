@@ -102,6 +102,13 @@
           "musclesWorked": "",
           "image": "m1788048070768.jpg",
           "logType": "weight"
+        },
+        {
+          "id": "m1788048150516",
+          "name": "Hip Adduction",
+          "musclesWorked": "",
+          "image": "m1788048150516.jpg",
+          "logType": "weight"
         }
       ]
     }
