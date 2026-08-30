@@ -115,7 +115,15 @@
     {
       "id": "5th-floor-free-weight-room-1788049291831",
       "name": "5th floor free weight room",
-      "machines": []
+      "machines": [
+        {
+          "id": "m1788049323161",
+          "name": "Adjustable Decline Bench",
+          "musclesWorked": "",
+          "image": "m1788049323161.jpg",
+          "logType": "weight"
+        }
+      ]
     }
   ]
 }
