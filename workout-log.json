@@ -32,6 +32,38 @@
     "notes": ""
   },
   {
+    "machineId": "elbow-planks",
+    "machine": "Elbow Planks",
+    "gym": "Common Machines",
+    "room": "Bodyweight — No Equipment",
+    "date": "2026-08-30",
+    "datetime": "2026-08-30 10:32:13 AM",
+    "set": 1,
+    "weight": null,
+    "reps": null,
+    "duration": 45,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
+    "machineId": "elbow-planks",
+    "machine": "Elbow Planks",
+    "gym": "Common Machines",
+    "room": "Bodyweight — No Equipment",
+    "date": "2026-08-30",
+    "datetime": "2026-08-30 10:32:13 AM",
+    "set": 2,
+    "weight": null,
+    "reps": null,
+    "duration": 45,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
     "machineId": "run",
     "machine": "Run",
     "gym": "Common Machines",
