@@ -95,6 +95,13 @@
           "musclesWorked": "",
           "image": "m1788048020857.jpg",
           "logType": "weight"
+        },
+        {
+          "id": "m1788048070768",
+          "name": "Hip Abduction",
+          "musclesWorked": "",
+          "image": "m1788048070768.jpg",
+          "logType": "weight"
         }
       ]
     }
