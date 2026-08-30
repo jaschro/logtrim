@@ -111,6 +111,11 @@
           "logType": "weight"
         }
       ]
+    },
+    {
+      "id": "5th-floor-free-weight-room-1788049291831",
+      "name": "5th floor free weight room",
+      "machines": []
     }
   ]
 }
