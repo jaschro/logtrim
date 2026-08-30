@@ -112,6 +112,38 @@
     "notes": ""
   },
   {
+    "machineId": "m1788048020857",
+    "machine": "Glute Press",
+    "gym": "Equinox 67th NYC",
+    "room": "5th Floor Machines",
+    "date": "2026-08-29",
+    "datetime": "2026-08-29 08:18:41 PM",
+    "set": 1,
+    "weight": 50,
+    "reps": 10,
+    "duration": null,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": "Machine needs oil"
+  },
+  {
+    "machineId": "m1788048020857",
+    "machine": "Glute Press",
+    "gym": "Equinox 67th NYC",
+    "room": "5th Floor Machines",
+    "date": "2026-08-29",
+    "datetime": "2026-08-29 08:18:41 PM",
+    "set": 2,
+    "weight": 70,
+    "reps": 10,
+    "duration": null,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
     "machineId": "m1787930967814",
     "machine": "Chest Press (Life Fitness)",
     "gym": "Equinox 67th NYC",
