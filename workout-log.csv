@@ -1,6 +1,8 @@
 datetime,gym,room,machine,machineId,set,weight,reps,duration,level,incline,hr,notes,zone1,zone2,zone3,zone4,zone5
 2026-08-31 11:50:14 AM,Common Machines,Bodyweight — No Equipment,Elbow Planks,elbow-planks,1,,,45,,,,,,,,,
 2026-08-31 11:50:25 AM,Common Machines,Bodyweight — No Equipment,High Planks,high-planks,1,,,50,,,,,,,,,
+2026-08-31 11:51:13 AM,Common Machines,Bodyweight — No Equipment,Squats,squats,1,,20,,,,,,,,,,
+2026-08-31 11:51:13 AM,Common Machines,Bodyweight — No Equipment,Squats,squats,2,,20,,,,,,,,,,
 2026-08-30 10:32:01 AM,Common Machines,Bodyweight — No Equipment,Push Ups,push-ups,1,,20,,,,,,,,,,
 2026-08-30 10:32:01 AM,Common Machines,Bodyweight — No Equipment,Push Ups,push-ups,2,,20,,,,,,,,,,
 2026-08-30 10:32:13 AM,Common Machines,Bodyweight — No Equipment,Elbow Planks,elbow-planks,1,,,45,,,,,,,,,
