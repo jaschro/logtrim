@@ -1,6 +1,6 @@
 {
-  "fetchedAt": "2026-08-30T23:10:15Z",
-  "today": "2026-08-30",
+  "fetchedAt": "2026-08-31T03:40:47Z",
+  "today": "2026-08-31",
   "recentActivities": [
     {
       "activityId": 24177411517,
@@ -306,19 +306,6 @@
       "calories": 190.0,
       "elevationGain": null,
       "avgPace": 0.0
-    },
-    {
-      "activityId": 23999760455,
-      "date": "2026-08-16",
-      "type": "treadmill_running",
-      "name": "Treadmill Running",
-      "durationMins": 45.0,
-      "distanceMiles": 2.48,
-      "avgHR": 83.0,
-      "maxHR": 94.0,
-      "calories": 181.0,
-      "elevationGain": null,
-      "avgPace": 1.4780000448226929
     }
   ],
   "todayStats": {
@@ -326,22 +313,22 @@
     "floors": 5.0082,
     "restingHR": 46,
     "activeCalories": 207.0,
-    "bodyBattery": 57,
+    "bodyBattery": null,
     "stressAvg": 23,
-    "weeklySteps": 112725
+    "weeklySteps": 103019
   },
   "trainingReadiness": {
-    "score": 85,
-    "level": "HIGH",
-    "feedback": "WELL_RECOVERED"
+    "score": null,
+    "level": null,
+    "feedback": null
   },
   "vo2max": {
     "vo2max": 40.0,
     "fitnessAge": null
   },
   "intensityMinutes": {
-    "moderate": 125,
-    "vigorous": 72
+    "moderate": null,
+    "vigorous": null
   },
   "hrv": {
     "weeklyAvg": 42,
@@ -359,9 +346,9 @@
     "avgRespirationRate": 14.0,
     "avgSpO2": 96.0
   },
-  "spo2Avg": 95.0,
+  "spo2Avg": null,
   "respiration": {
-    "avgWaking": 15.0,
-    "avgSleep": 14.0
+    "avgWaking": null,
+    "avgSleep": null
   }
 }
