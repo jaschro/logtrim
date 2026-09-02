@@ -1,7 +1,42 @@
 {
-  "fetchedAt": "2026-09-02T02:54:16Z",
+  "fetchedAt": "2026-09-02T07:38:04Z",
   "today": "2026-09-02",
   "recentActivities": [
+    {
+      "activityId": 24204944904,
+      "date": "2026-09-01",
+      "type": "walking",
+      "name": "New York Walking",
+      "durationMins": 88.0,
+      "distanceMiles": 4.75,
+      "avgHR": 83.0,
+      "maxHR": 94.0,
+      "calories": 492.0,
+      "elevationGain": 41.0,
+      "avgPace": 1.4470000267028809,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 2827.988
+        },
+        {
+          "zone": 2,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 3,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 4,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 5,
+          "secsInZone": 0.0
+        }
+      ]
+    },
     {
       "activityId": 24177411517,
       "date": "2026-08-30",
@@ -153,29 +188,7 @@
       "maxHR": 108.0,
       "calories": 35.0,
       "elevationGain": null,
-      "avgPace": 0.0,
-      "hrZones": [
-        {
-          "zone": 1,
-          "secsInZone": 129.159
-        },
-        {
-          "zone": 2,
-          "secsInZone": 165.0
-        },
-        {
-          "zone": 3,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 4,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 5,
-          "secsInZone": 0.0
-        }
-      ]
+      "avgPace": 0.0
     },
     {
       "activityId": 24112640806,
@@ -270,13 +283,13 @@
     }
   ],
   "todayStats": {
-    "steps": 9063,
-    "floors": 2.76247,
+    "steps": 20893,
+    "floors": 17.25131,
     "restingHR": 44,
-    "activeCalories": 130.0,
+    "activeCalories": 530.0,
     "bodyBattery": null,
-    "stressAvg": 25,
-    "weeklySteps": 114459
+    "stressAvg": 24,
+    "weeklySteps": 126289
   },
   "trainingReadiness": {
     "score": null,
@@ -288,11 +301,11 @@
     "fitnessAge": null
   },
   "intensityMinutes": {
-    "moderate": null,
+    "moderate": 87,
     "vigorous": null
   },
   "hrv": {
-    "weeklyAvg": 43,
+    "weeklyAvg": 45,
     "lastNight": null,
     "status": "BALANCED"
   },
