@@ -1,5 +1,26 @@
 [
   {
+    "machineId": "m1788445570062",
+    "machine": "Central Park - Lower Loop - from Tavern on the Green",
+    "gym": "Specific Courses (Runs/Walks)",
+    "room": "NYC",
+    "date": "2026-09-03",
+    "datetime": "2026-09-03 10:03:00 AM",
+    "set": 1,
+    "weight": null,
+    "reps": null,
+    "duration": 20.033333333333335,
+    "level": 1.79,
+    "incline": null,
+    "hr": 129,
+    "notes": "Central Park Lower Loop from Tavern on the Green - ran it; Garmin recorded as walk (Garmin 24223610969; 1.79 mi; +16 ft). Karvonen zones from cardio-minutes (RHR 46 / max 168); warmup below Z1 counted in zone1.",
+    "zone1": 6.633333333333333,
+    "zone2": 1,
+    "zone3": 7,
+    "zone4": 5,
+    "zone5": 0.4
+  },
+  {
     "machineId": "push-ups",
     "machine": "Push Ups",
     "gym": "Common Machines",
