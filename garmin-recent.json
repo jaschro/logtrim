@@ -1,7 +1,42 @@
 {
-  "fetchedAt": "2026-09-03T18:20:22Z",
+  "fetchedAt": "2026-09-03T22:58:26Z",
   "today": "2026-09-03",
   "recentActivities": [
+    {
+      "activityId": 24228644449,
+      "date": "2026-09-03",
+      "type": "walking",
+      "name": "New York Walking",
+      "durationMins": 19.4,
+      "distanceMiles": 0.95,
+      "avgHR": 83.0,
+      "maxHR": 90.0,
+      "calories": 100.0,
+      "elevationGain": 1.0,
+      "avgPace": 1.3170000314712522,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 514.899
+        },
+        {
+          "zone": 2,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 3,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 4,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 5,
+          "secsInZone": 0.0
+        }
+      ]
+    },
     {
       "activityId": 24223610969,
       "date": "2026-09-03",
@@ -153,29 +188,7 @@
       "maxHR": 109.0,
       "calories": 33.0,
       "elevationGain": null,
-      "avgPace": 0.0,
-      "hrZones": [
-        {
-          "zone": 1,
-          "secsInZone": 204.135
-        },
-        {
-          "zone": 2,
-          "secsInZone": 81.997
-        },
-        {
-          "zone": 3,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 4,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 5,
-          "secsInZone": 0.0
-        }
-      ]
+      "avgPace": 0.0
     },
     {
       "activityId": 24151106382,
@@ -283,25 +296,25 @@
     }
   ],
   "todayStats": {
-    "steps": 5509,
-    "floors": 5.33432,
+    "steps": 17919,
+    "floors": 11.5607,
     "restingHR": 46,
-    "activeCalories": 250.0,
-    "bodyBattery": 80,
-    "stressAvg": 15,
-    "weeklySteps": 129841
+    "activeCalories": 596.0,
+    "bodyBattery": 40,
+    "stressAvg": 26,
+    "weeklySteps": 142251
   },
   "trainingReadiness": {
-    "score": 72,
-    "level": "MODERATE",
-    "feedback": "RECOVERY_IN_PROGRESS"
+    "score": 77,
+    "level": "HIGH",
+    "feedback": "RESTED_AND_READY"
   },
   "vo2max": {
     "vo2max": 40.0,
     "fitnessAge": null
   },
   "intensityMinutes": {
-    "moderate": 92,
+    "moderate": 111,
     "vigorous": 17
   },
   "hrv": {
@@ -322,7 +335,7 @@
   },
   "spo2Avg": 95.0,
   "respiration": {
-    "avgWaking": 14.0,
+    "avgWaking": 15.0,
     "avgSleep": 14.0
   }
 }
