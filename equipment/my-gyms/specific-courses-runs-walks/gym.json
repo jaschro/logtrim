@@ -20,7 +20,15 @@
     {
       "id": "nyc-1788445541637",
       "name": "NYC",
-      "machines": []
+      "machines": [
+        {
+          "id": "m1788445570062",
+          "name": "Central Park - Lower Loop - from Tavern on the Green",
+          "musclesWorked": "",
+          "image": null,
+          "logType": "mins"
+        }
+      ]
     }
   ]
 }
