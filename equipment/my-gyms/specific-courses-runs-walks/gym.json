@@ -16,6 +16,11 @@
           "logType": "pace"
         }
       ]
+    },
+    {
+      "id": "nyc-1788445541637",
+      "name": "NYC",
+      "machines": []
     }
   ]
 }
