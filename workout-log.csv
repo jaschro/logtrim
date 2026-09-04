@@ -1,7 +1,10 @@
 datetime,gym,room,machine,machineId,set,weight,reps,duration,level,incline,hr,notes,zone1,zone2,zone3,zone4,zone5
+2026-09-04 10:52:00 AM,Common Machines,Outdoor Activities,Walk,walk,1,,,27.65,1.45,,83,New York walk (Garmin 24236354200; 1.45 mi; +22 ft). All Zone 1 - max minute HR ~91 (Karvonen RHR 46 / max 168).,27.583333333333336,,,,
 2026-09-03 10:03:00 AM,Specific Courses (Runs/Walks),NYC,Central Park - Lower Loop - from Tavern on the Green,m1788445570062,1,,,20.033333333333335,1.79,,129,Central Park Lower Loop from Tavern on the Green - ran it; Garmin recorded as walk (Garmin 24223610969; 1.79 mi; +16 ft). Karvonen zones from cardio-minutes (RHR 46 / max 168); warmup below Z1 counted in zone1.,6.633333333333333,1,7,5,0.4
 2026-09-03 12:31:44 PM,Common Machines,Bodyweight — No Equipment,Squats,squats,1,,20,,,,,,,,,,
 2026-09-03 12:31:44 PM,Common Machines,Bodyweight — No Equipment,Squats,squats,2,,20,,,,,,,,,,
+2026-09-03 05:39:00 PM,Common Machines,Outdoor Activities,Walk,walk,1,,,20.133333333333333,0.95,,83,New York walk (Garmin 24228644449; 0.95 mi; +1 ft). All Zone 1 - max minute HR ~86 (Karvonen RHR 46 / max 168).,20.133333333333333,,,,
+2026-09-03 09:36:00 PM,Common Machines,Outdoor Activities,Walk,walk,1,,,18.666666666666668,0.91,,88,New York walk (Garmin 24229989703; 0.91 mi; +7 ft). All Zone 1 - max minute HR ~94 (Karvonen RHR 46 / max 168).,18.666666666666668,,,,
 2026-09-02 12:31:56 PM,Common Machines,Bodyweight — No Equipment,Squats,squats,1,,20,,,,,,,,,,
 2026-09-02 12:31:56 PM,Common Machines,Bodyweight — No Equipment,Squats,squats,2,,20,,,,,,,,,,
 2026-09-02 12:32:12 PM,Common Machines,Bodyweight — No Equipment,Push Ups,push-ups,1,,20,,,,,,,,,,
