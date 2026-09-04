@@ -101,6 +101,38 @@
     "notes": ""
   },
   {
+    "machineId": "squats",
+    "machine": "Squats",
+    "gym": "Common Machines",
+    "room": "Bodyweight — No Equipment",
+    "date": "2026-09-04",
+    "datetime": "2026-09-04 02:31:22 PM",
+    "set": 3,
+    "weight": null,
+    "reps": 20,
+    "duration": null,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
+    "machineId": "squats",
+    "machine": "Squats",
+    "gym": "Common Machines",
+    "room": "Bodyweight — No Equipment",
+    "date": "2026-09-04",
+    "datetime": "2026-09-04 02:31:22 PM",
+    "set": 4,
+    "weight": null,
+    "reps": 20,
+    "duration": null,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
     "machineId": "m1788445570062",
     "machine": "Central Park - Lower Loop - from Tavern on the Green",
     "gym": "Specific Courses (Runs/Walks)",
