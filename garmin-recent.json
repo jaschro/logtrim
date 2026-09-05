@@ -1,6 +1,6 @@
 {
-  "fetchedAt": "2026-09-04T22:46:31Z",
-  "today": "2026-09-04",
+  "fetchedAt": "2026-09-05T02:58:30Z",
+  "today": "2026-09-05",
   "recentActivities": [
     {
       "activityId": 24236354200,
@@ -293,34 +293,21 @@
       "calories": 53.0,
       "elevationGain": 3.0,
       "avgPace": 1.5429999828338625
-    },
-    {
-      "activityId": 24065482935,
-      "date": "2026-08-21",
-      "type": "running",
-      "name": "West Tisbury Running",
-      "durationMins": 33.3,
-      "distanceMiles": 2.56,
-      "avgHR": 125.0,
-      "maxHR": 167.0,
-      "calories": 318.0,
-      "elevationGain": 45.0,
-      "avgPace": 2.062999963760376
     }
   ],
   "todayStats": {
-    "steps": 10883,
+    "steps": 16089,
     "floors": 10.4101,
     "restingHR": 45,
-    "activeCalories": 258.0,
-    "bodyBattery": 48,
-    "stressAvg": 23,
-    "weeklySteps": 137028
+    "activeCalories": 356.0,
+    "bodyBattery": null,
+    "stressAvg": 25,
+    "weeklySteps": 127957
   },
   "trainingReadiness": {
-    "score": 73,
-    "level": "MODERATE",
-    "feedback": "WELL_RESTED"
+    "score": null,
+    "level": null,
+    "feedback": null
   },
   "vo2max": {
     "vo2max": 40.0,
@@ -346,9 +333,9 @@
     "avgRespirationRate": 14.0,
     "avgSpO2": 96.0
   },
-  "spo2Avg": 95.0,
+  "spo2Avg": null,
   "respiration": {
-    "avgWaking": 15.0,
-    "avgSleep": 14.0
+    "avgWaking": null,
+    "avgSleep": null
   }
 }
