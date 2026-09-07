@@ -64,6 +64,22 @@
     "notes": ""
   },
   {
+    "machineId": "elbow-planks",
+    "machine": "Elbow Planks",
+    "gym": "Common Machines",
+    "room": "Bodyweight — No Equipment",
+    "date": "2026-09-06",
+    "datetime": "2026-09-06 10:34:18 AM",
+    "set": 1,
+    "weight": null,
+    "reps": null,
+    "duration": 50,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
     "machineId": "high-planks",
     "machine": "High Planks",
     "gym": "Common Machines",
