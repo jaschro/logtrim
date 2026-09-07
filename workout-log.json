@@ -32,6 +32,38 @@
     "notes": ""
   },
   {
+    "machineId": "meditation",
+    "machine": "Meditation",
+    "gym": "Common Machines",
+    "room": "Bodyweight — No Equipment",
+    "date": "2026-09-07",
+    "datetime": "2026-09-07 10:35:59 AM",
+    "set": 1,
+    "weight": null,
+    "reps": null,
+    "duration": 60,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
+    "machineId": "meditation",
+    "machine": "Meditation",
+    "gym": "Common Machines",
+    "room": "Bodyweight — No Equipment",
+    "date": "2026-09-07",
+    "datetime": "2026-09-07 10:35:59 AM",
+    "set": 2,
+    "weight": null,
+    "reps": null,
+    "duration": 60,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
     "machineId": "push-ups",
     "machine": "Push Ups",
     "gym": "Common Machines",
