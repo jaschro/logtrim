@@ -341,6 +341,38 @@
     "notes": ""
   },
   {
+    "machineId": "meditation",
+    "machine": "Meditation",
+    "gym": "Common Machines",
+    "room": "Bodyweight — No Equipment",
+    "date": "2026-09-04",
+    "datetime": "2026-09-04 10:37:10 AM",
+    "set": 1,
+    "weight": null,
+    "reps": null,
+    "duration": 60,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
+    "machineId": "meditation",
+    "machine": "Meditation",
+    "gym": "Common Machines",
+    "room": "Bodyweight — No Equipment",
+    "date": "2026-09-04",
+    "datetime": "2026-09-04 10:37:10 AM",
+    "set": 2,
+    "weight": null,
+    "reps": null,
+    "duration": 60,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
     "machineId": "m1788445570062",
     "machine": "Central Park - Lower Loop - from Tavern on the Green",
     "gym": "Specific Courses (Runs/Walks)",
