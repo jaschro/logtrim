@@ -29,6 +29,11 @@
           "logType": "walk"
         }
       ]
+    },
+    {
+      "id": "los-angeles-1788831260339",
+      "name": "Los Angeles",
+      "machines": []
     }
   ]
 }
