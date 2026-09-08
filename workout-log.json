@@ -32,6 +32,27 @@
     "notes": ""
   },
   {
+    "machineId": "m1788831284335",
+    "machine": "Lake Hollywood Reservoir Loop",
+    "gym": "Specific Courses (Runs/Walks)",
+    "room": "Los Angeles",
+    "date": "2026-09-07",
+    "datetime": "2026-09-07 07:17:00 PM",
+    "set": 1,
+    "weight": null,
+    "reps": null,
+    "duration": 44.35,
+    "level": 3.3,
+    "incline": null,
+    "hr": 125,
+    "notes": "Lake Hollywood Reservoir Loop - ran it; Garmin recorded as walk (Garmin 24277850668; 3.3 mi; +13 ft; started 4:17 PM PT - datetime shown is ET per pipeline convention). Karvonen zones from cardio-minutes (RHR 46 / max 168); warmup below Z1 counted in zone1.",
+    "zone1": 7,
+    "zone2": 26,
+    "zone3": 10,
+    "zone4": 1.2333333333333334,
+    "zone5": null
+  },
+  {
     "machineId": "push-ups",
     "machine": "Push Ups",
     "gym": "Common Machines",
