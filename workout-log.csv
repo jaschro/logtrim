@@ -1,6 +1,7 @@
 datetime,gym,room,machine,machineId,set,weight,reps,duration,level,incline,hr,notes,zone1,zone2,zone3,zone4,zone5
 2026-09-07 10:33:17 AM,Common Machines,Bodyweight — No Equipment,Push Ups,push-ups,1,,30,,,,,,,,,,
 2026-09-07 10:34:05 AM,Common Machines,Bodyweight — No Equipment,Elbow Planks,elbow-planks,1,,,75,,,,,,,,,
+2026-09-07 07:17:00 PM,Specific Courses (Runs/Walks),Los Angeles,Lake Hollywood Reservoir Loop,m1788831284335,1,,,44.35,3.3,,125,Lake Hollywood Reservoir Loop - ran it; Garmin recorded as walk (Garmin 24277850668; 3.3 mi; +13 ft; started 4:17 PM PT - datetime shown is ET per pipeline convention). Karvonen zones from cardio-minutes (RHR 46 / max 168); warmup below Z1 counted in zone1.,7,26,10,1.2333333333333334,
 2026-09-06 10:33:01 AM,Common Machines,Bodyweight — No Equipment,Push Ups,push-ups,1,,20,,,,,,,,,,
 2026-09-06 10:33:01 AM,Common Machines,Bodyweight — No Equipment,Push Ups,push-ups,2,,20,,,,,,,,,,
 2026-09-06 10:34:18 AM,Common Machines,Bodyweight — No Equipment,Elbow Planks,elbow-planks,1,,,50,,,,,,,,,
