@@ -33,7 +33,15 @@
     {
       "id": "los-angeles-1788831260339",
       "name": "Los Angeles",
-      "machines": []
+      "machines": [
+        {
+          "id": "m1788831284335",
+          "name": "Lake Hollywood Reservoir Loop",
+          "musclesWorked": "",
+          "image": null,
+          "logType": "walk"
+        }
+      ]
     }
   ]
 }
