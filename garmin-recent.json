@@ -1,7 +1,42 @@
 {
-  "fetchedAt": "2026-09-07T23:16:34Z",
-  "today": "2026-09-07",
+  "fetchedAt": "2026-09-08T02:59:50Z",
+  "today": "2026-09-08",
   "recentActivities": [
+    {
+      "activityId": 24277850668,
+      "date": "2026-09-07",
+      "type": "walking",
+      "name": "Los Angeles Walking",
+      "durationMins": 44.1,
+      "distanceMiles": 3.3,
+      "avgHR": 125.0,
+      "maxHR": 153.0,
+      "calories": 379.0,
+      "elevationGain": 13.0,
+      "avgPace": 2.005000114440918,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 145.92
+        },
+        {
+          "zone": 2,
+          "secsInZone": 284.004
+        },
+        {
+          "zone": 3,
+          "secsInZone": 1710.991
+        },
+        {
+          "zone": 4,
+          "secsInZone": 439.005
+        },
+        {
+          "zone": 5,
+          "secsInZone": 67.308
+        }
+      ]
+    },
     {
       "activityId": 24236354200,
       "date": "2026-09-04",
@@ -153,29 +188,7 @@
       "maxHR": 94.0,
       "calories": 492.0,
       "elevationGain": 41.0,
-      "avgPace": 1.4470000267028809,
-      "hrZones": [
-        {
-          "zone": 1,
-          "secsInZone": 2827.988
-        },
-        {
-          "zone": 2,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 3,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 4,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 5,
-          "secsInZone": 0.0
-        }
-      ]
+      "avgPace": 1.4470000267028809
     },
     {
       "activityId": 24177411517,
@@ -254,55 +267,29 @@
       "calories": 429.0,
       "elevationGain": 66.0,
       "avgPace": 1.9390000104904175
-    },
-    {
-      "activityId": 24103319711,
-      "date": "2026-08-24",
-      "type": "cycling",
-      "name": "Tisbury Cycling",
-      "durationMins": 15.0,
-      "distanceMiles": 2.55,
-      "avgHR": 110.0,
-      "maxHR": 140.0,
-      "calories": 118.0,
-      "elevationGain": 45.0,
-      "avgPace": 4.559000015258789
-    },
-    {
-      "activityId": 24102789581,
-      "date": "2026-08-24",
-      "type": "cycling",
-      "name": "West Tisbury Cycling",
-      "durationMins": 82.2,
-      "distanceMiles": 14.55,
-      "avgHR": 105.0,
-      "maxHR": 139.0,
-      "calories": 501.0,
-      "elevationGain": 196.0,
-      "avgPace": 4.745999813079834
     }
   ],
   "todayStats": {
-    "steps": 3019,
-    "floors": 4.0,
+    "steps": 13145,
+    "floors": 9.0,
     "restingHR": 46,
-    "activeCalories": 49.0,
-    "bodyBattery": 59,
-    "stressAvg": 24,
-    "weeklySteps": 113595
+    "activeCalories": 448.0,
+    "bodyBattery": null,
+    "stressAvg": 30,
+    "weeklySteps": 105074
   },
   "trainingReadiness": {
-    "score": 92,
-    "level": "HIGH",
-    "feedback": "EXCELLENT_RECOVERY"
+    "score": null,
+    "level": null,
+    "feedback": null
   },
   "vo2max": {
     "vo2max": 40.0,
     "fitnessAge": null
   },
   "intensityMinutes": {
-    "moderate": null,
-    "vigorous": null
+    "moderate": 19,
+    "vigorous": 29
   },
   "hrv": {
     "weeklyAvg": 44,
@@ -320,9 +307,9 @@
     "avgRespirationRate": 15.0,
     "avgSpO2": 96.0
   },
-  "spo2Avg": 94.0,
+  "spo2Avg": null,
   "respiration": {
-    "avgWaking": 16.0,
-    "avgSleep": 15.0
+    "avgWaking": null,
+    "avgSleep": null
   }
 }
