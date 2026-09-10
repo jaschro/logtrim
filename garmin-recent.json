@@ -1,7 +1,42 @@
 {
-  "fetchedAt": "2026-09-10T06:51:56Z",
+  "fetchedAt": "2026-09-10T08:05:57Z",
   "today": "2026-09-10",
   "recentActivities": [
+    {
+      "activityId": 24305697347,
+      "date": "2026-09-09",
+      "type": "walking",
+      "name": "Laguna Woods Walking",
+      "durationMins": 28.1,
+      "distanceMiles": 1.38,
+      "avgHR": 89.0,
+      "maxHR": 115.0,
+      "calories": 147.0,
+      "elevationGain": 19.0,
+      "avgPace": 1.319000005722046,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 1523.649
+        },
+        {
+          "zone": 2,
+          "secsInZone": 126.002
+        },
+        {
+          "zone": 3,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 4,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 5,
+          "secsInZone": 0.0
+        }
+      ]
+    },
     {
       "activityId": 24291957162,
       "date": "2026-09-08",
@@ -153,29 +188,7 @@
       "maxHR": 90.0,
       "calories": 100.0,
       "elevationGain": 1.0,
-      "avgPace": 1.3170000314712522,
-      "hrZones": [
-        {
-          "zone": 1,
-          "secsInZone": 514.899
-        },
-        {
-          "zone": 2,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 3,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 4,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 5,
-          "secsInZone": 0.0
-        }
-      ]
+      "avgPace": 1.3170000314712522
     },
     {
       "activityId": 24223610969,
@@ -270,26 +283,26 @@
     }
   ],
   "todayStats": {
-    "steps": 3989,
+    "steps": null,
     "floors": 0.0,
-    "restingHR": 43,
-    "activeCalories": 54.0,
-    "bodyBattery": null,
-    "stressAvg": 26,
-    "weeklySteps": 82142
+    "restingHR": 49,
+    "activeCalories": 0.0,
+    "bodyBattery": 29,
+    "stressAvg": 29,
+    "weeklySteps": 87870
   },
   "trainingReadiness": {
-    "score": null,
-    "level": null,
-    "feedback": null
+    "score": 80,
+    "level": "HIGH",
+    "feedback": "WELL_RECOVERED"
   },
   "vo2max": {
     "vo2max": 40.0,
     "fitnessAge": null
   },
   "intensityMinutes": {
-    "moderate": 49,
-    "vigorous": 29
+    "moderate": 77,
+    "vigorous": 30
   },
   "hrv": {
     "weeklyAvg": 44,
@@ -309,7 +322,7 @@
   },
   "spo2Avg": null,
   "respiration": {
-    "avgWaking": null,
-    "avgSleep": null
+    "avgWaking": 16.0,
+    "avgSleep": 11.0
   }
 }
