@@ -1,6 +1,8 @@
 datetime,gym,room,machine,machineId,set,weight,reps,duration,level,incline,hr,notes,zone1,zone2,zone3,zone4,zone5
 2026-09-11 11:15:47 AM,5th Street Gym,5th Street Gym,Decline Bench & Hyperext,f02,1,,20,,,,,,,,,,
 2026-09-11 11:15:47 AM,5th Street Gym,5th Street Gym,Decline Bench & Hyperext,f02,2,,20,,,,,,,,,,
+2026-09-11 11:16:52 AM,5th Street Gym,5th Street Gym,Seated Tricep Dips,f08,1,55,15,,,,,,,,,,
+2026-09-11 11:16:52 AM,5th Street Gym,5th Street Gym,Seated Tricep Dips,f08,2,77,10,,,,,,,,,,
 2026-09-10 01:38:00 AM,Common Machines,Outdoor Activities,Walk,walk,1,,,28.483333333333334,1.38,,89,Laguna Woods walk (Garmin 24305697347; 1.38 mi; +19 ft). All Zone 1 - max minute HR ~110 (Karvonen RHR 46 / max 168).,28.4,,,,
 2026-09-08 11:06:00 PM,Common Machines,Outdoor Activities,Walk,walk,1,,,39.86666666666667,1.76,,84,Laguna Woods walk (Garmin 24291957162; 1.76 mi; +26 ft). All Zone 1 - max minute HR ~100 (Karvonen RHR 46 / max 168).,39.86666666666667,,,,
 2026-09-07 10:33:17 AM,Common Machines,Bodyweight — No Equipment,Push Ups,push-ups,1,,30,,,,,,,,,,
