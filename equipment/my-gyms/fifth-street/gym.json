@@ -2,13 +2,11 @@
   "id": "fifth",
   "name": "5th Street Gym",
   "icon": "🌤",
-  "subtitle": "Outdoor",
   "isGeneric": false,
   "rooms": [
     {
       "id": "main",
       "name": "5th Street Gym",
-      "icon": "🌤",
       "machines": [
         {
           "id": "f01",
@@ -78,6 +76,13 @@
           "name": "Incline Chest Press",
           "musclesWorked": "Chest and shoulder muscles with variable load",
           "image": "MB.7.75.Incline Chest Press.jpg",
+          "logType": "weight"
+        },
+        {
+          "id": "m1789140015915",
+          "name": "Negative Pullups",
+          "musclesWorked": "",
+          "image": "m1789140015915.jpg",
           "logType": "weight"
         }
       ]
