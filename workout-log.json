@@ -1,5 +1,37 @@
 [
   {
+    "machineId": "f02",
+    "machine": "Decline Bench & Hyperext",
+    "gym": "5th Street Gym",
+    "room": "5th Street Gym",
+    "date": "2026-09-11",
+    "datetime": "2026-09-11 11:15:47 AM",
+    "set": 1,
+    "weight": null,
+    "reps": 20,
+    "duration": null,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
+    "machineId": "f02",
+    "machine": "Decline Bench & Hyperext",
+    "gym": "5th Street Gym",
+    "room": "5th Street Gym",
+    "date": "2026-09-11",
+    "datetime": "2026-09-11 11:15:47 AM",
+    "set": 2,
+    "weight": null,
+    "reps": 20,
+    "duration": null,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
     "machineId": "walk",
     "machine": "Walk",
     "gym": "Common Machines",
