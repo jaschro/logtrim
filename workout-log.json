@@ -1,5 +1,26 @@
 [
   {
+    "machineId": "walk",
+    "machine": "Walk",
+    "gym": "Common Machines",
+    "room": "Outdoor Activities",
+    "date": "2026-09-11",
+    "datetime": "2026-09-11 10:28:00 AM",
+    "set": 1,
+    "weight": null,
+    "reps": null,
+    "duration": 66.13333333333334,
+    "level": 2.78,
+    "incline": null,
+    "hr": 81,
+    "notes": "Miami Beach walk (Garmin 24323002983; 2.78 mi; +13 ft). All Zone 1 - max minute HR ~95 (Karvonen RHR 46 / max 168).",
+    "zone1": 66.13333333333334,
+    "zone2": null,
+    "zone3": null,
+    "zone4": null,
+    "zone5": null
+  },
+  {
     "machineId": "f02",
     "machine": "Decline Bench & Hyperext",
     "gym": "5th Street Gym",
