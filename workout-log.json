@@ -181,6 +181,22 @@
     "notes": ""
   },
   {
+    "machineId": "m1789140015915",
+    "machine": "Negative Pullups",
+    "gym": "5th Street Gym",
+    "room": "5th Street Gym",
+    "date": "2026-09-11",
+    "datetime": "2026-09-11 07:29:20 PM",
+    "set": 1,
+    "weight": null,
+    "reps": 3,
+    "duration": null,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
     "machineId": "walk",
     "machine": "Walk",
     "gym": "Common Machines",
