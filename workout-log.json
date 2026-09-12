@@ -448,6 +448,38 @@
     "notes": ""
   },
   {
+    "machineId": "pm01",
+    "machine": "Adjustable Decline Abdominal Bench",
+    "gym": "Portofino Gym",
+    "room": "Machines Room",
+    "date": "2026-09-12",
+    "datetime": "2026-09-12 11:04:31 AM",
+    "set": 1,
+    "weight": null,
+    "reps": 15,
+    "duration": null,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
+    "machineId": "pm01",
+    "machine": "Adjustable Decline Abdominal Bench",
+    "gym": "Portofino Gym",
+    "room": "Machines Room",
+    "date": "2026-09-12",
+    "datetime": "2026-09-12 11:04:31 AM",
+    "set": 2,
+    "weight": null,
+    "reps": 15,
+    "duration": null,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
     "machineId": "walk",
     "machine": "Walk",
     "gym": "Common Machines",
