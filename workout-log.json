@@ -480,6 +480,27 @@
     "notes": ""
   },
   {
+    "machineId": "pa04",
+    "machine": "Peloton",
+    "gym": "Portofino Gym",
+    "room": "Aerobic Room",
+    "date": "2026-09-12",
+    "datetime": "2026-09-12 11:09:00 AM",
+    "set": 1,
+    "weight": null,
+    "reps": null,
+    "duration": 33.55,
+    "level": null,
+    "incline": null,
+    "hr": 123,
+    "notes": "Indoor Peloton ride (Garmin 24335850337). Karvonen zones from cardio-minutes (RHR 46 / max 168); warmup below Z1 counted in zone1.",
+    "zone1": 11.583333333333334,
+    "zone2": 11.966666666666667,
+    "zone3": 10,
+    "zone4": null,
+    "zone5": null
+  },
+  {
     "machineId": "walk",
     "machine": "Walk",
     "gym": "Common Machines",
