@@ -1,7 +1,42 @@
 {
-  "fetchedAt": "2026-09-12T14:59:36Z",
+  "fetchedAt": "2026-09-12T16:24:44Z",
   "today": "2026-09-12",
   "recentActivities": [
+    {
+      "activityId": 24335850337,
+      "date": "2026-09-12",
+      "type": "indoor_cycling",
+      "name": "Indoor Cycling",
+      "durationMins": 33.6,
+      "distanceMiles": null,
+      "avgHR": 123.0,
+      "maxHR": 149.0,
+      "calories": 311.0,
+      "elevationGain": null,
+      "avgPace": 0.0,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 59.898
+        },
+        {
+          "zone": 2,
+          "secsInZone": 542.151
+        },
+        {
+          "zone": 3,
+          "secsInZone": 1003.0
+        },
+        {
+          "zone": 4,
+          "secsInZone": 408.997
+        },
+        {
+          "zone": 5,
+          "secsInZone": 0.0
+        }
+      ]
+    },
     {
       "activityId": 24327478789,
       "date": "2026-09-11",
@@ -153,29 +188,7 @@
       "maxHR": 153.0,
       "calories": 379.0,
       "elevationGain": 13.0,
-      "avgPace": 2.005000114440918,
-      "hrZones": [
-        {
-          "zone": 1,
-          "secsInZone": 145.92
-        },
-        {
-          "zone": 2,
-          "secsInZone": 284.004
-        },
-        {
-          "zone": 3,
-          "secsInZone": 1710.991
-        },
-        {
-          "zone": 4,
-          "secsInZone": 439.005
-        },
-        {
-          "zone": 5,
-          "secsInZone": 67.308
-        }
-      ]
+      "avgPace": 2.005000114440918
     },
     {
       "activityId": 24236354200,
@@ -270,26 +283,26 @@
     }
   ],
   "todayStats": {
-    "steps": 1220,
+    "steps": 1806,
     "floors": 0.0,
     "restingHR": 45,
-    "activeCalories": 11.0,
-    "bodyBattery": 88,
-    "stressAvg": 19,
-    "weeklySteps": 74523
+    "activeCalories": 286.0,
+    "bodyBattery": 69,
+    "stressAvg": 20,
+    "weeklySteps": 75109
   },
   "trainingReadiness": {
-    "score": 100,
-    "level": "PRIME",
-    "feedback": "READY_TO_GO"
+    "score": 82,
+    "level": "HIGH",
+    "feedback": "ENERGIZED_BY_GOOD_SLEEP"
   },
   "vo2max": {
     "vo2max": 40.0,
     "fitnessAge": null
   },
   "intensityMinutes": {
-    "moderate": 228,
-    "vigorous": 30
+    "moderate": 235,
+    "vigorous": 55
   },
   "hrv": {
     "weeklyAvg": 46,
@@ -309,7 +322,7 @@
   },
   "spo2Avg": 94.0,
   "respiration": {
-    "avgWaking": 14.0,
+    "avgWaking": 15.0,
     "avgSleep": 13.0
   }
 }
