@@ -64,6 +64,38 @@
     "notes": ""
   },
   {
+    "machineId": "bridges",
+    "machine": "Bridges",
+    "gym": "Common Machines",
+    "room": "Bodyweight — No Equipment",
+    "date": "2026-09-13",
+    "datetime": "2026-09-13 11:53:45 PM",
+    "set": 1,
+    "weight": null,
+    "reps": 20,
+    "duration": null,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
+    "machineId": "bridges",
+    "machine": "Bridges",
+    "gym": "Common Machines",
+    "room": "Bodyweight — No Equipment",
+    "date": "2026-09-13",
+    "datetime": "2026-09-13 11:53:45 PM",
+    "set": 2,
+    "weight": null,
+    "reps": 20,
+    "duration": null,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
     "machineId": "high-planks",
     "machine": "High Planks",
     "gym": "Common Machines",
