@@ -11,7 +11,7 @@ if %ERRORLEVEL% neq 0 (
 )
 echo Committing changes...
 git add -A
-git commit -m "Add Negative Pullups to generic; convert generic images PNG->JPEG (47MB -> 1.1MB)"
+git commit -m "Make Generic gym editable in the equipment manager"
 echo Pulling and pushing to personal (jaschro/logtrim)...
 git pull personal main --rebase -X theirs
 git push personal main

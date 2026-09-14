@@ -377,7 +377,7 @@ async function loadGyms(){
   try{
     const f=await ghGet('equipment/generic/gym.json');
     const gd=JSON.parse(b64d(f.content));
-    gd._path='equipment/generic';gd._gen=true;A.gyms.push(gd);
+    gd._path='equipment/generic';gd._gen=true;A.sha.gym['equipment/generic/gym.json']=f.sha;A.gyms.push(gd);
   }catch(e){console.warn('generic:',e)}
   try{
     const dirs=await ghGet('equipment/my-gyms');
@@ -841,7 +841,9 @@ function renderEquip(){
   let h='<div class="sh">MY GYMS</div>';
   h+=my.length?my.map(g2=>`<div class="ei"><div class="eh" onclick="openGymEq('${g2.id}')"><span style="font-size:20px">${g2.icon||'🏋️'}</span><span class="en">${x(g2.name)}</span><div class="ea" onclick="event.stopPropagation()"><button onclick="editGym('${g2.id}')" title="Edit">✏️</button><button onclick="delGym('${g2.id}')" title="Delete">🗑️</button></div><span class="ch">›</span></div></div>`).join(''):'<div class="em" style="padding:20px 24px"><p>No gyms added yet.</p></div>';
   h+=`<button class="addb" onclick="addGym()">＋ Add Gym</button>`;
-  h+=`<div class="sh" style="margin-top:8px">GENERIC GYM</div><div class="sg"><div class="si"><span>Common Machines</span><span style="color:var(--dim);font-size:13px">Read-only</span></div></div>`;
+  const gen=A.gyms.find(x=>x._gen);
+  h+=`<div class="sh" style="margin-top:8px">GENERIC GYM</div>`;
+  h+=gen?`<div class="ei"><div class="eh" onclick="openGymEq('${gen.id}')"><span style="font-size:20px">${gen.icon||'🏋️'}</span><span class="en">${x(gen.name)}</span><span style="color:var(--dim);font-size:13px;margin-right:8px">${gen.rooms.reduce((n,r)=>n+r.machines.length,0)} exercises</span><span class="ch">›</span></div></div>`:'<div class="em" style="padding:20px 24px"><p>Generic gym not loaded.</p></div>';
   g('eqlist').innerHTML=h;
 }
 function openGymEq(gid){
