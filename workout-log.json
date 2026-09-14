@@ -1,5 +1,37 @@
 [
   {
+    "machineId": "leg-lifts",
+    "machine": "Leg Lifts",
+    "gym": "Common Machines",
+    "room": "Bodyweight — No Equipment",
+    "date": "2026-09-13",
+    "datetime": "2026-09-13 11:50:21 PM",
+    "set": 1,
+    "weight": null,
+    "reps": 15,
+    "duration": null,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
+    "machineId": "leg-lifts",
+    "machine": "Leg Lifts",
+    "gym": "Common Machines",
+    "room": "Bodyweight — No Equipment",
+    "date": "2026-09-13",
+    "datetime": "2026-09-13 11:50:21 PM",
+    "set": 2,
+    "weight": null,
+    "reps": 15,
+    "duration": null,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
     "machineId": "high-planks",
     "machine": "High Planks",
     "gym": "Common Machines",
