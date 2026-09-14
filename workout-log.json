@@ -725,6 +725,22 @@
     "notes": ""
   },
   {
+    "machineId": "negative-pullups",
+    "machine": "Negative Pullups",
+    "gym": "Common Machines",
+    "room": "Bodyweight — Light Equipment",
+    "date": "2026-09-14",
+    "datetime": "2026-09-14 03:59:57 PM",
+    "set": 1,
+    "weight": null,
+    "reps": 3,
+    "duration": null,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
     "machineId": "leg-lifts",
     "machine": "Leg Lifts",
     "gym": "Common Machines",
