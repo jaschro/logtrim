@@ -11,14 +11,21 @@ if %ERRORLEVEL% neq 0 (
 )
 echo Committing changes...
 git add -A
-git commit -m "Add Negative Pullups to generic Bodyweight - Light Equipment"
+git commit -m "Add Negative Pullups to generic; convert generic images PNG->JPEG (47MB -> 1.1MB)"
 echo Pulling and pushing to personal (jaschro/logtrim)...
 git pull personal main --rebase -X theirs
 git push personal main
 echo.
-echo Pulling and pushing to origin (logtrim/logtrim)...
-git pull origin main --rebase -X theirs
-git push origin main
+REM --- origin (logtrim/logtrim) push disabled ---
+REM The template repo has a rewritten, divergent history: "git pull origin
+REM main --rebase" tries to replay ~565 personal commits onto it, stalls on
+REM conflicts, and would push personal workout data into the shared repo.
+REM To send a change to origin, cherry-pick it onto a branch off origin/main:
+REM   git fetch origin main
+REM   git checkout -b sync-origin origin/main
+REM   git checkout main -- <file>
+REM   git commit -m "..." ^&^& git push origin sync-origin:main
+REM   git checkout main ^&^& git branch -D sync-origin
 echo.
 echo Done! Check above for any errors.
 pause
