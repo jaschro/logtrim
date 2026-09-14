@@ -512,6 +512,27 @@
     "notes": ""
   },
   {
+    "machineId": "stationary-bike-upright",
+    "machine": "Stationary Bike (Upright)",
+    "gym": "Common Machines",
+    "room": "Cardio",
+    "date": "2026-09-14",
+    "datetime": "2026-09-14 12:16:00 PM",
+    "set": 1,
+    "weight": null,
+    "reps": null,
+    "duration": 23.95,
+    "level": null,
+    "incline": null,
+    "hr": 100,
+    "notes": "Indoor spin (Garmin 24359760913). All Zone 1 - max minute HR ~110 (Karvonen RHR 46 / max 168).",
+    "zone1": 23.833333333333332,
+    "zone2": null,
+    "zone3": null,
+    "zone4": null,
+    "zone5": null
+  },
+  {
     "machineId": "m1788048070768",
     "machine": "Hip Abduction",
     "gym": "Equinox 67th NYC",
