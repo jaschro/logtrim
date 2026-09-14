@@ -1,198 +1,198 @@
 {
-  "generatedAt": "2026-09-12",
-  "coachNote": "Light upper-body return day at Portofino - your first session here since Aug 13, and your first resistance work since the knee tweak. Everything is seated or standing with zero knee load, and weights are set ~10-15% below your usual top sets with 3 sets instead of 4: leave 2-3 reps in the tank on every set. The elliptical is knee-friendly, but ease into it and stop if the knee complains.",
+  "generatedAt": "2026-09-14",
+  "coachNote": "Full-body day at Equinox, built around the knee: upper body progresses off your Aug 28 numbers (Saturday's Portofino session was intentionally light, so you're fresh to push), while lower body sticks to knee-safe work - hip machines and light hamstring curls through a pain-free range only. Leg Press and Leg Extension stay OFF the menu until the knee is cleared. Bike easy to open; stop anything that talks to the knee.",
   "exercises": [
     {
-      "machineId": "pa06",
-      "machine": "Elliptical Cross Trainer",
-      "gym": "Portofino Gym",
-      "room": "Aerobic Room",
-      "sets": [],
-      "note": "30 min easy-moderate, HR in Zone 1-2 (under ~131). Low resistance to start; let the knee vote on the level."
-    },
-    {
-      "machineId": "pm03",
-      "machine": "Seated Chest Press Machine",
-      "gym": "Portofino Gym",
-      "room": "Machines Room",
-      "sets": [
-        {
-          "set": 1,
-          "weight": 55,
-          "reps": 12
-        },
-        {
-          "set": 2,
-          "weight": 70,
-          "reps": 10
-        },
-        {
-          "set": 3,
-          "weight": 85,
-          "reps": 10
-        }
-      ],
-      "note": "Light day: stopping at 85 (your Aug 13 top was 100)."
-    },
-    {
-      "machineId": "pw02",
-      "machine": "Lat Pulldown Machine",
-      "gym": "Portofino Gym",
-      "room": "Weight Room",
-      "sets": [
-        {
-          "set": 1,
-          "weight": 55,
-          "reps": 12
-        },
-        {
-          "set": 2,
-          "weight": 70,
-          "reps": 10
-        },
-        {
-          "set": 3,
-          "weight": 85,
-          "reps": 10
-        }
-      ],
-      "note": "Holding below your Aug 13 top of 95."
-    },
-    {
-      "machineId": "pm02",
-      "machine": "Seated Row Machine",
-      "gym": "Portofino Gym",
-      "room": "Machines Room",
-      "sets": [
-        {
-          "set": 1,
-          "weight": 60,
-          "reps": 12
-        },
-        {
-          "set": 2,
-          "weight": 80,
-          "reps": 12
-        },
-        {
-          "set": 3,
-          "weight": 100,
-          "reps": 10
-        }
-      ],
-      "note": "Jul 30 you went to 120; capping at 100 today."
-    },
-    {
-      "machineId": "pm08",
-      "machine": "Seated Shoulder Press",
-      "gym": "Portofino Gym",
-      "room": "Machines Room",
-      "sets": [
-        {
-          "set": 1,
-          "weight": 35,
-          "reps": 12
-        },
-        {
-          "set": 2,
-          "weight": 45,
-          "reps": 10
-        },
-        {
-          "set": 3,
-          "weight": 55,
-          "reps": 10
-        }
-      ],
-      "note": "Hands vertical per your own Jul 30 note. Aug 5 top was 60."
-    },
-    {
-      "machineId": "pm04",
-      "machine": "Pec Fly",
-      "gym": "Portofino Gym",
-      "room": "Machines Room",
-      "sets": [
-        {
-          "set": 1,
-          "weight": 60,
-          "reps": 10
-        },
-        {
-          "set": 2,
-          "weight": 70,
-          "reps": 10
-        },
-        {
-          "set": 3,
-          "weight": 75,
-          "reps": 10
-        }
-      ],
-      "note": "Easy-controlled; last Portofino-area session reached 90."
-    },
-    {
-      "machineId": "m1782480059048",
-      "machine": "Rear Deltoid",
-      "gym": "Portofino Gym",
-      "room": "Machines Room",
-      "sets": [
-        {
-          "set": 1,
-          "weight": 30,
-          "reps": 12
-        },
-        {
-          "set": 2,
-          "weight": 40,
-          "reps": 10
-        },
-        {
-          "set": 3,
-          "weight": 50,
-          "reps": 10
-        }
-      ],
-      "note": "Below your Aug 13 top of 60."
-    },
-    {
-      "machineId": "pm10",
-      "machine": "Seated Biceps Curl Machine",
-      "gym": "Portofino Gym",
-      "room": "Machines Room",
-      "sets": [
-        {
-          "set": 1,
-          "weight": 40,
-          "reps": 12
-        },
-        {
-          "set": 2,
-          "weight": 50,
-          "reps": 10
-        },
-        {
-          "set": 3,
-          "weight": 55,
-          "reps": 10
-        }
-      ],
-      "note": "You noted the geometry is awkward and 70 stalled at 4 reps - staying well under that."
-    },
-    {
-      "machineId": "overhead-tricep-extension",
-      "machine": "Overhead Tricep Extension",
+      "machineId": "stationary-bike-upright",
+      "machine": "Stationary Bike (Upright)",
       "gym": "Common Machines",
-      "room": "Free Weights",
+      "room": "Cardio",
+      "sets": [],
+      "note": "Warmup: 15-20 min easy, Zone 1-2 (HR under ~131). Same drill as Saturday's Peloton - surges fine, but brief."
+    },
+    {
+      "machineId": "m1787930967814",
+      "machine": "Chest Press (Life Fitness)",
+      "gym": "Equinox 67th NYC",
+      "room": "Weight Machines",
+      "sets": [
+        {
+          "set": 1,
+          "weight": 50,
+          "reps": 12
+        },
+        {
+          "set": 2,
+          "weight": 70,
+          "reps": 12
+        },
+        {
+          "set": 3,
+          "weight": 85,
+          "reps": 10
+        }
+      ],
+      "note": "You closed Aug 28 with 70x20 - clearly had more. 85 is the new top."
+    },
+    {
+      "machineId": "m1787931030542",
+      "machine": "Pulldown",
+      "gym": "Equinox 67th NYC",
+      "room": "Weight Machines",
+      "sets": [
+        {
+          "set": 1,
+          "weight": 60,
+          "reps": 12
+        },
+        {
+          "set": 2,
+          "weight": 95,
+          "reps": 10
+        },
+        {
+          "set": 3,
+          "weight": 115,
+          "reps": 8
+        }
+      ],
+      "note": "Nudging past your 110 from Aug 28."
+    },
+    {
+      "machineId": "m1787930991678",
+      "machine": "Shoulder Press",
+      "gym": "Equinox 67th NYC",
+      "room": "Weight Machines",
+      "sets": [
+        {
+          "set": 1,
+          "weight": 50,
+          "reps": 10
+        },
+        {
+          "set": 2,
+          "weight": 70,
+          "reps": 10
+        },
+        {
+          "set": 3,
+          "weight": 85,
+          "reps": 8
+        }
+      ],
+      "note": "80x10 last time - try 85 for 8."
+    },
+    {
+      "machineId": "m1787931012328",
+      "machine": "Row",
+      "gym": "Equinox 67th NYC",
+      "room": "Weight Machines",
       "sets": [
         {
           "set": 1,
           "weight": 25,
+          "reps": 15
+        },
+        {
+          "set": 2,
+          "weight": 32.5,
+          "reps": 15
+        },
+        {
+          "set": 3,
+          "weight": 37.5,
+          "reps": 12
+        }
+      ],
+      "note": "Per column, as you noted. All three sets of 20 at 35 total last time - time to load it."
+    },
+    {
+      "machineId": "m1787931097899",
+      "machine": "Tricep Press",
+      "gym": "Equinox 67th NYC",
+      "room": "Weight Machines",
+      "sets": [
+        {
+          "set": 1,
+          "weight": 60,
+          "reps": 12
+        },
+        {
+          "set": 2,
+          "weight": 100,
+          "reps": 12
+        },
+        {
+          "set": 3,
+          "weight": 115,
+          "reps": 10
+        }
+      ],
+      "note": "110x20 on Aug 28 was strong - small bump."
+    },
+    {
+      "machineId": "m1788048070768",
+      "machine": "Hip Abduction",
+      "gym": "Equinox 67th NYC",
+      "room": "Weight Machines",
+      "sets": [
+        {
+          "set": 1,
+          "weight": 90,
+          "reps": 12
+        },
+        {
+          "set": 2,
+          "weight": 110,
+          "reps": 12
+        },
+        {
+          "set": 3,
+          "weight": 130,
+          "reps": 12
+        }
+      ],
+      "note": "Knee-safe. You did 130x20 on Aug 29, so this is comfortable territory."
+    },
+    {
+      "machineId": "m1788048150516",
+      "machine": "Hip Adduction",
+      "gym": "Equinox 67th NYC",
+      "room": "Weight Machines",
+      "sets": [
+        {
+          "set": 1,
+          "weight": 90,
+          "reps": 12
+        },
+        {
+          "set": 2,
+          "weight": 110,
+          "reps": 10
+        },
+        {
+          "set": 3,
+          "weight": 130,
+          "reps": 10
+        }
+      ],
+      "note": "The machine that kept slipping out of gear - seat the pin firmly. Skipping the 150 attempt."
+    },
+    {
+      "machineId": "m1788047963696",
+      "machine": "Leg Curl",
+      "gym": "Equinox 67th NYC",
+      "room": "Weight Machines",
+      "sets": [
+        {
+          "set": 1,
+          "weight": 20,
           "reps": 12
         },
         {
           "set": 2,
           "weight": 30,
-          "reps": 10
+          "reps": 12
         },
         {
           "set": 3,
@@ -200,24 +200,24 @@
           "reps": 10
         }
       ],
-      "note": "A notch under your Aug 28 sets (30/35/40)."
+      "note": "Hamstrings support the knee - light, smooth, pain-free range only. Stop if the knee objects."
     },
     {
-      "machineId": "elbow-planks",
-      "machine": "Elbow Planks",
-      "gym": "Common Machines",
-      "room": "Bodyweight — No Equipment",
+      "machineId": "m1788049323161",
+      "machine": "Adjustable Decline Abdominal Bench",
+      "gym": "Equinox 67th NYC",
+      "room": "Weight Machines",
       "sets": [
         {
           "set": 1,
-          "duration": 45
+          "reps": 15
         },
         {
           "set": 2,
-          "duration": 45
+          "reps": 15
         }
       ],
-      "note": "Core finisher, zero knee stress."
+      "note": "Core finisher, matching Aug 29."
     }
   ]
 }
