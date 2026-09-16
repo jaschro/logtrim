@@ -1,6 +1,6 @@
 {
-  "fetchedAt": "2026-09-15T23:23:40Z",
-  "today": "2026-09-15",
+  "fetchedAt": "2026-09-16T03:21:49Z",
+  "today": "2026-09-16",
   "recentActivities": [
     {
       "activityId": 24359760913,
@@ -267,34 +267,21 @@
       "calories": 214.0,
       "elevationGain": 16.0,
       "avgPace": 2.4100000858306885
-    },
-    {
-      "activityId": 24204944904,
-      "date": "2026-09-01",
-      "type": "walking",
-      "name": "New York Walking",
-      "durationMins": 88.0,
-      "distanceMiles": 4.75,
-      "avgHR": 83.0,
-      "maxHR": 94.0,
-      "calories": 492.0,
-      "elevationGain": 41.0,
-      "avgPace": 1.4470000267028809
     }
   ],
   "todayStats": {
-    "steps": 5443,
-    "floors": 3.34219,
+    "steps": 8682,
+    "floors": 5.78871,
     "restingHR": 47,
-    "activeCalories": 108.0,
-    "bodyBattery": 54,
-    "stressAvg": 24,
-    "weeklySteps": 82805
+    "activeCalories": 159.0,
+    "bodyBattery": null,
+    "stressAvg": 28,
+    "weeklySteps": 79517
   },
   "trainingReadiness": {
-    "score": 87,
-    "level": "HIGH",
-    "feedback": "WELL_RECOVERED"
+    "score": null,
+    "level": null,
+    "feedback": null
   },
   "vo2max": {
     "vo2max": 40.0,
@@ -320,9 +307,9 @@
     "avgRespirationRate": 14.0,
     "avgSpO2": 96.0
   },
-  "spo2Avg": 95.0,
+  "spo2Avg": null,
   "respiration": {
-    "avgWaking": 14.0,
-    "avgSleep": 14.0
+    "avgWaking": null,
+    "avgSleep": null
   }
 }
