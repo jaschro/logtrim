@@ -50,6 +50,8 @@ The app needs permission to save your workouts to your repository. A "fine-grain
 5. Click **Generate token**
 6. **Copy the token immediately** (it starts with `github_pat_…`) and save it somewhere safe — GitHub only shows it once
 
+> Keep this token handy. If you set up the Claude coach in Part 2, you'll use the same one — there's no need for a second token.
+
 ### Step 5: Connect the app
 
 1. Open your app: `https://YOUR-USERNAME.github.io/logtrim/`
@@ -66,7 +68,9 @@ The app needs permission to save your workouts to your repository. A "fine-grain
 **iPhone (Safari):**
 1. Open your app URL in Safari
 2. Tap the Share button (square with arrow)
-3. Tap **Add to Home Screen** → **Add**
+3. Scroll down the list of actions and tap **Add to Home Screen** → **Add**
+
+It must be Safari — Chrome and in-app browsers don't offer this. If you don't see the option, scroll further down the share sheet; it sits below Add to Bookmarks and Add to Favorites.
 
 **Android (Chrome):**
 1. Open your app URL in Chrome
@@ -77,9 +81,10 @@ It now behaves like a regular app icon. Repeat Step 5 on the phone the first tim
 ### Step 7: Set up your gyms
 
 1. In the app: **Settings → Manage Equipment**
-2. Add your gym(s), rooms within them, and the machines you use
-3. You can take photos of machines with your phone as you add them — very handy for remembering which machine is which
-4. The built-in "Common Machines" gym covers generic equipment (outdoor activities, cardio, free weights, classes) with no setup needed
+2. Tap **📚 Import from Gym Catalog** to pull in a ready-made gym — machines, layout and photos already filled in. If yours isn't listed, skip this and add it by hand.
+3. Add your gym(s), rooms within them, and the machines you use
+4. You can take photos of machines with your phone as you add them — very handy for remembering which machine is which
+5. The built-in "Common Machines" gym covers generic equipment (outdoor activities, cardio, free weights, classes) with no setup needed
 
 You're done with the core setup. Log your first workout!
 
@@ -87,92 +92,100 @@ You're done with the core setup. Log your first workout!
 
 ## Part 2 — Connect Claude as Your Workout Coach (optional)
 
-This lets Claude read your workout history and act as a coach: analyzing progress, suggesting session plans, and answering "how much weight did I use last time?"
+This lets Claude read your workout history and act as a coach: analyzing progress, suggesting session plans, answering "how much weight did I use last time?", and writing a plan straight into the app.
+
+**Log a few real workouts before starting this.** Claude builds plans from the machines in your history, so it needs something to work with.
 
 ### Step 1: Get Claude
 
 1. Sign up at [claude.ai](https://claude.ai) (or download the Claude desktop app)
 2. A paid plan is recommended — coaching conversations use a meaningful amount of usage
 
-### Step 2: Create a Claude Project
+### Step 2: Turn on network access
+
+Claude needs to be able to reach GitHub to read your log and write plans.
+
+In Claude: **Settings → Capabilities** → make sure **Allow network egress** is switched on. (On a Team or Enterprise account this appears as a Domain allowlist controlled by the organization owner.)
+
+### Step 3: Create a Claude Project
 
 1. In Claude, create a new **Project** (e.g. "Workout Coach")
 2. Copy the contents of `Project-Instructions-Template.md` (in this repository) into the Project's custom instructions
-3. Fill in the placeholders — your GitHub username, repo name, and gym names
+3. Fill in the placeholders — your name, GitHub username, gym names, and the token from Part 1 Step 4
 
-### Step 3: Let Claude read your data
+### Step 4: Check that Claude can read your data
 
-The simplest approach — your workout CSV is publicly readable if your fork is public:
+Your workout log is a plain file in your repo:
 
 ```
 https://raw.githubusercontent.com/YOUR-USERNAME/logtrim/main/workout-log.csv
 ```
 
-Claude can fetch this URL directly in any conversation. The template instructions tell it how.
+If your fork is public, Claude can fetch this with no authentication at all. Start a conversation in your Project and ask "what did I do in my last workout?" — it should answer from the file.
 
-**Privacy note:** a public repo means anyone with the URL can see your workout data (dates, exercises, weights — no personal identity info beyond your GitHub username). If you prefer privacy, make the repo private and see "Private repo option" below.
+**Privacy note:** a public repo means anyone with the URL can see your workout data (dates, exercises, weights — no personal identity info beyond your GitHub username). If you prefer privacy, make the repo private; Claude then reads through the token instead, using the same GitHub API it uses to write.
 
-**Private repo option:** if your fork is private, Claude can't fetch the raw URL. Options:
-- Use Claude's GitHub connector (in Claude settings → Connectors) to grant read access to your repo, or
-- Paste your recent workout data into the conversation when asking for coaching
+### Step 5: Let Claude push workout plans into the app
 
-### Step 4 (advanced, optional): Let Claude push workout plans into the app
+Nothing more to install — this works as soon as the token from Part 1 is in your Project instructions.
 
-This requires deploying a small Cloudflare Worker (free tier) that accepts workout suggestions from Claude and writes them into your repo, where the app displays them as "Today's Plan."
+Say: **"Look at my recent workouts and push a plan for tomorrow to my app."**
 
-1. Create a free account at [cloudflare.com](https://cloudflare.com)
-2. Go to **Workers & Pages** → **Create** → **Create Worker**, give it any name
-3. Click **Edit Code**, replace the contents with the `worker.js` file from this repository, and click **Deploy**
-4. In the Worker's **Settings → Variables and Secrets**, add:
-   - `SECRET_TOKEN` — any password-like string you invent (e.g. `logtrim-x8k2p`)
-   - `GITHUB_PAT` — a fine-grained token like Step 4 of Part 1 (Contents: Read and write on your fork)
-   - `GITHUB_USER` — your GitHub username
-   - `GITHUB_REPO` — `logtrim`
-5. Note your Worker URL (e.g. `https://your-worker.your-subdomain.workers.dev`)
-6. Fill in the Worker URL and secret token in your Project instructions (the template shows where)
+Claude writes a file called `suggested-workout.json` into your repository using the GitHub API. The app reads that file and displays it as **Today's Plan** at the top of the screen. Refresh LogTrim (or fully close and reopen it on your phone) and the plan is there.
 
-Now you can tell Claude "plan me a workout for tomorrow and push it to my app," and it will appear in LogTrim.
+**What you're trading:** the token sits in your Project's instructions, which only you can see. It's scoped to this one repository and can only read and write files there — it can't touch your other repos or your account. If that's not a trade you want to make, see `worker.js` in this repository for a relay-based alternative that keeps the token out of Claude's hands, at the cost of a Cloudflare account and about twenty minutes of setup.
 
 ### Garmin integration (advanced, optional)
 
-If you have a Garmin watch, the repo includes scripts (`scripts/garmin_sync.py` and `.github/workflows/garmin-sync.yml`) that automatically pull your daily stats (steps, sleep, heart rate zones, training readiness) into the repo on a schedule, where Claude can read them for recovery-aware coaching. This requires:
+If you have a Garmin watch, the repo ships with **two** scheduled GitHub Actions
+pipelines that pull your Garmin data into your fork, where the app and Claude can
+use it:
 
-1. Running `scripts/garmin_auth_setup.py` locally once to generate Garmin auth tokens
-2. Adding `GARMIN_TOKENS` and `GARMIN_DISPLAY_NAME` as repository secrets (repo **Settings → Secrets and variables → Actions**)
-3. Editing the `if: github.repository ==` line in `.github/workflows/garmin-sync.yml` to match your fork
+- **Garmin Sync** (`scripts/garmin_sync.py`, every 3 hours) — daily stats like
+  steps, sleep, heart rate zones, and training readiness, written to
+  `garmin-recent.json`. Useful for recovery-aware coaching.
+- **cardio-minutes** (`cardio-minutes-pipeline/`, daily) — per-minute heart-rate
+  data from every activity, written to `cardio-minutes.csv`. Useful for
+  time-in-zone analysis.
 
-This is the fiddliest part of setup — feel free to skip it, or ask Claude to walk you through it once your Project is set up.
+Both are **off by default** — they're skipped until you opt in, so if you don't
+use Garmin you can ignore this section entirely.
 
----
+To enable them:
 
-## Getting Updates
+1. Generate your Garmin auth token blob (one-time, on your computer):
+   `pip install garminconnect`, then `python cardio-minutes-pipeline/garmin_login.py`
+   (enter your Garmin login; it prints a base64 string — copy it)
+2. In your fork: **Settings → Secrets and variables → Actions**
+   - **Secrets tab:** add `GARMIN_TOKENS` = the base64 string.
+     For Garmin Sync, also add `GARMIN_DISPLAY_NAME` = your Garmin Connect
+     display name (find it in your Garmin Connect profile URL).
+3. **Variables tab:** add `GARMIN_ENABLED` = `true`. This one variable switches
+   both workflows on. Remove it (or set it to anything else) to switch them off.
+4. Kick off a first run of each from the **Actions** tab (Run workflow), or just
+   wait for the schedule.
 
-LogTrim improves over time. How you update depends on how your copy was created:
-
-**If you forked** (your repo page says "forked from logtrim/logtrim" under the name):
-1. Open your repo on GitHub
-2. If updates are available you'll see "This branch is N commits behind logtrim/logtrim:main"
-3. Click **Sync fork** → **Update branch**
-4. Wait a minute or two for GitHub Pages to rebuild, then hard-refresh the app
-
-**If your repo is a standalone copy** (no "forked from" note), update from a computer with git:
-
-```
-cd path\to\your\logtrim
-git remote add template https://github.com/logtrim/logtrim.git   (first time only)
-git pull template main
-git push origin main
-```
-
-Your personal data (workout logs, profile, custom gyms) is never touched by updates — it lives in files the template doesn't include.
-
-After any update, hard-refresh the app (Ctrl+Shift+R on desktop; on phone, fully close and reopen the browser or home-screen app).
+For more detail on the per-minute pipeline (CSV format, backfilling history,
+token renewal), see `cardio-minutes-pipeline/CARDIO-MINUTES-SETUP.md`.
 
 ---
 
 ## Troubleshooting
 
+### The app
+
 - **App shows old version after an update:** hard-refresh (Ctrl+Shift+R on desktop; on phone, close the tab fully and reopen)
 - **"Set up GitHub in Settings first":** the username/repo/token fields aren't all filled in, or the token is wrong
 - **Save fails:** token may have expired, or its Contents permission isn't Read and write
 - **Pages site is 404:** GitHub Pages can take a few minutes after enabling; check repo Settings → Pages for the status
+- **No "Add to Home Screen" on iPhone:** you're not in Safari, or you're in a Private tab, or the action was hidden — scroll to the bottom of the share sheet and check **Edit Actions**
+
+### The Claude coach
+
+- **Claude hands you a long URL to paste instead of pushing:** network access is off, or it hasn't been told to make the call itself. Check Part 2 Step 2, and that the push section of your Project instructions is intact.
+- **403 when pushing:** the token is missing **Contents: Read and write**
+- **404 when pushing:** the token isn't scoped to this repo, or the username in the instructions is wrong
+- **401 when pushing:** the token is invalid or has expired — generate a new one and update both the app and the Project instructions
+- **409 when pushing:** a stale file version; Claude should re-read the file's `sha` and retry
+- **Plan pushed but not visible:** the app cached the old page — fully close and reopen it
+- **Claude can't find your workouts:** confirm the username in the instructions, and that you've logged at least a few sessions

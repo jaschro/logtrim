@@ -139,6 +139,7 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,BlinkMacSystemFo
 #toast.ok{border-color:var(--ok);color:var(--ok)}
 #toast.err{border-color:var(--bad);color:var(--bad)}
 /* Loading */
+#ldmsg{white-space:pre-line;text-align:center;line-height:1.5}
 #ld{position:fixed;inset:0;background:rgba(0,0,0,.75);display:none;flex-direction:column;align-items:center;justify-content:center;z-index:999;gap:14px}
 #ld.on{display:flex}
 .sp{width:36px;height:36px;border:3px solid var(--bdr);border-top-color:var(--accent);border-radius:50%;animation:sp .8s linear infinite}
@@ -458,8 +459,9 @@ function renderHome(){
   myEl.innerHTML=my.length?my.map(gymCard).join(''):'<div class="em"><div class="icon">🏟️</div><p>No gyms yet.<br>Go to Settings → Manage Equipment.</p></div>';
   genEl.innerHTML=gen?gymCard(gen):'';
 }
+function visCount(r){return r.machines.filter(m=>!m.hidden).length}
 function gymCard(g2){
-  const tot=g2.rooms.reduce((s,r)=>s+r.machines.length,0);
+  const tot=g2.rooms.reduce((s,r)=>s+visCount(r),0);
   const sub=g2.rooms.length>1?`${g2.rooms.length} rooms · ${tot} machines`:`${tot} machines`;
   return`<div class="gc" onclick="openGym('${g2.id}')"><div class="gi">${g2.icon||'🏋️'}</div><div class="gi2"><h2>${x(g2.name)}</h2><p>${sub}</p></div><span class="ch">›</span></div>`;
 }
@@ -513,7 +515,7 @@ async function dismissPlan(){
 // === ROOMS ===
 function renderRooms(){
   g('rttl').textContent=A.gym.name;
-  g('rlist').innerHTML=A.gym.rooms.map(r=>`<div class="ri" onclick="openRoom('${r.id}')"><h2>${x(r.name)}</h2><span class="rc">${r.machines.length} machines</span><span class="ch">›</span></div>`).join('');
+  g('rlist').innerHTML=A.gym.rooms.map(r=>`<div class="ri" onclick="openRoom('${r.id}')"><h2>${x(r.name)}</h2><span class="rc">${visCount(r)} machines</span><span class="ch">›</span></div>`).join('');
 }
 function openRoom(rid){
   const r=A.gym.rooms.find(r=>r.id===rid);if(!r)return;
@@ -524,7 +526,7 @@ function openRoom(rid){
 function renderMachines(){
   const ttl=A.gym.rooms.length>1?A.room.name:A.gym.name;
   g('mttl').textContent=ttl;
-  g('mgrid').innerHTML=A.room.machines.map(m=>{
+  g('mgrid').innerHTML=A.room.machines.filter(m=>!m.hidden).map(m=>{
     const ls=lastSess(m.id);
     const iu=imgUrl(A.gym,m.image);
     const ih=iu?`<div class="mi"><img src="${iu}" alt="${x(m.name)}" loading="lazy" onerror="this.parentElement.innerHTML='🏋️'"></div>`:`<div class="mi">🏋️</div>`;
@@ -730,7 +732,7 @@ async function saveSess(){
     if(isW){
       const dist=parseFloat((row.querySelector('.sdist')||{}).value)||null;
       const dur=parseMinutes((row.querySelector('.sd')||{}).value);
-      newSets.push({machineId:m.id,machine:m.name,gym:gym.name,room:rm.name,date,datetime,set:i+1,weight:null,reps:null,duration:dur,level:dist,incline:null,hr:null,notes:i===0?notes.trim():''});
+      newSets.push({machineId:m.id,machine:m.name,gym:gym.name,gymId:gym.id,room:rm.name,roomId:rm.id,date,datetime,set:i+1,weight:null,reps:null,duration:dur,level:dist,incline:null,hr:null,notes:i===0?notes.trim():''});
     }else if(isC){
       const dur=parseFloat((row.querySelector('.sd')||{}).value)||null;
       const mph=parseFloat((row.querySelector('.smph')||{}).value)||null;
@@ -738,21 +740,21 @@ async function saveSess(){
       const inc=incV!==''&&incV!=null?parseFloat(incV):null;
       const hrV=(row.querySelector('.shr')||{}).value;
       const hr=hrV!==''&&hrV!=null?parseFloat(hrV):null;
-      newSets.push({machineId:m.id,machine:m.name,gym:gym.name,room:rm.name,date,datetime,set:i+1,weight:null,reps:null,duration:dur,level:mph,incline:isNaN(inc)?null:inc,hr:isNaN(hr)?null:hr,notes:i===0?notes.trim():''});
+      newSets.push({machineId:m.id,machine:m.name,gym:gym.name,gymId:gym.id,room:rm.name,roomId:rm.id,date,datetime,set:i+1,weight:null,reps:null,duration:dur,level:mph,incline:isNaN(inc)?null:inc,hr:isNaN(hr)?null:hr,notes:i===0?notes.trim():''});
     }else if(isP){
       const dur=parseFloat((row.querySelector('.sd')||{}).value)||null;
       const mph=parseFloat((row.querySelector('.smph')||{}).value)||null;
-      newSets.push({machineId:m.id,machine:m.name,gym:gym.name,room:rm.name,date,datetime,set:i+1,weight:null,reps:null,duration:dur,level:mph,incline:null,hr:null,notes:i===0?notes.trim():''});
+      newSets.push({machineId:m.id,machine:m.name,gym:gym.name,gymId:gym.id,room:rm.name,roomId:rm.id,date,datetime,set:i+1,weight:null,reps:null,duration:dur,level:mph,incline:null,hr:null,notes:i===0?notes.trim():''});
     }else if(isT){
       const dur=parseFloat((row.querySelector('.sd')||{}).value)||null;
-      newSets.push({machineId:m.id,machine:m.name,gym:gym.name,room:rm.name,date,datetime,set:i+1,weight:null,reps:null,duration:dur,level:null,incline:null,hr:null,notes:i===0?notes.trim():''});
+      newSets.push({machineId:m.id,machine:m.name,gym:gym.name,gymId:gym.id,room:rm.name,roomId:rm.id,date,datetime,set:i+1,weight:null,reps:null,duration:dur,level:null,incline:null,hr:null,notes:i===0?notes.trim():''});
     }else if(isMn){
       const dur=parseMinutes((row.querySelector('.sd')||{}).value);
-      newSets.push({machineId:m.id,machine:m.name,gym:gym.name,room:rm.name,date,datetime,set:i+1,weight:null,reps:null,duration:dur,level:null,incline:null,hr:null,notes:i===0?notes.trim():''});
+      newSets.push({machineId:m.id,machine:m.name,gym:gym.name,gymId:gym.id,room:rm.name,roomId:rm.id,date,datetime,set:i+1,weight:null,reps:null,duration:dur,level:null,incline:null,hr:null,notes:i===0?notes.trim():''});
     }else{
       const wt=parseFloat((row.querySelector('.sw')||{}).value);
       const rp=parseInt((row.querySelector('.srp')||{}).value);
-      newSets.push({machineId:m.id,machine:m.name,gym:gym.name,room:rm.name,date,datetime,set:i+1,weight:isNaN(wt)?null:wt,reps:isNaN(rp)?null:rp,duration:null,level:null,incline:null,hr:null,notes:i===0?notes.trim():''});
+      newSets.push({machineId:m.id,machine:m.name,gym:gym.name,gymId:gym.id,room:rm.name,roomId:rm.id,date,datetime,set:i+1,weight:isNaN(wt)?null:wt,reps:isNaN(rp)?null:rp,duration:null,level:null,incline:null,hr:null,notes:i===0?notes.trim():''});
     }
   });
   if(!newSets.length){toast('Add at least one set','err');return}
@@ -841,6 +843,7 @@ function renderEquip(){
   let h='<div class="sh">MY GYMS</div>';
   h+=my.length?my.map(g2=>`<div class="ei"><div class="eh" onclick="openGymEq('${g2.id}')"><span style="font-size:20px">${g2.icon||'🏋️'}</span><span class="en">${x(g2.name)}</span><div class="ea" onclick="event.stopPropagation()"><button onclick="editGym('${g2.id}')" title="Edit">✏️</button><button onclick="delGym('${g2.id}')" title="Delete">🗑️</button></div><span class="ch">›</span></div></div>`).join(''):'<div class="em" style="padding:20px 24px"><p>No gyms added yet.</p></div>';
   h+=`<button class="addb" onclick="addGym()">＋ Add Gym</button>`;
+  h+=`<button class="addb" onclick="openCatalog()" style="border-style:solid;background:none">📚 Import from Gym Catalog</button>`;
   const gen=A.gyms.find(x=>x._gen);
   h+=`<div class="sh" style="margin-top:8px">GENERIC GYM</div>`;
   h+=gen?`<div class="ei"><div class="eh" onclick="openGymEq('${gen.id}')"><span style="font-size:20px">${gen.icon||'🏋️'}</span><span class="en">${x(gen.name)}</span><span style="color:var(--dim);font-size:13px;margin-right:8px">${gen.rooms.reduce((n,r)=>n+r.machines.length,0)} exercises</span><span class="ch">›</span></div></div>`:'<div class="em" style="padding:20px 24px"><p>Generic gym not loaded.</p></div>';
@@ -866,7 +869,9 @@ function renderRoomEq(){
   const r=A.room;
   g('reqttl').textContent=r.name;
   let h='<div class="sh">MACHINES</div>';
-  h+=r.machines.map(m=>`<div class="sg" style="margin:6px 16px"><div class="si"><span style="flex:1;font-size:15px">${x(m.name)}</span><button onclick="editMachine('${m.id}')" style="background:none;border:none;color:var(--dim);font-size:16px;cursor:pointer;padding:4px">✏️</button><button onclick="delMachine('${m.id}')" style="background:none;border:none;color:var(--bad);font-size:16px;cursor:pointer;padding:4px">🗑️</button></div></div>`).join('');
+  h+=r.machines.map(m=>m.hidden
+    ?`<div class="sg" style="margin:6px 16px;opacity:.55"><div class="si"><span style="flex:1;font-size:15px">${x(m.name)} <span style="font-size:11px;color:var(--dim)">(hidden)</span></span><button onclick="unhideMachine('${m.id}')" title="Unhide" style="background:none;border:none;color:var(--dim);font-size:16px;cursor:pointer;padding:4px">👁️</button></div></div>`
+    :`<div class="sg" style="margin:6px 16px"><div class="si"><span style="flex:1;font-size:15px">${x(m.name)}</span><button onclick="editMachine('${m.id}')" style="background:none;border:none;color:var(--dim);font-size:16px;cursor:pointer;padding:4px">✏️</button><button onclick="delMachine('${m.id}')" style="background:none;border:none;color:var(--bad);font-size:16px;cursor:pointer;padding:4px">🗑️</button></div></div>`).join('');
   h+=`<button class="addb" onclick="addMachine()">＋ Add Machine</button>`;
   g('reqbody').innerHTML=h;
 }
@@ -991,15 +996,98 @@ async function doEditMachine(mid){
 }
 function doDelMachine(mid){
   const m=A.room.machines.find(m=>m.id===mid);if(!m)return;
-  if(!confirm(`Delete "${m.name}"?\nWorkout history is kept.`))return;
+  const n=A.log.filter(e=>e.machineId===mid).length;
+  if(n>0){
+    if(!confirm(`"${m.name}" has ${n} logged set${n===1?'':'s'}.\nHide it instead of deleting? Your history is kept and you can unhide it later from Manage Equipment.`))return;
+    closeMod();m.hidden=true;
+    saveGym(A.gym).then(()=>{renderRoomEq();toast('Machine hidden','ok')}).catch(e=>toast(e.message,'err'));
+    return;
+  }
+  if(!confirm(`Delete "${m.name}"?`))return;
   closeMod();A.room.machines=A.room.machines.filter(m=>m.id!==mid);
   saveGym(A.gym).then(()=>{renderRoomEq();toast('Machine deleted','ok')}).catch(e=>toast(e.message,'err'));
 }
+function unhideMachine(mid){
+  const m=A.room.machines.find(m=>m.id===mid);if(!m)return;
+  delete m.hidden;
+  saveGym(A.gym).then(()=>{renderRoomEq();toast('Machine restored','ok')}).catch(e=>toast(e.message,'err'));
+}
 function delMachine(mid){editMachine(mid)}
+
+// === GYM CATALOG (logtrim/gyms) ===
+const CATALOG_RAW='https://raw.githubusercontent.com/logtrim/gyms/main';
+function gymPathFor(id){return id==='generic'?'equipment/generic':`equipment/my-gyms/${id}`}
+async function openCatalog(){
+  if(!hasCfg()){toast('Set up GitHub in Settings first','err');return}
+  showLd('Loading catalog…');
+  let idx;
+  try{
+    const r=await fetch(`${CATALOG_RAW}/index.json?t=${Date.now()}`);
+    if(!r.ok)throw new Error(`HTTP ${r.status}`);
+    idx=await r.json();
+  }catch(e){hideLd();toast(`Could not load catalog: ${e.message}`,'err');return}
+  hideLd();
+  A.catalog=idx;
+  const rows=(idx.gyms||[]).map(c=>{
+    const have=A.gyms.find(g=>g.id===c.id);
+    const sub=[c.location,`${c.machines} machine${c.machines===1?'':'s'}`,c.images?`${c.images.length} photo${c.images.length===1?'':'s'}`:null].filter(Boolean).join(' · ');
+    const btn=have
+      ?`<button onclick="importCatalogGym('${c.id}',true)" style="background:var(--card2);color:var(--dim);border:1px solid var(--bdr);border-radius:8px;padding:8px 12px;font-size:13px;font-weight:600;cursor:pointer">Replace</button>`
+      :`<button onclick="importCatalogGym('${c.id}',false)" style="background:var(--accent);color:#000;border:none;border-radius:8px;padding:8px 12px;font-size:13px;font-weight:700;cursor:pointer">Import</button>`;
+    return`<div class="si" style="padding:12px 0"><span style="font-size:22px">${c.icon||'🏋️'}</span><div style="flex:1;min-width:0"><div style="font-size:15px;font-weight:600">${x(c.name)}${have?' <span style="font-size:11px;color:var(--dim);font-weight:400">(installed)</span>':''}</div><div style="font-size:12px;color:var(--dim)">${x(sub)}</div></div>${btn}</div>`;
+  }).join('')||'<p style="color:var(--dim)">Catalog is empty.</p>';
+  modal(`<h2>Gym Catalog</h2>
+    <p style="font-size:13px;color:var(--dim);margin:-8px 0 12px">Imports a copy into your repo. You can edit it freely afterwards; the catalog is never changed.</p>
+    <div style="max-height:55vh;overflow-y:auto">${rows}</div>
+    <div class="mbs"><button class="mc2" onclick="closeMod()">Close</button></div>`);
+}
+async function fetchRawB64(url){
+  const r=await fetch(url);
+  if(!r.ok)throw new Error(`Download failed (HTTP ${r.status})`);
+  const bytes=new Uint8Array(await r.arrayBuffer());
+  let bin='';const CH=0x8000;
+  for(let i=0;i<bytes.length;i+=CH)bin+=String.fromCharCode.apply(null,bytes.subarray(i,i+CH));
+  return btoa(bin);
+}
+async function importCatalogGym(id,replace){
+  const c=(A.catalog&&A.catalog.gyms||[]).find(c=>c.id===id);if(!c)return;
+  const existing=A.gyms.find(g=>g.id===id);
+  if(existing&&!confirm(`Replace "${existing.name}" with the catalog version?\n\nAny rooms, machines or photos you added or changed in it will be lost. Workout history is kept.`))return;
+  closeMod();
+  const path=gymPathFor(id);
+  const imgs=c.images||[];
+  try{
+    showLd(`Importing ${c.name}…`);
+    // existing image SHAs (needed to overwrite)
+    const shas={};
+    try{const dir=await ghGet(`${path}/images`);(Array.isArray(dir)?dir:[]).forEach(f=>{shas[f.name]=f.sha})}catch(e){}
+    for(let i=0;i<imgs.length;i++){
+      showLd(`Importing ${c.name}…\nphoto ${i+1} of ${imgs.length}`);
+      const fn=imgs[i];
+      const b64=await fetchRawB64(`${CATALOG_RAW}/gyms/${id}/images/${encodeURIComponent(fn)}`);
+      await ghPutImg(`${path}/images/${encodeURIComponent(fn)}`,b64,shas[fn]||null);
+    }
+    showLd(`Importing ${c.name}…\nsaving gym`);
+    const r=await fetch(`${CATALOG_RAW}/gyms/${id}/gym.json?t=${Date.now()}`);
+    if(!r.ok)throw new Error(`gym.json download failed (HTTP ${r.status})`);
+    const gd=await r.json();
+    gd.source=`logtrim/gyms@${A.catalog.version||A.catalog.updated||'main'}`;
+    gd._path=path;gd._gen=(id==='generic');
+    let sha=A.sha.gym[`${path}/gym.json`]||null;
+    if(!sha){try{const f=await ghGet(`${path}/gym.json`);sha=f.sha}catch(e){}}
+    A.sha.gym[`${path}/gym.json`]=sha;
+    await saveGym(gd);
+    A.gyms=A.gyms.filter(g=>g.id!==id);
+    if(gd._gen)A.gyms.unshift(gd);else A.gyms.push(gd);
+    hideLd();renderEquip();renderHome();toast(`${c.name} imported!`,'ok');
+  }catch(e){hideLd();toast(`Import failed: ${e.message}`,'err');console.error(e)}
+}
 
 async function saveGym(gym){
   if(!hasCfg())return;
-  const data={id:gym.id,name:gym.name,icon:gym.icon,isGeneric:gym.isGeneric||false,rooms:gym.rooms.map(r=>({id:r.id,name:r.name,machines:r.machines.map(m=>({id:m.id,name:m.name,musclesWorked:m.musclesWorked||'',image:m.image||null,logType:m.logType||'weight'}))}))};
+  const data={id:gym.id,name:gym.name,icon:gym.icon,isGeneric:gym.isGeneric||false};
+  ['subtitle','location','version','source'].forEach(k=>{if(gym[k]!=null)data[k]=gym[k]});
+  data.rooms=gym.rooms.map(r=>({id:r.id,name:r.name,machines:r.machines.map(m=>{const o={id:m.id,name:m.name,musclesWorked:m.musclesWorked||'',image:m.image||null,logType:m.logType||'weight'};if(m.hidden)o.hidden=true;return o})}));
   const path=`${gym._path}/gym.json`;
   const sha=A.sha.gym[path]||null;
   const res=await ghPut(path,JSON.stringify(data,null,2),sha,`Update ${gym.name}`);
