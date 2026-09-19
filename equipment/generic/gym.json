@@ -359,6 +359,34 @@
           "musclesWorked": "Cardiovascular system, full body, coordination, core",
           "image": "zumba-class.jpg",
           "logType": "mins"
+        },
+        {
+          "id": "strength-training-class",
+          "name": "Strength Training",
+          "musclesWorked": "Full body, quadriceps, glutes, back, chest, shoulders, arms, core",
+          "image": "strength-training-class.jpg",
+          "logType": "mins"
+        },
+        {
+          "id": "water-aerobics-class",
+          "name": "Water Aerobics",
+          "musclesWorked": "Cardiovascular system, full body, core, low-impact joint mobility",
+          "image": "water-aerobics-class.jpg",
+          "logType": "mins"
+        },
+        {
+          "id": "pilates-mat-class",
+          "name": "Pilates Mat",
+          "musclesWorked": "Core, abdominals, obliques, lower back, glutes, flexibility",
+          "image": "pilates-mat-class.jpg",
+          "logType": "mins"
+        },
+        {
+          "id": "pilates-reformer-class",
+          "name": "Pilates Reformer",
+          "musclesWorked": "Core, abdominals, glutes, hamstrings, back, flexibility, stability",
+          "image": "pilates-reformer-class.jpg",
+          "logType": "mins"
         }
       ]
     },
