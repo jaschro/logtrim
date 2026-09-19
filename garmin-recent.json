@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-19T15:22:29Z",
+  "fetchedAt": "2026-09-19T17:31:04Z",
   "today": "2026-09-19",
   "recentActivities": [
     {
@@ -261,7 +261,7 @@
     "floors": 2.69915,
     "restingHR": 47,
     "activeCalories": 100.0,
-    "bodyBattery": null,
+    "bodyBattery": 72,
     "stressAvg": 24,
     "weeklySteps": 80366
   },
@@ -274,7 +274,10 @@
     "vo2max": 40.0,
     "fitnessAge": null
   },
-  "intensityMinutes": null,
+  "intensityMinutes": {
+    "moderate": 93,
+    "vigorous": 29
+  },
   "hrv": {
     "weeklyAvg": 42,
     "lastNight": null,
