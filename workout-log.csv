@@ -1,5 +1,6 @@
 datetime,gym,room,machine,machineId,set,weight,reps,duration,level,incline,hr,notes,zone1,zone2,zone3,zone4,zone5
 2026-09-19 11:04:20 AM,Common Machines,Bodyweight — No Equipment,Squats,squats,1,,20,,,,,,,,,,
+2026-09-19 11:04:33 AM,Common Machines,Bodyweight — No Equipment,Push Ups,push-ups,1,,30,,,,,,,,,,
 2026-09-18 01:51:00 PM,Portofino Gym,Aerobic Room,Peloton,pa04,1,,,34.86666666666667,,,120,Indoor Peloton ride (Garmin 24411302590). Karvonen zones from cardio-minutes (RHR 46 / max 168); warmup below Z1 counted in zone1.,13.866666666666665,11,10,,
 2026-09-18 05:10:59 PM,Equinox 67th NYC,5th floor free weight room,Adjustable Decline Abdominal Bench,m1788049323161,1,,20,,,,,,,,,,
 2026-09-18 05:10:59 PM,Equinox 67th NYC,5th floor free weight room,Adjustable Decline Abdominal Bench,m1788049323161,2,,20,,,,,,,,,,
