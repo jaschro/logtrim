@@ -615,6 +615,24 @@
     "notes": ""
   },
   {
+    "machineId": "leg-lifts",
+    "machine": "Leg Lifts",
+    "gym": "Common Machines",
+    "gymId": "generic",
+    "room": "Bodyweight — No Equipment",
+    "roomId": "bodyweight-no-equipment",
+    "date": "2026-09-18",
+    "datetime": "2026-09-18 09:37:57 PM",
+    "set": 1,
+    "weight": null,
+    "reps": 20,
+    "duration": null,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
     "machineId": "walk",
     "machine": "Walk",
     "gym": "Common Machines",
