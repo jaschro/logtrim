@@ -2,12 +2,21 @@
 setlocal
 cd /d "%~dp0"
 
+set FILES=equipment/generic/gym.json equipment/generic/images/strength-training-class.jpg equipment/generic/images/water-aerobics-class.jpg equipment/generic/images/pilates-mat-class.jpg equipment/generic/images/pilates-reformer-class.jpg
+
 echo ===============================================================
-echo  LogTrim sync push
+echo  LogTrim push - four new classes in the generic gym
 echo ---------------------------------------------------------------
-echo  This does TWO things:
-echo    1. Updates jaschro/logtrim  (app + docs, from the template)
-echo    2. Updates logtrim/logtrim  (the three rewritten doc files)
+echo  Strength Training / Water Aerobics / Pilates Mat / Pilates Reformer
+echo.
+echo  1. jaschro/logtrim  (your fork)
+echo  2. logtrim/logtrim  (the template)
+echo  Only these paths are staged:
+echo     equipment\generic\gym.json
+echo     equipment\generic\images\strength-training-class.jpg
+echo     equipment\generic\images\water-aerobics-class.jpg
+echo     equipment\generic\images\pilates-mat-class.jpg
+echo     equipment\generic\images\pilates-reformer-class.jpg
 echo ===============================================================
 echo.
 
@@ -15,52 +24,25 @@ echo Removing stale lock file if present...
 if exist .git\index.lock del .git\index.lock
 
 REM ---------------------------------------------------------------
-REM  Pre-flight: the three rewritten docs must already be in place
+REM  Pre-flight
 REM ---------------------------------------------------------------
-echo Checking that the new doc files were dropped in...
-findstr /C:"Allow network egress" SETUP.md >nul 2>&1
-if %ERRORLEVEL% neq 0 (
-  echo.
-  echo  ERROR: SETUP.md is not the new version.
-  echo  Copy the three .md files from Claude into this folder first.
-  pause
-  exit /b 1
+echo Checking that Claude's files are in place...
+for %%C in (strength-training-class water-aerobics-class pilates-mat-class pilates-reformer-class) do (
+  findstr /C:"%%C" equipment\generic\gym.json >nul 2>&1
+  if errorlevel 1 (
+    echo.
+    echo  ERROR: equipment\generic\gym.json does not mention %%C.
+    pause
+    exit /b 1
+  )
+  if not exist equipment\generic\images\%%C.jpg (
+    echo.
+    echo  ERROR: equipment\generic\images\%%C.jpg is missing.
+    pause
+    exit /b 1
+  )
 )
-findstr /C:"suggested-workout.json" Project-Instructions-Template.md >nul 2>&1
-if %ERRORLEVEL% neq 0 (
-  echo.
-  echo  ERROR: Project-Instructions-Template.md is not the new version.
-  pause
-  exit /b 1
-)
-findstr /C:"nothing extra to deploy" README.md >nul 2>&1
-if %ERRORLEVEL% neq 0 (
-  echo.
-  echo  ERROR: README.md is not the new version.
-  pause
-  exit /b 1
-)
-echo   ...all three new docs found.
-echo.
-
-REM ---------------------------------------------------------------
-REM  Pull the template's index.html into this fork
-REM ---------------------------------------------------------------
-echo Fetching origin (logtrim/logtrim)...
-git fetch origin main
-if %ERRORLEVEL% neq 0 ( echo Fetch failed - aborting. & pause & exit /b 1 )
-
-echo.
-echo About to overwrite your local index.html with the template's version.
-echo That adds the gym-catalog feature. Any uncommitted local edits to
-echo index.html will be LOST.
-echo.
-choice /C YN /M "Continue"
-if %ERRORLEVEL% neq 1 ( echo Aborted by user. & pause & exit /b 1 )
-
-git checkout origin/main -- index.html
-if %ERRORLEVEL% neq 0 ( echo Could not take index.html from origin - aborting. & pause & exit /b 1 )
-echo   ...index.html synced from template.
+echo   ...gym.json and all four images found.
 echo.
 
 REM ---------------------------------------------------------------
@@ -78,36 +60,58 @@ echo.
 REM ---------------------------------------------------------------
 REM  1. Personal fork (jaschro/logtrim)
 REM ---------------------------------------------------------------
-echo Committing to local main...
-git add -A
-git commit -m "Sync app from template; drop Cloudflare from the required setup path" -m "index.html taken from logtrim/logtrim (adds gym catalog import). README, SETUP and the coach instructions rewritten so the Claude coach writes suggested-workout.json straight to the GitHub Contents API. worker.js left in place as an optional relay." -m "Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>" -m "Claude-Session: https://claude.ai/code/session_01GCoT6NFrkVwoyU6Ph3iRRc"
+echo Staging the five files (explicit paths - nothing else is touched)...
+git add %FILES%
+echo.
+echo Staged for jaschro/logtrim:
+git diff --cached --name-only
+echo.
+choice /C YN /M "Commit these"
+if %ERRORLEVEL% neq 1 ( echo Aborted by user. Unstaging... & git reset & pause & exit /b 1 )
+
+git commit -m "Add four classes to the generic gym" -m "Strength Training, Water Aerobics, Pilates Mat and Pilates Reformer added to the Classes room of equipment/generic (logType mins), each with its illustration." -m "Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>" -m "Claude-Session: https://claude.ai/code/session_01Mhn3agjMda2MJwWkz222i5"
+if %ERRORLEVEL% neq 0 ( echo Commit failed - aborting. & pause & exit /b 1 )
 
 echo.
-echo Pulling and pushing to personal (jaschro/logtrim)...
-git pull personal main --rebase -X theirs
+echo Pushing to personal (jaschro/logtrim)...
 git push personal main
-if %ERRORLEVEL% neq 0 ( echo Push to personal FAILED - see above. & pause & exit /b 1 )
+if %ERRORLEVEL% neq 0 (
+  echo.
+  echo Direct push rejected - personal/main has moved (the app writes your log there).
+  echo Rebasing onto personal/main and retrying...
+  git pull personal main --rebase
+  if %ERRORLEVEL% neq 0 (
+    echo.
+    echo Rebase hit a conflict. Nothing was pushed. Run "git rebase --abort" and tell Claude.
+    pause
+    exit /b 1
+  )
+  git push personal main
+  if %ERRORLEVEL% neq 0 ( echo Push to personal FAILED - see above. & pause & exit /b 1 )
+)
 echo.
 echo Files in the commit that landed on personal:
 git show --stat HEAD
 echo.
 
 REM ---------------------------------------------------------------
-REM  2. Template repo (logtrim/logtrim) - docs only, via a clean branch
-REM     off origin/main so no personal workout data can travel with it.
+REM  2. Template repo (logtrim/logtrim) - clean branch off origin/main
+REM     so no personal workout data can travel with it.
 REM ---------------------------------------------------------------
 echo ===============================================================
-echo  Now pushing the three doc files to logtrim/logtrim
+echo  Now pushing the same five files to logtrim/logtrim
 echo ===============================================================
 git fetch origin main
+if %ERRORLEVEL% neq 0 ( echo Fetch of origin failed - aborting. & pause & exit /b 1 )
+
 git checkout -b sync-origin origin/main
 if %ERRORLEVEL% neq 0 ( echo Could not create sync-origin branch - aborting. & pause & exit /b 1 )
 
-git checkout main -- README.md SETUP.md Project-Instructions-Template.md
-git add README.md SETUP.md Project-Instructions-Template.md
+git checkout main -- %FILES%
+git add %FILES%
 
 echo.
-echo Files staged for logtrim/logtrim (should be exactly three .md files):
+echo Files staged for logtrim/logtrim (should be exactly these five):
 git diff --cached --name-only
 echo.
 choice /C YN /M "Push these to logtrim/logtrim"
@@ -119,7 +123,7 @@ if %ERRORLEVEL% neq 1 (
   exit /b 0
 )
 
-git commit -m "Coach writes plans via the GitHub API; Cloudflare Worker now optional" -m "SETUP Part 2 drops the Cloudflare account, second token and four Worker secrets in favour of reusing the app's existing fine-grained PAT. Project instructions push suggested-workout.json through the Contents API with a sha-aware write and an error-code table. worker.js stays in the repo as an opt-in relay for anyone who would rather Claude not hold a token." -m "Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>" -m "Claude-Session: https://claude.ai/code/session_01GCoT6NFrkVwoyU6Ph3iRRc"
+git commit -m "Add four classes to the generic gym" -m "Strength Training, Water Aerobics, Pilates Mat and Pilates Reformer added to the Classes room of equipment/generic (logType mins), each with its illustration. Forks pick them up via scripts/updater.js, which syncs the equipment/generic/ prefix." -m "Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>" -m "Claude-Session: https://claude.ai/code/session_01Mhn3agjMda2MJwWkz222i5"
 
 git push origin sync-origin:main
 if %ERRORLEVEL% neq 0 (
@@ -138,7 +142,7 @@ git branch -D sync-origin
 
 echo.
 echo ===============================================================
-echo  Done. Both repos updated.
-echo  Check above for any errors.
+echo  Done. Fork and template both updated.
+echo  Still to do by hand: logtrim/gyms (the catalog) - see chat.
 echo ===============================================================
 pause
