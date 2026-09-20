@@ -1,7 +1,42 @@
 {
-  "fetchedAt": "2026-09-20T10:38:12Z",
+  "fetchedAt": "2026-09-20T15:20:12Z",
   "today": "2026-09-20",
   "recentActivities": [
+    {
+      "activityId": 24433911143,
+      "date": "2026-09-20",
+      "type": "elliptical",
+      "name": "Elliptical",
+      "durationMins": 31.2,
+      "distanceMiles": null,
+      "avgHR": 100.0,
+      "maxHR": 131.0,
+      "calories": 198.0,
+      "elevationGain": null,
+      "avgPace": 0.0,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 865.544
+        },
+        {
+          "zone": 2,
+          "secsInZone": 572.552
+        },
+        {
+          "zone": 3,
+          "secsInZone": 258.0
+        },
+        {
+          "zone": 4,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 5,
+          "secsInZone": 0.0
+        }
+      ]
+    },
     {
       "activityId": 24420368967,
       "date": "2026-09-19",
@@ -153,29 +188,7 @@
       "maxHR": 97.0,
       "calories": 200.0,
       "elevationGain": 1.0,
-      "avgPace": 1.4099999666213987,
-      "hrZones": [
-        {
-          "zone": 1,
-          "secsInZone": 2068.298
-        },
-        {
-          "zone": 2,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 3,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 4,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 5,
-          "secsInZone": 0.0
-        }
-      ]
+      "avgPace": 1.4099999666213987
     },
     {
       "activityId": 24335850337,
@@ -257,18 +270,18 @@
     }
   ],
   "todayStats": {
-    "steps": 3191,
-    "floors": 2.69915,
+    "steps": 455,
+    "floors": 0.0,
     "restingHR": 47,
-    "activeCalories": 100.0,
-    "bodyBattery": null,
+    "activeCalories": 7.0,
+    "bodyBattery": 69,
     "stressAvg": 24,
-    "weeklySteps": 70104
+    "weeklySteps": 79927
   },
   "trainingReadiness": {
-    "score": null,
-    "level": null,
-    "feedback": null
+    "score": 61,
+    "level": "MODERATE",
+    "feedback": "LISTEN_TO_YOUR_BODY"
   },
   "vo2max": {
     "vo2max": 40.0,
@@ -279,24 +292,24 @@
     "vigorous": 29
   },
   "hrv": {
-    "weeklyAvg": 42,
+    "weeklyAvg": 41,
     "lastNight": null,
-    "status": "BALANCED"
+    "status": "UNBALANCED"
   },
   "sleep": {
-    "date": "2026-09-19",
-    "durationHours": 7.4,
-    "score": 83,
-    "deepSleepMins": 76,
-    "lightSleepMins": 273,
-    "remSleepMins": 94,
-    "awakeMins": 6,
+    "date": "2026-09-20",
+    "durationHours": 7.1,
+    "score": 84,
+    "deepSleepMins": 77,
+    "lightSleepMins": 254,
+    "remSleepMins": 95,
+    "awakeMins": 8,
     "avgRespirationRate": 14.0,
-    "avgSpO2": 95.0
+    "avgSpO2": 96.0
   },
-  "spo2Avg": null,
+  "spo2Avg": 95.0,
   "respiration": {
-    "avgWaking": null,
-    "avgSleep": null
+    "avgWaking": 13.0,
+    "avgSleep": 14.0
   }
 }
