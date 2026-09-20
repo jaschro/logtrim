@@ -1,102 +1,118 @@
 {
-  "generatedAt": "2026-09-18",
-  "coachNote": "Finishing block for today's Portofino session - pulldowns, arms, calves. Numbers from your Portofino/free-weight history.",
+  "generatedAt": "2026-09-20T15:23:45Z",
+  "coachNote": "Sun Sep 20 - Portofino. Cardio's done (31-min elliptical this morning - nice). Thursday covered chest/back/arms + hips/glutes, so today: shoulders, rear delts, hamstrings, and core. All knee-safe. Leg curls: light and controlled - stop if the knee complains.",
   "exercises": [
     {
-      "machineId": "pw02",
-      "machine": "Lat Pulldown Machine",
+      "machineId": "pm08",
+      "machine": "Seated Shoulder Press",
       "gym": "Portofino Gym",
       "room": "Weight Room",
       "sets": [
         {
           "set": 1,
-          "weight": 60,
-          "reps": 12
-        },
-        {
-          "set": 2,
-          "weight": 80,
-          "reps": 10
-        },
-        {
-          "set": 3,
-          "weight": 95,
-          "reps": 10
-        }
-      ],
-      "note": "95 matches your Aug 13 top - take 100 if set 3 is smooth."
-    },
-    {
-      "machineId": "standing-dumbbell-curl",
-      "machine": "Standing Dumbbell Curl",
-      "gym": "Common Machines",
-      "room": "Free Weights",
-      "sets": [
-        {
-          "set": 1,
-          "weight": 20,
-          "reps": 10
-        },
-        {
-          "set": 2,
-          "weight": 22.5,
-          "reps": 10
-        },
-        {
-          "set": 3,
-          "weight": 25,
-          "reps": 8
-        }
-      ],
-      "note": "25s for the last set is the step up from your usual 22.5."
-    },
-    {
-      "machineId": "overhead-tricep-extension",
-      "machine": "Overhead Tricep Extension",
-      "gym": "Common Machines",
-      "room": "Free Weights",
-      "sets": [
-        {
-          "set": 1,
-          "weight": 30,
-          "reps": 12
-        },
-        {
-          "set": 2,
           "weight": 35,
           "reps": 12
         },
         {
+          "set": 2,
+          "weight": 45,
+          "reps": 10
+        },
+        {
           "set": 3,
-          "weight": 40,
+          "weight": 55,
           "reps": 10
         }
       ],
-      "note": "Back to your 40 top from Aug 28."
+      "note": "Same as Sep 12; if 55x10 feels solid, try 60x8 as a bonus set."
     },
     {
-      "machineId": "pw08",
-      "machine": "Plate-Loaded Seated Calf Raise",
+      "machineId": "m1782480059048",
+      "machine": "Rear Deltoid",
       "gym": "Portofino Gym",
       "room": "Weight Room",
       "sets": [
         {
           "set": 1,
-          "weight": 20,
+          "weight": 30,
           "reps": 12
         },
         {
           "set": 2,
-          "weight": 25,
-          "reps": 12
+          "weight": 45,
+          "reps": 10
         },
         {
           "set": 3,
-          "weight": 30,
+          "weight": 60,
+          "reps": 10
+        }
+      ],
+      "note": "Matches Sep 12. Squeeze and pause at the back."
+    },
+    {
+      "machineId": "pm06",
+      "machine": "Seated Leg Curl Machine",
+      "gym": "Portofino Gym",
+      "room": "Weight Room",
+      "sets": [
+        {
+          "set": 1,
+          "weight": 40,
+          "reps": 15
+        },
+        {
+          "set": 2,
+          "weight": 50,
+          "reps": 15
+        },
+        {
+          "set": 3,
+          "weight": 60,
           "reps": 12
         }
       ],
-      "note": "Matching Aug 5. Seated = knee-friendly; slow on the stretch at the bottom."
+      "note": "First time since Aug 8. Hamstrings only - knee-safe, but keep it smooth."
+    },
+    {
+      "machineId": "pw01",
+      "machine": "Assisted Pullup & Dip Machine",
+      "gym": "Portofino Gym",
+      "room": "Weight Room",
+      "sets": [
+        {
+          "set": 1,
+          "weight": -100,
+          "reps": 8
+        },
+        {
+          "set": 2,
+          "weight": -100,
+          "reps": 8
+        }
+      ],
+      "note": "Pullups, 100 lbs assist like Aug 8. Drop to 90 assist if 2x8 is easy."
+    },
+    {
+      "machineId": "pm13",
+      "machine": "Seated Abdominal Crunch Machine",
+      "gym": "Portofino Gym",
+      "room": "Weight Room",
+      "sets": [
+        {
+          "set": 1,
+          "reps": 20
+        },
+        {
+          "set": 2,
+          "reps": 20
+        },
+        {
+          "set": 3,
+          "reps": 15
+        }
+      ],
+      "note": "Machine crunches for variety - you've been on planks/leg lifts lately."
     }
   ]
 }
