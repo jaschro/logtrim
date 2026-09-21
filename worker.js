@@ -7,6 +7,8 @@
 //   GET  /trigger-sync?token=SECRET   — dispatch the Garmin Sync workflow (garmin-recent.json)
 //   GET  /trigger-cardio?token=SECRET[&fetch_limit=N]
 //                                     — dispatch the cardio-minutes workflow (per-minute HR CSV)
+//   GET  /trigger-wellness?token=SECRET[&max_days=N]
+//                                     — dispatch the daily-wellness workflow (daily-wellness.csv)
 //   POST /log-write?token=SECRET      — commit workout-log.json + workout-log.csv to the repo
 //                                       body: {"logJson": "<full JSON text>", "logCsv": "<full CSV text>",
 //                                              "message": "optional commit message", "allowShrink": false}
@@ -120,6 +122,19 @@ export default {
         return new Response(JSON.stringify({ error: e.message }), { status: 502, headers: cors });
       }
       return new Response(JSON.stringify({ ok: true, message: 'cardio-minutes triggered — the CSV should update in ~60 seconds.' }), { headers: cors });
+    }
+
+    // GET /trigger-wellness — dispatch the daily-wellness workflow (daily-wellness.csv)
+    if (url.pathname === '/trigger-wellness') {
+      const inputs = {};
+      const days = url.searchParams.get('max_days');
+      if (days) inputs.max_days = days;
+      try {
+        await dispatchWorkflow('daily-wellness.yml', inputs);
+      } catch (e) {
+        return new Response(JSON.stringify({ error: e.message }), { status: 502, headers: cors });
+      }
+      return new Response(JSON.stringify({ ok: true, message: 'daily-wellness triggered — the CSV should update in ~90 seconds (longer for backfills).' }), { headers: cors });
     }
 
     // POST /log-write — commit workout-log.json + workout-log.csv

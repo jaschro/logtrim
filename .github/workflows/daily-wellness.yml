@@ -1,0 +1,54 @@
+name: daily-wellness
+
+on:
+  schedule:
+    - cron: "40 9 * * *"   # daily 9:40 UTC = 5:40 AM EDT / 4:40 AM EST (after cardio-minutes)
+  workflow_dispatch:        # manual runs from the Actions tab
+    inputs:
+      max_days:
+        description: "Days back to scan (set 4000 for full-history backfill)"
+        required: false
+        default: "40"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-wellness
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    if: github.repository == 'jaschro/logtrim'
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install garminconnect
+
+      - name: Update daily-wellness.csv
+        env:
+          GARMIN_TOKENS: ${{ secrets.GARMIN_TOKENS }}
+          MAX_DAYS: ${{ inputs.max_days || '40' }}
+        run: python daily-wellness-pipeline/daily_wellness.py
+
+      - name: Commit if changed
+        if: always()   # keep backfill progress even if the run errors partway
+        run: |
+          git add daily-wellness.csv
+          if git diff --cached --quiet; then
+            echo "No changes."
+            exit 0
+          fi
+          git config user.name "daily-wellness-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git commit -m "daily-wellness: update $(date -u +%F)"
+          # other workflows and the app commit to main while a backfill runs
+          git pull --rebase
+          git push
