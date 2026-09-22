@@ -1,7 +1,42 @@
 {
-  "fetchedAt": "2026-09-21T23:49:15Z",
-  "today": "2026-09-21",
+  "fetchedAt": "2026-09-22T02:43:36Z",
+  "today": "2026-09-22",
   "recentActivities": [
+    {
+      "activityId": 24450668909,
+      "date": "2026-09-21",
+      "type": "walking",
+      "name": "Jupiter Walking",
+      "durationMins": 76.8,
+      "distanceMiles": 4.12,
+      "avgHR": 88.0,
+      "maxHR": 111.0,
+      "calories": 426.0,
+      "elevationGain": 9.0,
+      "avgPace": 1.4390000104904173,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 4257.421
+        },
+        {
+          "zone": 2,
+          "secsInZone": 27.056
+        },
+        {
+          "zone": 3,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 4,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 5,
+          "secsInZone": 0.0
+        }
+      ]
+    },
     {
       "activityId": 24438226427,
       "date": "2026-09-20",
@@ -153,29 +188,7 @@
       "maxHR": 110.0,
       "calories": 269.0,
       "elevationGain": 8.0,
-      "avgPace": 1.4349999427795408,
-      "hrZones": [
-        {
-          "zone": 1,
-          "secsInZone": 1918.146
-        },
-        {
-          "zone": 2,
-          "secsInZone": 51.003
-        },
-        {
-          "zone": 3,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 4,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 5,
-          "secsInZone": 0.0
-        }
-      ]
+      "avgPace": 1.4349999427795408
     },
     {
       "activityId": 24359760913,
@@ -267,41 +280,28 @@
       "calories": 190.0,
       "elevationGain": 26.0,
       "avgPace": 1.2289999723434448
-    },
-    {
-      "activityId": 24277850668,
-      "date": "2026-09-07",
-      "type": "walking",
-      "name": "Los Angeles Walking",
-      "durationMins": 44.1,
-      "distanceMiles": 3.3,
-      "avgHR": 125.0,
-      "maxHR": 153.0,
-      "calories": 379.0,
-      "elevationGain": 13.0,
-      "avgPace": 2.005000114440918
     }
   ],
   "todayStats": {
-    "steps": 299,
-    "floors": 1.07218,
+    "steps": 3229,
+    "floors": 5.16896,
     "restingHR": 45,
-    "activeCalories": 4.0,
-    "bodyBattery": 51,
-    "stressAvg": 28,
-    "weeklySteps": 83315
+    "activeCalories": 87.0,
+    "bodyBattery": null,
+    "stressAvg": 34,
+    "weeklySteps": 74630
   },
   "trainingReadiness": {
-    "score": 70,
-    "level": "MODERATE",
-    "feedback": "LISTEN_TO_YOUR_BODY"
+    "score": null,
+    "level": null,
+    "feedback": null
   },
   "vo2max": {
     "vo2max": 40.0,
     "fitnessAge": null
   },
   "intensityMinutes": {
-    "moderate": null,
+    "moderate": 15,
     "vigorous": null
   },
   "hrv": {
@@ -320,9 +320,9 @@
     "avgRespirationRate": 14.0,
     "avgSpO2": 93.0
   },
-  "spo2Avg": 92.0,
+  "spo2Avg": null,
   "respiration": {
-    "avgWaking": 16.0,
-    "avgSleep": 14.0
+    "avgWaking": null,
+    "avgSleep": null
   }
 }
