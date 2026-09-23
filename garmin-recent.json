@@ -1,6 +1,6 @@
 {
-  "fetchedAt": "2026-09-22T23:29:18Z",
-  "today": "2026-09-22",
+  "fetchedAt": "2026-09-23T03:21:38Z",
+  "today": "2026-09-23",
   "recentActivities": [
     {
       "activityId": 24450668909,
@@ -267,34 +267,21 @@
       "calories": 147.0,
       "elevationGain": 19.0,
       "avgPace": 1.319000005722046
-    },
-    {
-      "activityId": 24291957162,
-      "date": "2026-09-08",
-      "type": "walking",
-      "name": "Laguna Woods Walking",
-      "durationMins": 38.4,
-      "distanceMiles": 1.76,
-      "avgHR": 84.0,
-      "maxHR": 102.0,
-      "calories": 190.0,
-      "elevationGain": 26.0,
-      "avgPace": 1.2289999723434448
     }
   ],
   "todayStats": {
-    "steps": 4352,
+    "steps": 12279,
     "floors": 0.10597,
     "restingHR": 49,
-    "activeCalories": 83.0,
-    "bodyBattery": 47,
-    "stressAvg": 29,
-    "weeklySteps": 86744
+    "activeCalories": 291.0,
+    "bodyBattery": null,
+    "stressAvg": 38,
+    "weeklySteps": 84625
   },
   "trainingReadiness": {
-    "score": 67,
-    "level": "MODERATE",
-    "feedback": "LISTEN_TO_YOUR_BODY"
+    "score": null,
+    "level": null,
+    "feedback": null
   },
   "vo2max": {
     "vo2max": 40.0,
@@ -320,9 +307,9 @@
     "avgRespirationRate": 14.0,
     "avgSpO2": 95.0
   },
-  "spo2Avg": 94.0,
+  "spo2Avg": null,
   "respiration": {
-    "avgWaking": 16.0,
-    "avgSleep": 14.0
+    "avgWaking": null,
+    "avgSleep": null
   }
 }
