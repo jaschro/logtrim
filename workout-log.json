@@ -21,6 +21,24 @@
     "zone5": null
   },
   {
+    "machineId": "meditation",
+    "machine": "Meditation",
+    "gym": "Common Machines",
+    "gymId": "generic",
+    "room": "Bodyweight — No Equipment",
+    "roomId": "bodyweight-no-equipment",
+    "date": "2026-09-22",
+    "datetime": "2026-09-22 01:13:48 PM",
+    "set": 1,
+    "weight": null,
+    "reps": null,
+    "duration": 60,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
     "machineId": "walk",
     "machine": "Walk",
     "gym": "Common Machines",
