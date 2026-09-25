@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-25T16:33:04Z",
+  "fetchedAt": "2026-09-25T21:05:53Z",
   "today": "2026-09-25",
   "recentActivities": [
     {
@@ -322,7 +322,7 @@
   },
   "spo2Avg": 95.0,
   "respiration": {
-    "avgWaking": 14.0,
+    "avgWaking": 15.0,
     "avgSleep": 13.0
   }
 }
