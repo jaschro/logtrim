@@ -8,6 +8,8 @@ datetime,gym,room,machine,machineId,set,weight,reps,duration,level,incline,hr,no
 2026-09-26 09:17:42 AM,Common Machines,Free Weights,Standing Dumbbell Curl,standing-dumbbell-curl,2,20,10,,,,,,,,,,
 2026-09-26 09:18:01 AM,Common Machines,Free Weights,Overhead Tricep Extension,overhead-tricep-extension,1,35,15,,,,,,,,,,
 2026-09-26 09:18:01 AM,Common Machines,Free Weights,Overhead Tricep Extension,overhead-tricep-extension,2,35,15,,,,,,,,,,
+2026-09-26 09:22:06 AM,Common Machines,Free Weights,Dumbbell Press,dumbbell-press,1,20,15,,,,,,,,,,
+2026-09-26 09:22:06 AM,Common Machines,Free Weights,Dumbbell Press,dumbbell-press,2,25,15,,,,,,,,,,
 2026-09-24 12:42:00 PM,Portofino Gym,Aerobic Room,Treadmill,pa05,1,,,39.2167,2.1,,99,Portofino treadmill session (Garmin 24484914406; 2.1 mi; 64.2 min). Karvonen zones from cardio-minutes (RHR 46 / max 168); warmup below Z1 counted in zone1. ADJUSTED: watch under-read on left wrist 12:42-12:59 during 3.6 mph / 10% incline stretch; those 17.2 min reclassified Z1->Z2 to match post-wrist-switch readings (~125-135). Trimmed 25 min of post-workout idle time (tracking left running after getting off): removed from duration and zone1.,5.9833,26.2333,7,,
 2026-09-24 09:33:16 PM,Common Machines,Selectorized Machines,Lat Pulldown,lat-pulldown,1,55,15,,,,,,,,,,
 2026-09-24 09:33:16 PM,Common Machines,Selectorized Machines,Lat Pulldown,lat-pulldown,2,70,10,,,,,,,,,,
