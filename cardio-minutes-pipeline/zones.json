@@ -1,0 +1,6 @@
+{
+  "_comment": "Karvonen parameters used by the cardio-minutes Action to post zone records automatically. Keep in sync with the garmin-to-logtrim-flow project doc.",
+  "rhr": 46,
+  "hrmax": 168,
+  "sinceDays": 14
+}

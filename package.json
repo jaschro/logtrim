@@ -3,6 +3,6 @@
   "version": "1.0.0",
   "description": "Workout logging app",
   "scripts": {
-    "test": "node --test tests/utils.test.js"
+    "test": "node --test tests/utils.test.js tests/reports.test.js"
   }
 }

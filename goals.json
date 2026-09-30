@@ -1,0 +1,17 @@
+{
+  "weekStart": "sat",
+  "goals": [
+    { "id": "steps",        "label": "Total steps",          "kind": "sum",  "source": "wellness", "field": "steps",          "target": 70000 },
+    { "id": "cardioDays",   "label": "Days with cardio",     "kind": "days", "source": "log",      "filter": "cardio",        "target": 4 },
+    { "id": "strengthDays", "label": "Days with strength",   "kind": "days", "source": "log",      "filter": "strength",      "target": 3 },
+    { "id": "zone1",        "label": "Zone 1 minutes",       "kind": "sum",  "source": "log",      "field": "zone1",          "target": 180 },
+    { "id": "zone2",        "label": "Zone 2 minutes",       "kind": "sum",  "source": "log",      "field": "zone2",          "target": 45 },
+    { "id": "pushups",      "label": "Pushups",              "kind": "sum",  "source": "log",      "field": "reps",     "machineIds": ["push-ups"],  "target": 140 },
+    { "id": "legLifts",     "label": "Leg lifts",            "kind": "sum",  "source": "log",      "field": "reps",     "machineIds": ["leg-lifts"], "target": 140 },
+    { "id": "squats",       "label": "Squats",               "kind": "sum",  "source": "log",      "field": "reps",     "machineIds": ["squats"],    "target": 140 },
+    { "id": "plank",        "label": "Plank seconds",        "kind": "sum",  "source": "log",      "field": "duration", "machineIds": ["elbow-planks", "high-planks", "side-planks"], "target": 315, "unit": "s" },
+    { "id": "sleep",        "label": "Avg sleep",            "kind": "avg",  "source": "wellness", "field": "sleep_hours",    "target": 7.1, "unit": "h" },
+    { "id": "hrv",          "label": "Avg HRV",              "kind": "avg",  "source": "wellness", "field": "hrv_last_night", "target": 40 },
+    { "id": "rhr",          "label": "Avg resting HR",       "kind": "avg",  "source": "wellness", "field": "resting_hr",     "target": 46, "direction": "below" }
+  ]
+}

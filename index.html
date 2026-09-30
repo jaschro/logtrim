@@ -189,6 +189,52 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,BlinkMacSystemFo
 @keyframes cebounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
 @keyframes ceshine{to{background-position:250% 0}}
 @media (prefers-reduced-motion:reduce){.bal,.cetrophy,.cettl,.cecard{animation:none!important}}
+/* === REPORTS === */
+.wkbar{display:flex;align-items:center;justify-content:space-between;padding:12px 16px 4px;gap:8px}
+.wkbar .nb{font-size:22px}
+.wkttl{text-align:center;flex:1}
+.wkttl b{display:block;font-size:16px;font-weight:700}
+.wkttl span{font-size:12px;color:var(--dim)}
+.wksum{margin:6px 16px 0;padding:10px 14px;background:var(--card);border:1px solid var(--bdr);border-radius:12px;font-size:13px;color:var(--dim);display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.wksum b{color:var(--text)}
+.rc{background:var(--card);margin:6px 16px;border-radius:12px;border:1px solid var(--bdr);overflow:hidden;-webkit-tap-highlight-color:transparent}
+.rch{display:flex;align-items:center;gap:10px;padding:12px 14px;cursor:pointer}
+.rch:active{opacity:.7}
+.rcl{flex:1;min-width:0}
+.rcn{font-size:14px;font-weight:600;line-height:1.2}
+.rcs{font-size:12px;color:var(--dim);margin-top:3px}
+.rcv{text-align:right;flex-shrink:0}
+.rcv b{font-size:17px;font-weight:700;display:block;line-height:1.1}
+.rcv span{font-size:11px;color:var(--dim)}
+.rbar{height:5px;background:var(--card2);position:relative}
+.rbar i{position:absolute;left:0;top:0;bottom:0;background:var(--accent);border-radius:0 3px 3px 0}
+.rbar em{position:absolute;top:-2px;bottom:-2px;width:2px;background:var(--text);opacity:.6}
+.rc.hit .rbar i,.rc.hit .rcv b{background:var(--ok)}.rc.hit .rcv b{background:none;color:var(--ok)}
+.rc.onpace .rcv b{color:var(--accent)}
+.rc.behind .rbar i,.rc.miss .rbar i{background:var(--bad)}
+.rc.behind .rcv b,.rc.miss .rcv b{color:var(--bad)}
+.rc.nodata .rcv b{color:var(--dim)}
+.rdd{display:none;border-top:1px solid var(--bdr);padding:6px 14px 10px;background:rgba(255,255,255,.02)}
+.rc.open .rdd{display:block}
+.rdr{display:flex;justify-content:space-between;gap:10px;font-size:13px;padding:5px 0;border-bottom:1px solid var(--bdr)}
+.rdr:last-child{border-bottom:none}
+.rdr .d{color:var(--dim);flex-shrink:0;min-width:70px}
+.rdr .t{flex:1;color:var(--dim);font-size:12px;line-height:1.35}
+.rdr .v{font-weight:600;flex-shrink:0}
+.rdd .empty{font-size:13px;color:var(--dim);padding:6px 0;font-style:italic}
+.homewk{background:var(--card);border:1px solid var(--bdr);border-radius:12px;margin:6px 16px;padding:14px 16px;cursor:pointer;-webkit-tap-highlight-color:transparent;display:flex;align-items:center;gap:12px}
+.homewk:active{opacity:.7}
+.homewk .n{flex:1;font-size:14px;color:var(--dim);line-height:1.4}
+.homewk .n b{color:var(--text)}
+/* goals editor */
+.gl{display:flex;align-items:center;gap:8px;padding:10px 14px;border-bottom:1px solid var(--bdr)}
+.gl:last-child{border-bottom:none}
+.gl .gn{flex:1;min-width:0}
+.gl .gn input{width:100%;background:none;border:none;color:var(--text);font-size:14px;font-weight:600;outline:none;padding:0}
+.gl .gk{font-size:11px;color:var(--dim);margin-top:2px}
+.gl .gt{width:76px;background:var(--card2);border:1px solid var(--bdr);border-radius:8px;color:var(--text);font-size:15px;padding:8px 6px;text-align:right;outline:none;-webkit-appearance:none}
+.gl .gt:focus{border-color:var(--accent)}
+.gl .xb{width:28px}
 </style>
 </head>
 <body>
@@ -198,10 +244,12 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,BlinkMacSystemFo
 <div id="s-home" class="scr on">
   <div class="nav">
     <h1>LogTrim &#127947;</h1>
+    <button class="nb" onclick="nav('reports')" title="Weekly report">&#128202;</button>
     <button class="nb" onclick="nav('settings')" title="Settings">&#9881;&#65039;</button>
   </div>
   <div class="sc">
     <div id="planSection"></div>
+    <div id="weekSection"></div>
     <div class="sh">MY GYMS</div>
     <div id="mygyms"></div>
     <div class="sh">GENERIC GYM</div>
@@ -253,6 +301,7 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,BlinkMacSystemFo
     <div class="sg">
       <div class="sl" onclick="nav('equipment')"><span>Manage Equipment</span><span class="ch">&#8250;</span></div>
       <div class="sl" onclick="nav('profile')"><span>My Profile</span><span class="ch">&#8250;</span></div>
+      <div class="sl" onclick="nav('goals')"><span>Weekly Goals</span><span class="ch">&#8250;</span></div>
       <div class="sl" onclick="reloadData()"><span>Reload Data from GitHub</span><span class="ch">&#8250;</span></div>
       <div class="sl" onclick="runAppUpdate()"><span>Update App from Template</span><span class="ch">&#8250;</span></div>
     </div>
@@ -300,6 +349,18 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,BlinkMacSystemFo
   </div>
 </div>
 
+<!-- REPORTS -->
+<div id="s-reports" class="scr">
+  <div class="nav"><button class="nb" onclick="back()">&#8249;</button><h1>Weekly Report</h1><button class="nb sm" onclick="nav('goals')">Goals</button></div>
+  <div class="sc" id="repbody"></div>
+</div>
+
+<!-- GOALS EDITOR -->
+<div id="s-goals" class="scr">
+  <div class="nav"><button class="nb" onclick="back()">&#8249;</button><h1>Weekly Goals</h1><button class="nb sm" onclick="saveGoals()">Save</button></div>
+  <div class="sc" id="goalsbody"></div>
+</div>
+
 <!-- PLAN -->
 <div id="s-plan" class="scr">
   <div class="nav"><button class="nb" onclick="back()">&#8249;</button><h1>Today&#8217;s Plan</h1></div>
@@ -325,12 +386,14 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,BlinkMacSystemFo
 <input type="file" id="photoin" accept="image/*" capture="environment" style="display:none">
 
 <script src="scripts/utils.js"></script>
+<script src="scripts/reports.js"></script>
 <script src="scripts/updater.js"></script>
 <script>
 // === STATE ===
 const A={
   gyms:[],log:[],profile:{},suggestion:null,
-  sha:{log:null,csv:null,profile:null,suggestion:null,gym:{}},
+  goals:null,wellness:[],weekOffset:0,
+  sha:{log:null,csv:null,profile:null,suggestion:null,goals:null,gym:{}},
   stack:['home'],
   gym:null,room:null,machine:null,
   editDate:null,logType:'weight',fromPlan:false,
@@ -399,7 +462,7 @@ async function loadAll(){
   if(!hasCfg()){renderHome();return}
   showLd('Loading your data…');
   try{
-    await Promise.all([loadGyms(),loadLog(),loadProfile(),loadSuggestion()]);
+    await Promise.all([loadGyms(),loadLog(),loadProfile(),loadSuggestion(),loadGoals(),loadWellness()]);
     hideLd();renderHome();
   }catch(e){
     hideLd();toast(`Load error: ${e.message}`,'err');renderHome();
@@ -445,6 +508,20 @@ async function loadSuggestion(){
     A.suggestion=JSON.parse(b64d(f.content));A.sha.suggestion=f.sha;
   }catch(e){A.suggestion=null;A.sha.suggestion=null;}
 }
+async function loadGoals(){
+  try{
+    const f=await ghGet('goals.json');
+    A.goals=JSON.parse(b64d(f.content));A.sha.goals=f.sha;
+  }catch(e){A.goals=null;A.sha.goals=null;}
+}
+async function loadWellness(){
+  // Optional: only repos with the daily-wellness pipeline have this file.
+  A.wellness=[];
+  try{
+    const r=await fetch(`${rawBase()}/daily-wellness.csv?t=${Date.now()}`);
+    if(r.ok)A.wellness=parseWellnessCSV(await r.text());
+  }catch(e){}
+}
 async function reloadData(){await loadAll();toast('Data reloaded','ok')}
 async function connectGH(){
   saveCfg();
@@ -458,6 +535,8 @@ function nav(id){
   if(id==='equipment')renderEquip();
   if(id==='profile')fillProfile();
   if(id==='plan')renderPlan();
+  if(id==='reports'){A.weekOffset=0;renderReports()}
+  if(id==='goals')renderGoalsEditor();
   if(A.stack[A.stack.length-1]!==id)A.stack.push(id);
   document.querySelectorAll('.scr').forEach(s=>s.classList.remove('on'));
   const el=document.getElementById(`s-${id}`);
@@ -478,7 +557,7 @@ function renderHome(){
   const gen=A.gyms.find(x=>x._gen);
   if(!hasCfg()){
     myEl.innerHTML='<div class="em"><div class="icon">⚙️</div><p>Tap ⚙️ to connect your GitHub repo.</p></div>';
-    genEl.innerHTML='';planEl.innerHTML='';return;
+    genEl.innerHTML='';planEl.innerHTML='';g('weekSection').innerHTML='';return;
   }
   // Today's Plan
   if(A.suggestion){
@@ -488,6 +567,7 @@ function renderHome(){
   }else{
     planEl.innerHTML='';
   }
+  renderWeekStrip();
   myEl.innerHTML=my.length?my.map(gymCard).join(''):'<div class="em"><div class="icon">🏟️</div><p>No gyms yet.<br>Go to Settings → Manage Equipment.</p></div>';
   genEl.innerHTML=gen?gymCard(gen):'';
 }
@@ -543,6 +623,142 @@ async function dismissPlan(){
   document.querySelectorAll('.scr').forEach(s=>s.classList.remove('on'));
   document.getElementById('s-home').classList.add('on');
   renderHome();
+}
+
+// === WEEKLY REPORT ===
+function goalsCfg(){return A.goals&&Array.isArray(A.goals.goals)?A.goals:null}
+function weekCtx(offset){
+  const gc=goalsCfg()||defaultGoals();
+  return computeGoals(gc.goals,{log:A.log,wellness:A.wellness,gyms:A.gyms,weekStart:gc.weekStart||'mon',today:todayStr(),offset:offset||0});
+}
+function visibleResults(o){
+  // Wellness cards only appear when the repo actually has wellness data.
+  return o.results.filter(r=>r.source!=='wellness'||A.wellness.length);
+}
+function renderWeekStrip(){
+  const el=g('weekSection');if(!el)return;
+  if(!goalsCfg()){el.innerHTML='';return}
+  const o=weekCtx(0);const rs=visibleResults(o);
+  if(!rs.length){el.innerHTML='';return}
+  const good=rs.filter(r=>r.status==='hit'||r.status==='onpace').length;
+  const hit=rs.filter(r=>r.status==='hit').length;
+  el.innerHTML=`<div class="sh">THIS WEEK</div><div class="homewk" onclick="nav('reports')"><span style="font-size:26px">📊</span><div class="n"><b>${good} of ${rs.length}</b> goals on pace${hit?` · <b>${hit}</b> hit`:''}<br><span style="font-size:12px">${fmtRange(o.start,o.end)} · day ${o.daysElapsed} of 7</span></div><span class="ch">›</span></div>`;
+}
+function fmtRange(s,e){
+  const f=d=>new Date(d+'T12:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric'});
+  return`${f(s)} – ${f(e)}`;
+}
+function shiftWeek(n){A.weekOffset+=n;if(A.weekOffset>0)A.weekOffset=0;renderReports()}
+function renderReports(){
+  const body=g('repbody');
+  if(!goalsCfg()){
+    body.innerHTML=`<div class="em"><div class="icon">🎯</div><p>No weekly goals yet.<br>Set a few targets and this page will track them.</p></div><button class="conbtn" onclick="nav('goals')">Set Up Goals</button>`;
+    return;
+  }
+  const o=weekCtx(A.weekOffset);const rs=visibleResults(o);
+  const good=rs.filter(r=>r.status==='hit'||r.status==='onpace').length;
+  const hit=rs.filter(r=>r.status==='hit').length;
+  const title=A.weekOffset===0?'This Week':A.weekOffset===-1?'Last Week':`${-A.weekOffset} Weeks Ago`;
+  let h=`<div class="wkbar"><button class="nb" onclick="shiftWeek(-1)">&#8249;</button><div class="wkttl"><b>${title}</b><span>${fmtRange(o.start,o.end)}${o.isCurrent?` · day ${o.daysElapsed} of 7`:''}</span></div><button class="nb" onclick="shiftWeek(1)"${A.weekOffset===0?' style="visibility:hidden"':''}>&#8250;</button></div>`;
+  h+=`<div class="wksum"><span><b>${hit}</b> hit</span>${o.isCurrent?`<span><b>${good-hit}</b> on pace</span><span><b>${rs.length-good}</b> behind</span>`:`<span><b>${rs.length-hit}</b> missed</span>`}</div>`;
+  const groups=[['ACTIVITY',r=>r.source!=='wellness'&&!(r.machineIds&&r.machineIds.length)],['BODYWEIGHT',r=>r.source!=='wellness'&&r.machineIds&&r.machineIds.length],['WELLNESS',r=>r.source==='wellness']];
+  groups.forEach(([name,pred])=>{
+    const list=rs.filter(pred);if(!list.length)return;
+    h+=`<div class="sh">${name}</div>`+list.map(r=>goalCard(r,o)).join('');
+  });
+  if(!A.wellness.length&&goalsCfg().goals.some(r=>r.source==='wellness'))h+=`<p style="padding:12px 20px;font-size:12px;color:var(--dim)">Steps, sleep, HRV and resting HR goals need <code>daily-wellness.csv</code> in your repo (Garmin wellness pipeline).</p>`;
+  body.innerHTML=h;
+}
+function goalCard(r,o){
+  const isAvg=r.kind==='avg';
+  const unit=r.unit||'';
+  const val=fmtGoalNum(r.value,unit),tgt=fmtGoalNum(r.target,unit);
+  const missTxt=isAvg&&o.isCurrent?(r.direction==='below'?'Above target':'Below target'):'Missed';
+  const statusTxt={hit:o.isCurrent&&isAvg?'On target':'Hit ✓',onpace:'On pace',behind:'Behind',miss:missTxt,nodata:'No data'}[r.status]||'';
+  let sub;
+  if(isAvg)sub=`${r.direction==='below'?'≤':'≥'} ${tgt}${r.daysWithData!=null?` · ${r.daysWithData} day${r.daysWithData===1?'':'s'}`:''}`;
+  else if(o.isCurrent)sub=r.status==='hit'?`Target reached on day ${o.daysElapsed}`:`Pace: ${fmtGoalNum(r.expected,unit)} by now`;
+  else sub=r.status==='hit'?'Target reached':`${fmtGoalNum(Math.max(0,r.target-r.value),unit)} short`;
+  if(r.note)sub=(sub?sub+' · ':'')+r.note;
+  const pct=Math.round((r.pct||0)*100);
+  const paceMark=!isAvg&&o.isCurrent&&r.target?`<em style="left:${Math.min(100,Math.round(r.expected/r.target*100))}%"></em>`:'';
+  const rows=r.items.length?r.items.map(i=>`<div class="rdr"><span class="d">${i.label}</span><span class="t">${x(i.detail||'')}</span><span class="v">${i.value!=null?fmtGoalNum(i.value,unit):'✓'}</span></div>`).join(''):`<div class="empty">Nothing logged yet this week.</div>`;
+  return`<div class="rc ${r.status}" id="rc-${x(r.id)}"><div class="rch" onclick="this.parentElement.classList.toggle('open')"><div class="rcl"><div class="rcn">${x(r.label)}</div><div class="rcs">${x(sub)}</div></div><div class="rcv"><b>${val}${isAvg?'':` <span style="font-size:12px;font-weight:400">/ ${tgt}</span>`}</b><span>${statusTxt}</span></div></div><div class="rbar"><i style="width:${pct}%"></i>${paceMark}</div><div class="rdd">${rows}</div></div>`;
+}
+
+// === GOALS EDITOR ===
+const GOAL_PRESETS=[
+  {label:'Days with cardio',kind:'days',source:'log',filter:'cardio',target:3},
+  {label:'Days with strength',kind:'days',source:'log',filter:'strength',target:2},
+  {label:'Days with any workout',kind:'days',source:'log',filter:'any',target:4},
+  {label:'Zone 1 minutes',kind:'sum',source:'log',field:'zone1',target:180},
+  {label:'Zone 2 minutes',kind:'sum',source:'log',field:'zone2',target:45},
+  {label:'Zone 3 minutes',kind:'sum',source:'log',field:'zone3',target:30},
+  {label:'Zone 4+5 minutes',kind:'sum',source:'log',field:'zone4',target:10},
+  {label:'Reps of an exercise…',kind:'sum',source:'log',field:'reps',machineIds:[],target:100,pick:true},
+  {label:'Seconds of an exercise…',kind:'sum',source:'log',field:'duration',machineIds:[],target:300,unit:'s',pick:true},
+  {label:'Total steps',kind:'sum',source:'wellness',field:'steps',target:70000},
+  {label:'Avg sleep (hours)',kind:'avg',source:'wellness',field:'sleep_hours',target:7,unit:'h'},
+  {label:'Avg HRV',kind:'avg',source:'wellness',field:'hrv_last_night',target:40},
+  {label:'Avg resting HR (max)',kind:'avg',source:'wellness',field:'resting_hr',target:50,direction:'below'}
+];
+let GE=null; // working copy while editing
+function renderGoalsEditor(){
+  GE=JSON.parse(JSON.stringify(goalsCfg()||defaultGoals()));
+  drawGoalsEditor();
+}
+function goalKindText(gl){
+  if(gl.kind==='days')return`Days with ${gl.filter==='any'?'a workout':gl.filter}`;
+  if(gl.source==='wellness')return(gl.kind==='avg'?'Weekly average of ':'Weekly total of ')+gl.field.replace(/_/g,' ')+(gl.direction==='below'?' (lower is better)':'');
+  if(gl.machineIds&&gl.machineIds.length)return`Total ${gl.field} · ${gl.machineIds.map(id=>machineName(id)).join(', ')}`;
+  return`Weekly total of ${gl.field}`;
+}
+function machineName(id){
+  for(const g2 of A.gyms)for(const r of g2.rooms){const m=r.machines.find(m=>m.id===id);if(m)return m.name}
+  return id;
+}
+function drawGoalsEditor(){
+  const days=[['sat','Saturday'],['sun','Sunday'],['mon','Monday'],['tue','Tuesday'],['wed','Wednesday'],['thu','Thursday'],['fri','Friday']];
+  let h=`<div class="sh">WEEK</div><div class="sg"><div class="si"><label>Starts on</label><select id="gws" class="fi" style="text-align:right" onchange="GE.weekStart=this.value">${days.map(([v,n])=>`<option value="${v}"${GE.weekStart===v?' selected':''}>${n}</option>`).join('')}</select></div></div>`;
+  h+=`<div class="sh">GOALS</div><div class="sg">`;
+  h+=GE.goals.length?GE.goals.map((gl,i)=>`<div class="gl"><div class="gn"><input type="text" value="${x(gl.label)}" oninput="GE.goals[${i}].label=this.value"><div class="gk">${x(goalKindText(gl))}</div></div><input class="gt" type="number" inputmode="decimal" value="${gl.target}" oninput="GE.goals[${i}].target=parseFloat(this.value)||0"><button class="xb" onclick="GE.goals.splice(${i},1);drawGoalsEditor()">×</button></div>`).join(''):'<div class="em" style="padding:20px"><p>No goals yet.</p></div>';
+  h+=`</div><button class="addb" onclick="addGoalPicker()">＋ Add Goal</button>`;
+  h+=`<p style="padding:12px 20px;font-size:12px;color:var(--dim);line-height:1.5">Counts and sums come from your workout log; steps, sleep, HRV and resting HR come from the Garmin wellness file if your repo has one. Saved to <code>goals.json</code> in your repo.</p>`;
+  g('goalsbody').innerHTML=h;
+}
+function addGoalPicker(){
+  modal(`<h2>Add Goal</h2><div style="max-height:55vh;overflow-y:auto">${GOAL_PRESETS.map((p,i)=>`<div class="sl" onclick="pickGoalPreset(${i})"><span>${x(p.label)}</span><span class="ch">›</span></div>`).join('')}</div><div class="mbs"><button class="mc2" onclick="closeMod()">Cancel</button></div>`);
+}
+function pickGoalPreset(i){
+  const p=JSON.parse(JSON.stringify(GOAL_PRESETS[i]));
+  if(p.pick){
+    // choose an exercise from the loaded gyms
+    const opts=[];A.gyms.forEach(g2=>g2.rooms.forEach(r=>r.machines.filter(m=>!m.hidden).forEach(m=>opts.push([m.id,`${m.name} (${g2.name})`]))));
+    modal(`<h2>${x(p.label.replace('…',''))}</h2><div class="mr"><label>Exercise</label><select id="gpm">${opts.map(([id,n])=>`<option value="${x(id)}">${x(n)}</option>`).join('')}</select></div><div class="mr"><label>Weekly target</label><input id="gpt" type="number" inputmode="decimal" value="${p.target}"></div><div class="mbs"><button class="mc2" onclick="closeMod()">Cancel</button><button class="mo" onclick="finishPickGoal(${i})">Add</button></div>`);
+    return;
+  }
+  delete p.pick;p.id=slug(p.label)+'-'+Date.now().toString(36);
+  GE.goals.push(p);closeMod();drawGoalsEditor();
+}
+function finishPickGoal(i){
+  const p=JSON.parse(JSON.stringify(GOAL_PRESETS[i]));delete p.pick;
+  const mid=(g('gpm')||{}).value;if(!mid)return;
+  p.machineIds=[mid];p.label=`${machineName(mid)} ${p.field==='reps'?'reps':'seconds'}`;
+  p.target=parseFloat((g('gpt')||{}).value)||p.target;
+  p.id=slug(p.label)+'-'+Date.now().toString(36);
+  GE.goals.push(p);closeMod();drawGoalsEditor();
+}
+async function saveGoals(){
+  if(!hasCfg()){toast('Set up GitHub in Settings first','err');return}
+  if(!GE)return;
+  GE.goals=GE.goals.filter(gl=>gl.label&&gl.label.trim()).map(gl=>{gl.label=gl.label.trim();return gl});
+  showLd('Saving goals…');
+  try{
+    const r=await ghPut('goals.json',JSON.stringify(GE,null,2),A.sha.goals,'Update weekly goals');
+    A.sha.goals=r.content.sha;A.goals=GE;
+    hideLd();toast('Goals saved!','ok');renderHome();back();
+    if(A.stack[A.stack.length-1]==='reports')renderReports();
+  }catch(e){hideLd();toast(`Save failed: ${e.message}`,'err')}
 }
 
 // === CELEBRATION ===
@@ -920,19 +1136,22 @@ async function saveSess(){
   }
   const btn=g('svbtn');btn.disabled=true;btn.textContent='Saving…';
   try{
-    let updated;
-    if(A.editDate){
-      // editing: replace all entries for this machine+date
-      updated=[...A.log.filter(e=>!(e.machineId===m.id&&e.date===date)),...newSets];
-    }else{
-      // new session: append, renumber sets after existing ones
-      const existing=A.log.filter(e=>e.machineId===m.id&&e.date===date);
-      const start=existing.length+1;
-      newSets.forEach((s,i)=>{s.set=start+i;});
-      updated=[...A.log,...newSets];
-    }
-    updated=updated.sort((a,b)=>a.date<b.date?1:a.date>b.date?-1:0);
-    await writeLog(updated);A.log=updated;
+    const editing=!!A.editDate;
+    await commitLog(base=>{
+      let updated;
+      if(editing){
+        // editing: replace all entries for this machine+date
+        updated=[...base.filter(e=>!(e.machineId===m.id&&e.date===date)),...newSets];
+      }else{
+        // new session: append, renumber sets after existing ones
+        const existing=base.filter(e=>e.machineId===m.id&&e.date===date);
+        const start=existing.length+1;
+        newSets.forEach((s,i)=>{s.set=start+i;});
+        updated=[...base,...newSets];
+      }
+      return updated.sort((a,b)=>a.date<b.date?1:a.date>b.date?-1:0);
+    });
+    renderWeekStrip();
     toast('Session saved!','ok');
     if(A.fromPlan){A.fromPlan=false;back();renderPlan();maybeCelebrate();}
     else{back();renderDetail();}
@@ -944,10 +1163,30 @@ async function delSess(date){
   if(!confirm(`Delete session on ${fmtDateFull(date)}?`))return;
   showLd('Deleting…');
   try{
-    const updated=A.log.filter(e=>!(e.machineId===A.machine.id&&e.date===date));
-    await writeLog(updated);A.log=updated;hideLd();
+    const mid=A.machine.id;
+    await commitLog(base=>base.filter(e=>!(e.machineId===mid&&e.date===date)));
+    hideLd();renderWeekStrip();
     toast('Session deleted','ok');renderDetail();
   }catch(e){hideLd();toast(`Delete failed: ${e.message}`,'err')}
+}
+
+// Apply a change to the log and write it. If GitHub reports the file moved
+// underneath us (409 — e.g. the Garmin Action posted a cardio record since
+// the app loaded), re-fetch the log and re-apply the change once.
+async function commitLog(apply){
+  let base=A.log;
+  for(let attempt=0;attempt<2;attempt++){
+    const updated=apply(base);
+    try{await writeLog(updated);A.log=updated;return updated}
+    catch(e){
+      if(attempt===0&&/GitHub 409/.test(e.message)){
+        const prev=base;await loadLog();base=A.log;
+        if(!base.length&&prev.length)throw new Error('log changed on GitHub and could not be reloaded — tap Reload Data and try again');
+        continue;
+      }
+      throw e;
+    }
+  }
 }
 
 async function writeLog(entries){

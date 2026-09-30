@@ -41,9 +41,36 @@ jobs:
           git add cardio-minutes.csv
           if git diff --cached --quiet; then
             echo "No changes."
+          else
+            git config user.name "cardio-minutes-bot"
+            git config user.email "actions@users.noreply.github.com"
+            git commit -m "cardio-minutes: update $(date -u +%F)"
+            git pull --rebase --autostash origin main
+            git push
+          fi
+
+      # Post Karvonen zone records for new outdoor activities (walk / run /
+      # ride / hike) into the workout log. Indoor types and anything that
+      # overlaps a hand-logged session are skipped and left for manual review.
+      - name: Post zone records to workout log
+        run: |
+          RHR=$(python -c "import json;print(json.load(open('cardio-minutes-pipeline/zones.json'))['rhr'])")
+          HRMAX=$(python -c "import json;print(json.load(open('cardio-minutes-pipeline/zones.json'))['hrmax'])")
+          DAYS=$(python -c "import json;print(json.load(open('cardio-minutes-pipeline/zones.json')).get('sinceDays',14))")
+          SINCE=$(date -u -d "-$DAYS days" +%F)
+          python cardio-minutes-pipeline/post_zone_records.py \
+            --cardio cardio-minutes.csv --log-json workout-log.json --log-csv workout-log.csv \
+            --garmin garmin-recent.json --rhr "$RHR" --hrmax "$HRMAX" --since "$SINCE" --out-dir .
+
+      - name: Commit zone records if any
+        run: |
+          git add workout-log.json workout-log.csv
+          if git diff --cached --quiet; then
+            echo "No new zone records."
             exit 0
           fi
           git config user.name "cardio-minutes-bot"
           git config user.email "actions@users.noreply.github.com"
-          git commit -m "cardio-minutes: update $(date -u +%F)"
+          git commit -m "Post cardio zone records (auto) $(date -u +%F)"
+          git pull --rebase --autostash origin main
           git push

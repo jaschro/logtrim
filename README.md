@@ -8,6 +8,14 @@ is a single web page hosted free on GitHub Pages, and it works on desktop and ph
 GitHub Pages, create one access token, and you're logging workouts in about
 20–30 minutes.
 
+## Weekly goals
+
+Tap 📊 on the home screen for a weekly report: set targets in Settings → Weekly
+Goals (days with cardio or strength, minutes in a heart-rate zone, reps or seconds
+of any exercise, and — if the Garmin wellness pipeline is on — steps, sleep, HRV
+and resting HR). Each card shows progress, whether you're on pace for the week,
+and the sessions behind the number. Goals are saved to `goals.json` in your repo.
+
 ## Optional extras (all covered in SETUP.md)
 
 - **Claude as your workout coach** — connect a Claude Project that reads your
@@ -22,6 +30,8 @@ GitHub Pages, create one access token, and you're logging workouts in about
 ## Repo tour
 
 - `index.html` — the app itself
+- `scripts/reports.js` — weekly goal computations (shared with the tests)
+- `goals.json` — your weekly targets (created from Settings → Weekly Goals)
 - `SETUP.md` — new-user setup guide (start here)
 - `equipment/` — gym and machine definitions with images. Ships with the
   generic "Common Machines" set; real gyms are imported from the
