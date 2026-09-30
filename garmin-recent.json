@@ -1,7 +1,77 @@
 {
-  "fetchedAt": "2026-09-30T00:03:48Z",
+  "fetchedAt": "2026-09-30T09:19:04Z",
   "today": "2026-09-30",
   "recentActivities": [
+    {
+      "activityId": 24548851961,
+      "date": "2026-09-29",
+      "type": "walking",
+      "name": "Burlingame Walking",
+      "durationMins": 19.7,
+      "distanceMiles": 1.03,
+      "avgHR": 83.0,
+      "maxHR": 93.0,
+      "calories": 107.0,
+      "elevationGain": 0.0,
+      "avgPace": 1.3990000486373901,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 579.737
+        },
+        {
+          "zone": 2,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 3,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 4,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 5,
+          "secsInZone": 0.0
+        }
+      ]
+    },
+    {
+      "activityId": 24548851692,
+      "date": "2026-09-29",
+      "type": "walking",
+      "name": "San Mateo Walking",
+      "durationMins": 27.2,
+      "distanceMiles": 1.36,
+      "avgHR": 77.0,
+      "maxHR": 86.0,
+      "calories": 140.0,
+      "elevationGain": 10.0,
+      "avgPace": 1.340999960899353,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 74.999
+        },
+        {
+          "zone": 2,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 3,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 4,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 5,
+          "secsInZone": 0.0
+        }
+      ]
+    },
     {
       "activityId": 24536029655,
       "date": "2026-09-28",
@@ -96,29 +166,7 @@
       "maxHR": 132.0,
       "calories": 268.0,
       "elevationGain": null,
-      "avgPace": 1.5240000486373901,
-      "hrZones": [
-        {
-          "zone": 1,
-          "secsInZone": 138.003
-        },
-        {
-          "zone": 2,
-          "secsInZone": 457.574
-        },
-        {
-          "zone": 3,
-          "secsInZone": 1132.984
-        },
-        {
-          "zone": 4,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 5,
-          "secsInZone": 0.0
-        }
-      ]
+      "avgPace": 1.5240000486373901
     },
     {
       "activityId": 24450668909,
@@ -131,29 +179,7 @@
       "maxHR": 111.0,
       "calories": 426.0,
       "elevationGain": 9.0,
-      "avgPace": 1.4390000104904173,
-      "hrZones": [
-        {
-          "zone": 1,
-          "secsInZone": 4257.421
-        },
-        {
-          "zone": 2,
-          "secsInZone": 27.056
-        },
-        {
-          "zone": 3,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 4,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 5,
-          "secsInZone": 0.0
-        }
-      ]
+      "avgPace": 1.4390000104904173
     },
     {
       "activityId": 24438226427,
@@ -222,13 +248,13 @@
     }
   ],
   "todayStats": {
-    "steps": 154,
+    "steps": 108,
     "floors": 0.0,
-    "restingHR": 46,
-    "activeCalories": 2.0,
-    "bodyBattery": null,
-    "stressAvg": 25,
-    "weeklySteps": 87346
+    "restingHR": 51,
+    "activeCalories": 1.0,
+    "bodyBattery": 25,
+    "stressAvg": 30,
+    "weeklySteps": 98605
   },
   "trainingReadiness": {
     "score": null,
@@ -236,11 +262,11 @@
     "feedback": null
   },
   "vo2max": {
-    "vo2max": 40.0,
+    "vo2max": 41.0,
     "fitnessAge": null
   },
   "intensityMinutes": {
-    "moderate": 93,
+    "moderate": 134,
     "vigorous": 3
   },
   "hrv": {
@@ -261,7 +287,7 @@
   },
   "spo2Avg": null,
   "respiration": {
-    "avgWaking": null,
-    "avgSleep": null
+    "avgWaking": 15.0,
+    "avgSleep": 11.0
   }
 }
