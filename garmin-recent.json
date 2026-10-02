@@ -1,7 +1,42 @@
 {
-  "fetchedAt": "2026-10-02T09:21:33Z",
+  "fetchedAt": "2026-10-02T17:28:14Z",
   "today": "2026-10-02",
   "recentActivities": [
+    {
+      "activityId": 24579675835,
+      "date": "2026-10-02",
+      "type": "treadmill_running",
+      "name": "Treadmill Running",
+      "durationMins": 32.0,
+      "distanceMiles": 1.7,
+      "avgHR": 108.0,
+      "maxHR": 130.0,
+      "calories": 257.0,
+      "elevationGain": null,
+      "avgPace": 1.4199999570846558,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 54.883
+        },
+        {
+          "zone": 2,
+          "secsInZone": 722.984
+        },
+        {
+          "zone": 3,
+          "secsInZone": 852.0
+        },
+        {
+          "zone": 4,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 5,
+          "secsInZone": 0.0
+        }
+      ]
+    },
     {
       "activityId": 24573798214,
       "date": "2026-10-01",
@@ -153,29 +188,7 @@
       "maxHR": 123.0,
       "calories": 552.0,
       "elevationGain": 137.0,
-      "avgPace": 1.225000023841858,
-      "hrZones": [
-        {
-          "zone": 1,
-          "secsInZone": 3856.021
-        },
-        {
-          "zone": 2,
-          "secsInZone": 412.0
-        },
-        {
-          "zone": 3,
-          "secsInZone": 41.0
-        },
-        {
-          "zone": 4,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 5,
-          "secsInZone": 0.0
-        }
-      ]
+      "avgPace": 1.225000023841858
     },
     {
       "activityId": 24509403359,
@@ -283,46 +296,46 @@
     }
   ],
   "todayStats": {
-    "steps": 375,
+    "steps": 4929,
     "floors": 0.0,
-    "restingHR": 50,
-    "activeCalories": 5.0,
-    "bodyBattery": 31,
-    "stressAvg": 35,
-    "weeklySteps": 87748
+    "restingHR": 46,
+    "activeCalories": 225.0,
+    "bodyBattery": 76,
+    "stressAvg": 23,
+    "weeklySteps": 92302
   },
   "trainingReadiness": {
-    "score": null,
-    "level": null,
-    "feedback": null
+    "score": 61,
+    "level": "MODERATE",
+    "feedback": "LISTEN_TO_YOUR_BODY"
   },
   "vo2max": {
     "vo2max": 42.0,
     "fitnessAge": null
   },
   "intensityMinutes": {
-    "moderate": 236,
-    "vigorous": 11
+    "moderate": 245,
+    "vigorous": 29
   },
   "hrv": {
     "weeklyAvg": 38,
     "lastNight": null,
-    "status": "LOW"
+    "status": "UNBALANCED"
   },
   "sleep": {
-    "date": "2026-10-01",
+    "date": "2026-10-02",
     "durationHours": 7.6,
-    "score": 90,
-    "deepSleepMins": 104,
-    "lightSleepMins": 252,
-    "remSleepMins": 98,
-    "awakeMins": 1,
-    "avgRespirationRate": 13.0,
-    "avgSpO2": 96.0
+    "score": 87,
+    "deepSleepMins": 88,
+    "lightSleepMins": 273,
+    "remSleepMins": 94,
+    "awakeMins": 9,
+    "avgRespirationRate": 14.0,
+    "avgSpO2": 94.0
   },
-  "spo2Avg": 93.0,
+  "spo2Avg": 94.0,
   "respiration": {
-    "avgWaking": 15.0,
-    "avgSleep": 7.0
+    "avgWaking": 12.0,
+    "avgSleep": 14.0
   }
 }
