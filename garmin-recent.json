@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-03T03:49:25Z",
+  "fetchedAt": "2026-10-03T11:06:28Z",
   "today": "2026-10-03",
   "recentActivities": [
     {
@@ -296,13 +296,13 @@
     }
   ],
   "todayStats": {
-    "steps": 11408,
-    "floors": 3.50131,
+    "steps": 13708,
+    "floors": 6.72966,
     "restingHR": 46,
-    "activeCalories": 396.0,
+    "activeCalories": 490.0,
     "bodyBattery": null,
     "stressAvg": 34,
-    "weeklySteps": 88649
+    "weeklySteps": 90949
   },
   "trainingReadiness": {
     "score": null,
@@ -314,7 +314,7 @@
     "fitnessAge": null
   },
   "intensityMinutes": {
-    "moderate": 269,
+    "moderate": 285,
     "vigorous": 29
   },
   "hrv": {
