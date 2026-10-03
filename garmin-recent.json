@@ -1,7 +1,42 @@
 {
-  "fetchedAt": "2026-10-03T15:43:25Z",
+  "fetchedAt": "2026-10-03T20:35:52Z",
   "today": "2026-10-03",
   "recentActivities": [
+    {
+      "activityId": 24592441579,
+      "date": "2026-10-03",
+      "type": "walking",
+      "name": "Miami Beach Walking",
+      "durationMins": 35.5,
+      "distanceMiles": 1.98,
+      "avgHR": 84.0,
+      "maxHR": 108.0,
+      "calories": 208.0,
+      "elevationGain": 14.0,
+      "avgPace": 1.4980000257492065,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 1051.51
+        },
+        {
+          "zone": 2,
+          "secsInZone": 25.354
+        },
+        {
+          "zone": 3,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 4,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 5,
+          "secsInZone": 0.0
+        }
+      ]
+    },
     {
       "activityId": 24584827772,
       "date": "2026-10-02",
@@ -153,29 +188,7 @@
       "maxHR": 93.0,
       "calories": 107.0,
       "elevationGain": 0.0,
-      "avgPace": 1.3990000486373901,
-      "hrZones": [
-        {
-          "zone": 1,
-          "secsInZone": 579.737
-        },
-        {
-          "zone": 2,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 3,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 4,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 5,
-          "secsInZone": 0.0
-        }
-      ]
+      "avgPace": 1.3990000486373901
     },
     {
       "activityId": 24548851692,
@@ -296,13 +309,13 @@
     }
   ],
   "todayStats": {
-    "steps": 527,
-    "floors": 0.0,
+    "steps": 9869,
+    "floors": 10.3668,
     "restingHR": 45,
-    "activeCalories": 3.0,
-    "bodyBattery": 89,
-    "stressAvg": 18,
-    "weeklySteps": 91476
+    "activeCalories": 307.0,
+    "bodyBattery": 66,
+    "stressAvg": 20,
+    "weeklySteps": 100818
   },
   "trainingReadiness": {
     "score": 78,
@@ -310,11 +323,11 @@
     "feedback": "LISTEN_TO_YOUR_BODY"
   },
   "vo2max": {
-    "vo2max": 41.0,
+    "vo2max": 42.0,
     "fitnessAge": null
   },
   "intensityMinutes": {
-    "moderate": 285,
+    "moderate": 320,
     "vigorous": 29
   },
   "hrv": {
@@ -335,7 +348,7 @@
   },
   "spo2Avg": 95.0,
   "respiration": {
-    "avgWaking": 13.0,
+    "avgWaking": 14.0,
     "avgSleep": 14.0
   }
 }
