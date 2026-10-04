@@ -72,6 +72,24 @@
     "notes": ""
   },
   {
+    "machineId": "pm14",
+    "machine": "Glute Isolator",
+    "gym": "Portofino Gym",
+    "gymId": "portofino",
+    "room": "Machines Room",
+    "roomId": "machines",
+    "date": "2026-10-04",
+    "datetime": "2026-10-04 05:57:24 PM",
+    "set": 1,
+    "weight": 70,
+    "reps": 10,
+    "duration": null,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
     "machineId": "walk",
     "machine": "Walk",
     "gym": "Common Machines",
