@@ -12,6 +12,8 @@ datetime,gym,room,machine,machineId,set,weight,reps,duration,level,incline,hr,no
 2026-10-04 06:05:00 PM,Portofino Gym,Machines Room,Seated Chest Press Machine,pm03,1,55,15,,,,,,,,,,
 2026-10-04 06:06:07 PM,Portofino Gym,Machines Room,Seated Row Machine,pm02,2,55,15,,,,,,,,,,
 2026-10-04 06:06:07 PM,Portofino Gym,Machines Room,Seated Row Machine,pm02,3,70,15,,,,,,,,,,
+2026-10-04 06:07:18 PM,Portofino Gym,Machines Room,Seated Chest Press Machine,pm03,2,55,15,,,,,,,,,,
+2026-10-04 06:07:18 PM,Portofino Gym,Machines Room,Seated Chest Press Machine,pm03,3,70,15,,,,,,,,,,
 2026-10-03 10:45:00 AM,Common Machines,Outdoor Activities,Walk,walk,1,,,36.6,1.98,,84,Miami Beach walk (Garmin 24592441579; 1.98 mi; +14 ft). All Zone 1 - max minute HR ~100 (Karvonen RHR 46 / max 168).,36.36666666666667,,,,
 2026-10-02 10:46:00 AM,Portofino Gym,Aerobic Room,Treadmill,pa05,1,,,32.016666666666666,1.7,,108,Portofino treadmill session (Garmin 24579675835; 1.7 mi). Karvonen zones from cardio-minutes (RHR 46 / max 168); warmup below Z1 counted in zone1.,19.016666666666666,13,,,
 2026-10-02 10:07:00 PM,Common Machines,Outdoor Activities,Walk,walk,1,,,40.3,2.22,,94,Miami Beach walk (Garmin 24584827772; 2.22 mi; +18 ft). All Zone 1 - max minute HR ~106 (Karvonen RHR 46 / max 168).,40.13333333333334,,,,
