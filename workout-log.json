@@ -54,6 +54,24 @@
     "notes": ""
   },
   {
+    "machineId": "pm04",
+    "machine": "Pec Fly",
+    "gym": "Portofino Gym",
+    "gymId": "portofino",
+    "room": "Machines Room",
+    "roomId": "machines",
+    "date": "2026-10-04",
+    "datetime": "2026-10-04 05:55:37 PM",
+    "set": 1,
+    "weight": 60,
+    "reps": 15,
+    "duration": null,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
     "machineId": "walk",
     "machine": "Walk",
     "gym": "Common Machines",
