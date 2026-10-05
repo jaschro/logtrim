@@ -1,7 +1,42 @@
 {
-  "fetchedAt": "2026-10-04T23:49:14Z",
-  "today": "2026-10-04",
+  "fetchedAt": "2026-10-05T03:01:39Z",
+  "today": "2026-10-05",
   "recentActivities": [
+    {
+      "activityId": 24609293314,
+      "date": "2026-10-04",
+      "type": "walking",
+      "name": "Miami Beach Walking",
+      "durationMins": 22.5,
+      "distanceMiles": 1.23,
+      "avgHR": 91.0,
+      "maxHR": 121.0,
+      "calories": 130.0,
+      "elevationGain": 3.0,
+      "avgPace": 1.4709999561309812,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 1321.364
+        },
+        {
+          "zone": 2,
+          "secsInZone": 13.626
+        },
+        {
+          "zone": 3,
+          "secsInZone": 12.0
+        },
+        {
+          "zone": 4,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 5,
+          "secsInZone": 0.0
+        }
+      ]
+    },
     {
       "activityId": 24592441579,
       "date": "2026-10-03",
@@ -153,29 +188,7 @@
       "maxHR": 120.0,
       "calories": 211.0,
       "elevationGain": 29.0,
-      "avgPace": 1.4839999675750732,
-      "hrZones": [
-        {
-          "zone": 1,
-          "secsInZone": 1058.785
-        },
-        {
-          "zone": 2,
-          "secsInZone": 115.999
-        },
-        {
-          "zone": 3,
-          "secsInZone": 20.999
-        },
-        {
-          "zone": 4,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 5,
-          "secsInZone": 0.0
-        }
-      ]
+      "avgPace": 1.4839999675750732
     },
     {
       "activityId": 24548851961,
@@ -267,55 +280,29 @@
       "calories": 426.0,
       "elevationGain": 9.0,
       "avgPace": 1.4390000104904173
-    },
-    {
-      "activityId": 24438226427,
-      "date": "2026-09-20",
-      "type": "walking",
-      "name": "Jupiter Walking",
-      "durationMins": 53.5,
-      "distanceMiles": 2.86,
-      "avgHR": 93.0,
-      "maxHR": 118.0,
-      "calories": 299.0,
-      "elevationGain": 3.0,
-      "avgPace": 1.4320000410079954
-    },
-    {
-      "activityId": 24433911143,
-      "date": "2026-09-20",
-      "type": "elliptical",
-      "name": "Elliptical",
-      "durationMins": 31.2,
-      "distanceMiles": null,
-      "avgHR": 100.0,
-      "maxHR": 131.0,
-      "calories": 198.0,
-      "elevationGain": null,
-      "avgPace": 0.0
     }
   ],
   "todayStats": {
-    "steps": 7404,
-    "floors": 0.0,
+    "steps": 12784,
+    "floors": 1.01969,
     "restingHR": 47,
-    "activeCalories": 166.0,
-    "bodyBattery": 34,
-    "stressAvg": 27,
-    "weeklySteps": 104955
+    "activeCalories": 358.0,
+    "bodyBattery": null,
+    "stressAvg": 29,
+    "weeklySteps": 97579
   },
   "trainingReadiness": {
-    "score": 68,
-    "level": "MODERATE",
-    "feedback": "LISTEN_TO_YOUR_BODY"
+    "score": null,
+    "level": null,
+    "feedback": null
   },
   "vo2max": {
     "vo2max": 42.0,
     "fitnessAge": null
   },
   "intensityMinutes": {
-    "moderate": 320,
-    "vigorous": 29
+    "moderate": null,
+    "vigorous": null
   },
   "hrv": {
     "weeklyAvg": 40,
@@ -333,9 +320,9 @@
     "avgRespirationRate": 14.0,
     "avgSpO2": 97.0
   },
-  "spo2Avg": 95.0,
+  "spo2Avg": null,
   "respiration": {
-    "avgWaking": 14.0,
-    "avgSleep": 14.0
+    "avgWaking": null,
+    "avgSleep": null
   }
 }
