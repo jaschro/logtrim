@@ -1,7 +1,42 @@
 {
-  "fetchedAt": "2026-10-06T19:58:17Z",
-  "today": "2026-10-06",
+  "fetchedAt": "2026-10-07T00:21:33Z",
+  "today": "2026-10-07",
   "recentActivities": [
+    {
+      "activityId": 24632691281,
+      "date": "2026-10-06",
+      "type": "treadmill_running",
+      "name": "Treadmill Running",
+      "durationMins": 42.4,
+      "distanceMiles": 2.22,
+      "avgHR": 107.0,
+      "maxHR": 136.0,
+      "calories": 322.0,
+      "elevationGain": null,
+      "avgPace": 1.4040000438690186,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 511.001
+        },
+        {
+          "zone": 2,
+          "secsInZone": 725.815
+        },
+        {
+          "zone": 3,
+          "secsInZone": 955.987
+        },
+        {
+          "zone": 4,
+          "secsInZone": 29.999
+        },
+        {
+          "zone": 5,
+          "secsInZone": 0.0
+        }
+      ]
+    },
     {
       "activityId": 24618034151,
       "date": "2026-10-05",
@@ -153,29 +188,7 @@
       "maxHR": 110.0,
       "calories": 235.0,
       "elevationGain": 18.0,
-      "avgPace": 1.503000020980835,
-      "hrZones": [
-        {
-          "zone": 1,
-          "secsInZone": 2092.335
-        },
-        {
-          "zone": 2,
-          "secsInZone": 282.001
-        },
-        {
-          "zone": 3,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 4,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 5,
-          "secsInZone": 0.0
-        }
-      ]
+      "avgPace": 1.503000020980835
     },
     {
       "activityId": 24579675835,
@@ -296,26 +309,26 @@
     }
   ],
   "todayStats": {
-    "steps": 5300,
+    "steps": 12215,
     "floors": 1.0,
     "restingHR": 47,
-    "activeCalories": 152.0,
-    "bodyBattery": 54,
-    "stressAvg": 26,
-    "weeklySteps": 96537
+    "activeCalories": 459.0,
+    "bodyBattery": null,
+    "stressAvg": 29,
+    "weeklySteps": 92147
   },
   "trainingReadiness": {
-    "score": 69,
-    "level": "MODERATE",
-    "feedback": "LISTEN_TO_YOUR_BODY"
+    "score": null,
+    "level": null,
+    "feedback": null
   },
   "vo2max": {
     "vo2max": 42.0,
     "fitnessAge": null
   },
   "intensityMinutes": {
-    "moderate": 67,
-    "vigorous": 12
+    "moderate": 87,
+    "vigorous": 31
   },
   "hrv": {
     "weeklyAvg": 39,
@@ -333,9 +346,9 @@
     "avgRespirationRate": 14.0,
     "avgSpO2": 94.0
   },
-  "spo2Avg": 93.0,
+  "spo2Avg": null,
   "respiration": {
-    "avgWaking": 15.0,
-    "avgSleep": 14.0
+    "avgWaking": null,
+    "avgSleep": null
   }
 }
