@@ -1,5 +1,26 @@
 [
   {
+    "machineId": "m1791398256648",
+    "machine": "Jog",
+    "gym": "Common Machines",
+    "room": "Outdoor Activities",
+    "date": "2026-10-07",
+    "datetime": "2026-10-07 10:34:00 AM",
+    "set": 1,
+    "weight": null,
+    "reps": null,
+    "duration": 22.783333333333335,
+    "level": 1.33,
+    "incline": null,
+    "hr": 111,
+    "notes": "Miami-Dade County jog (Garmin 24640653835; 1.33 mi; +10 ft). All Zone 1 - max minute HR ~119 (Karvonen RHR 46 / max 168).",
+    "zone1": 22.783333333333335,
+    "zone2": null,
+    "zone3": null,
+    "zone4": null,
+    "zone5": null
+  },
+  {
     "machineId": "pa05",
     "machine": "Treadmill",
     "gym": "Portofino Gym",
