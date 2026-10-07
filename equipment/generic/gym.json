@@ -42,6 +42,13 @@
           "musclesWorked": "Calves, cardiovascular system, coordination, agility",
           "image": "jump-rope.jpg",
           "logType": "time"
+        },
+        {
+          "id": "m1791398256648",
+          "name": "Jog",
+          "musclesWorked": "",
+          "image": null,
+          "logType": "walk"
         }
       ]
     },
