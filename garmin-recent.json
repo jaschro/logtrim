@@ -1,7 +1,42 @@
 {
-  "fetchedAt": "2026-10-07T09:48:42Z",
+  "fetchedAt": "2026-10-07T18:26:06Z",
   "today": "2026-10-07",
   "recentActivities": [
+    {
+      "activityId": 24640653835,
+      "date": "2026-10-07",
+      "type": "other",
+      "name": "Miami-Dade County Jog",
+      "durationMins": 22.8,
+      "distanceMiles": 1.33,
+      "avgHR": 111.0,
+      "maxHR": 130.0,
+      "calories": 197.0,
+      "elevationGain": 10.0,
+      "avgPace": 1.5700000524520874,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 62.733
+        },
+        {
+          "zone": 2,
+          "secsInZone": 1140.891
+        },
+        {
+          "zone": 3,
+          "secsInZone": 162.998
+        },
+        {
+          "zone": 4,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 5,
+          "secsInZone": 0.0
+        }
+      ]
+    },
     {
       "activityId": 24632691281,
       "date": "2026-10-06",
@@ -153,29 +188,7 @@
       "maxHR": 108.0,
       "calories": 208.0,
       "elevationGain": 14.0,
-      "avgPace": 1.4980000257492065,
-      "hrZones": [
-        {
-          "zone": 1,
-          "secsInZone": 1051.51
-        },
-        {
-          "zone": 2,
-          "secsInZone": 25.354
-        },
-        {
-          "zone": 3,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 4,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 5,
-          "secsInZone": 0.0
-        }
-      ]
+      "avgPace": 1.4980000257492065
     },
     {
       "activityId": 24584827772,
@@ -309,26 +322,26 @@
     }
   ],
   "todayStats": {
-    "steps": 12215,
-    "floors": 1.0,
-    "restingHR": 47,
-    "activeCalories": 459.0,
-    "bodyBattery": null,
-    "stressAvg": 29,
-    "weeklySteps": 92147
+    "steps": 9120,
+    "floors": 2.56988,
+    "restingHR": 45,
+    "activeCalories": 332.0,
+    "bodyBattery": 49,
+    "stressAvg": 26,
+    "weeklySteps": 101610
   },
   "trainingReadiness": {
-    "score": null,
-    "level": null,
-    "feedback": null
+    "score": 63,
+    "level": "MODERATE",
+    "feedback": "LISTEN_TO_YOUR_BODY"
   },
   "vo2max": {
     "vo2max": 42.0,
     "fitnessAge": null
   },
   "intensityMinutes": {
-    "moderate": 87,
-    "vigorous": 31
+    "moderate": 95,
+    "vigorous": 48
   },
   "hrv": {
     "weeklyAvg": 39,
@@ -336,19 +349,19 @@
     "status": "UNBALANCED"
   },
   "sleep": {
-    "date": "2026-10-06",
-    "durationHours": 7.7,
-    "score": 86,
+    "date": "2026-10-07",
+    "durationHours": 7.0,
+    "score": 85,
     "deepSleepMins": 111,
-    "lightSleepMins": 227,
-    "remSleepMins": 121,
-    "awakeMins": 8,
+    "lightSleepMins": 211,
+    "remSleepMins": 98,
+    "awakeMins": 2,
     "avgRespirationRate": 14.0,
-    "avgSpO2": 94.0
+    "avgSpO2": 97.0
   },
-  "spo2Avg": null,
+  "spo2Avg": 96.0,
   "respiration": {
-    "avgWaking": null,
-    "avgSleep": null
+    "avgWaking": 15.0,
+    "avgSleep": 14.0
   }
 }
