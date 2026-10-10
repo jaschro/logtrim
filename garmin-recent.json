@@ -1,7 +1,42 @@
 {
-  "fetchedAt": "2026-10-10T21:09:59Z",
+  "fetchedAt": "2026-10-10T23:25:00Z",
   "today": "2026-10-10",
   "recentActivities": [
+    {
+      "activityId": 24679288003,
+      "date": "2026-10-10",
+      "type": "cycling",
+      "name": "Miami Beach Cycling",
+      "durationMins": 70.3,
+      "distanceMiles": 13.61,
+      "avgHR": 110.0,
+      "maxHR": 138.0,
+      "calories": 571.0,
+      "elevationGain": 57.0,
+      "avgPace": 5.191999912261963,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 576.156
+        },
+        {
+          "zone": 2,
+          "secsInZone": 2704.295
+        },
+        {
+          "zone": 3,
+          "secsInZone": 868.393
+        },
+        {
+          "zone": 4,
+          "secsInZone": 60.0
+        },
+        {
+          "zone": 5,
+          "secsInZone": 0.0
+        }
+      ]
+    },
     {
       "activityId": 24663794066,
       "date": "2026-10-09",
@@ -153,29 +188,7 @@
       "maxHR": 136.0,
       "calories": 317.0,
       "elevationGain": null,
-      "avgPace": 1.0859999656677246,
-      "hrZones": [
-        {
-          "zone": 1,
-          "secsInZone": 1547.648
-        },
-        {
-          "zone": 2,
-          "secsInZone": 695.987
-        },
-        {
-          "zone": 3,
-          "secsInZone": 557.001
-        },
-        {
-          "zone": 4,
-          "secsInZone": 54.001
-        },
-        {
-          "zone": 5,
-          "secsInZone": 0.0
-        }
-      ]
+      "avgPace": 1.0859999656677246
     },
     {
       "activityId": 24614654519,
@@ -322,16 +335,16 @@
     }
   ],
   "todayStats": {
-    "steps": 227,
+    "steps": 3086,
     "floors": 0.0,
     "restingHR": 45,
-    "activeCalories": 1.0,
-    "bodyBattery": 83,
-    "stressAvg": 18,
-    "weeklySteps": 96164
+    "activeCalories": 556.0,
+    "bodyBattery": 38,
+    "stressAvg": 25,
+    "weeklySteps": 99023
   },
   "trainingReadiness": {
-    "score": 73,
+    "score": 60,
     "level": "MODERATE",
     "feedback": "LISTEN_TO_YOUR_BODY"
   },
@@ -340,8 +353,8 @@
     "fitnessAge": null
   },
   "intensityMinutes": {
-    "moderate": 137,
-    "vigorous": 63
+    "moderate": 177,
+    "vigorous": 96
   },
   "hrv": {
     "weeklyAvg": 36,
