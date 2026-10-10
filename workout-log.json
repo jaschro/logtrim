@@ -1,5 +1,26 @@
 [
   {
+    "machineId": "bike-ride",
+    "machine": "Bike Ride",
+    "gym": "Common Machines",
+    "room": "Outdoor Activities",
+    "date": "2026-10-10",
+    "datetime": "2026-10-10 05:22:00 PM",
+    "set": 1,
+    "weight": null,
+    "reps": null,
+    "duration": 70.81666666666666,
+    "level": 13.61,
+    "incline": null,
+    "hr": 110,
+    "notes": "Miami Beach ride (Garmin 24679288003; 13.61 mi; +57 ft). Karvonen zones from cardio-minutes (RHR 46 / max 168); warmup below Z1 counted in zone1.",
+    "zone1": 58.3,
+    "zone2": 10.516666666666667,
+    "zone3": 2,
+    "zone4": null,
+    "zone5": null
+  },
+  {
     "machineId": "walk",
     "machine": "Walk",
     "gym": "Common Machines",
