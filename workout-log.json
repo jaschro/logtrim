@@ -252,6 +252,24 @@
     "notes": ""
   },
   {
+    "machineId": "m1791726491514",
+    "machine": "Slant Press",
+    "gym": "5th Street (New)",
+    "gymId": "5th-street-new",
+    "room": "5th Street (New)",
+    "roomId": "main",
+    "date": "2026-10-11",
+    "datetime": "2026-10-11 10:06:03 AM",
+    "set": 1,
+    "weight": 0,
+    "reps": 1,
+    "duration": null,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
     "machineId": "bike-ride",
     "machine": "Bike Ride",
     "gym": "Common Machines",
