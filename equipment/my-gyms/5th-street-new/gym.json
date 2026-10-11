@@ -14,6 +14,13 @@
           "musclesWorked": "",
           "image": "m1791726194462.jpg",
           "logType": "weight"
+        },
+        {
+          "id": "m1791726252344",
+          "name": "Squat",
+          "musclesWorked": "",
+          "image": "m1791726252344.jpg",
+          "logType": "weight"
         }
       ]
     }
