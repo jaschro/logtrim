@@ -49,6 +49,13 @@
           "musclesWorked": "",
           "image": "m1791726370971.jpg",
           "logType": "weight"
+        },
+        {
+          "id": "m1791726427962",
+          "name": "Chest Press",
+          "musclesWorked": "",
+          "image": "m1791726427962.jpg",
+          "logType": "weight"
         }
       ]
     }
