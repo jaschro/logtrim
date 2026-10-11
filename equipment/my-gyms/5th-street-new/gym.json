@@ -35,6 +35,13 @@
           "musclesWorked": "",
           "image": "m1791726300768.jpg",
           "logType": "weight"
+        },
+        {
+          "id": "m1791726337000",
+          "name": "Dips",
+          "musclesWorked": "",
+          "image": "m1791726337000.jpg",
+          "logType": "weight"
         }
       ]
     }
