@@ -21,6 +21,13 @@
           "musclesWorked": "",
           "image": "m1791726252344.jpg",
           "logType": "weight"
+        },
+        {
+          "id": "m1791726280605",
+          "name": "Combo Lift",
+          "musclesWorked": "",
+          "image": "m1791726280605.jpg",
+          "logType": "weight"
         }
       ]
     }
