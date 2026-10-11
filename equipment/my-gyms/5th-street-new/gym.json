@@ -70,6 +70,13 @@
           "musclesWorked": "",
           "image": "m1791726524534.jpg",
           "logType": "weight"
+        },
+        {
+          "id": "m1791726559972",
+          "name": "Situp Bench",
+          "musclesWorked": "",
+          "image": "m1791726559972.jpg",
+          "logType": "weight"
         }
       ]
     }
