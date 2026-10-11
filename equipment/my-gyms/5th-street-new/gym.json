@@ -1,0 +1,13 @@
+{
+  "id": "5th-street-new",
+  "name": "5th Street (New)",
+  "icon": "🏋️",
+  "isGeneric": false,
+  "rooms": [
+    {
+      "id": "main",
+      "name": "5th Street (New)",
+      "machines": []
+    }
+  ]
+}
