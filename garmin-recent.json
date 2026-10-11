@@ -1,6 +1,6 @@
 {
-  "fetchedAt": "2026-10-10T23:25:00Z",
-  "today": "2026-10-10",
+  "fetchedAt": "2026-10-11T04:02:21Z",
+  "today": "2026-10-11",
   "recentActivities": [
     {
       "activityId": 24679288003,
@@ -319,19 +319,6 @@
       "calories": 552.0,
       "elevationGain": 137.0,
       "avgPace": 1.225000023841858
-    },
-    {
-      "activityId": 24509403359,
-      "date": "2026-09-26",
-      "type": "multi_sport",
-      "name": "Multisport",
-      "durationMins": 217.0,
-      "distanceMiles": null,
-      "avgHR": null,
-      "maxHR": 146.0,
-      "calories": 821.0,
-      "elevationGain": null,
-      "avgPace": null
     }
   ],
   "todayStats": {
@@ -339,14 +326,14 @@
     "floors": 0.0,
     "restingHR": 45,
     "activeCalories": 556.0,
-    "bodyBattery": 38,
+    "bodyBattery": null,
     "stressAvg": 25,
-    "weeklySteps": 99023
+    "weeklySteps": 83334
   },
   "trainingReadiness": {
-    "score": 60,
-    "level": "MODERATE",
-    "feedback": "LISTEN_TO_YOUR_BODY"
+    "score": null,
+    "level": null,
+    "feedback": null
   },
   "vo2max": {
     "vo2max": 42.0,
@@ -372,9 +359,9 @@
     "avgRespirationRate": 14.0,
     "avgSpO2": 94.0
   },
-  "spo2Avg": 94.0,
+  "spo2Avg": null,
   "respiration": {
-    "avgWaking": 16.0,
-    "avgSleep": 14.0
+    "avgWaking": null,
+    "avgSleep": null
   }
 }
