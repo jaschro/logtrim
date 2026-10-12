@@ -9,9 +9,18 @@
 //                                     — dispatch the cardio-minutes workflow (per-minute HR CSV)
 //   GET  /trigger-wellness?token=SECRET[&max_days=N]
 //                                     — dispatch the daily-wellness workflow (daily-wellness.csv)
+//   GET  /log-json?token=SECRET       — returns BOTH log files read live from GitHub, with their versions:
+//                                       {"logJson","logCsv","jsonSha","csvSha","entries","csvRows","inSync"}
+//                                       Always read the log through this before a /log-write — never
+//                                       from raw.githubusercontent.com, which can be minutes stale.
 //   POST /log-write?token=SECRET      — commit workout-log.json + workout-log.csv to the repo
 //                                       body: {"logJson": "<full JSON text>", "logCsv": "<full CSV text>",
+//                                              "baseJsonSha": "<jsonSha from /log-json>",
+//                                              "baseCsvSha":  "<csvSha from /log-json>",
 //                                              "message": "optional commit message", "allowShrink": false}
+//                                       Refused with 409 if either file changed on GitHub since that
+//                                       read, and with 400 if the JSON and CSV don't describe the same
+//                                       entries. Returns the new jsonSha / csvSha for a follow-up write.
 //   GET  /?token=SECRET&data=BASE64   — writes suggested-workout.json to GitHub
 //
 // Required environment variables:
@@ -49,15 +58,27 @@ export default {
 
     const b64 = (str) => btoa(unescape(encodeURIComponent(str)));
 
-    // Fetch a repo file's current { sha, text } (null if it doesn't exist).
+    // Fetch a repo file's current { sha, text } live from GitHub (null if it
+    // doesn't exist). Files over 1 MB come back from the Contents API with an
+    // empty `content`, so those are re-fetched in raw form.
     async function getFile(path) {
-      const res = await fetch(`${apiBase}/${path}`, { headers: ghHeaders });
+      // The timestamp makes every read a distinct URL, so no cache between
+      // here and GitHub can answer with an older copy. GitHub ignores it.
+      const fresh = `${apiBase}/${path}?t=${Date.now()}`;
+      const res = await fetch(fresh, { headers: ghHeaders });
       if (!res.ok) return null;
       const file = await res.json();
-      return { sha: file.sha, text: decodeURIComponent(escape(atob(file.content.replace(/\n/g, '')))) };
+      if (file.content) {
+        return { sha: file.sha, text: decodeURIComponent(escape(atob(file.content.replace(/\n/g, '')))) };
+      }
+      const raw = await fetch(fresh, { headers: { ...ghHeaders, Accept: 'application/vnd.github.raw+json' } });
+      if (!raw.ok) return null;
+      return { sha: file.sha, text: await raw.text() };
     }
 
-    // PUT one file to the repo (creating or overwriting).
+    // PUT one file to the repo (creating or overwriting). GitHub rejects the
+    // write with 409 if `sha` is no longer the file's current version.
+    // Returns the file's new sha.
     async function putFile(path, text, message, sha) {
       const body = { message, content: b64(text) };
       if (sha) body.sha = sha;
@@ -67,6 +88,42 @@ export default {
         body: JSON.stringify(body)
       });
       if (!res.ok) throw new Error(`GitHub write failed for ${path}: ${res.status} ${await res.text()}`);
+      const out = await res.json().catch(() => null);
+      return out && out.content ? out.content.sha : null;
+    }
+
+    // Non-blank data rows of a log CSV (header dropped).
+    function csvDataRows(csvText) {
+      return csvText.split('\n').map(l => l.replace(/\r$/, '')).filter(l => l.trim()).slice(1);
+    }
+
+    // Do the JSON entries and the CSV rows describe the same log? Compares the
+    // (datetime, machineId, set) of every entry against every row, ignoring
+    // order. Returns null when they agree, or a short description of the
+    // first difference. Columns 1, 5 and 6 are safe to split on: the app strips
+    // commas from the text fields before them.
+    function logMismatch(entries, csvText) {
+      const rows = csvDataRows(csvText);
+      if (rows.length !== entries.length) {
+        return `logJson has ${entries.length} entries but logCsv has ${rows.length} rows`;
+      }
+      const count = new Map();
+      for (const e of entries) {
+        const k = `${String(e.datetime || e.date || '').replace(/[,\n"]/g, ' ')}|${e.machineId}|${e.set}`;
+        count.set(k, (count.get(k) || 0) + 1);
+      }
+      for (const r of rows) {
+        const c = r.split(',');
+        const k = `${c[0]}|${c[4]}|${c[5]}`;
+        const n = count.get(k);
+        if (!n) return `logCsv has a row with no matching logJson entry: ${c[0]} / ${c[4]} / set ${c[5]}`;
+        if (n === 1) count.delete(k); else count.set(k, n - 1);
+      }
+      if (count.size) {
+        const [k] = count.keys();
+        return `logJson has an entry with no matching logCsv row: ${k.split('|').join(' / ')}`;
+      }
+      return null;
     }
 
     // Dispatch a GitHub Actions workflow by file name, with optional inputs.
@@ -85,6 +142,25 @@ export default {
       const f = await getFile('workout-log.csv');
       if (!f) return new Response(JSON.stringify({ error: 'Could not fetch log' }), { status: 502, headers: cors });
       return new Response(f.text, { headers: { ...cors, 'Content-Type': 'text/csv' } });
+    }
+
+    // GET /log-json — both log files, read live, with the versions a later
+    // /log-write must quote back.
+    if (url.pathname === '/log-json') {
+      const [j, c] = await Promise.all([getFile('workout-log.json'), getFile('workout-log.csv')]);
+      if (!j || !c) return new Response(JSON.stringify({ error: 'Could not fetch log' }), { status: 502, headers: cors });
+      let entries = null, mismatch = null;
+      try {
+        const parsed = JSON.parse(j.text);
+        entries = parsed.length;
+        mismatch = logMismatch(parsed, c.text);
+      } catch (e) {
+        mismatch = 'workout-log.json is not valid JSON: ' + e.message;
+      }
+      return new Response(JSON.stringify({
+        ok: true, logJson: j.text, logCsv: c.text, jsonSha: j.sha, csvSha: c.sha,
+        entries, csvRows: csvDataRows(c.text).length, inSync: !mismatch, mismatch
+      }), { headers: cors });
     }
 
     // GET /profile — return profile.json for Claude to read
@@ -148,7 +224,7 @@ export default {
       } catch (e) {
         return new Response(JSON.stringify({ error: 'Invalid JSON body: ' + e.message }), { status: 400, headers: cors });
       }
-      const { logJson, logCsv, message, allowShrink } = payload || {};
+      const { logJson, logCsv, message, allowShrink, baseJsonSha, baseCsvSha } = payload || {};
       if (typeof logJson !== 'string' || typeof logCsv !== 'string' || !logJson.length || !logCsv.length) {
         return new Response(JSON.stringify({ error: 'Body must include logJson and logCsv as non-empty strings' }), { status: 400, headers: cors });
       }
@@ -162,8 +238,40 @@ export default {
         return new Response(JSON.stringify({ error: 'logJson is not a valid JSON array: ' + e.message }), { status: 400, headers: cors });
       }
 
+      // The two files must describe the same entries.
+      const mismatch = logMismatch(newEntries, logCsv);
+      if (mismatch) {
+        return new Response(JSON.stringify({
+          error: `logJson and logCsv disagree (${mismatch}). Nothing was written. ` +
+                 `Rebuild both from one fresh GET /log-json read and resend.`
+        }), { status: 400, headers: cors });
+      }
+
+      // The caller must say which version of the log its edit is based on.
+      if (typeof baseJsonSha !== 'string' || typeof baseCsvSha !== 'string' || !baseJsonSha || !baseCsvSha) {
+        return new Response(JSON.stringify({
+          error: 'Missing baseJsonSha / baseCsvSha. Read the log with GET /log-json, apply the change to that ' +
+                 'copy, and send its jsonSha and csvSha back as baseJsonSha and baseCsvSha. Nothing was written.'
+        }), { status: 400, headers: cors });
+      }
+
+      const [currentJson, currentCsv] = await Promise.all([getFile('workout-log.json'), getFile('workout-log.csv')]);
+
+      // Refuse an edit built on an out-of-date copy: writing it would erase
+      // whatever the app or the Garmin job added in the meantime.
+      const stale = [];
+      if ((currentJson ? currentJson.sha : null) !== baseJsonSha) stale.push('workout-log.json');
+      if ((currentCsv ? currentCsv.sha : null) !== baseCsvSha) stale.push('workout-log.csv');
+      if (stale.length) {
+        return new Response(JSON.stringify({
+          error: `The log changed on GitHub since you read it (${stale.join(' and ')}). Nothing was written. ` +
+                 `GET /log-json again, re-apply your change to that fresh copy, and resend. ` +
+                 `Do not re-add records from your older copy — check the fresh copy for them first.`,
+          stale
+        }), { status: 409, headers: cors });
+      }
+
       // Safety guard: refuse a write that would shrink the log unless explicitly allowed.
-      const currentJson = await getFile('workout-log.json');
       let currentCount = null;
       if (currentJson) {
         try { currentCount = JSON.parse(currentJson.text).length; } catch (_) { /* unreadable current file — skip guard */ }
@@ -176,16 +284,31 @@ export default {
       }
 
       const msg = message || 'Post cardio zone records via Worker';
-      const currentCsv = await getFile('workout-log.csv');
+      let jsonSha, csvSha;
       try {
-        await putFile('workout-log.json', logJson, msg, currentJson ? currentJson.sha : null);
-        await putFile('workout-log.csv', logCsv, msg, currentCsv ? currentCsv.sha : null);
+        jsonSha = await putFile('workout-log.json', logJson, msg, currentJson ? currentJson.sha : null);
       } catch (e) {
-        return new Response(JSON.stringify({ error: e.message, warning: 'The two log files may now be out of sync — retry the write.' }), { status: 502, headers: cors });
+        const moved = / 409 /.test(e.message);
+        return new Response(JSON.stringify({
+          error: e.message,
+          warning: moved
+            ? 'The log changed on GitHub mid-write. Nothing was written — GET /log-json again and redo the change.'
+            : 'Nothing was written.'
+        }), { status: moved ? 409 : 502, headers: cors });
+      }
+      try {
+        csvSha = await putFile('workout-log.csv', logCsv, msg, currentCsv ? currentCsv.sha : null);
+      } catch (e) {
+        return new Response(JSON.stringify({
+          error: e.message,
+          warning: 'workout-log.json was written but workout-log.csv was not, so the two are out of sync. ' +
+                   'GET /log-json (inSync will be false), rebuild the CSV from that JSON, and resend both.'
+        }), { status: 502, headers: cors });
       }
       return new Response(JSON.stringify({
         ok: true,
-        message: `Log updated: ${newEntries.length} entries (was ${currentCount === null ? 'unknown' : currentCount}).`
+        message: `Log updated: ${newEntries.length} entries (was ${currentCount === null ? 'unknown' : currentCount}).`,
+        jsonSha, csvSha
       }), { headers: cors });
     }
 
