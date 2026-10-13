@@ -36,9 +36,16 @@ jobs:
           ACTIVITY_FETCH_LIMIT: ${{ inputs.fetch_limit || '30' }}
         run: python cardio-minutes-pipeline/cardio_minutes.py
 
+      # Rebuild cardio-buckets.csv (minutes per 5-bpm heart-rate bucket, one
+      # row per activity) from cardio-minutes.csv plus corrections.json. Runs
+      # every time, so a corrections.json edit is picked up even on a day
+      # with no new activity. The app reads this file for heart-rate goals.
+      - name: Build cardio-buckets.csv
+        run: python cardio-minutes-pipeline/build_cardio_buckets.py
+
       - name: Commit if changed
         run: |
-          git add cardio-minutes.csv
+          git add cardio-minutes.csv cardio-buckets.csv
           if git diff --cached --quiet; then
             echo "No changes."
           else

@@ -76,3 +76,46 @@ This uses Garmin's unofficial Connect API via the `garminconnect`
 library. It's well-maintained but not contractual — if Garmin changes
 something, the Action may fail until the library updates. The CSV is
 append-only from your side, so nothing already written is ever at risk.
+
+## cardio-buckets.csv — what the app reads
+
+`build_cardio_buckets.py` runs in the same Action right after the CSV update
+and rebuilds `cardio-buckets.csv` in full: **one row per Garmin activity**,
+with the minutes spent in each 5-bpm heart-rate bucket.
+
+| column | meaning |
+|---|---|
+| `date`, `start` | NY date and first minute of the activity |
+| `activity_id`, `activity_type` | as in `cardio-minutes.csv` |
+| `minutes` | minutes with at least 10 s of sensor coverage |
+| `avg_hr`, `max_minute_hr` | over those minutes |
+| `corrected` | `y` if `corrections.json` changed this activity |
+| `hr_under70`, `hr70_74`, … `hr180_184`, `hr185_up` | minutes in each bucket (blank = 0) |
+
+Heart-rate data is stored as buckets, never as zones. A zone is a boundary
+table that changes with every retest or coach; the app applies whatever
+boundaries are current when it displays the data (zone floors and
+heart-rate-range goals both live in `goals.json`, editable under
+Settings → Weekly Goals). Changing a boundary rewrites nothing.
+
+A log row is linked to its activity by the `Garmin <activity_id>` tag in its
+notes. Weekly heart-rate-range goals count only activities that have a row in
+the workout log.
+
+### Hand corrections
+
+Never edit `cardio-buckets.csv` — it is regenerated every run. Put the fix in
+`cardio-minutes-pipeline/corrections.json`, keyed by activity ID:
+
+```json
+"24509403359": {
+  "note":   "watch left recording ~3 h after the ride",
+  "keep":   ["2026-09-26 11:26", "2026-09-26 12:04"],
+  "set_hr": [{ "from": "2026-09-24 12:42", "to": "2026-09-24 12:59", "hr": 127 }],
+  "add":    [{ "minutes": 9.4, "hr": 85 }]
+}
+```
+
+`keep` drops minutes outside the window, `set_hr` overrides a stretch the
+sensor misread, `add` supplies minutes the watch did not record. Tests:
+`python -m unittest discover -s cardio-minutes-pipeline -p "test_*.py"`.

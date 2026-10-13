@@ -6,10 +6,17 @@
  *   goals.json          — { weekStart: 'sat', goals: [ ... ] }
  *   workout-log.json    — array of set entries (newest first)
  *   daily-wellness.csv  — optional; one row per complete Garmin day
+ *   cardio-buckets.csv  — optional; one row per Garmin activity, minutes per 5-bpm bucket
  *
  * Goal shapes (all fields optional except id/kind/target):
  *   { id, label, kind:'sum'|'days'|'avg', source:'log'|'wellness', field, machineIds,
- *     filter:'cardio'|'strength'|'any', target, unit, direction:'above'|'below' }
+ *     filter:'cardio'|'strength'|'any', target, unit, direction:'above'|'below',
+ *     hrMin, hrMax }
+ *
+ * A 'sum' goal with hrMin and/or hrMax counts minutes in that heart-rate range
+ * (hrMin inclusive, hrMax exclusive) from cardio-buckets.csv, for the Garmin
+ * activities that appear in the log that week. Heart-rate data is stored as
+ * neutral 5-bpm buckets; zones are only ever computed here, at read time.
  */
 (function (global, factory) {
   if (typeof module !== 'undefined' && module.exports) {
@@ -92,9 +99,116 @@
   function num(v) { const n = Number(v); return isNaN(n) ? 0 : n; }
   function round1(v) { return Math.round(v * 10) / 10; }
 
+  // ---- heart-rate buckets (cardio-buckets.csv) ----
+  const GARMIN_ID_RE = /Garmin(?:\s+[a-z]+)?\s+(\d{9,})/i;
+
+  /** Garmin activity ID a log entry is linked to (a garminId field, else the "Garmin <id>" tag in its notes). */
+  function garminIdOf(e) {
+    if (!e) return null;
+    if (e.garminId != null && e.garminId !== '') return String(e.garminId);
+    const m = GARMIN_ID_RE.exec(e.notes || '');
+    return m ? m[1] : null;
+  }
+
+  /** Column name -> { lo, hi, open } (hi exclusive), or null if it is not a bucket column. */
+  function bucketColumn(name) {
+    let m;
+    if ((m = /^hr_under(\d+)$/.exec(name))) return { lo: +m[1] - 5, hi: +m[1], open: 'low' };
+    if ((m = /^hr(\d+)_up$/.exec(name))) return { lo: +m[1], hi: +m[1] + 5, open: 'high' };
+    if ((m = /^hr(\d+)_(\d+)$/.exec(name))) return { lo: +m[1], hi: +m[2] + 1, open: null };
+    return null;
+  }
+
+  /**
+   * Parse cardio-buckets.csv text into { activityId: row }, where row is
+   * { id, date, start, type, minutes, avgHr, maxHr, corrected, bins: [{ lo, hi, open, min }] }.
+   * Only non-empty buckets are kept in bins.
+   */
+  function parseBucketsCSV(text) {
+    const lines = String(text || '').split(/\r?\n/).filter(l => l.trim());
+    const map = {};
+    if (lines.length < 2) return map;
+    const head = lines[0].split(',');
+    const cols = head.map(bucketColumn);
+    const at = n => head.indexOf(n);
+    const iId = at('activity_id');
+    if (iId < 0) return map;
+    lines.slice(1).forEach(l => {
+      const c = l.split(',');
+      const id = c[iId];
+      if (!id) return;
+      const bins = [];
+      cols.forEach((b, i) => { const v = Number(c[i]); if (b && v > 0) bins.push({ lo: b.lo, hi: b.hi, open: b.open, min: v }); });
+      map[id] = {
+        id, date: c[at('date')] || '', start: c[at('start')] || '', type: c[at('activity_type')] || '',
+        minutes: num(c[at('minutes')]), avgHr: num(c[at('avg_hr')]), maxHr: num(c[at('max_minute_hr')]),
+        corrected: c[at('corrected')] === 'y', bins
+      };
+    });
+    return map;
+  }
+
+  /**
+   * Minutes of one activity between lo (inclusive) and hi (exclusive) bpm; either
+   * end may be null for "no limit". A range edge that falls inside a 5-bpm bucket
+   * takes that bucket's minutes in proportion — keep edges on multiples of 5 for
+   * exact numbers.
+   */
+  function hrRangeMinutes(row, lo, hi) {
+    if (!row || !row.bins) return 0;
+    const a = lo == null || lo === '' ? -Infinity : Number(lo);
+    const b = hi == null || hi === '' ? Infinity : Number(hi);
+    let total = 0;
+    row.bins.forEach(bin => {
+      const blo = bin.open === 'low' && a === -Infinity ? -Infinity : bin.lo;
+      const bhi = bin.open === 'high' && b === Infinity ? Infinity : bin.hi;
+      const from = Math.max(a, blo), to = Math.min(b, bhi);
+      if (to <= from) return;
+      const width = bhi - blo;
+      total += width === Infinity ? bin.min : bin.min * (to - from) / width;
+    });
+    return total;
+  }
+
+  /**
+   * Zone minutes for one activity from its buckets and a list of zone floors
+   * (ascending bpm, e.g. [105, 120, 130, 145, 155]). Returns
+   * { below, zones: [z1, z2, ...] } — minutes under the first floor are kept
+   * separate, never folded into zone 1.
+   */
+  function zonesFromBuckets(row, floors) {
+    const fl = cleanFloors(floors);
+    if (!row || !fl.length) return null;
+    return {
+      below: hrRangeMinutes(row, null, fl[0]),
+      zones: fl.map((f, i) => hrRangeMinutes(row, f, i + 1 < fl.length ? fl[i + 1] : null))
+    };
+  }
+
+  /** Zone floors as a clean ascending list of positive numbers ([] if unusable). */
+  function cleanFloors(floors) {
+    if (!Array.isArray(floors)) return [];
+    const fl = floors.map(Number).filter(n => n > 0);
+    for (let i = 1; i < fl.length; i++) if (fl[i] <= fl[i - 1]) return [];
+    return fl;
+  }
+
+  function isHrRangeGoal(goal) {
+    return !!goal && goal.kind === 'sum' && (goal.hrMin != null || goal.hrMax != null);
+  }
+
+  /** "under 120 bpm" / "120–129 bpm" / "130+ bpm" for a goal's range. */
+  function hrRangeText(lo, hi) {
+    const a = lo == null || lo === '' ? null : Number(lo), b = hi == null || hi === '' ? null : Number(hi);
+    if (a == null && b == null) return 'any heart rate';
+    if (a == null) return `under ${b} bpm`;
+    if (b == null) return `${a}+ bpm`;
+    return `${a}–${b - 1} bpm`;
+  }
+
   /**
    * Compute every goal for one week.
-   * ctx: { log, wellness, gyms, weekStart, today, offset }
+   * ctx: { log, wellness, buckets, gyms, weekStart, today, offset }
    * Returns { start, end, isCurrent, daysElapsed, results: [...] }
    */
   function computeGoals(goals, ctx) {
@@ -105,6 +219,8 @@
     const info = machineInfoMap(ctx.gyms);
     const log = (ctx.log || []).filter(e => inRange(e.date, b));
     const wellness = (ctx.wellness || []).filter(r => inRange(r.date, b));
+    const buckets = ctx.buckets || {};
+    const haveBuckets = Object.keys(buckets).length > 0;
 
     const results = (goals || []).map(goal => {
       const r = Object.assign({}, goal, { value: 0, items: [], daysWithData: null, note: '' });
@@ -134,6 +250,27 @@
         const dates = Object.keys(byDate).sort();
         r.value = dates.length;
         r.items = dates.map(d => ({ date: d, label: fmtShortDate(d), value: null, detail: [...byDate[d]].join(', ') }));
+      } else if (isHrRangeGoal(goal)) {
+        // minutes in a heart-rate range, from the buckets of Garmin activities in this week's log
+        const byDate = {};
+        const seen = new Set();
+        log.forEach(e => {
+          const id = garminIdOf(e);
+          if (!id || seen.has(id) || !buckets[id]) return;
+          seen.add(id);
+          const v = hrRangeMinutes(buckets[id], goal.hrMin, goal.hrMax);
+          if (!v) return;
+          const d = byDate[e.date] = byDate[e.date] || { value: 0, names: new Set() };
+          d.value += v; d.names.add(e.machine || e.machineId);
+        });
+        const dates = Object.keys(byDate).sort();
+        r.value = round1(dates.reduce((s, d) => s + byDate[d].value, 0));
+        r.items = dates.map(d => ({ date: d, label: fmtShortDate(d), value: round1(byDate[d].value), detail: [...byDate[d].names].join(', ') }));
+        if (!haveBuckets) r.note = 'needs cardio-buckets.csv';
+        else {
+          const unlinked = Object.keys(buckets).filter(id => inRange(buckets[id].date, b) && !seen.has(id)).length;
+          if (unlinked) r.note = `${unlinked} Garmin activit${unlinked === 1 ? 'y' : 'ies'} not in the log`;
+        }
       } else {
         // sum over log entries
         const ids = goal.machineIds && goal.machineIds.length ? goal.machineIds : null;
@@ -198,5 +335,6 @@
   }
 
   return { DAY_NAMES, weekBounds, addDays, todayStr, machineInfoMap, classifyEntry, parseWellnessCSV,
+           garminIdOf, parseBucketsCSV, hrRangeMinutes, zonesFromBuckets, cleanFloors, isHrRangeGoal, hrRangeText,
            computeGoals, fmtShortDate, fmtGoalNum, defaultGoals };
 });

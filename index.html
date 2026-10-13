@@ -392,7 +392,7 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,BlinkMacSystemFo
 // === STATE ===
 const A={
   gyms:[],log:[],profile:{},suggestion:null,
-  goals:null,wellness:[],weekOffset:0,
+  goals:null,wellness:[],buckets:{},weekOffset:0,
   sha:{log:null,csv:null,profile:null,suggestion:null,goals:null,gym:{}},
   stack:['home'],
   gym:null,room:null,machine:null,
@@ -462,7 +462,7 @@ async function loadAll(){
   if(!hasCfg()){renderHome();return}
   showLd('Loading your data…');
   try{
-    await Promise.all([loadGyms(),loadLog(),loadProfile(),loadSuggestion(),loadGoals(),loadWellness()]);
+    await Promise.all([loadGyms(),loadLog(),loadProfile(),loadSuggestion(),loadGoals(),loadWellness(),loadBuckets()]);
     hideLd();renderHome();
   }catch(e){
     hideLd();toast(`Load error: ${e.message}`,'err');renderHome();
@@ -521,6 +521,33 @@ async function loadWellness(){
     const r=await fetch(`${rawBase()}/daily-wellness.csv?t=${Date.now()}`);
     if(r.ok)A.wellness=parseWellnessCSV(await r.text());
   }catch(e){}
+}
+async function loadBuckets(){
+  // Optional: only repos with the cardio-minutes pipeline have this file.
+  // One row per Garmin activity: minutes in each 5-bpm heart-rate bucket.
+  A.buckets={};
+  try{
+    const r=await fetch(`${rawBase()}/cardio-buckets.csv?t=${Date.now()}`);
+    if(r.ok)A.buckets=parseBucketsCSV(await r.text());
+  }catch(e){}
+}
+function haveBuckets(){return Object.keys(A.buckets).length>0}
+// Zone floors (bpm) used only to DISPLAY bucket data as zones; null if not set.
+function hrZoneFloors(){const f=cleanFloors(A.goals&&A.goals.hrZones);return f.length?f:null}
+// History line under a cardio session: zone minutes worked out from the
+// Garmin buckets when the session is linked to an activity, else the zone
+// minutes typed into the session by hand.
+function zoneRowHtml(f0){
+  const st='<div class="sr" style="font-size:12px;color:var(--dim)">';
+  const row=A.buckets[garminIdOf(f0)],fl=hrZoneFloors();
+  if(row&&fl){
+    const z=zonesFromBuckets(row,fl);
+    const parts=z.zones.map((v,i)=>`Z${i+1}:${v>0?fmtDuration(v)+'m':'—'}`);
+    if(z.below>0)parts.unshift(`<Z1:${fmtDuration(z.below)}m`);
+    return st+x(parts.join(' · '))+'</div>';
+  }
+  if(![1,2,3,4,5].some(i=>f0['zone'+i]!=null))return'';
+  return st+[1,2,3,4,5].map(i=>`Z${i}:${f0['zone'+i]!=null?fmtDuration(f0['zone'+i])+'m':'—'}`).join(' · ')+'</div>';
 }
 async function reloadData(){await loadAll();toast('Data reloaded','ok')}
 async function connectGH(){
@@ -629,7 +656,7 @@ async function dismissPlan(){
 function goalsCfg(){return A.goals&&Array.isArray(A.goals.goals)?A.goals:null}
 function weekCtx(offset){
   const gc=goalsCfg()||defaultGoals();
-  return computeGoals(gc.goals,{log:A.log,wellness:A.wellness,gyms:A.gyms,weekStart:gc.weekStart||'mon',today:todayStr(),offset:offset||0});
+  return computeGoals(gc.goals,{log:A.log,wellness:A.wellness,buckets:A.buckets,gyms:A.gyms,weekStart:gc.weekStart||'mon',today:todayStr(),offset:offset||0});
 }
 function visibleResults(o){
   // Wellness cards only appear when the repo actually has wellness data.
@@ -695,6 +722,7 @@ const GOAL_PRESETS=[
   {label:'Zone 2 minutes',kind:'sum',source:'log',field:'zone2',target:45},
   {label:'Zone 3 minutes',kind:'sum',source:'log',field:'zone3',target:30},
   {label:'Zone 4+5 minutes',kind:'sum',source:'log',field:'zone4',target:10},
+  {label:'Minutes in a heart-rate range…',kind:'sum',source:'log',hrMin:120,hrMax:130,target:45,pickHr:true},
   {label:'Reps of an exercise…',kind:'sum',source:'log',field:'reps',machineIds:[],target:100,pick:true},
   {label:'Seconds of an exercise…',kind:'sum',source:'log',field:'duration',machineIds:[],target:300,unit:'s',pick:true},
   {label:'Total steps',kind:'sum',source:'wellness',field:'steps',target:70000},
@@ -709,6 +737,7 @@ function renderGoalsEditor(){
 }
 function goalKindText(gl){
   if(gl.kind==='days')return`Days with ${gl.filter==='any'?'a workout':gl.filter}`;
+  if(isHrRangeGoal(gl))return`Garmin minutes · ${hrRangeText(gl.hrMin,gl.hrMax)}`;
   if(gl.source==='wellness')return(gl.kind==='avg'?'Weekly average of ':'Weekly total of ')+gl.field.replace(/_/g,' ')+(gl.direction==='below'?' (lower is better)':'');
   if(gl.machineIds&&gl.machineIds.length)return`Total ${gl.field} · ${gl.machineIds.map(id=>machineName(id)).join(', ')}`;
   return`Weekly total of ${gl.field}`;
@@ -723,11 +752,19 @@ function drawGoalsEditor(){
   h+=`<div class="sh">GOALS</div><div class="sg">`;
   h+=GE.goals.length?GE.goals.map((gl,i)=>`<div class="gl"><div class="gn"><input type="text" value="${x(gl.label)}" oninput="GE.goals[${i}].label=this.value"><div class="gk">${x(goalKindText(gl))}</div></div><input class="gt" type="number" inputmode="decimal" value="${gl.target}" oninput="GE.goals[${i}].target=parseFloat(this.value)||0"><button class="xb" onclick="GE.goals.splice(${i},1);drawGoalsEditor()">×</button></div>`).join(''):'<div class="em" style="padding:20px"><p>No goals yet.</p></div>';
   h+=`</div><button class="addb" onclick="addGoalPicker()">＋ Add Goal</button>`;
-  h+=`<p style="padding:12px 20px;font-size:12px;color:var(--dim);line-height:1.5">Counts and sums come from your workout log; steps, sleep, HRV and resting HR come from the Garmin wellness file if your repo has one. Saved to <code>goals.json</code> in your repo.</p>`;
+  if(haveBuckets()||(GE.hrZones&&GE.hrZones.length)){
+    const fl=GE.hrZones||[];
+    h+=`<div class="sh">HEART RATE ZONES</div><div class="sg"><div class="gl" style="flex-wrap:wrap"><div class="gn" style="flex-basis:100%"><div style="font-size:14px;font-weight:600">Zone floors (bpm)</div><div class="gk">Where each zone starts. Garmin heart-rate data is stored in 5-bpm buckets, so use multiples of 5. Only changes how sessions are shown — nothing stored is rewritten.</div></div>${[0,1,2,3,4].map(i=>`<input class="gt" style="width:56px" type="number" inputmode="numeric" step="5" placeholder="Z${i+1}" value="${fl[i]!=null?fl[i]:''}" oninput="setZoneFloor(${i},this.value)">`).join('')}</div></div>`;
+  }
+  h+=`<p style="padding:12px 20px;font-size:12px;color:var(--dim);line-height:1.5">Counts and sums come from your workout log; heart-rate-range minutes come from the Garmin bucket file (<code>cardio-buckets.csv</code>) for activities in your log; steps, sleep, HRV and resting HR come from the Garmin wellness file. Saved to <code>goals.json</code> in your repo.</p>`;
   g('goalsbody').innerHTML=h;
 }
+function setZoneFloor(i,v){
+  GE.hrZones=GE.hrZones||[];
+  const n=parseFloat(v);GE.hrZones[i]=isNaN(n)?null:n;
+}
 function addGoalPicker(){
-  modal(`<h2>Add Goal</h2><div style="max-height:55vh;overflow-y:auto">${GOAL_PRESETS.map((p,i)=>`<div class="sl" onclick="pickGoalPreset(${i})"><span>${x(p.label)}</span><span class="ch">›</span></div>`).join('')}</div><div class="mbs"><button class="mc2" onclick="closeMod()">Cancel</button></div>`);
+  modal(`<h2>Add Goal</h2><div style="max-height:55vh;overflow-y:auto">${GOAL_PRESETS.map((p,i)=>p.pickHr&&!haveBuckets()?'':`<div class="sl" onclick="pickGoalPreset(${i})"><span>${x(p.label)}</span><span class="ch">›</span></div>`).join('')}</div><div class="mbs"><button class="mc2" onclick="closeMod()">Cancel</button></div>`);
 }
 function pickGoalPreset(i){
   const p=JSON.parse(JSON.stringify(GOAL_PRESETS[i]));
@@ -737,7 +774,23 @@ function pickGoalPreset(i){
     modal(`<h2>${x(p.label.replace('…',''))}</h2><div class="mr"><label>Exercise</label><select id="gpm">${opts.map(([id,n])=>`<option value="${x(id)}">${x(n)}</option>`).join('')}</select></div><div class="mr"><label>Weekly target</label><input id="gpt" type="number" inputmode="decimal" value="${p.target}"></div><div class="mbs"><button class="mc2" onclick="closeMod()">Cancel</button><button class="mo" onclick="finishPickGoal(${i})">Add</button></div>`);
     return;
   }
+  if(p.pickHr){
+    modal(`<h2>Minutes in a heart-rate range</h2><p style="font-size:12px;color:var(--dim);line-height:1.5;margin-bottom:10px">Counts Garmin minutes from the first number up to (not including) the second. Leave one blank for "under" or "and above". Use multiples of 5.</p><div class="mr"><label>From (bpm)</label><input id="ghlo" type="number" inputmode="numeric" step="5" value="${p.hrMin}"></div><div class="mr"><label>Up to (bpm)</label><input id="ghhi" type="number" inputmode="numeric" step="5" value="${p.hrMax}"></div><div class="mr"><label>Weekly target (min)</label><input id="gpt" type="number" inputmode="decimal" value="${p.target}"></div><div class="mbs"><button class="mc2" onclick="closeMod()">Cancel</button><button class="mo" onclick="finishPickHr(${i})">Add</button></div>`);
+    return;
+  }
   delete p.pick;p.id=slug(p.label)+'-'+Date.now().toString(36);
+  GE.goals.push(p);closeMod();drawGoalsEditor();
+}
+function finishPickHr(i){
+  const p=JSON.parse(JSON.stringify(GOAL_PRESETS[i]));delete p.pickHr;
+  const lo=parseFloat((g('ghlo')||{}).value),hi=parseFloat((g('ghhi')||{}).value);
+  if(isNaN(lo)&&isNaN(hi)){toast('Enter at least one heart rate','err');return}
+  if(!isNaN(lo)&&!isNaN(hi)&&hi<=lo){toast('"Up to" must be higher than "From"','err');return}
+  if(isNaN(lo))delete p.hrMin;else p.hrMin=lo;
+  if(isNaN(hi))delete p.hrMax;else p.hrMax=hi;
+  p.label=`Minutes at ${hrRangeText(p.hrMin,p.hrMax)}`;
+  p.target=parseFloat((g('gpt')||{}).value)||p.target;
+  p.id=slug(p.label)+'-'+Date.now().toString(36);
   GE.goals.push(p);closeMod();drawGoalsEditor();
 }
 function finishPickGoal(i){
@@ -752,6 +805,12 @@ async function saveGoals(){
   if(!hasCfg()){toast('Set up GitHub in Settings first','err');return}
   if(!GE)return;
   GE.goals=GE.goals.filter(gl=>gl.label&&gl.label.trim()).map(gl=>{gl.label=gl.label.trim();return gl});
+  if(GE.hrZones){
+    // keep the leading run of filled-in floors; they must rise
+    const fl=[];for(const v of GE.hrZones){if(v==null||!(v>0))break;fl.push(v)}
+    if(fl.some((v,i)=>i&&v<=fl[i-1])){toast('Zone floors must go up from left to right','err');return}
+    if(fl.length)GE.hrZones=fl;else delete GE.hrZones;
+  }
   showLd('Saving goals…');
   try{
     const r=await ghPut('goals.json',JSON.stringify(GE,null,2),A.sha.goals,'Update weekly goals');
@@ -958,7 +1017,7 @@ function renderDetail(){
                `${s.weight!=null?s.weight:'—'} lbs × ${s.reps!=null?s.reps:'—'}`;
       return`<div class="sr"><span class="sn">Set ${s.set}</span><span class="sv">${v}</span></div>`;
     }).join('');
-    const zRow=(isW||isC||isP||isMn)&&[1,2,3,4,5].some(i=>f0['zone'+i]!=null)?`<div class="sr" style="font-size:12px;color:var(--dim)">${[1,2,3,4,5].map(i=>`Z${i}:${f0['zone'+i]!=null?fmtDuration(f0['zone'+i])+'m':'—'}`).join(' · ')}</div>`:'';
+    const zRow=(isW||isC||isP||isMn)?zoneRowHtml(f0):'';
     return`<div class="hi"><div class="hd"><span>${fmtDateFull(d)}</span><div class="ha"><button onclick="editSess('${d}')" title="Edit">✏️</button><button onclick="delSess('${d}')" title="Delete">🗑️</button></div></div>${rowsH}${zRow}${notes?`<div class="hn">"${x(notes)}"</div>`:''}</div>`;
   }).join(''):`<div class="em" style="padding:28px 24px"><div class="icon">📋</div><p>No sessions logged yet.</p></div>`;
   g('dbody').innerHTML=`${heroH}<div class="dm"><h2>${x(m.name)}</h2>${m.musclesWorked?`<p class="mu">${x(m.musclesWorked)}</p>`:''}</div><button class="lb" onclick="startLog()">Log Today</button><div class="sh">HISTORY</div>${histH}`;

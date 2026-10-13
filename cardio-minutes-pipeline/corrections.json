@@ -1,0 +1,16 @@
+{
+  "_comment": "Hand corrections applied by build_cardio_buckets.py when it builds cardio-buckets.csv. Keyed by Garmin activity ID. keep = [from, to] inclusive minute window; set_hr = treat a minute range as a given HR (sensor misread); add = extra minutes at a given HR (watch paused). See the docstring in build_cardio_buckets.py.",
+  "24484914406": {
+    "note": "2026-09-24 Portofino treadmill. Watch under-read on the left wrist 12:42-12:59 during the 3.6 mph / 10% incline stretch (post-wrist-switch readings were ~125-135), and tracking was left running ~25 min after getting off.",
+    "keep": ["2026-09-24 12:42", "2026-09-24 13:21"],
+    "set_hr": [{ "from": "2026-09-24 12:42", "to": "2026-09-24 12:59", "hr": 127 }]
+  },
+  "24509403359": {
+    "note": "2026-09-26 Portofino Peloton ride. Watch left recording ~3 h after the ride; trimmed to the actual ride window 11:26 AM-12:04 PM.",
+    "keep": ["2026-09-26 11:26", "2026-09-26 12:04"]
+  },
+  "24609293314": {
+    "note": "2026-10-04 Miami Beach walk. Watch was paused ~10:05-10:14 PM while still walking; HR was 81-88 either side of the pause.",
+    "add": [{ "minutes": 9.4, "hr": 85 }]
+  }
+}
