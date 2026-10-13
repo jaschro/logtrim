@@ -1,7 +1,42 @@
 {
-  "fetchedAt": "2026-10-13T02:24:52Z",
+  "fetchedAt": "2026-10-13T03:55:27Z",
   "today": "2026-10-13",
   "recentActivities": [
+    {
+      "activityId": 24704044983,
+      "date": "2026-10-12",
+      "type": "walking",
+      "name": "Miami Beach Walking",
+      "durationMins": 63.7,
+      "distanceMiles": 3.36,
+      "avgHR": 88.0,
+      "maxHR": 111.0,
+      "calories": 348.0,
+      "elevationGain": 10.0,
+      "avgPace": 1.4149999618530273,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 3588.606
+        },
+        {
+          "zone": 2,
+          "secsInZone": 65.002
+        },
+        {
+          "zone": 3,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 4,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 5,
+          "secsInZone": 0.0
+        }
+      ]
+    },
     {
       "activityId": 24691924101,
       "date": "2026-10-11",
@@ -153,29 +188,7 @@
       "maxHR": 130.0,
       "calories": 197.0,
       "elevationGain": 10.0,
-      "avgPace": 1.5700000524520874,
-      "hrZones": [
-        {
-          "zone": 1,
-          "secsInZone": 62.733
-        },
-        {
-          "zone": 2,
-          "secsInZone": 1140.891
-        },
-        {
-          "zone": 3,
-          "secsInZone": 162.998
-        },
-        {
-          "zone": 4,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 5,
-          "secsInZone": 0.0
-        }
-      ]
+      "avgPace": 1.5700000524520874
     },
     {
       "activityId": 24632691281,
@@ -322,13 +335,13 @@
     }
   ],
   "todayStats": {
-    "steps": 4530,
-    "floors": 1.46293,
+    "steps": 14630,
+    "floors": 4.68274,
     "restingHR": 49,
-    "activeCalories": 78.0,
+    "activeCalories": 411.0,
     "bodyBattery": null,
-    "stressAvg": 35,
-    "weeklySteps": 82504
+    "stressAvg": 39,
+    "weeklySteps": 92604
   },
   "trainingReadiness": {
     "score": null,
@@ -340,7 +353,7 @@
     "fitnessAge": null
   },
   "intensityMinutes": {
-    "moderate": null,
+    "moderate": 62,
     "vigorous": null
   },
   "hrv": {
