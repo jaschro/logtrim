@@ -36,6 +36,27 @@
     "notes": ""
   },
   {
+    "machineId": "pa05",
+    "machine": "Treadmill",
+    "gym": "Portofino Gym",
+    "room": "Aerobic Room",
+    "date": "2026-10-13",
+    "datetime": "2026-10-13 10:07:00 AM",
+    "set": 1,
+    "weight": null,
+    "reps": null,
+    "duration": 31.0,
+    "level": 1.71,
+    "incline": null,
+    "hr": 120,
+    "notes": "Portofino treadmill session (Garmin 24709737707; 1.71 mi; 31.0 min). Karvonen zones from cardio-minutes (RHR 46 / max 168); warmup below Z1 counted in zone1.",
+    "zone1": 4.866666666666667,
+    "zone2": 26,
+    "zone3": null,
+    "zone4": null,
+    "zone5": null
+  },
+  {
     "machineId": "walk",
     "machine": "Walk",
     "gym": "Common Machines",
