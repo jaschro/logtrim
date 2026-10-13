@@ -1,103 +1,119 @@
 {
-  "generatedAt": "2026-09-20T15:23:45Z",
-  "coachNote": "Sun Sep 20 - Portofino. Cardio's done (31-min elliptical this morning - nice). Thursday covered chest/back/arms + hips/glutes, so today: shoulders, rear delts, hamstrings, and core. All knee-safe. Leg curls: light and controlled - stop if the knee complains.",
+  "generatedAt": "2026-10-13T01:42:49Z",
+  "coachNote": "Simple full-body at the new 5th Street. Nearly all machines are new, so set 1 everywhere is calibration: pick a weight that feels easy for 15, note what the machine reads, and we lock in real numbers next visit. Don't chase loads from the old equipment - different brands, different scales.",
   "exercises": [
     {
-      "machineId": "pm08",
-      "machine": "Seated Shoulder Press",
-      "gym": "Portofino Gym",
-      "room": "Weight Room",
+      "machineId": "m1791726427962",
+      "machine": "Chest Press",
+      "gym": "5th Street (New)",
+      "room": "5th Street (New)",
       "sets": [
         {
           "set": 1,
-          "weight": 35,
-          "reps": 12
-        },
-        {
-          "set": 2,
-          "weight": 45,
-          "reps": 10
-        },
-        {
-          "set": 3,
-          "weight": 55,
-          "reps": 10
-        }
-      ],
-      "note": "Same as Sep 12; if 55x10 feels solid, try 60x8 as a bonus set."
-    },
-    {
-      "machineId": "m1782480059048",
-      "machine": "Rear Deltoid",
-      "gym": "Portofino Gym",
-      "room": "Weight Room",
-      "sets": [
-        {
-          "set": 1,
-          "weight": 30,
-          "reps": 12
-        },
-        {
-          "set": 2,
-          "weight": 45,
-          "reps": 10
-        },
-        {
-          "set": 3,
-          "weight": 60,
-          "reps": 10
-        }
-      ],
-      "note": "Matches Sep 12. Squeeze and pause at the back."
-    },
-    {
-      "machineId": "pm06",
-      "machine": "Seated Leg Curl Machine",
-      "gym": "Portofino Gym",
-      "room": "Weight Room",
-      "sets": [
-        {
-          "set": 1,
-          "weight": 40,
           "reps": 15
         },
         {
           "set": 2,
-          "weight": 50,
-          "reps": 15
+          "reps": 12
         },
         {
           "set": 3,
-          "weight": 60,
-          "reps": 12
+          "reps": 10
         }
       ],
-      "note": "First time since Aug 8. Hamstrings only - knee-safe, but keep it smooth."
+      "note": "New machine - calibrate: easy 15, then add weight each set until 10 is honest work."
     },
     {
-      "machineId": "pw01",
-      "machine": "Assisted Pullup & Dip Machine",
-      "gym": "Portofino Gym",
-      "room": "Weight Room",
+      "machineId": "m1791727070548",
+      "machine": "Pull Down",
+      "gym": "5th Street (New)",
+      "room": "5th Street (New)",
       "sets": [
         {
           "set": 1,
-          "weight": -100,
-          "reps": 8
+          "weight": 15,
+          "reps": 15
         },
         {
           "set": 2,
-          "weight": -100,
-          "reps": 8
+          "weight": 20,
+          "reps": 12
+        },
+        {
+          "set": 3,
+          "weight": 25,
+          "reps": 10
         }
       ],
-      "note": "Pullups, 100 lbs assist like Aug 8. Drop to 90 assist if 2x8 is easy."
+      "note": "15 was easy for 20 reps on Sunday - step it up until 10-12 reps is challenging."
     },
     {
-      "machineId": "pm13",
-      "machine": "Seated Abdominal Crunch Machine",
-      "gym": "Portofino Gym",
-      "room": "Weight Room",
+      "machineId": "m1791726194462",
+      "machine": "Row",
+      "gym": "5th Street (New)",
+      "room": "5th Street (New)",
+      "sets": [
+        {
+          "set": 1,
+          "reps": 15
+        },
+        {
+          "set": 2,
+          "reps": 12
+        },
+        {
+          "set": 3,
+          "reps": 10
+        }
+      ],
+      "note": "Calibrate like the chest press. Squeeze shoulder blades at the back."
+    },
+    {
+      "machineId": "m1791726524534",
+      "machine": "Shoulder Press",
+      "gym": "5th Street (New)",
+      "room": "5th Street (New)",
+      "sets": [
+        {
+          "set": 1,
+          "weight": 15,
+          "reps": 12
+        },
+        {
+          "set": 2,
+          "weight": 20,
+          "reps": 10
+        },
+        {
+          "set": 3,
+          "weight": 20,
+          "reps": 10
+        }
+      ],
+      "note": "You did 15x15 Sunday, so nudge to 20 and see how it feels."
+    },
+    {
+      "machineId": "m1791726300768",
+      "machine": "Leg Press",
+      "gym": "5th Street (New)",
+      "room": "5th Street (New)",
+      "sets": [
+        {
+          "set": 1,
+          "reps": 15
+        },
+        {
+          "set": 2,
+          "reps": 12
+        }
+      ],
+      "note": "Light and controlled - first weighted leg press since the knee injury, so stay well shy of grinding. Stop if the knee says anything."
+    },
+    {
+      "machineId": "m1791726559972",
+      "machine": "Situp Bench",
+      "gym": "5th Street (New)",
+      "room": "5th Street (New)",
       "sets": [
         {
           "set": 1,
@@ -106,13 +122,9 @@
         {
           "set": 2,
           "reps": 20
-        },
-        {
-          "set": 3,
-          "reps": 15
         }
       ],
-      "note": "Machine crunches for variety - you've been on planks/leg lifts lately."
+      "note": "Core finisher - same as Sunday."
     }
   ]
 }
