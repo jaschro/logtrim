@@ -1,6 +1,6 @@
 {
-  "fetchedAt": "2026-10-12T20:54:26Z",
-  "today": "2026-10-12",
+  "fetchedAt": "2026-10-13T02:24:52Z",
+  "today": "2026-10-13",
   "recentActivities": [
     {
       "activityId": 24691924101,
@@ -319,19 +319,6 @@
       "calories": 140.0,
       "elevationGain": 10.0,
       "avgPace": 1.340999960899353
-    },
-    {
-      "activityId": 24536029655,
-      "date": "2026-09-28",
-      "type": "walking",
-      "name": "San Francisco Walking",
-      "durationMins": 106.3,
-      "distanceMiles": 4.85,
-      "avgHR": 88.0,
-      "maxHR": 123.0,
-      "calories": 552.0,
-      "elevationGain": 137.0,
-      "avgPace": 1.225000023841858
     }
   ],
   "todayStats": {
@@ -339,14 +326,14 @@
     "floors": 1.46293,
     "restingHR": 49,
     "activeCalories": 78.0,
-    "bodyBattery": 32,
+    "bodyBattery": null,
     "stressAvg": 35,
-    "weeklySteps": 95704
+    "weeklySteps": 82504
   },
   "trainingReadiness": {
-    "score": 59,
-    "level": "MODERATE",
-    "feedback": "LISTEN_TO_YOUR_BODY"
+    "score": null,
+    "level": null,
+    "feedback": null
   },
   "vo2max": {
     "vo2max": 41.0,
@@ -372,9 +359,9 @@
     "avgRespirationRate": 15.0,
     "avgSpO2": 94.0
   },
-  "spo2Avg": 93.0,
+  "spo2Avg": null,
   "respiration": {
-    "avgWaking": 16.0,
-    "avgSleep": 15.0
+    "avgWaking": null,
+    "avgSleep": null
   }
 }
