@@ -1,12 +1,132 @@
 {
-  "generatedAt": "2026-10-13T01:42:49Z",
-  "coachNote": "Simple full-body at the new 5th Street. Nearly all machines are new, so set 1 everywhere is calibration: pick a weight that feels easy for 15, note what the machine reads, and we lock in real numbers next visit. Don't chase loads from the old equipment - different brands, different scales.",
+  "generatedAt": "2026-10-14T15:45:38Z",
+  "coachNote": "Wed Oct 14 - Portofino lower body + core. Upper got plenty at 5th Street (Oct 11-12) and yesterday was a solid Z2 treadmill, so today: hamstrings (untouched since August!), hips, glutes, calves, abs. All knee-friendly. If you want cardio, 10 easy treadmill minutes to warm up is plenty.",
   "exercises": [
     {
-      "machineId": "m1791726427962",
-      "machine": "Chest Press",
-      "gym": "5th Street (New)",
-      "room": "5th Street (New)",
+      "machineId": "pm06",
+      "machine": "Seated Leg Curl Machine",
+      "gym": "Portofino Gym",
+      "room": "Weight Room",
+      "sets": [
+        {
+          "set": 1,
+          "weight": 40,
+          "reps": 15
+        },
+        {
+          "set": 2,
+          "weight": 50,
+          "reps": 15
+        },
+        {
+          "set": 3,
+          "weight": 60,
+          "reps": 12
+        }
+      ],
+      "note": "First hamstring work since Aug 8 - same loads as then. Smooth and controlled; the knee should feel nothing but it gets a vote."
+    },
+    {
+      "machineId": "pm11",
+      "machine": "Hip Abduction Machine",
+      "gym": "Portofino Gym",
+      "room": "Weight Room",
+      "sets": [
+        {
+          "set": 1,
+          "weight": 105,
+          "reps": 15
+        },
+        {
+          "set": 2,
+          "weight": 135,
+          "reps": 15
+        },
+        {
+          "set": 3,
+          "weight": 150,
+          "reps": 15
+        }
+      ],
+      "note": "Picking up where Sep 18 left off."
+    },
+    {
+      "machineId": "pm12",
+      "machine": "Hip Adduction Machine",
+      "gym": "Portofino Gym",
+      "room": "Weight Room",
+      "sets": [
+        {
+          "set": 1,
+          "weight": 95,
+          "reps": 15
+        },
+        {
+          "set": 2,
+          "weight": 125,
+          "reps": 15
+        },
+        {
+          "set": 3,
+          "weight": 155,
+          "reps": 12
+        }
+      ],
+      "note": "Same ladder as Sep 18; last set 155 only if form holds."
+    },
+    {
+      "machineId": "pm14",
+      "machine": "Glute Isolator",
+      "gym": "Portofino Gym",
+      "room": "Weight Room",
+      "sets": [
+        {
+          "set": 1,
+          "weight": 70,
+          "reps": 15
+        },
+        {
+          "set": 2,
+          "weight": 90,
+          "reps": 12
+        },
+        {
+          "set": 3,
+          "weight": 100,
+          "reps": 10
+        }
+      ],
+      "note": "Oct 4 was 70/90x10 - adding a 100 top set."
+    },
+    {
+      "machineId": "pw08",
+      "machine": "Plate-Loaded Seated Calf Raise",
+      "gym": "Portofino Gym",
+      "room": "Weight Room",
+      "sets": [
+        {
+          "set": 1,
+          "weight": 70,
+          "reps": 12
+        },
+        {
+          "set": 2,
+          "weight": 70,
+          "reps": 12
+        },
+        {
+          "set": 3,
+          "weight": 70,
+          "reps": 12
+        }
+      ],
+      "note": "Matching Oct 6 (70x10x3) with 12s. Full stretch at the bottom, pause at the top."
+    },
+    {
+      "machineId": "pm01",
+      "machine": "Adjustable Decline Abdominal Bench",
+      "gym": "Portofino Gym",
+      "room": "Weight Room",
       "sets": [
         {
           "set": 1,
@@ -14,117 +134,10 @@
         },
         {
           "set": 2,
-          "reps": 12
-        },
-        {
-          "set": 3,
-          "reps": 10
-        }
-      ],
-      "note": "New machine - calibrate: easy 15, then add weight each set until 10 is honest work."
-    },
-    {
-      "machineId": "m1791727070548",
-      "machine": "Pull Down",
-      "gym": "5th Street (New)",
-      "room": "5th Street (New)",
-      "sets": [
-        {
-          "set": 1,
-          "weight": 15,
           "reps": 15
-        },
-        {
-          "set": 2,
-          "weight": 20,
-          "reps": 12
-        },
-        {
-          "set": 3,
-          "weight": 25,
-          "reps": 10
         }
       ],
-      "note": "15 was easy for 20 reps on Sunday - step it up until 10-12 reps is challenging."
-    },
-    {
-      "machineId": "m1791726194462",
-      "machine": "Row",
-      "gym": "5th Street (New)",
-      "room": "5th Street (New)",
-      "sets": [
-        {
-          "set": 1,
-          "reps": 15
-        },
-        {
-          "set": 2,
-          "reps": 12
-        },
-        {
-          "set": 3,
-          "reps": 10
-        }
-      ],
-      "note": "Calibrate like the chest press. Squeeze shoulder blades at the back."
-    },
-    {
-      "machineId": "m1791726524534",
-      "machine": "Shoulder Press",
-      "gym": "5th Street (New)",
-      "room": "5th Street (New)",
-      "sets": [
-        {
-          "set": 1,
-          "weight": 15,
-          "reps": 12
-        },
-        {
-          "set": 2,
-          "weight": 20,
-          "reps": 10
-        },
-        {
-          "set": 3,
-          "weight": 20,
-          "reps": 10
-        }
-      ],
-      "note": "You did 15x15 Sunday, so nudge to 20 and see how it feels."
-    },
-    {
-      "machineId": "m1791726300768",
-      "machine": "Leg Press",
-      "gym": "5th Street (New)",
-      "room": "5th Street (New)",
-      "sets": [
-        {
-          "set": 1,
-          "reps": 15
-        },
-        {
-          "set": 2,
-          "reps": 12
-        }
-      ],
-      "note": "Light and controlled - first weighted leg press since the knee injury, so stay well shy of grinding. Stop if the knee says anything."
-    },
-    {
-      "machineId": "m1791726559972",
-      "machine": "Situp Bench",
-      "gym": "5th Street (New)",
-      "room": "5th Street (New)",
-      "sets": [
-        {
-          "set": 1,
-          "reps": 20
-        },
-        {
-          "set": 2,
-          "reps": 20
-        }
-      ],
-      "note": "Core finisher - same as Sunday."
+      "note": "Core finisher - up from 10s on Oct 4."
     }
   ]
 }
