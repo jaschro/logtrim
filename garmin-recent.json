@@ -1,6 +1,6 @@
 {
-  "fetchedAt": "2026-10-13T18:52:48Z",
-  "today": "2026-10-13",
+  "fetchedAt": "2026-10-14T00:08:42Z",
+  "today": "2026-10-14",
   "recentActivities": [
     {
       "activityId": 24709737707,
@@ -319,32 +319,6 @@
       "calories": 211.0,
       "elevationGain": 29.0,
       "avgPace": 1.4839999675750732
-    },
-    {
-      "activityId": 24548851961,
-      "date": "2026-09-29",
-      "type": "walking",
-      "name": "Burlingame Walking",
-      "durationMins": 19.7,
-      "distanceMiles": 1.03,
-      "avgHR": 83.0,
-      "maxHR": 93.0,
-      "calories": 107.0,
-      "elevationGain": 0.0,
-      "avgPace": 1.3990000486373901
-    },
-    {
-      "activityId": 24548851692,
-      "date": "2026-09-29",
-      "type": "walking",
-      "name": "San Mateo Walking",
-      "durationMins": 27.2,
-      "distanceMiles": 1.36,
-      "avgHR": 77.0,
-      "maxHR": 86.0,
-      "calories": 140.0,
-      "elevationGain": 10.0,
-      "avgPace": 1.340999960899353
     }
   ],
   "todayStats": {
@@ -352,14 +326,14 @@
     "floors": 0.0,
     "restingHR": 46,
     "activeCalories": 272.0,
-    "bodyBattery": 75,
+    "bodyBattery": null,
     "stressAvg": 19,
-    "weeklySteps": 97439
+    "weeklySteps": 84881
   },
   "trainingReadiness": {
-    "score": 53,
-    "level": "MODERATE",
-    "feedback": "LISTEN_TO_YOUR_BODY"
+    "score": null,
+    "level": null,
+    "feedback": null
   },
   "vo2max": {
     "vo2max": 41.0,
@@ -385,9 +359,9 @@
     "avgRespirationRate": 14.0,
     "avgSpO2": 96.0
   },
-  "spo2Avg": 95.0,
+  "spo2Avg": null,
   "respiration": {
-    "avgWaking": 16.0,
-    "avgSleep": 14.0
+    "avgWaking": null,
+    "avgSleep": null
   }
 }
