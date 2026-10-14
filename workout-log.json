@@ -540,6 +540,24 @@
     "notes": ""
   },
   {
+    "machineId": "pw06",
+    "machine": "Seated Leg Press Machine",
+    "gym": "Portofino Gym",
+    "gymId": "portofino",
+    "room": "Weight Room",
+    "roomId": "weights",
+    "date": "2026-10-14",
+    "datetime": "2026-10-14 01:13:29 PM",
+    "set": 1,
+    "weight": 55,
+    "reps": 30,
+    "duration": null,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
     "machineId": "elbow-planks",
     "machine": "Elbow Planks",
     "gym": "Common Machines",
