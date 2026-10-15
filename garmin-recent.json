@@ -1,7 +1,42 @@
 {
-  "fetchedAt": "2026-10-14T23:41:00Z",
-  "today": "2026-10-14",
+  "fetchedAt": "2026-10-15T03:13:42Z",
+  "today": "2026-10-15",
   "recentActivities": [
+    {
+      "activityId": 24728466445,
+      "date": "2026-10-14",
+      "type": "other",
+      "name": "Miami Beach Jog",
+      "durationMins": 23.5,
+      "distanceMiles": 1.61,
+      "avgHR": 122.0,
+      "maxHR": 146.0,
+      "calories": 240.0,
+      "elevationGain": 13.0,
+      "avgPace": 1.8300000429153442,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 25.813
+        },
+        {
+          "zone": 2,
+          "secsInZone": 306.334
+        },
+        {
+          "zone": 3,
+          "secsInZone": 1027.999
+        },
+        {
+          "zone": 4,
+          "secsInZone": 52.001
+        },
+        {
+          "zone": 5,
+          "secsInZone": 0.0
+        }
+      ]
+    },
     {
       "activityId": 24709737707,
       "date": "2026-10-13",
@@ -153,29 +188,7 @@
       "maxHR": 126.0,
       "calories": 159.0,
       "elevationGain": 14.0,
-      "avgPace": 1.843999981880188,
-      "hrZones": [
-        {
-          "zone": 1,
-          "secsInZone": 32.997
-        },
-        {
-          "zone": 2,
-          "secsInZone": 393.0
-        },
-        {
-          "zone": 3,
-          "secsInZone": 559.908
-        },
-        {
-          "zone": 4,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 5,
-          "secsInZone": 0.0
-        }
-      ]
+      "avgPace": 1.843999981880188
     },
     {
       "activityId": 24655815314,
@@ -306,42 +319,29 @@
       "calories": 480.0,
       "elevationGain": 28.0,
       "avgPace": 1.4220000505447388
-    },
-    {
-      "activityId": 24556197461,
-      "date": "2026-09-30",
-      "type": "walking",
-      "name": "San Mateo County Walking",
-      "durationMins": 32.9,
-      "distanceMiles": 1.82,
-      "avgHR": 86.0,
-      "maxHR": 120.0,
-      "calories": 211.0,
-      "elevationGain": 29.0,
-      "avgPace": 1.4839999675750732
     }
   ],
   "todayStats": {
-    "steps": 2783,
-    "floors": 0.0,
+    "steps": 10210,
+    "floors": 2.19521,
     "restingHR": 46,
-    "activeCalories": 42.0,
-    "bodyBattery": 61,
-    "stressAvg": 20,
-    "weeklySteps": 91528
+    "activeCalories": 354.0,
+    "bodyBattery": null,
+    "stressAvg": 25,
+    "weeklySteps": 86996
   },
   "trainingReadiness": {
-    "score": 67,
-    "level": "MODERATE",
-    "feedback": "LISTEN_TO_YOUR_BODY"
+    "score": null,
+    "level": null,
+    "feedback": null
   },
   "vo2max": {
     "vo2max": 41.0,
     "fitnessAge": null
   },
   "intensityMinutes": {
-    "moderate": 68,
-    "vigorous": 27
+    "moderate": 72,
+    "vigorous": 48
   },
   "hrv": {
     "weeklyAvg": 36,
@@ -359,9 +359,9 @@
     "avgRespirationRate": 14.0,
     "avgSpO2": 95.0
   },
-  "spo2Avg": 94.0,
+  "spo2Avg": null,
   "respiration": {
-    "avgWaking": 14.0,
-    "avgSleep": 14.0
+    "avgWaking": null,
+    "avgSleep": null
   }
 }
