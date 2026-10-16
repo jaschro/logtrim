@@ -1,5 +1,5 @@
 datetime,gym,room,machine,machineId,set,weight,reps,duration,level,incline,hr,notes,zone1,zone2,zone3,zone4,zone5
-2026-10-16 01:07:00 PM,Common Machines,Outdoor Activities,Walk,walk,1,,,27.883333333333333,1.82,,114,Los Angeles walk (Garmin 24747877721; 1.82 mi; +24 ft). Karvonen zones from cardio-minutes (RHR 46 / max 168); warmup below Z1 counted in zone1.,10.783333333333333,15,2,,
+2026-10-16 01:07:00 PM,Common Machines,Outdoor Activities,Run,run,1,,,27.883333333333333,1.82,,114,Los Angeles jog (Garmin 24747877721; started 10:07 AM Pacific; 1.82 mi; +24 ft). Karvonen zones from cardio-minutes (RHR 46 / max 168); warmup below Z1 counted in zone1. Recorded on the watch as a walk; relabeled as a jog per Jason.,10.783333333333333,15,2,,
 2026-10-14 12:25:10 PM,Portofino Gym,Machines Room,Hip Abduction Machine,pm11,1,105,15,,,,,,,,,,
 2026-10-14 12:25:10 PM,Portofino Gym,Machines Room,Hip Abduction Machine,pm11,2,135,15,,,,,,,,,,
 2026-10-14 12:25:10 PM,Portofino Gym,Machines Room,Hip Abduction Machine,pm11,3,150,15,,,,,,,,,,
