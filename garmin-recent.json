@@ -1,7 +1,42 @@
 {
-  "fetchedAt": "2026-10-16T16:05:27Z",
+  "fetchedAt": "2026-10-16T17:40:32Z",
   "today": "2026-10-16",
   "recentActivities": [
+    {
+      "activityId": 24747877721,
+      "date": "2026-10-16",
+      "type": "walking",
+      "name": "Los Angeles Walking",
+      "durationMins": 27.4,
+      "distanceMiles": 1.82,
+      "avgHR": 114.0,
+      "maxHR": 137.0,
+      "calories": 214.0,
+      "elevationGain": 24.0,
+      "avgPace": 1.784999966621399,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 226.009
+        },
+        {
+          "zone": 2,
+          "secsInZone": 373.704
+        },
+        {
+          "zone": 3,
+          "secsInZone": 927.015
+        },
+        {
+          "zone": 4,
+          "secsInZone": 78.0
+        },
+        {
+          "zone": 5,
+          "secsInZone": 0.0
+        }
+      ]
+    },
     {
       "activityId": 24728466445,
       "date": "2026-10-14",
@@ -153,29 +188,7 @@
       "maxHR": 138.0,
       "calories": 571.0,
       "elevationGain": 57.0,
-      "avgPace": 5.191999912261963,
-      "hrZones": [
-        {
-          "zone": 1,
-          "secsInZone": 576.156
-        },
-        {
-          "zone": 2,
-          "secsInZone": 2704.295
-        },
-        {
-          "zone": 3,
-          "secsInZone": 868.393
-        },
-        {
-          "zone": 4,
-          "secsInZone": 60.0
-        },
-        {
-          "zone": 5,
-          "secsInZone": 0.0
-        }
-      ]
+      "avgPace": 5.191999912261963
     },
     {
       "activityId": 24663794066,
@@ -309,16 +322,16 @@
     }
   ],
   "todayStats": {
-    "steps": null,
-    "floors": 0.0,
-    "restingHR": 48,
-    "activeCalories": 0.0,
-    "bodyBattery": 57,
+    "steps": 4627,
+    "floors": 8.0,
+    "restingHR": 45,
+    "activeCalories": 181.0,
+    "bodyBattery": 83,
     "stressAvg": 16,
-    "weeklySteps": 85667
+    "weeklySteps": 90294
   },
   "trainingReadiness": {
-    "score": 73,
+    "score": 53,
     "level": "MODERATE",
     "feedback": "LISTEN_TO_YOUR_BODY"
   },
@@ -327,28 +340,28 @@
     "fitnessAge": null
   },
   "intensityMinutes": {
-    "moderate": 72,
-    "vigorous": 48
+    "moderate": 83,
+    "vigorous": 64
   },
   "hrv": {
-    "weeklyAvg": 38,
+    "weeklyAvg": 39,
     "lastNight": null,
     "status": "UNBALANCED"
   },
   "sleep": {
-    "date": "2026-10-15",
-    "durationHours": 7.3,
-    "score": 88,
-    "deepSleepMins": 66,
-    "lightSleepMins": 252,
+    "date": "2026-10-16",
+    "durationHours": 9.5,
+    "score": 71,
+    "deepSleepMins": 96,
+    "lightSleepMins": 354,
     "remSleepMins": 119,
-    "awakeMins": 1,
+    "awakeMins": 55,
     "avgRespirationRate": 15.0,
-    "avgSpO2": 96.0
+    "avgSpO2": 97.0
   },
-  "spo2Avg": 94.0,
+  "spo2Avg": 96.0,
   "respiration": {
-    "avgWaking": 15.0,
-    "avgSleep": 11.0
+    "avgWaking": 13.0,
+    "avgSleep": 15.0
   }
 }
