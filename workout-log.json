@@ -129,6 +129,24 @@
     "notes": ""
   },
   {
+    "machineId": "walk",
+    "machine": "Walk",
+    "gym": "Common Machines",
+    "gymId": "generic",
+    "room": "Outdoor Activities",
+    "roomId": "outdoor-activities",
+    "date": "2026-10-15",
+    "datetime": "2026-10-15 01:23:12 PM",
+    "set": 1,
+    "weight": null,
+    "reps": null,
+    "duration": 30,
+    "level": 1.7,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
     "machineId": "pm11",
     "machine": "Hip Abduction Machine",
     "gym": "Portofino Gym",
