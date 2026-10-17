@@ -1,5 +1,26 @@
 [
   {
+    "machineId": "walk",
+    "machine": "Walk",
+    "gym": "Common Machines",
+    "room": "Outdoor Activities",
+    "date": "2026-10-17",
+    "datetime": "2026-10-17 01:37:00 PM",
+    "set": 1,
+    "weight": null,
+    "reps": null,
+    "duration": 51.95,
+    "level": 2.68,
+    "incline": null,
+    "hr": 82,
+    "notes": "Santa Monica walk (Garmin 24760027077; 2.68 mi; +28 ft). All Zone 1 - max minute HR ~91 (Karvonen RHR 46 / max 168).",
+    "zone1": 51.95,
+    "zone2": null,
+    "zone3": null,
+    "zone4": null,
+    "zone5": null
+  },
+  {
     "machineId": "run",
     "machine": "Run",
     "gym": "Common Machines",
