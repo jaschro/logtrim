@@ -1,7 +1,42 @@
 {
-  "fetchedAt": "2026-10-17T17:48:31Z",
+  "fetchedAt": "2026-10-17T18:36:38Z",
   "today": "2026-10-17",
   "recentActivities": [
+    {
+      "activityId": 24760027077,
+      "date": "2026-10-17",
+      "type": "walking",
+      "name": "Santa Monica Walking",
+      "durationMins": 51.8,
+      "distanceMiles": 2.68,
+      "avgHR": 82.0,
+      "maxHR": 95.0,
+      "calories": 277.0,
+      "elevationGain": 28.0,
+      "avgPace": 1.389000058174133,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 1188.963
+        },
+        {
+          "zone": 2,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 3,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 4,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 5,
+          "secsInZone": 0.0
+        }
+      ]
+    },
     {
       "activityId": 24747877721,
       "date": "2026-10-16",
@@ -153,29 +188,7 @@
       "maxHR": 145.0,
       "calories": 139.0,
       "elevationGain": 3.0,
-      "avgPace": 2.1040000915527344,
-      "hrZones": [
-        {
-          "zone": 1,
-          "secsInZone": 19.008
-        },
-        {
-          "zone": 2,
-          "secsInZone": 69.01
-        },
-        {
-          "zone": 3,
-          "secsInZone": 246.988
-        },
-        {
-          "zone": 4,
-          "secsInZone": 540.985
-        },
-        {
-          "zone": 5,
-          "secsInZone": 0.0
-        }
-      ]
+      "avgPace": 2.1040000915527344
     },
     {
       "activityId": 24679288003,
@@ -296,16 +309,16 @@
     }
   ],
   "todayStats": {
-    "steps": 238,
-    "floors": 0.0,
+    "steps": 9379,
+    "floors": 10.13714,
     "restingHR": 45,
-    "activeCalories": 1.0,
-    "bodyBattery": 90,
-    "stressAvg": 16,
-    "weeklySteps": 81212
+    "activeCalories": 293.0,
+    "bodyBattery": 75,
+    "stressAvg": 17,
+    "weeklySteps": 90353
   },
   "trainingReadiness": {
-    "score": 62,
+    "score": 58,
     "level": "MODERATE",
     "feedback": "LISTEN_TO_YOUR_BODY"
   },
@@ -314,7 +327,7 @@
     "fitnessAge": null
   },
   "intensityMinutes": {
-    "moderate": 83,
+    "moderate": 135,
     "vigorous": 64
   },
   "hrv": {
