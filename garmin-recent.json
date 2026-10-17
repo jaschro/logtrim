@@ -1,6 +1,6 @@
 {
-  "fetchedAt": "2026-10-16T23:14:37Z",
-  "today": "2026-10-16",
+  "fetchedAt": "2026-10-17T03:00:54Z",
+  "today": "2026-10-17",
   "recentActivities": [
     {
       "activityId": 24747877721,
@@ -293,32 +293,6 @@
       "calories": 208.0,
       "elevationGain": 14.0,
       "avgPace": 1.4980000257492065
-    },
-    {
-      "activityId": 24584827772,
-      "date": "2026-10-02",
-      "type": "walking",
-      "name": "Miami Beach Walking",
-      "durationMins": 39.6,
-      "distanceMiles": 2.22,
-      "avgHR": 94.0,
-      "maxHR": 110.0,
-      "calories": 235.0,
-      "elevationGain": 18.0,
-      "avgPace": 1.503000020980835
-    },
-    {
-      "activityId": 24579675835,
-      "date": "2026-10-02",
-      "type": "treadmill_running",
-      "name": "Treadmill Running",
-      "durationMins": 32.0,
-      "distanceMiles": 1.7,
-      "avgHR": 108.0,
-      "maxHR": 130.0,
-      "calories": 257.0,
-      "elevationGain": null,
-      "avgPace": 1.4199999570846558
     }
   ],
   "todayStats": {
@@ -326,14 +300,14 @@
     "floors": 10.13681,
     "restingHR": 45,
     "activeCalories": 201.0,
-    "bodyBattery": 51,
+    "bodyBattery": null,
     "stressAvg": 27,
-    "weeklySteps": 91485
+    "weeklySteps": 75625
   },
   "trainingReadiness": {
-    "score": 53,
-    "level": "MODERATE",
-    "feedback": "LISTEN_TO_YOUR_BODY"
+    "score": null,
+    "level": null,
+    "feedback": null
   },
   "vo2max": {
     "vo2max": 41.0,
@@ -359,9 +333,9 @@
     "avgRespirationRate": 15.0,
     "avgSpO2": 97.0
   },
-  "spo2Avg": 96.0,
+  "spo2Avg": null,
   "respiration": {
-    "avgWaking": 16.0,
-    "avgSleep": 15.0
+    "avgWaking": null,
+    "avgSleep": null
   }
 }
