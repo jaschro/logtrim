@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-21T03:20:48Z",
+  "fetchedAt": "2026-10-21T11:10:47Z",
   "today": "2026-10-21",
   "recentActivities": [
     {
@@ -257,18 +257,18 @@
     }
   ],
   "todayStats": {
-    "steps": 2384,
+    "steps": 387,
     "floors": 0.0,
-    "restingHR": 45,
-    "activeCalories": 47.0,
-    "bodyBattery": null,
-    "stressAvg": 25,
-    "weeklySteps": 67580
+    "restingHR": 50,
+    "activeCalories": 2.0,
+    "bodyBattery": 34,
+    "stressAvg": 21,
+    "weeklySteps": 69893
   },
   "trainingReadiness": {
-    "score": null,
-    "level": null,
-    "feedback": null
+    "score": 94,
+    "level": "HIGH",
+    "feedback": "WELL_RECOVERED"
   },
   "vo2max": {
     "vo2max": 41.0,
@@ -294,9 +294,9 @@
     "avgRespirationRate": 14.0,
     "avgSpO2": 93.0
   },
-  "spo2Avg": null,
+  "spo2Avg": 95.0,
   "respiration": {
-    "avgWaking": null,
-    "avgSleep": null
+    "avgWaking": 14.0,
+    "avgSleep": 8.0
   }
 }
