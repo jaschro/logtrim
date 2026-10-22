@@ -1,7 +1,42 @@
 {
-  "fetchedAt": "2026-10-22T16:38:29Z",
+  "fetchedAt": "2026-10-22T17:39:30Z",
   "today": "2026-10-22",
   "recentActivities": [
+    {
+      "activityId": 24817154275,
+      "date": "2026-10-22",
+      "type": "other",
+      "name": "New York Jog",
+      "durationMins": 19.2,
+      "distanceMiles": 1.75,
+      "avgHR": 137.0,
+      "maxHR": 159.0,
+      "calories": 230.0,
+      "elevationGain": 17.0,
+      "avgPace": 2.440999984741211,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 20.159
+        },
+        {
+          "zone": 2,
+          "secsInZone": 29.006
+        },
+        {
+          "zone": 3,
+          "secsInZone": 325.999
+        },
+        {
+          "zone": 4,
+          "secsInZone": 625.995
+        },
+        {
+          "zone": 5,
+          "secsInZone": 149.898
+        }
+      ]
+    },
     {
       "activityId": 24816234164,
       "date": "2026-10-22",
@@ -153,29 +188,7 @@
       "maxHR": 137.0,
       "calories": 214.0,
       "elevationGain": 24.0,
-      "avgPace": 1.784999966621399,
-      "hrZones": [
-        {
-          "zone": 1,
-          "secsInZone": 226.009
-        },
-        {
-          "zone": 2,
-          "secsInZone": 373.704
-        },
-        {
-          "zone": 3,
-          "secsInZone": 927.015
-        },
-        {
-          "zone": 4,
-          "secsInZone": 78.0
-        },
-        {
-          "zone": 5,
-          "secsInZone": 0.0
-        }
-      ]
+      "avgPace": 1.784999966621399
     },
     {
       "activityId": 24728466445,
@@ -270,26 +283,26 @@
     }
   ],
   "todayStats": {
-    "steps": 1118,
-    "floors": 0.0,
+    "steps": 10528,
+    "floors": 5.58727,
     "restingHR": 48,
-    "activeCalories": 15.0,
-    "bodyBattery": 90,
-    "stressAvg": 16,
-    "weeklySteps": 72756
+    "activeCalories": 471.0,
+    "bodyBattery": 62,
+    "stressAvg": 19,
+    "weeklySteps": 82166
   },
   "trainingReadiness": {
-    "score": 91,
-    "level": "HIGH",
-    "feedback": "WELL_RECOVERED"
+    "score": 71,
+    "level": "MODERATE",
+    "feedback": "RECOVERY_IN_PROGRESS"
   },
   "vo2max": {
     "vo2max": 42.0,
     "fitnessAge": null
   },
   "intensityMinutes": {
-    "moderate": 35,
-    "vigorous": 17
+    "moderate": 71,
+    "vigorous": 38
   },
   "hrv": {
     "weeklyAvg": 48,
