@@ -1,6 +1,6 @@
 {
-  "fetchedAt": "2026-10-23T23:49:06Z",
-  "today": "2026-10-23",
+  "fetchedAt": "2026-10-24T03:18:45Z",
+  "today": "2026-10-24",
   "recentActivities": [
     {
       "activityId": 24829567790,
@@ -267,19 +267,6 @@
       "calories": 571.0,
       "elevationGain": 57.0,
       "avgPace": 5.191999912261963
-    },
-    {
-      "activityId": 24663794066,
-      "date": "2026-10-09",
-      "type": "other",
-      "name": "Miami Beach Jog",
-      "durationMins": 16.7,
-      "distanceMiles": 1.15,
-      "avgHR": 115.0,
-      "maxHR": 126.0,
-      "calories": 159.0,
-      "elevationGain": 14.0,
-      "avgPace": 1.843999981880188
     }
   ],
   "todayStats": {
@@ -287,14 +274,14 @@
     "floors": 7.06693,
     "restingHR": 45,
     "activeCalories": 437.0,
-    "bodyBattery": 34,
+    "bodyBattery": null,
     "stressAvg": 30,
-    "weeklySteps": 93311
+    "weeklySteps": 82144
   },
   "trainingReadiness": {
-    "score": 77,
-    "level": "HIGH",
-    "feedback": "WELL_RECOVERED"
+    "score": null,
+    "level": null,
+    "feedback": null
   },
   "vo2max": {
     "vo2max": 42.0,
@@ -320,9 +307,9 @@
     "avgRespirationRate": 14.0,
     "avgSpO2": 97.0
   },
-  "spo2Avg": 96.0,
+  "spo2Avg": null,
   "respiration": {
-    "avgWaking": 17.0,
-    "avgSleep": 14.0
+    "avgWaking": null,
+    "avgSleep": null
   }
 }
