@@ -1,7 +1,42 @@
 {
-  "fetchedAt": "2026-10-24T20:13:39Z",
+  "fetchedAt": "2026-10-24T22:53:15Z",
   "today": "2026-10-24",
   "recentActivities": [
+    {
+      "activityId": 24840388908,
+      "date": "2026-10-24",
+      "type": "walking",
+      "name": "Miami Beach Walking",
+      "durationMins": 33.3,
+      "distanceMiles": 1.82,
+      "avgHR": 93.0,
+      "maxHR": 102.0,
+      "calories": 190.0,
+      "elevationGain": 13.0,
+      "avgPace": 1.4700000286102295,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 1835.638
+        },
+        {
+          "zone": 2,
+          "secsInZone": 144.0
+        },
+        {
+          "zone": 3,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 4,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 5,
+          "secsInZone": 0.0
+        }
+      ]
+    },
     {
       "activityId": 24829567790,
       "date": "2026-10-23",
@@ -153,29 +188,7 @@
       "maxHR": 116.0,
       "calories": 190.0,
       "elevationGain": 36.0,
-      "avgPace": 1.4900000095367432,
-      "hrZones": [
-        {
-          "zone": 1,
-          "secsInZone": 1510.848
-        },
-        {
-          "zone": 2,
-          "secsInZone": 145.0
-        },
-        {
-          "zone": 3,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 4,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 5,
-          "secsInZone": 0.0
-        }
-      ]
+      "avgPace": 1.4900000095367432
     },
     {
       "activityId": 24760027077,
