@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-25T10:43:57Z",
+  "fetchedAt": "2026-10-25T15:33:28Z",
   "today": "2026-10-25",
   "recentActivities": [
     {
@@ -270,18 +270,18 @@
     }
   ],
   "todayStats": {
-    "steps": 452,
+    "steps": 647,
     "floors": 0.0,
-    "restingHR": 49,
-    "activeCalories": 3.0,
-    "bodyBattery": 21,
-    "stressAvg": 36,
-    "weeklySteps": 86656
+    "restingHR": 45,
+    "activeCalories": 4.0,
+    "bodyBattery": 85,
+    "stressAvg": 18,
+    "weeklySteps": 86851
   },
   "trainingReadiness": {
-    "score": null,
-    "level": null,
-    "feedback": null
+    "score": 82,
+    "level": "HIGH",
+    "feedback": "WELL_RECOVERED"
   },
   "vo2max": {
     "vo2max": 42.0,
@@ -297,19 +297,19 @@
     "status": "BALANCED"
   },
   "sleep": {
-    "date": "2026-10-24",
-    "durationHours": 7.0,
-    "score": 84,
-    "deepSleepMins": 129,
-    "lightSleepMins": 164,
-    "remSleepMins": 126,
-    "awakeMins": 6,
+    "date": "2026-10-25",
+    "durationHours": 7.4,
+    "score": 90,
+    "deepSleepMins": 111,
+    "lightSleepMins": 225,
+    "remSleepMins": 110,
+    "awakeMins": 0,
     "avgRespirationRate": 14.0,
-    "avgSpO2": 97.0
+    "avgSpO2": 95.0
   },
-  "spo2Avg": 97.0,
+  "spo2Avg": 95.0,
   "respiration": {
-    "avgWaking": 13.0,
-    "avgSleep": 8.0
+    "avgWaking": 14.0,
+    "avgSleep": 14.0
   }
 }
