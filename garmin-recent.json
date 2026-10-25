@@ -1,7 +1,42 @@
 {
-  "fetchedAt": "2026-10-25T15:33:28Z",
+  "fetchedAt": "2026-10-25T16:17:49Z",
   "today": "2026-10-25",
   "recentActivities": [
+    {
+      "activityId": 24849017969,
+      "date": "2026-10-25",
+      "type": "walking",
+      "name": "Walking",
+      "durationMins": 33.2,
+      "distanceMiles": 1.72,
+      "avgHR": 119.0,
+      "maxHR": 133.0,
+      "calories": 242.0,
+      "elevationGain": 5.0,
+      "avgPace": 1.3869999647140503,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 174.447
+        },
+        {
+          "zone": 2,
+          "secsInZone": 331.003
+        },
+        {
+          "zone": 3,
+          "secsInZone": 1485.992
+        },
+        {
+          "zone": 4,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 5,
+          "secsInZone": 0.0
+        }
+      ]
+    },
     {
       "activityId": 24840388908,
       "date": "2026-10-24",
@@ -153,29 +188,7 @@
       "maxHR": 142.0,
       "calories": 192.0,
       "elevationGain": 26.0,
-      "avgPace": 2.4100000858306885,
-      "hrZones": [
-        {
-          "zone": 1,
-          "secsInZone": 76.0
-        },
-        {
-          "zone": 2,
-          "secsInZone": 245.998
-        },
-        {
-          "zone": 3,
-          "secsInZone": 533.005
-        },
-        {
-          "zone": 4,
-          "secsInZone": 272.77
-        },
-        {
-          "zone": 5,
-          "secsInZone": 0.0
-        }
-      ]
+      "avgPace": 2.4100000858306885
     },
     {
       "activityId": 24781304985,
@@ -279,12 +292,12 @@
     "weeklySteps": 86851
   },
   "trainingReadiness": {
-    "score": 82,
-    "level": "HIGH",
-    "feedback": "WELL_RECOVERED"
+    "score": 74,
+    "level": "MODERATE",
+    "feedback": "RECOVERED_AND_READY"
   },
   "vo2max": {
-    "vo2max": 42.0,
+    "vo2max": 41.0,
     "fitnessAge": null
   },
   "intensityMinutes": {
