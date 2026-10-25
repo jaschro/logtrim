@@ -1,93 +1,21 @@
 {
-  "generatedAt": "2026-10-14T15:45:38Z",
-  "coachNote": "Wed Oct 14 - Portofino lower body + core. Upper got plenty at 5th Street (Oct 11-12) and yesterday was a solid Z2 treadmill, so today: hamstrings (untouched since August!), hips, glutes, calves, abs. All knee-friendly. If you want cardio, 10 easy treadmill minutes to warm up is plenty.",
+  "generatedAt": "2026-10-25T15:16:59Z",
+  "coachNote": "Sun Oct 25 - Portofino upper body, back on the machines after 10 days of travel bodyweight work. You've banked a LOT of push-ups lately, so this leans pulling and shoulders. Legs got their day Oct 14 and the runs since - they rest. Cardio optional: you earned an easy one after Thursday's Z4/Z5 session.",
   "exercises": [
     {
-      "machineId": "pm06",
-      "machine": "Seated Leg Curl Machine",
+      "machineId": "pm02",
+      "machine": "Seated Row Machine",
       "gym": "Portofino Gym",
       "room": "Weight Room",
       "sets": [
         {
           "set": 1,
-          "weight": 40,
-          "reps": 15
-        },
-        {
-          "set": 2,
-          "weight": 50,
-          "reps": 15
-        },
-        {
-          "set": 3,
           "weight": 60,
-          "reps": 12
-        }
-      ],
-      "note": "First hamstring work since Aug 8 - same loads as then. Smooth and controlled; the knee should feel nothing but it gets a vote."
-    },
-    {
-      "machineId": "pm11",
-      "machine": "Hip Abduction Machine",
-      "gym": "Portofino Gym",
-      "room": "Weight Room",
-      "sets": [
-        {
-          "set": 1,
-          "weight": 105,
           "reps": 15
         },
         {
           "set": 2,
-          "weight": 135,
-          "reps": 15
-        },
-        {
-          "set": 3,
-          "weight": 150,
-          "reps": 15
-        }
-      ],
-      "note": "Picking up where Sep 18 left off."
-    },
-    {
-      "machineId": "pm12",
-      "machine": "Hip Adduction Machine",
-      "gym": "Portofino Gym",
-      "room": "Weight Room",
-      "sets": [
-        {
-          "set": 1,
-          "weight": 95,
-          "reps": 15
-        },
-        {
-          "set": 2,
-          "weight": 125,
-          "reps": 15
-        },
-        {
-          "set": 3,
-          "weight": 155,
-          "reps": 12
-        }
-      ],
-      "note": "Same ladder as Sep 18; last set 155 only if form holds."
-    },
-    {
-      "machineId": "pm14",
-      "machine": "Glute Isolator",
-      "gym": "Portofino Gym",
-      "room": "Weight Room",
-      "sets": [
-        {
-          "set": 1,
-          "weight": 70,
-          "reps": 15
-        },
-        {
-          "set": 2,
-          "weight": 90,
+          "weight": 80,
           "reps": 12
         },
         {
@@ -96,48 +24,127 @@
           "reps": 10
         }
       ],
-      "note": "Oct 4 was 70/90x10 - adding a 100 top set."
+      "note": "Back to the Sep 18 ladder - first rows here in 3 weeks."
     },
     {
-      "machineId": "pw08",
-      "machine": "Plate-Loaded Seated Calf Raise",
+      "machineId": "pm08",
+      "machine": "Seated Shoulder Press",
       "gym": "Portofino Gym",
       "room": "Weight Room",
       "sets": [
         {
           "set": 1,
-          "weight": 70,
+          "weight": 35,
           "reps": 12
         },
         {
           "set": 2,
-          "weight": 70,
+          "weight": 45,
+          "reps": 10
+        },
+        {
+          "set": 3,
+          "weight": 55,
+          "reps": 10
+        }
+      ],
+      "note": "Same loads as last time; 60x8 bonus set if 55 moves well."
+    },
+    {
+      "machineId": "m1782480059048",
+      "machine": "Rear Deltoid",
+      "gym": "Portofino Gym",
+      "room": "Weight Room",
+      "sets": [
+        {
+          "set": 1,
+          "weight": 35,
+          "reps": 15
+        },
+        {
+          "set": 2,
+          "weight": 55,
           "reps": 12
         },
         {
           "set": 3,
-          "weight": 70,
-          "reps": 12
+          "weight": 65,
+          "reps": 10
         }
       ],
-      "note": "Matching Oct 6 (70x10x3) with 12s. Full stretch at the bottom, pause at the top."
+      "note": "Oct 4 was 35/55x15 - adding a 65 top set. Pause at the back."
     },
     {
-      "machineId": "pm01",
-      "machine": "Adjustable Decline Abdominal Bench",
+      "machineId": "pm04",
+      "machine": "Pec Fly",
       "gym": "Portofino Gym",
       "room": "Weight Room",
       "sets": [
         {
           "set": 1,
+          "weight": 60,
+          "reps": 12
+        },
+        {
+          "set": 2,
+          "weight": 80,
+          "reps": 12
+        },
+        {
+          "set": 3,
+          "weight": 90,
+          "reps": 10
+        }
+      ],
+      "note": "The one press-pattern machine today, since push-ups have chest covered."
+    },
+    {
+      "machineId": "pw04",
+      "machine": "Seated Preacher Curl Bench",
+      "gym": "Portofino Gym",
+      "room": "Weight Room",
+      "sets": [
+        {
+          "set": 1,
+          "weight": 20,
+          "reps": 12
+        },
+        {
+          "set": 2,
+          "weight": 30,
+          "reps": 10
+        },
+        {
+          "set": 3,
+          "weight": 30,
+          "reps": 10
+        }
+      ],
+      "note": "Third set is new - last time was 2 sets."
+    },
+    {
+      "machineId": "overhead-tricep-extension",
+      "machine": "Overhead Tricep Extension",
+      "gym": "Common Machines",
+      "room": "Free Weights",
+      "sets": [
+        {
+          "set": 1,
+          "weight": 30,
           "reps": 15
         },
         {
           "set": 2,
-          "reps": 15
+          "weight": 35,
+          "reps": 12
+        },
+        {
+          "set": 3,
+          "weight": 40,
+          "reps": 10
         }
       ],
-      "note": "Core finisher - up from 10s on Oct 4."
+      "note": "Matching Sep 18's ladder."
     }
   ]
 }
