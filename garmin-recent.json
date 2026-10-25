@@ -1,6 +1,6 @@
 {
-  "fetchedAt": "2026-10-24T22:53:15Z",
-  "today": "2026-10-24",
+  "fetchedAt": "2026-10-25T03:13:59Z",
+  "today": "2026-10-25",
   "recentActivities": [
     {
       "activityId": 24840388908,
@@ -267,41 +267,28 @@
       "calories": 139.0,
       "elevationGain": 3.0,
       "avgPace": 2.1040000915527344
-    },
-    {
-      "activityId": 24679288003,
-      "date": "2026-10-10",
-      "type": "cycling",
-      "name": "Miami Beach Cycling",
-      "durationMins": 70.3,
-      "distanceMiles": 13.61,
-      "avgHR": 110.0,
-      "maxHR": 138.0,
-      "calories": 571.0,
-      "elevationGain": 57.0,
-      "avgPace": 5.191999912261963
     }
   ],
   "todayStats": {
-    "steps": 5080,
-    "floors": 0.6542,
+    "steps": 12973,
+    "floors": 5.48491,
     "restingHR": 45,
-    "activeCalories": 58.0,
-    "bodyBattery": 51,
-    "stressAvg": 24,
-    "weeklySteps": 88672
+    "activeCalories": 310.0,
+    "bodyBattery": null,
+    "stressAvg": 27,
+    "weeklySteps": 83426
   },
   "trainingReadiness": {
-    "score": 79,
-    "level": "HIGH",
-    "feedback": "WELL_RECOVERED"
+    "score": null,
+    "level": null,
+    "feedback": null
   },
   "vo2max": {
     "vo2max": 42.0,
     "fitnessAge": null
   },
   "intensityMinutes": {
-    "moderate": 108,
+    "moderate": 142,
     "vigorous": 38
   },
   "hrv": {
@@ -320,9 +307,9 @@
     "avgRespirationRate": 14.0,
     "avgSpO2": 97.0
   },
-  "spo2Avg": 97.0,
+  "spo2Avg": null,
   "respiration": {
-    "avgWaking": 14.0,
-    "avgSleep": 14.0
+    "avgWaking": null,
+    "avgSleep": null
   }
 }
