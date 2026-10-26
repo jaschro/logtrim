@@ -1,6 +1,6 @@
 {
-  "fetchedAt": "2026-10-25T23:00:38Z",
-  "today": "2026-10-25",
+  "fetchedAt": "2026-10-26T03:14:48Z",
+  "today": "2026-10-26",
   "recentActivities": [
     {
       "activityId": 24849017969,
@@ -267,42 +267,29 @@
       "calories": 348.0,
       "elevationGain": 10.0,
       "avgPace": 1.4149999618530273
-    },
-    {
-      "activityId": 24691924101,
-      "date": "2026-10-11",
-      "type": "walking",
-      "name": "Miami Beach Walking",
-      "durationMins": 14.6,
-      "distanceMiles": 1.15,
-      "avgHR": 132.0,
-      "maxHR": 145.0,
-      "calories": 139.0,
-      "elevationGain": 3.0,
-      "avgPace": 2.1040000915527344
     }
   ],
   "todayStats": {
-    "steps": 9367,
-    "floors": 3.0,
+    "steps": 11377,
+    "floors": 5.37238,
     "restingHR": 45,
-    "activeCalories": 306.0,
-    "bodyBattery": 46,
-    "stressAvg": 27,
-    "weeklySteps": 95571
+    "activeCalories": 352.0,
+    "bodyBattery": null,
+    "stressAvg": 31,
+    "weeklySteps": 85473
   },
   "trainingReadiness": {
-    "score": 75,
-    "level": "HIGH",
-    "feedback": "RESTED_AND_READY"
+    "score": null,
+    "level": null,
+    "feedback": null
   },
   "vo2max": {
     "vo2max": 41.0,
     "fitnessAge": null
   },
   "intensityMinutes": {
-    "moderate": 170,
-    "vigorous": 46
+    "moderate": null,
+    "vigorous": null
   },
   "hrv": {
     "weeklyAvg": 46,
@@ -320,9 +307,9 @@
     "avgRespirationRate": 14.0,
     "avgSpO2": 95.0
   },
-  "spo2Avg": 95.0,
+  "spo2Avg": null,
   "respiration": {
-    "avgWaking": 16.0,
-    "avgSleep": 14.0
+    "avgWaking": null,
+    "avgSleep": null
   }
 }
