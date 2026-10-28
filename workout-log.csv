@@ -7,6 +7,7 @@ datetime,gym,room,machine,machineId,set,weight,reps,duration,level,incline,hr,no
 2026-10-28 11:09:22 AM,Common Machines,Bodyweight — No Equipment,Squats,squats,2,,20,,,,,,,,,,
 2026-10-28 12:13:29 PM,Common Machines,Bodyweight — No Equipment,Leg Lifts,leg-lifts,1,,20,,,,,,,,,,
 2026-10-28 12:13:29 PM,Common Machines,Bodyweight — No Equipment,Leg Lifts,leg-lifts,2,,15,,,,,,,,,,
+2026-10-28 12:34:21 PM,Common Machines,Bodyweight — No Equipment,Elbow Planks,elbow-planks,1,,,45,,,,,,,,,
 2026-10-26 09:54:00 AM,Common Machines,Outdoor Activities,Walk,walk,1,,,36.266666666666666,,,79,Walk (Garmin 24857735309). All Zone 1 - max minute HR ~89 (Karvonen RHR 46 / max 168).,36.26666666666666,,,,
 2026-10-26 02:25:00 PM,Common Machines,Outdoor Activities,Walk,walk,1,,,75.05,3.81,,88,Miami Beach walk (Garmin 24862187437; 3.81 mi; +65 ft). All Zone 1 - max minute HR ~102 (Karvonen RHR 46 / max 168).,74.98333333333333,,,,
 2026-10-25 11:35:00 AM,Portofino Gym,Aerobic Room,Treadmill,pa05,1,,,35.666666666666664,1.72,,119,Portofino treadmill walk (Garmin 24849017969; 1.72 mi; 33.2 min). Karvonen zones from cardio-minutes (RHR 46 / max 168); warmup below Z1 counted in zone1. Auto-posted as an outdoor walk; relabeled to the treadmill per Jason.,10.666666666666666,25,,,
