@@ -1,11 +1,13 @@
 datetime,gym,room,machine,machineId,set,weight,reps,duration,level,incline,hr,notes,zone1,zone2,zone3,zone4,zone5
-2026-10-29 11:44:32 AM,Common Machines,Bodyweight — No Equipment,Push Ups,push-ups,1,,30,,,,,,,,,,
 2026-10-29 11:44:48 AM,Common Machines,Bodyweight — No Equipment,Elbow Planks,elbow-planks,1,,,60,,,,,,,,,
 2026-10-29 11:47:43 AM,Common Machines,Bodyweight — No Equipment,Bridges,bridges,1,,25,,,,,,,,,,
 2026-10-29 11:48:32 AM,Common Machines,Bodyweight — No Equipment,Leg Lifts,leg-lifts,1,,20,,,,,,,,,,
 2026-10-29 11:48:32 AM,Common Machines,Bodyweight — No Equipment,Leg Lifts,leg-lifts,2,,15,,,,,,,,,,
 2026-10-29 11:49:54 AM,Common Machines,Bodyweight — No Equipment,Squats,squats,1,,10,,,,,,,,,,
 2026-10-29 11:49:54 AM,Common Machines,Bodyweight — No Equipment,Squats,squats,2,,20,,,,,,,,,,
+2026-10-29 02:38:54 PM,Common Machines,Bodyweight — No Equipment,Push Ups,push-ups,1,,30,,,,,,,,,,
+2026-10-29 02:38:54 PM,Common Machines,Bodyweight — No Equipment,Push Ups,push-ups,2,,30,,,,,,,,,,
+2026-10-29 02:38:54 PM,Common Machines,Bodyweight — No Equipment,Push Ups,push-ups,3,,25,,,,,,,,,,
 2026-10-28 10:23:00 AM,Common Machines,Outdoor Activities,Run,run,1,,,42,2.77,,113,Miami Beach walk-then-run (Garmin 24882426334; 2.77 mi; +13 ft). ~16 min easy walk  then pushups + squats (HR spike ~10:40)  then jog building into a hard run - final minute averaged 155.8  instantaneous max 169 (highest observed; Jason kept the zone basis at 168 as a 1-bpm difference is insignificant). Karvonen zones from cardio-minutes (RHR 46 / max 168); warmup below Z1 counted in zone1. Auto-posted as a walk; relabeled as a run per Jason.,19.033333333333335,9.966666666666667,9,3,1
 2026-10-28 11:08:25 AM,Common Machines,Bodyweight — No Equipment,Push Ups,push-ups,1,,25,,,,,,,,,,
 2026-10-28 11:08:25 AM,Common Machines,Bodyweight — No Equipment,Push Ups,push-ups,2,,20,,,,,,,,,,
