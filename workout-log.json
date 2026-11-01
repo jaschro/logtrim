@@ -1,5 +1,26 @@
 [
   {
+    "machineId": "walk",
+    "machine": "Walk",
+    "gym": "Common Machines",
+    "room": "Outdoor Activities",
+    "date": "2026-10-31",
+    "datetime": "2026-10-31 11:14:00 AM",
+    "set": 1,
+    "weight": null,
+    "reps": null,
+    "duration": 55.3,
+    "level": 2.13,
+    "incline": null,
+    "hr": 80,
+    "notes": "Miami Beach walk (Garmin 24919910332; 2.13 mi; +15 ft). All Zone 1 - max minute HR ~96 (Karvonen RHR 46 / max 168).",
+    "zone1": 54.85,
+    "zone2": null,
+    "zone3": null,
+    "zone4": null,
+    "zone5": null
+  },
+  {
     "machineId": "leg-lifts",
     "machine": "Leg Lifts",
     "gym": "Common Machines",
