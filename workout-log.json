@@ -234,6 +234,24 @@
     "notes": ""
   },
   {
+    "machineId": "elbow-planks",
+    "machine": "Elbow Planks",
+    "gym": "Common Machines",
+    "gymId": "generic",
+    "room": "Bodyweight — No Equipment",
+    "roomId": "bodyweight-no-equipment",
+    "date": "2026-11-01",
+    "datetime": "2026-11-01 11:21:41 PM",
+    "set": 1,
+    "weight": null,
+    "reps": null,
+    "duration": 60,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
     "machineId": "walk",
     "machine": "Walk",
     "gym": "Common Machines",
