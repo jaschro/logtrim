@@ -162,6 +162,24 @@
     "notes": ""
   },
   {
+    "machineId": "standing-dumbbell-curl",
+    "machine": "Standing Dumbbell Curl",
+    "gym": "Common Machines",
+    "gymId": "generic",
+    "room": "Free Weights",
+    "roomId": "free-weights",
+    "date": "2026-11-02",
+    "datetime": "2026-11-02 09:38:23 PM",
+    "set": 1,
+    "weight": 22.5,
+    "reps": 10,
+    "duration": null,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
     "machineId": "leg-lifts",
     "machine": "Leg Lifts",
     "gym": "Common Machines",
