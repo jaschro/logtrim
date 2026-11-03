@@ -10,6 +10,7 @@
     { "id": "pushups", "label": "Pushups", "kind": "sum", "source": "log", "field": "reps", "machineIds": ["push-ups"], "target": 140 },
     { "id": "legLifts", "label": "Leg lifts", "kind": "sum", "source": "log", "field": "reps", "machineIds": ["leg-lifts"], "target": 140 },
     { "id": "squats", "label": "Squats", "kind": "sum", "source": "log", "field": "reps", "machineIds": ["squats"], "target": 140 },
+    { "id": "lunges", "label": "Lunges", "kind": "sum", "source": "log", "field": "reps", "machineIds": ["lunges"], "target": 70 },
     { "id": "plank", "label": "Plank seconds", "kind": "sum", "source": "log", "field": "duration", "machineIds": ["elbow-planks", "high-planks", "side-planks"], "target": 315, "unit": "s" },
     { "id": "sleep", "label": "Avg sleep", "kind": "avg", "source": "wellness", "field": "sleep_hours", "target": 7.1, "unit": "h" },
     { "id": "hrv", "label": "Avg HRV", "kind": "avg", "source": "wellness", "field": "hrv_last_night", "target": 40 },
