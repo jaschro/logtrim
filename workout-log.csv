@@ -11,6 +11,8 @@ datetime,gym,room,machine,machineId,set,weight,reps,duration,level,incline,hr,no
 2026-11-02 09:36:21 PM,Common Machines,Free Weights,Dumbbell Press,dumbbell-press,2,30,15,,,,,,,,,,
 2026-11-02 09:38:23 PM,Common Machines,Free Weights,Standing Dumbbell Curl,standing-dumbbell-curl,1,22.5,10,,,,,,,,,,
 2026-11-02 09:40:05 PM,Portofino Gym,Weight Room,Seated Leg Press Machine,pw06,1,55,30,,,,,,,,,,
+2026-11-02 12:19:26 AM,Common Machines,Bodyweight — No Equipment,Lunges,lunges,1,,10,,,,,,,,,,
+2026-11-02 12:19:26 AM,Common Machines,Bodyweight — No Equipment,Lunges,lunges,2,,10,,,,,,,,,,
 2026-11-01 10:47:02 PM,Common Machines,Bodyweight — No Equipment,Leg Lifts,leg-lifts,1,,20,,,,,,,,,,
 2026-11-01 10:47:02 PM,Common Machines,Bodyweight — No Equipment,Leg Lifts,leg-lifts,2,,20,,,,,,,,,,
 2026-11-01 10:47:14 PM,Common Machines,Bodyweight — No Equipment,Squats,squats,1,,20,,,,,,,,,,
