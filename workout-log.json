@@ -180,6 +180,24 @@
     "notes": ""
   },
   {
+    "machineId": "pw06",
+    "machine": "Seated Leg Press Machine",
+    "gym": "Portofino Gym",
+    "gymId": "portofino",
+    "room": "Weight Room",
+    "roomId": "weights",
+    "date": "2026-11-02",
+    "datetime": "2026-11-02 09:40:05 PM",
+    "set": 1,
+    "weight": 55,
+    "reps": 30,
+    "duration": null,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
     "machineId": "leg-lifts",
     "machine": "Leg Lifts",
     "gym": "Common Machines",
