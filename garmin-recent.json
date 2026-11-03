@@ -1,7 +1,42 @@
 {
-  "fetchedAt": "2026-11-02T21:24:09Z",
-  "today": "2026-11-02",
+  "fetchedAt": "2026-11-03T03:10:58Z",
+  "today": "2026-11-03",
   "recentActivities": [
+    {
+      "activityId": 24946488433,
+      "date": "2026-11-02",
+      "type": "treadmill_running",
+      "name": "Treadmill Running",
+      "durationMins": 46.8,
+      "distanceMiles": 1.73,
+      "avgHR": 101.0,
+      "maxHR": 128.0,
+      "calories": 299.0,
+      "elevationGain": null,
+      "avgPace": 0.9900000095367432,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 599.997
+        },
+        {
+          "zone": 2,
+          "secsInZone": 1328.228
+        },
+        {
+          "zone": 3,
+          "secsInZone": 461.001
+        },
+        {
+          "zone": 4,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 5,
+          "secsInZone": 0.0
+        }
+      ]
+    },
     {
       "activityId": 24919910332,
       "date": "2026-10-31",
@@ -153,29 +188,7 @@
       "maxHR": 169.0,
       "calories": 323.0,
       "elevationGain": 18.0,
-      "avgPace": 1.8090000152587893,
-      "hrZones": [
-        {
-          "zone": 1,
-          "secsInZone": 456.992
-        },
-        {
-          "zone": 2,
-          "secsInZone": 11.492
-        },
-        {
-          "zone": 3,
-          "secsInZone": 721.99
-        },
-        {
-          "zone": 4,
-          "secsInZone": 598.009
-        },
-        {
-          "zone": 5,
-          "secsInZone": 108.001
-        }
-      ]
+      "avgPace": 1.8090000152587893
     },
     {
       "activityId": 24862187437,
@@ -280,42 +293,29 @@
       "calories": 192.0,
       "elevationGain": 26.0,
       "avgPace": 2.4100000858306885
-    },
-    {
-      "activityId": 24781304985,
-      "date": "2026-10-19",
-      "type": "walking",
-      "name": "Laguna Woods Walking",
-      "durationMins": 31.9,
-      "distanceMiles": 1.77,
-      "avgHR": 89.0,
-      "maxHR": 116.0,
-      "calories": 190.0,
-      "elevationGain": 36.0,
-      "avgPace": 1.4900000095367432
     }
   ],
   "todayStats": {
-    "steps": 644,
-    "floors": 0.0,
+    "steps": 9005,
+    "floors": 0.7851,
     "restingHR": 46,
-    "activeCalories": 5.0,
-    "bodyBattery": 74,
-    "stressAvg": 22,
-    "weeklySteps": 99544
+    "activeCalories": 282.0,
+    "bodyBattery": null,
+    "stressAvg": 26,
+    "weeklySteps": 83808
   },
   "trainingReadiness": {
-    "score": 78,
-    "level": "HIGH",
-    "feedback": "WELL_RECOVERED"
+    "score": null,
+    "level": null,
+    "feedback": null
   },
   "vo2max": {
     "vo2max": 42.0,
     "fitnessAge": null
   },
   "intensityMinutes": {
-    "moderate": null,
-    "vigorous": null
+    "moderate": 30,
+    "vigorous": 12
   },
   "hrv": {
     "weeklyAvg": 43,
@@ -333,9 +333,9 @@
     "avgRespirationRate": 14.0,
     "avgSpO2": 96.0
   },
-  "spo2Avg": 95.0,
+  "spo2Avg": null,
   "respiration": {
-    "avgWaking": 15.0,
-    "avgSleep": 14.0
+    "avgWaking": null,
+    "avgSleep": null
   }
 }
