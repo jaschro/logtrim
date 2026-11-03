@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-11-03T03:10:58Z",
+  "fetchedAt": "2026-11-03T05:22:52Z",
   "today": "2026-11-03",
   "recentActivities": [
     {
@@ -296,13 +296,13 @@
     }
   ],
   "todayStats": {
-    "steps": 9005,
-    "floors": 0.7851,
+    "steps": 11966,
+    "floors": 2.43045,
     "restingHR": 46,
-    "activeCalories": 282.0,
+    "activeCalories": 357.0,
     "bodyBattery": null,
-    "stressAvg": 26,
-    "weeklySteps": 83808
+    "stressAvg": 27,
+    "weeklySteps": 84315
   },
   "trainingReadiness": {
     "score": null,
