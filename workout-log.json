@@ -126,6 +126,27 @@
     "notes": ""
   },
   {
+    "machineId": "treadmill",
+    "machine": "Treadmill",
+    "gym": "Common Machines",
+    "room": "Cardio",
+    "date": "2026-11-04",
+    "datetime": "2026-11-04 09:16:00 AM",
+    "set": 1,
+    "weight": null,
+    "reps": null,
+    "duration": 31.65,
+    "level": 1.04,
+    "incline": null,
+    "hr": 101,
+    "notes": "Mexico City hotel treadmill session (Garmin 24964425470; 1.04 mi; 31.6 min; started 8:16 AM local). At ~7,300 ft altitude. Karvonen zones from cardio-minutes (RHR 46 / max 168); warmup below Z1 counted in zone1.",
+    "zone1": 22.650000000000002,
+    "zone2": 7,
+    "zone3": 2,
+    "zone4": null,
+    "zone5": null
+  },
+  {
     "machineId": "walk",
     "machine": "Walk",
     "gym": "Common Machines",
