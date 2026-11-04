@@ -18,6 +18,27 @@
     "notes": ""
   },
   {
+    "machineId": "walk",
+    "machine": "Walk",
+    "gym": "Common Machines",
+    "room": "Outdoor Activities",
+    "date": "2026-11-03",
+    "datetime": "2026-11-03 08:26:00 PM",
+    "set": 1,
+    "weight": null,
+    "reps": null,
+    "duration": 52.85,
+    "level": 2.45,
+    "incline": null,
+    "hr": 93,
+    "notes": "Álvaro Obregón walk (Garmin 24958988894; 2.45 mi; +27 ft). All Zone 1 - max minute HR ~106 (Karvonen RHR 46 / max 168).",
+    "zone1": 52.73333333333334,
+    "zone2": null,
+    "zone3": null,
+    "zone4": null,
+    "zone5": null
+  },
+  {
     "machineId": "pa05",
     "machine": "Treadmill",
     "gym": "Portofino Gym",
