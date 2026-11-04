@@ -1,7 +1,42 @@
 {
-  "fetchedAt": "2026-11-04T01:02:07Z",
+  "fetchedAt": "2026-11-04T03:05:16Z",
   "today": "2026-11-04",
   "recentActivities": [
+    {
+      "activityId": 24958988894,
+      "date": "2026-11-03",
+      "type": "walking",
+      "name": "\u00c1lvaro Obreg\u00f3n Walking",
+      "durationMins": 48.3,
+      "distanceMiles": 2.45,
+      "avgHR": 93.0,
+      "maxHR": 115.0,
+      "calories": 257.0,
+      "elevationGain": 27.0,
+      "avgPace": 1.3619999885559082,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 2312.833
+        },
+        {
+          "zone": 2,
+          "secsInZone": 391.993
+        },
+        {
+          "zone": 3,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 4,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 5,
+          "secsInZone": 0.0
+        }
+      ]
+    },
     {
       "activityId": 24946488433,
       "date": "2026-11-02",
@@ -153,29 +188,7 @@
       "maxHR": 101.0,
       "calories": 129.0,
       "elevationGain": 11.0,
-      "avgPace": 1.3550000190734863,
-      "hrZones": [
-        {
-          "zone": 1,
-          "secsInZone": 819.548
-        },
-        {
-          "zone": 2,
-          "secsInZone": 6.999
-        },
-        {
-          "zone": 3,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 4,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 5,
-          "secsInZone": 0.0
-        }
-      ]
+      "avgPace": 1.3550000190734863
     },
     {
       "activityId": 24882426334,
@@ -296,13 +309,13 @@
     }
   ],
   "todayStats": {
-    "steps": 3423,
-    "floors": 0.64993,
+    "steps": 10848,
+    "floors": 10.62008,
     "restingHR": 48,
-    "activeCalories": 52.0,
+    "activeCalories": 290.0,
     "bodyBattery": null,
-    "stressAvg": 36,
-    "weeklySteps": 81707
+    "stressAvg": 38,
+    "weeklySteps": 89132
   },
   "trainingReadiness": {
     "score": null,
@@ -310,11 +323,11 @@
     "feedback": null
   },
   "vo2max": {
-    "vo2max": 42.0,
+    "vo2max": 39.0,
     "fitnessAge": null
   },
   "intensityMinutes": {
-    "moderate": 30,
+    "moderate": 72,
     "vigorous": 12
   },
   "hrv": {
