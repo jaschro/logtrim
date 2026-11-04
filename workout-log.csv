@@ -8,6 +8,8 @@ datetime,gym,room,machine,machineId,set,weight,reps,duration,level,incline,hr,no
 2026-11-04 09:16:00 AM,Common Machines,Cardio,Treadmill,treadmill,1,,,31.65,1.04,,101,Mexico City hotel treadmill session (Garmin 24964425470; 1.04 mi; 31.6 min; started 8:16 AM local). At ~7 300 ft altitude. Karvonen zones from cardio-minutes (RHR 46 / max 168); warmup below Z1 counted in zone1.,22.650000000000002,7,2,,
 2026-11-04 09:02:00 AM,Common Machines,Bodyweight — No Equipment,Lunges,lunges,1,,15,,,,,,,,,,
 2026-11-04 09:02:00 AM,Common Machines,Bodyweight — No Equipment,Lunges,lunges,2,,10,,,,,,,,,,
+2026-11-04 09:10:32 AM,Common Machines,Free Weights,Dumbbell Flys,dumbbell-flys,1,25,15,,,,,,,,,,
+2026-11-04 09:10:32 AM,Common Machines,Free Weights,Dumbbell Flys,dumbbell-flys,2,25,15,,,,,,,,,,
 2026-11-03 08:26:00 PM,Common Machines,Outdoor Activities,Walk,walk,1,,,52.85,2.45,,93,Álvaro Obregón walk (Garmin 24958988894; started 7:26 PM local  Mexico City; 2.45 mi; +27 ft). All Zone 1 - max minute HR ~106 (Karvonen RHR 46 / max 168).,52.73333333333334,,,,
 2026-11-03 10:04:58 PM,Common Machines,Bodyweight — No Equipment,Squats,squats,1,,20,,,,,,,,,,
 2026-11-03 10:05:15 PM,Common Machines,Bodyweight — No Equipment,Lunges,lunges,1,,10,,,,,,,,,,
