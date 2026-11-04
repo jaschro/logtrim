@@ -3,6 +3,7 @@ datetime,gym,room,machine,machineId,set,weight,reps,duration,level,incline,hr,no
 2026-11-03 10:04:38 PM,Common Machines,Bodyweight — No Equipment,Push Ups,push-ups,1,,30,,,,,,,,,,
 2026-11-03 10:04:38 PM,Common Machines,Bodyweight — No Equipment,Push Ups,push-ups,2,,,,,,,,,,,,
 2026-11-03 10:04:58 PM,Common Machines,Bodyweight — No Equipment,Squats,squats,1,,20,,,,,,,,,,
+2026-11-03 10:05:15 PM,Common Machines,Bodyweight — No Equipment,Lunges,lunges,1,,10,,,,,,,,,,
 2026-11-02 08:30:00 PM,Portofino Gym,Aerobic Room,Treadmill,pa05,1,,,46.78333333333333,1.73,,101,Portofino treadmill session (Garmin 24946488433; 1.73 mi; 46.8 min). Karvonen zones from cardio-minutes (RHR 46 / max 168); warmup below Z1 counted in zone1.,41.78333333333333,5,,,
 2026-11-02 09:24:21 PM,Portofino Gym,Weight Room,Lat Pulldown Machine,pw02,1,55,20,,,,,,,,,,
 2026-11-02 09:24:21 PM,Portofino Gym,Weight Room,Lat Pulldown Machine,pw02,2,62.5,20,,,,,,,,,,
