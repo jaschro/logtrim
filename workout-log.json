@@ -201,6 +201,24 @@
     "notes": ""
   },
   {
+    "machineId": "leg-press",
+    "machine": "Leg Press",
+    "gym": "Common Machines",
+    "gymId": "generic",
+    "room": "Selectorized Machines",
+    "roomId": "selectorized-machines",
+    "date": "2026-11-04",
+    "datetime": "2026-11-04 09:11:20 AM",
+    "set": 1,
+    "weight": 55,
+    "reps": 45,
+    "duration": null,
+    "level": null,
+    "incline": null,
+    "hr": null,
+    "notes": ""
+  },
+  {
     "machineId": "walk",
     "machine": "Walk",
     "gym": "Common Machines",
