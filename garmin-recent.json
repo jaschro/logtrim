@@ -1,6 +1,6 @@
 {
-  "fetchedAt": "2026-11-04T19:21:52Z",
-  "today": "2026-11-04",
+  "fetchedAt": "2026-11-05T01:17:12Z",
+  "today": "2026-11-05",
   "recentActivities": [
     {
       "activityId": 24964425470,
@@ -306,34 +306,21 @@
       "calories": 190.0,
       "elevationGain": 17.0,
       "avgPace": 1.5709999799728394
-    },
-    {
-      "activityId": 24803155564,
-      "date": "2026-10-21",
-      "type": "other",
-      "name": "New York Jog",
-      "durationMins": 18.9,
-      "distanceMiles": 1.7,
-      "avgHR": 122.0,
-      "maxHR": 142.0,
-      "calories": 192.0,
-      "elevationGain": 26.0,
-      "avgPace": 2.4100000858306885
     }
   ],
   "todayStats": {
-    "steps": 5158,
-    "floors": 2.68799,
+    "steps": 11514,
+    "floors": 3.4685,
     "restingHR": 48,
-    "activeCalories": 193.0,
-    "bodyBattery": 42,
-    "stressAvg": 27,
-    "weeklySteps": 94747
+    "activeCalories": 335.0,
+    "bodyBattery": null,
+    "stressAvg": 37,
+    "weeklySteps": 88033
   },
   "trainingReadiness": {
-    "score": 64,
-    "level": "MODERATE",
-    "feedback": "RECOVERED_AND_READY"
+    "score": null,
+    "level": null,
+    "feedback": null
   },
   "vo2max": {
     "vo2max": 39.0,
@@ -359,9 +346,9 @@
     "avgRespirationRate": 15.0,
     "avgSpO2": 92.0
   },
-  "spo2Avg": 91.0,
+  "spo2Avg": null,
   "respiration": {
-    "avgWaking": 16.0,
-    "avgSleep": 15.0
+    "avgWaking": null,
+    "avgSleep": null
   }
 }
