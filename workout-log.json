@@ -90,6 +90,27 @@
     "notes": ""
   },
   {
+    "machineId": "walk",
+    "machine": "Walk",
+    "gym": "Common Machines",
+    "room": "Outdoor Activities",
+    "date": "2026-11-05",
+    "datetime": "2026-11-05 05:00:00 PM",
+    "set": 1,
+    "weight": null,
+    "reps": null,
+    "duration": 94.1,
+    "level": 3.39,
+    "incline": null,
+    "hr": 82,
+    "notes": "Álvaro Obregón walk (Garmin 24981382877; 3.39 mi; +39 ft). All Zone 1 - max minute HR ~93 (Karvonen RHR 46 / max 168).",
+    "zone1": 94,
+    "zone2": null,
+    "zone3": null,
+    "zone4": null,
+    "zone5": null
+  },
+  {
     "machineId": "leg-extension",
     "machine": "Leg Extension",
     "gym": "Common Machines",
