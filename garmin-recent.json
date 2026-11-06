@@ -1,7 +1,42 @@
 {
-  "fetchedAt": "2026-11-06T10:23:18Z",
+  "fetchedAt": "2026-11-06T16:36:43Z",
   "today": "2026-11-06",
   "recentActivities": [
+    {
+      "activityId": 24988451749,
+      "date": "2026-11-06",
+      "type": "elliptical",
+      "name": "Elliptical",
+      "durationMins": 32.4,
+      "distanceMiles": null,
+      "avgHR": 126.0,
+      "maxHR": 148.0,
+      "calories": 311.0,
+      "elevationGain": null,
+      "avgPace": 0.0,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 2,
+          "secsInZone": 76.737
+        },
+        {
+          "zone": 3,
+          "secsInZone": 1587.002
+        },
+        {
+          "zone": 4,
+          "secsInZone": 282.322
+        },
+        {
+          "zone": 5,
+          "secsInZone": 0.0
+        }
+      ]
+    },
     {
       "activityId": 24981382877,
       "date": "2026-11-05",
@@ -153,29 +188,7 @@
       "maxHR": 104.0,
       "calories": 215.0,
       "elevationGain": 15.0,
-      "avgPace": 1.3370000123977661,
-      "hrZones": [
-        {
-          "zone": 1,
-          "secsInZone": 618.993
-        },
-        {
-          "zone": 2,
-          "secsInZone": 25.005
-        },
-        {
-          "zone": 3,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 4,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 5,
-          "secsInZone": 0.0
-        }
-      ]
+      "avgPace": 1.3370000123977661
     },
     {
       "activityId": 24911480716,
@@ -296,18 +309,18 @@
     }
   ],
   "todayStats": {
-    "steps": 135,
+    "steps": 270,
     "floors": 0.0,
     "restingHR": 50,
-    "activeCalories": 0.0,
-    "bodyBattery": 10,
-    "stressAvg": 21,
-    "weeklySteps": 95305
+    "activeCalories": 2.0,
+    "bodyBattery": 56,
+    "stressAvg": 22,
+    "weeklySteps": 95440
   },
   "trainingReadiness": {
-    "score": 61,
-    "level": "MODERATE",
-    "feedback": "RECOVERED_AND_READY"
+    "score": 41,
+    "level": "LOW",
+    "feedback": "FOCUS_ON_ENERGY_LEVELS"
   },
   "vo2max": {
     "vo2max": 40.0,
@@ -318,24 +331,24 @@
     "vigorous": 23
   },
   "hrv": {
-    "weeklyAvg": 40,
+    "weeklyAvg": 39,
     "lastNight": null,
     "status": "BALANCED"
   },
   "sleep": {
-    "date": "2026-11-05",
-    "durationHours": 6.1,
-    "score": 56,
-    "deepSleepMins": 117,
-    "lightSleepMins": 232,
-    "remSleepMins": 19,
-    "awakeMins": 53,
+    "date": "2026-11-06",
+    "durationHours": 7.2,
+    "score": 81,
+    "deepSleepMins": 112,
+    "lightSleepMins": 234,
+    "remSleepMins": 86,
+    "awakeMins": 23,
     "avgRespirationRate": 15.0,
     "avgSpO2": 92.0
   },
-  "spo2Avg": 94.0,
+  "spo2Avg": 91.0,
   "respiration": {
     "avgWaking": 16.0,
-    "avgSleep": 10.0
+    "avgSleep": 15.0
   }
 }
