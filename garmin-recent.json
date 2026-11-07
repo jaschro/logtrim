@@ -1,7 +1,77 @@
 {
-  "fetchedAt": "2026-11-07T09:37:31Z",
+  "fetchedAt": "2026-11-07T17:25:55Z",
   "today": "2026-11-07",
   "recentActivities": [
+    {
+      "activityId": 24999512584,
+      "date": "2026-11-07",
+      "type": "other",
+      "name": "Miami Beach Jog",
+      "durationMins": 28.4,
+      "distanceMiles": 2.07,
+      "avgHR": 129.0,
+      "maxHR": 168.0,
+      "calories": 302.0,
+      "elevationGain": 19.0,
+      "avgPace": 1.9500000476837158,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 80.024
+        },
+        {
+          "zone": 2,
+          "secsInZone": 20.0
+        },
+        {
+          "zone": 3,
+          "secsInZone": 1262.467
+        },
+        {
+          "zone": 4,
+          "secsInZone": 242.998
+        },
+        {
+          "zone": 5,
+          "secsInZone": 101.0
+        }
+      ]
+    },
+    {
+      "activityId": 24999124400,
+      "date": "2026-11-07",
+      "type": "walking",
+      "name": "Miami Beach Walking",
+      "durationMins": 12.1,
+      "distanceMiles": 0.62,
+      "avgHR": 83.0,
+      "maxHR": 90.0,
+      "calories": 63.0,
+      "elevationGain": 0.0,
+      "avgPace": 1.3880000114440918,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 435.562
+        },
+        {
+          "zone": 2,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 3,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 4,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 5,
+          "secsInZone": 0.0
+        }
+      ]
+    },
     {
       "activityId": 24988451749,
       "date": "2026-11-06",
@@ -118,29 +188,7 @@
       "maxHR": 115.0,
       "calories": 257.0,
       "elevationGain": 27.0,
-      "avgPace": 1.3619999885559082,
-      "hrZones": [
-        {
-          "zone": 1,
-          "secsInZone": 2312.833
-        },
-        {
-          "zone": 2,
-          "secsInZone": 391.993
-        },
-        {
-          "zone": 3,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 4,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 5,
-          "secsInZone": 0.0
-        }
-      ]
+      "avgPace": 1.3619999885559082
     },
     {
       "activityId": 24946488433,
@@ -153,29 +201,7 @@
       "maxHR": 128.0,
       "calories": 299.0,
       "elevationGain": null,
-      "avgPace": 0.9900000095367432,
-      "hrZones": [
-        {
-          "zone": 1,
-          "secsInZone": 599.997
-        },
-        {
-          "zone": 2,
-          "secsInZone": 1328.228
-        },
-        {
-          "zone": 3,
-          "secsInZone": 461.001
-        },
-        {
-          "zone": 4,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 5,
-          "secsInZone": 0.0
-        }
-      ]
+      "avgPace": 0.9900000095367432
     },
     {
       "activityId": 24919910332,
@@ -296,26 +322,26 @@
     }
   ],
   "todayStats": {
-    "steps": null,
+    "steps": 7103,
     "floors": 0.0,
-    "restingHR": 52,
-    "activeCalories": 0.0,
-    "bodyBattery": null,
-    "stressAvg": 36,
-    "weeklySteps": 84980
+    "restingHR": 47,
+    "activeCalories": 332.0,
+    "bodyBattery": 66,
+    "stressAvg": 19,
+    "weeklySteps": 92083
   },
   "trainingReadiness": {
-    "score": 58,
-    "level": "MODERATE",
-    "feedback": "BALANCE_STRESS_AND_RECOVERY"
+    "score": 41,
+    "level": "LOW",
+    "feedback": "BALANCE_YOUR_TRAINING_LOAD"
   },
   "vo2max": {
-    "vo2max": 40.0,
+    "vo2max": 41.0,
     "fitnessAge": null
   },
   "intensityMinutes": {
-    "moderate": 144,
-    "vigorous": 56
+    "moderate": 160,
+    "vigorous": 83
   },
   "hrv": {
     "weeklyAvg": 39,
@@ -323,19 +349,19 @@
     "status": "BALANCED"
   },
   "sleep": {
-    "date": "2026-11-06",
+    "date": "2026-11-07",
     "durationHours": 7.2,
-    "score": 81,
-    "deepSleepMins": 112,
-    "lightSleepMins": 234,
-    "remSleepMins": 86,
-    "awakeMins": 23,
-    "avgRespirationRate": 15.0,
-    "avgSpO2": 92.0
+    "score": 86,
+    "deepSleepMins": 117,
+    "lightSleepMins": 225,
+    "remSleepMins": 92,
+    "awakeMins": 0,
+    "avgRespirationRate": 14.0,
+    "avgSpO2": 96.0
   },
-  "spo2Avg": null,
+  "spo2Avg": 95.0,
   "respiration": {
-    "avgWaking": 15.0,
-    "avgSleep": 15.0
+    "avgWaking": 14.0,
+    "avgSleep": 14.0
   }
 }
