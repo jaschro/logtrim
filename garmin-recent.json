@@ -1,7 +1,42 @@
 {
-  "fetchedAt": "2026-11-11T13:33:52Z",
+  "fetchedAt": "2026-11-11T18:55:17Z",
   "today": "2026-11-11",
   "recentActivities": [
+    {
+      "activityId": 25046088203,
+      "date": "2026-11-11",
+      "type": "cycling",
+      "name": "Miami Beach Cycling",
+      "durationMins": 48.7,
+      "distanceMiles": 3.96,
+      "avgHR": 83.0,
+      "maxHR": 120.0,
+      "calories": 209.0,
+      "elevationGain": 17.0,
+      "avgPace": 2.180000066757202,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 1006.083
+        },
+        {
+          "zone": 2,
+          "secsInZone": 339.971
+        },
+        {
+          "zone": 3,
+          "secsInZone": 17.957
+        },
+        {
+          "zone": 4,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 5,
+          "secsInZone": 0.0
+        }
+      ]
+    },
     {
       "activityId": 25035909799,
       "date": "2026-11-10",
@@ -153,29 +188,7 @@
       "maxHR": 164.0,
       "calories": 287.0,
       "elevationGain": 15.0,
-      "avgPace": 1.909999966621399,
-      "hrZones": [
-        {
-          "zone": 1,
-          "secsInZone": 45.0
-        },
-        {
-          "zone": 2,
-          "secsInZone": 165.43
-        },
-        {
-          "zone": 3,
-          "secsInZone": 1389.99
-        },
-        {
-          "zone": 4,
-          "secsInZone": 40.001
-        },
-        {
-          "zone": 5,
-          "secsInZone": 46.0
-        }
-      ]
+      "avgPace": 1.909999966621399
     },
     {
       "activityId": 25011106472,
@@ -348,18 +361,18 @@
     }
   ],
   "todayStats": {
-    "steps": 21107,
-    "floors": 6.56759,
-    "restingHR": 48,
-    "activeCalories": 627.0,
-    "bodyBattery": null,
-    "stressAvg": -1,
-    "weeklySteps": 97229
+    "steps": 310,
+    "floors": 0.0,
+    "restingHR": 47,
+    "activeCalories": 5.0,
+    "bodyBattery": 68,
+    "stressAvg": 21,
+    "weeklySteps": 97539
   },
   "trainingReadiness": {
-    "score": null,
-    "level": null,
-    "feedback": null
+    "score": 59,
+    "level": "MODERATE",
+    "feedback": "RECOVERED_AND_READY"
   },
   "vo2max": {
     "vo2max": 42.0,
@@ -370,24 +383,24 @@
     "vigorous": 29
   },
   "hrv": {
-    "weeklyAvg": 39,
+    "weeklyAvg": 40,
     "lastNight": null,
     "status": "BALANCED"
   },
   "sleep": {
-    "date": "2026-11-10",
-    "durationHours": 7.3,
-    "score": 83,
-    "deepSleepMins": 87,
-    "lightSleepMins": 245,
-    "remSleepMins": 105,
-    "awakeMins": 23,
-    "avgRespirationRate": 13.0,
-    "avgSpO2": 92.0
+    "date": "2026-11-11",
+    "durationHours": 8.1,
+    "score": 81,
+    "deepSleepMins": 81,
+    "lightSleepMins": 331,
+    "remSleepMins": 75,
+    "awakeMins": 6,
+    "avgRespirationRate": 14.0,
+    "avgSpO2": 95.0
   },
-  "spo2Avg": null,
+  "spo2Avg": 95.0,
   "respiration": {
-    "avgWaking": null,
-    "avgSleep": null
+    "avgWaking": 14.0,
+    "avgSleep": 14.0
   }
 }
