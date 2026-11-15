@@ -1,7 +1,77 @@
 {
-  "fetchedAt": "2026-11-14T19:41:43Z",
-  "today": "2026-11-14",
+  "fetchedAt": "2026-11-15T00:45:17Z",
+  "today": "2026-11-15",
   "recentActivities": [
+    {
+      "activityId": 25081393631,
+      "date": "2026-11-14",
+      "type": "walking",
+      "name": "Jupiter Walking",
+      "durationMins": 37.1,
+      "distanceMiles": 1.81,
+      "avgHR": 68.0,
+      "maxHR": 80.0,
+      "calories": 176.0,
+      "elevationGain": 1.0,
+      "avgPace": 1.309999942779541,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 2,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 3,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 4,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 5,
+          "secsInZone": 0.0
+        }
+      ]
+    },
+    {
+      "activityId": 25080878376,
+      "date": "2026-11-14",
+      "type": "treadmill_running",
+      "name": "Treadmill Running",
+      "durationMins": 15.2,
+      "distanceMiles": 0.28,
+      "avgHR": 89.0,
+      "maxHR": 97.0,
+      "calories": 74.0,
+      "elevationGain": null,
+      "avgPace": 0.5009999871253967,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 807.818
+        },
+        {
+          "zone": 2,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 3,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 4,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 5,
+          "secsInZone": 0.0
+        }
+      ]
+    },
     {
       "activityId": 25066098614,
       "date": "2026-11-13",
@@ -96,29 +166,7 @@
       "maxHR": 116.0,
       "calories": 395.0,
       "elevationGain": 7.0,
-      "avgPace": 1.4509999752044678,
-      "hrZones": [
-        {
-          "zone": 1,
-          "secsInZone": 4163.633
-        },
-        {
-          "zone": 2,
-          "secsInZone": 247.009
-        },
-        {
-          "zone": 3,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 4,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 5,
-          "secsInZone": 0.0
-        }
-      ]
+      "avgPace": 1.4509999752044678
     },
     {
       "activityId": 25046088203,
@@ -131,29 +179,7 @@
       "maxHR": 120.0,
       "calories": 209.0,
       "elevationGain": 17.0,
-      "avgPace": 2.180000066757202,
-      "hrZones": [
-        {
-          "zone": 1,
-          "secsInZone": 1006.083
-        },
-        {
-          "zone": 2,
-          "secsInZone": 339.971
-        },
-        {
-          "zone": 3,
-          "secsInZone": 17.957
-        },
-        {
-          "zone": 4,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 5,
-          "secsInZone": 0.0
-        }
-      ]
+      "avgPace": 2.180000066757202
     },
     {
       "activityId": 25035909799,
@@ -323,41 +349,28 @@
       "calories": 299.0,
       "elevationGain": null,
       "avgPace": 0.9900000095367432
-    },
-    {
-      "activityId": 24919910332,
-      "date": "2026-10-31",
-      "type": "walking",
-      "name": "Miami Beach Walking",
-      "durationMins": 42.8,
-      "distanceMiles": 2.13,
-      "avgHR": 80.0,
-      "maxHR": 104.0,
-      "calories": 215.0,
-      "elevationGain": 15.0,
-      "avgPace": 1.3370000123977661
     }
   ],
   "todayStats": {
-    "steps": 285,
-    "floors": 0.0,
-    "restingHR": 47,
-    "activeCalories": 2.0,
-    "bodyBattery": 78,
-    "stressAvg": 21,
-    "weeklySteps": 97562
+    "steps": 3943,
+    "floors": 1.0,
+    "restingHR": 46,
+    "activeCalories": 78.0,
+    "bodyBattery": null,
+    "stressAvg": 20,
+    "weeklySteps": 90805
   },
   "trainingReadiness": {
-    "score": 75,
-    "level": "HIGH",
-    "feedback": "WELL_RECOVERED"
+    "score": null,
+    "level": null,
+    "feedback": null
   },
   "vo2max": {
     "vo2max": 42.0,
     "fitnessAge": null
   },
   "intensityMinutes": {
-    "moderate": 211,
+    "moderate": 225,
     "vigorous": 42
   },
   "hrv": {
@@ -376,9 +389,9 @@
     "avgRespirationRate": 14.0,
     "avgSpO2": 95.0
   },
-  "spo2Avg": 94.0,
+  "spo2Avg": null,
   "respiration": {
-    "avgWaking": 14.0,
-    "avgSleep": 14.0
+    "avgWaking": null,
+    "avgSleep": null
   }
 }
