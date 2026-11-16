@@ -1,7 +1,42 @@
 {
-  "fetchedAt": "2026-11-16T00:45:36Z",
+  "fetchedAt": "2026-11-16T10:38:21Z",
   "today": "2026-11-16",
   "recentActivities": [
+    {
+      "activityId": 25092725307,
+      "date": "2026-11-15",
+      "type": "walking",
+      "name": "Jupiter Walking",
+      "durationMins": 32.7,
+      "distanceMiles": 1.67,
+      "avgHR": 81.0,
+      "maxHR": 90.0,
+      "calories": 163.0,
+      "elevationGain": 0.0,
+      "avgPace": 1.3730000257492065,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 1035.609
+        },
+        {
+          "zone": 2,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 3,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 4,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 5,
+          "secsInZone": 0.0
+        }
+      ]
+    },
     {
       "activityId": 25089824870,
       "date": "2026-11-15",
@@ -153,29 +188,7 @@
       "maxHR": 98.0,
       "calories": 340.0,
       "elevationGain": 11.0,
-      "avgPace": 1.3389999866485596,
-      "hrZones": [
-        {
-          "zone": 1,
-          "secsInZone": 1983.176
-        },
-        {
-          "zone": 2,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 3,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 4,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 5,
-          "secsInZone": 0.0
-        }
-      ]
+      "avgPace": 1.3389999866485596
     },
     {
       "activityId": 25050229823,
@@ -387,13 +400,13 @@
     }
   ],
   "todayStats": {
-    "steps": 8532,
+    "steps": null,
     "floors": 0.0,
-    "restingHR": 45,
-    "activeCalories": 357.0,
-    "bodyBattery": null,
-    "stressAvg": 21,
-    "weeklySteps": 86123
+    "restingHR": 50,
+    "activeCalories": 0.0,
+    "bodyBattery": 35,
+    "stressAvg": 33,
+    "weeklySteps": 91187
   },
   "trainingReadiness": {
     "score": null,
@@ -426,7 +439,7 @@
   },
   "spo2Avg": null,
   "respiration": {
-    "avgWaking": null,
-    "avgSleep": null
+    "avgWaking": 16.0,
+    "avgSleep": 9.0
   }
 }
