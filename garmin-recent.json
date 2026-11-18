@@ -1,7 +1,42 @@
 {
-  "fetchedAt": "2026-11-18T11:08:12Z",
+  "fetchedAt": "2026-11-18T19:58:32Z",
   "today": "2026-11-18",
   "recentActivities": [
+    {
+      "activityId": 25121024675,
+      "date": "2026-11-18",
+      "type": "indoor_cycling",
+      "name": "Indoor Cycling",
+      "durationMins": 17.1,
+      "distanceMiles": null,
+      "avgHR": 124.0,
+      "maxHR": 142.0,
+      "calories": 184.0,
+      "elevationGain": null,
+      "avgPace": 0.0,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 2,
+          "secsInZone": 173.145
+        },
+        {
+          "zone": 3,
+          "secsInZone": 747.164
+        },
+        {
+          "zone": 4,
+          "secsInZone": 104.0
+        },
+        {
+          "zone": 5,
+          "secsInZone": 0.0
+        }
+      ]
+    },
     {
       "activityId": 25092725307,
       "date": "2026-11-15",
@@ -153,29 +188,7 @@
       "maxHR": 127.0,
       "calories": 135.0,
       "elevationGain": 6.0,
-      "avgPace": 1.871999979019165,
-      "hrZones": [
-        {
-          "zone": 1,
-          "secsInZone": 227.997
-        },
-        {
-          "zone": 2,
-          "secsInZone": 391.0
-        },
-        {
-          "zone": 3,
-          "secsInZone": 343.337
-        },
-        {
-          "zone": 4,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 5,
-          "secsInZone": 0.0
-        }
-      ]
+      "avgPace": 1.871999979019165
     },
     {
       "activityId": 25061147640,
@@ -374,18 +387,18 @@
     }
   ],
   "todayStats": {
-    "steps": 6658,
-    "floors": 8.20801,
-    "restingHR": 45,
-    "activeCalories": 141.0,
-    "bodyBattery": null,
-    "stressAvg": 21,
-    "weeklySteps": 73355
+    "steps": 612,
+    "floors": 0.72671,
+    "restingHR": 44,
+    "activeCalories": 5.0,
+    "bodyBattery": 99,
+    "stressAvg": 17,
+    "weeklySteps": 73967
   },
   "trainingReadiness": {
-    "score": 94,
+    "score": 92,
     "level": "HIGH",
-    "feedback": "LOW_RECOVERY_NEEDS"
+    "feedback": "ENERGIZED_BY_GOOD_SLEEP"
   },
   "vo2max": {
     "vo2max": 42.0,
@@ -401,19 +414,19 @@
     "status": "BALANCED"
   },
   "sleep": {
-    "date": "2026-11-17",
-    "durationHours": 7.4,
-    "score": 95,
-    "deepSleepMins": 97,
-    "lightSleepMins": 232,
-    "remSleepMins": 116,
+    "date": "2026-11-18",
+    "durationHours": 6.7,
+    "score": 85,
+    "deepSleepMins": 93,
+    "lightSleepMins": 226,
+    "remSleepMins": 82,
     "awakeMins": 0,
     "avgRespirationRate": 13.0,
     "avgSpO2": 95.0
   },
-  "spo2Avg": null,
+  "spo2Avg": 95.0,
   "respiration": {
-    "avgWaking": null,
-    "avgSleep": null
+    "avgWaking": 12.0,
+    "avgSleep": 13.0
   }
 }
