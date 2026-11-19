@@ -1,7 +1,42 @@
 {
-  "fetchedAt": "2026-11-19T02:15:50Z",
+  "fetchedAt": "2026-11-19T11:07:30Z",
   "today": "2026-11-19",
   "recentActivities": [
+    {
+      "activityId": 25126786568,
+      "date": "2026-11-18",
+      "type": "walking",
+      "name": "Miami Beach Walking",
+      "durationMins": 21.7,
+      "distanceMiles": 0.99,
+      "avgHR": 90.0,
+      "maxHR": 96.0,
+      "calories": 102.0,
+      "elevationGain": 9.0,
+      "avgPace": 1.2259999513626099,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 1299.096
+        },
+        {
+          "zone": 2,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 3,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 4,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 5,
+          "secsInZone": 0.0
+        }
+      ]
+    },
     {
       "activityId": 25125031519,
       "date": "2026-11-18",
@@ -153,29 +188,7 @@
       "maxHR": 80.0,
       "calories": 176.0,
       "elevationGain": 1.0,
-      "avgPace": 1.309999942779541,
-      "hrZones": [
-        {
-          "zone": 1,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 2,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 3,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 4,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 5,
-          "secsInZone": 0.0
-        }
-      ]
+      "avgPace": 1.309999942779541
     },
     {
       "activityId": 25080878376,
@@ -387,26 +400,26 @@
     }
   ],
   "todayStats": {
-    "steps": 7333,
-    "floors": 2.71916,
+    "steps": 12797,
+    "floors": 6.47474,
     "restingHR": 44,
-    "activeCalories": 433.0,
+    "activeCalories": 605.0,
     "bodyBattery": null,
-    "stressAvg": 30,
-    "weeklySteps": 67093
+    "stressAvg": 33,
+    "weeklySteps": 72557
   },
   "trainingReadiness": {
-    "score": null,
-    "level": null,
-    "feedback": null
+    "score": 84,
+    "level": "HIGH",
+    "feedback": "WELL_RECOVERED"
   },
   "vo2max": {
     "vo2max": 42.0,
     "fitnessAge": null
   },
   "intensityMinutes": {
-    "moderate": 32,
-    "vigorous": 29
+    "moderate": 55,
+    "vigorous": 31
   },
   "hrv": {
     "weeklyAvg": 43,
