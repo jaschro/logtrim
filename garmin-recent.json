@@ -1,7 +1,42 @@
 {
-  "fetchedAt": "2026-11-20T02:00:19Z",
+  "fetchedAt": "2026-11-20T04:27:40Z",
   "today": "2026-11-20",
   "recentActivities": [
+    {
+      "activityId": 25137200923,
+      "date": "2026-11-19",
+      "type": "walking",
+      "name": "Miami Beach Walking",
+      "durationMins": 70.8,
+      "distanceMiles": 3.67,
+      "avgHR": 84.0,
+      "maxHR": 109.0,
+      "calories": 368.0,
+      "elevationGain": 10.0,
+      "avgPace": 1.3910000324249268,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 2385.997
+        },
+        {
+          "zone": 2,
+          "secsInZone": 62.473
+        },
+        {
+          "zone": 3,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 4,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 5,
+          "secsInZone": 0.0
+        }
+      ]
+    },
     {
       "activityId": 25133850042,
       "date": "2026-11-19",
@@ -153,29 +188,7 @@
       "maxHR": 142.0,
       "calories": 184.0,
       "elevationGain": null,
-      "avgPace": 0.0,
-      "hrZones": [
-        {
-          "zone": 1,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 2,
-          "secsInZone": 173.145
-        },
-        {
-          "zone": 3,
-          "secsInZone": 747.164
-        },
-        {
-          "zone": 4,
-          "secsInZone": 104.0
-        },
-        {
-          "zone": 5,
-          "secsInZone": 0.0
-        }
-      ]
+      "avgPace": 0.0
     },
     {
       "activityId": 25092725307,
@@ -413,13 +426,13 @@
     }
   ],
   "todayStats": {
-    "steps": 7179,
-    "floors": 5.32874,
+    "steps": 18244,
+    "floors": 10.03543,
     "restingHR": 46,
-    "activeCalories": 174.0,
+    "activeCalories": 487.0,
     "bodyBattery": null,
-    "stressAvg": 23,
-    "weeklySteps": 66665
+    "stressAvg": 25,
+    "weeklySteps": 77730
   },
   "trainingReadiness": {
     "score": null,
@@ -431,7 +444,7 @@
     "fitnessAge": null
   },
   "intensityMinutes": {
-    "moderate": 91,
+    "moderate": 156,
     "vigorous": 31
   },
   "hrv": {
