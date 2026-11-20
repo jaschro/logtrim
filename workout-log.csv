@@ -1,5 +1,7 @@
 datetime,gym,room,machine,machineId,set,weight,reps,duration,level,incline,hr,notes,zone1,zone2,zone3,zone4,zone5
 2026-11-19 11:50:00 AM,Common Machines,Outdoor Activities,Walk,walk,1,,,14.933333333333334,,,82,Walk (Garmin 25133068800). All Zone 1 - max minute HR ~100 (Karvonen RHR 46 / max 168).,14.933333333333334,,,,
+2026-11-19 01:09:00 PM,Common Machines,Outdoor Activities,Walk,walk,1,,,32.03333333333333,1.28,,79,Miami Beach walk (Garmin 25133850042; 1.28 mi; +11 ft). All Zone 1 - max minute HR ~90 (Karvonen RHR 46 / max 168).,31.96666666666667,,,,
+2026-11-19 08:49:00 PM,Common Machines,Outdoor Activities,Walk,walk,1,,,72.28333333333333,,,84,Walk (Garmin 25137200923). All Zone 1 - max minute HR ~104 (Karvonen RHR 46 / max 168).,72.15,,,,
 2026-11-18 10:34:00 PM,Common Machines,Outdoor Activities,Walk,walk,1,,,22.0,0.99,,90,Miami Beach walk (Garmin 25126786568; 0.99 mi; +9 ft). All Zone 1 - max minute HR ~93 (Karvonen RHR 46 / max 168).,22,,,,
 2026-11-15 07:59:00 PM,Common Machines,Outdoor Activities,Walk,walk,1,,,33.11666666666667,1.67,,81,Jupiter walk (Garmin 25092725307; 1.67 mi). All Zone 1 - max minute HR ~86 (Karvonen RHR 46 / max 168).,33,,,,
 2026-11-14 06:18:00 PM,Common Machines,Outdoor Activities,Walk,walk,1,,,37.43333333333333,1.81,,68,Jupiter walk (Garmin 25081393631; 1.81 mi; +1 ft). All Zone 1 - max minute HR ~74 (Karvonen RHR 46 / max 168).,37.43333333333334,,,,
