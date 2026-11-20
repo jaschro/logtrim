@@ -1,6 +1,6 @@
 {
-  "fetchedAt": "2026-11-19T19:56:55Z",
-  "today": "2026-11-19",
+  "fetchedAt": "2026-11-20T02:00:19Z",
+  "today": "2026-11-20",
   "recentActivities": [
     {
       "activityId": 25133850042,
@@ -410,19 +410,6 @@
       "calories": 311.0,
       "elevationGain": null,
       "avgPace": 0.0
-    },
-    {
-      "activityId": 24981382877,
-      "date": "2026-11-05",
-      "type": "walking",
-      "name": "\u00c1lvaro Obreg\u00f3n Walking",
-      "durationMins": 83.9,
-      "distanceMiles": 3.39,
-      "avgHR": 82.0,
-      "maxHR": 99.0,
-      "calories": 378.0,
-      "elevationGain": 39.0,
-      "avgPace": 1.0829999446868896
     }
   ],
   "todayStats": {
@@ -430,14 +417,14 @@
     "floors": 5.32874,
     "restingHR": 46,
     "activeCalories": 174.0,
-    "bodyBattery": 68,
+    "bodyBattery": null,
     "stressAvg": 23,
-    "weeklySteps": 79736
+    "weeklySteps": 66665
   },
   "trainingReadiness": {
-    "score": 89,
-    "level": "HIGH",
-    "feedback": "WELL_RECOVERED"
+    "score": null,
+    "level": null,
+    "feedback": null
   },
   "vo2max": {
     "vo2max": 42.0,
@@ -463,9 +450,9 @@
     "avgRespirationRate": 14.0,
     "avgSpO2": 96.0
   },
-  "spo2Avg": 95.0,
+  "spo2Avg": null,
   "respiration": {
-    "avgWaking": 13.0,
-    "avgSleep": 14.0
+    "avgWaking": null,
+    "avgSleep": null
   }
 }
