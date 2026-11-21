@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-11-21T10:38:41Z",
+  "fetchedAt": "2026-11-21T18:41:47Z",
   "today": "2026-11-21",
   "recentActivities": [
     {
@@ -461,7 +461,7 @@
     "vigorous": 51
   },
   "hrv": {
-    "weeklyAvg": 41,
+    "weeklyAvg": 42,
     "lastNight": null,
     "status": "BALANCED"
   },
