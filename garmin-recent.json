@@ -1,6 +1,6 @@
 {
-  "fetchedAt": "2026-11-22T19:01:46Z",
-  "today": "2026-11-22",
+  "fetchedAt": "2026-11-23T01:23:54Z",
+  "today": "2026-11-23",
   "recentActivities": [
     {
       "activityId": 25164240730,
@@ -397,68 +397,29 @@
       "calories": 147.0,
       "elevationGain": 8.0,
       "avgPace": 2.3450000286102295
-    },
-    {
-      "activityId": 25014075284,
-      "date": "2026-11-08",
-      "type": "walking",
-      "name": "Miami Beach Walking",
-      "durationMins": 68.5,
-      "distanceMiles": 2.39,
-      "avgHR": 92.0,
-      "maxHR": 126.0,
-      "calories": 274.0,
-      "elevationGain": 14.0,
-      "avgPace": 0.9369999766349792
-    },
-    {
-      "activityId": 25011498175,
-      "date": "2026-11-08",
-      "type": "other",
-      "name": "Miami Beach Jog",
-      "durationMins": 28.3,
-      "distanceMiles": 2.01,
-      "avgHR": 123.0,
-      "maxHR": 164.0,
-      "calories": 287.0,
-      "elevationGain": 15.0,
-      "avgPace": 1.909999966621399
-    },
-    {
-      "activityId": 25011106472,
-      "date": "2026-11-08",
-      "type": "walking",
-      "name": "Miami Beach Walking",
-      "durationMins": 13.6,
-      "distanceMiles": 0.64,
-      "avgHR": 77.0,
-      "maxHR": 85.0,
-      "calories": 65.0,
-      "elevationGain": 0.0,
-      "avgPace": 1.2649999856948853
     }
   ],
   "todayStats": {
-    "steps": 9891,
+    "steps": 11913,
     "floors": 0.65748,
     "restingHR": 49,
-    "activeCalories": 140.0,
-    "bodyBattery": 51,
-    "stressAvg": 28,
-    "weeklySteps": 85636
+    "activeCalories": 181.0,
+    "bodyBattery": null,
+    "stressAvg": 30,
+    "weeklySteps": 74062
   },
   "trainingReadiness": {
-    "score": 75,
-    "level": "HIGH",
-    "feedback": "WELL_RECOVERED"
+    "score": null,
+    "level": null,
+    "feedback": null
   },
   "vo2max": {
     "vo2max": 42.0,
     "fitnessAge": null
   },
   "intensityMinutes": {
-    "moderate": 198,
-    "vigorous": 51
+    "moderate": null,
+    "vigorous": null
   },
   "hrv": {
     "weeklyAvg": 42,
@@ -476,9 +437,9 @@
     "avgRespirationRate": 14.0,
     "avgSpO2": 92.0
   },
-  "spo2Avg": 92.0,
+  "spo2Avg": null,
   "respiration": {
-    "avgWaking": 14.0,
-    "avgSleep": 14.0
+    "avgWaking": null,
+    "avgSleep": null
   }
 }
