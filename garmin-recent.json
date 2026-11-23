@@ -1,7 +1,42 @@
 {
-  "fetchedAt": "2026-11-23T01:23:54Z",
+  "fetchedAt": "2026-11-23T11:47:41Z",
   "today": "2026-11-23",
   "recentActivities": [
+    {
+      "activityId": 25168462203,
+      "date": "2026-11-22",
+      "type": "walking",
+      "name": "Miami Beach Walking",
+      "durationMins": 42.6,
+      "distanceMiles": 2.17,
+      "avgHR": 90.0,
+      "maxHR": 106.0,
+      "calories": 218.0,
+      "elevationGain": 9.0,
+      "avgPace": 1.3680000305175781,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 2505.401
+        },
+        {
+          "zone": 2,
+          "secsInZone": 50.034
+        },
+        {
+          "zone": 3,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 4,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 5,
+          "secsInZone": 0.0
+        }
+      ]
+    },
     {
       "activityId": 25164240730,
       "date": "2026-11-22",
@@ -153,29 +188,7 @@
       "maxHR": 109.0,
       "calories": 368.0,
       "elevationGain": 10.0,
-      "avgPace": 1.3910000324249268,
-      "hrZones": [
-        {
-          "zone": 1,
-          "secsInZone": 2385.997
-        },
-        {
-          "zone": 2,
-          "secsInZone": 62.473
-        },
-        {
-          "zone": 3,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 4,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 5,
-          "secsInZone": 0.0
-        }
-      ]
+      "avgPace": 1.3910000324249268
     },
     {
       "activityId": 25133850042,
@@ -400,13 +413,13 @@
     }
   ],
   "todayStats": {
-    "steps": 11913,
-    "floors": 0.65748,
+    "steps": 19944,
+    "floors": 3.60499,
     "restingHR": 49,
-    "activeCalories": 181.0,
+    "activeCalories": 434.0,
     "bodyBattery": null,
-    "stressAvg": 30,
-    "weeklySteps": 74062
+    "stressAvg": 32,
+    "weeklySteps": 82093
   },
   "trainingReadiness": {
     "score": null,
