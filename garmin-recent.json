@@ -1,7 +1,42 @@
 {
-  "fetchedAt": "2026-11-24T19:55:48Z",
-  "today": "2026-11-24",
+  "fetchedAt": "2026-11-25T03:56:44Z",
+  "today": "2026-11-25",
   "recentActivities": [
+    {
+      "activityId": 25188895477,
+      "date": "2026-11-24",
+      "type": "cycling",
+      "name": "Miami Beach Cycling",
+      "durationMins": 46.8,
+      "distanceMiles": 7.21,
+      "avgHR": 98.0,
+      "maxHR": 118.0,
+      "calories": 285.0,
+      "elevationGain": 21.0,
+      "avgPace": 4.138000011444092,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 1304.395
+        },
+        {
+          "zone": 2,
+          "secsInZone": 1389.995
+        },
+        {
+          "zone": 3,
+          "secsInZone": 21.0
+        },
+        {
+          "zone": 4,
+          "secsInZone": 0.0
+        },
+        {
+          "zone": 5,
+          "secsInZone": 0.0
+        }
+      ]
+    },
     {
       "activityId": 25186470404,
       "date": "2026-11-24",
@@ -153,29 +188,7 @@
       "maxHR": 105.0,
       "calories": 136.0,
       "elevationGain": 12.0,
-      "avgPace": 1.2940000295639038,
-      "hrZones": [
-        {
-          "zone": 1,
-          "secsInZone": 1233.216
-        },
-        {
-          "zone": 2,
-          "secsInZone": 27.0
-        },
-        {
-          "zone": 3,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 4,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 5,
-          "secsInZone": 0.0
-        }
-      ]
+      "avgPace": 1.2940000295639038
     },
     {
       "activityId": 25146083113,
@@ -397,55 +410,29 @@
       "calories": 209.0,
       "elevationGain": 17.0,
       "avgPace": 2.180000066757202
-    },
-    {
-      "activityId": 25035909799,
-      "date": "2026-11-10",
-      "type": "other",
-      "name": "Miami Beach Jog",
-      "durationMins": 14.3,
-      "distanceMiles": 0.94,
-      "avgHR": 122.0,
-      "maxHR": 136.0,
-      "calories": 145.0,
-      "elevationGain": 4.0,
-      "avgPace": 1.7589999437332153
-    },
-    {
-      "activityId": 25034461776,
-      "date": "2026-11-10",
-      "type": "walking",
-      "name": "Miami Beach Walking",
-      "durationMins": 59.5,
-      "distanceMiles": 2.71,
-      "avgHR": 86.0,
-      "maxHR": 127.0,
-      "calories": 285.0,
-      "elevationGain": 20.0,
-      "avgPace": 1.222000002861023
     }
   ],
   "todayStats": {
-    "steps": 629,
-    "floors": 0.0,
+    "steps": 12120,
+    "floors": 1.68898,
     "restingHR": 47,
-    "activeCalories": 273.0,
-    "bodyBattery": 66,
-    "stressAvg": 19,
-    "weeklySteps": 99265
+    "activeCalories": 765.0,
+    "bodyBattery": null,
+    "stressAvg": 25,
+    "weeklySteps": 104098
   },
   "trainingReadiness": {
-    "score": 78,
-    "level": "HIGH",
-    "feedback": "RESTED_AND_READY"
+    "score": null,
+    "level": null,
+    "feedback": null
   },
   "vo2max": {
     "vo2max": 42.0,
     "fitnessAge": null
   },
   "intensityMinutes": {
-    "moderate": 53,
-    "vigorous": 65
+    "moderate": 91,
+    "vigorous": 68
   },
   "hrv": {
     "weeklyAvg": 42,
@@ -463,9 +450,9 @@
     "avgRespirationRate": 14.0,
     "avgSpO2": 94.0
   },
-  "spo2Avg": 94.0,
+  "spo2Avg": null,
   "respiration": {
-    "avgWaking": 14.0,
-    "avgSleep": 14.0
+    "avgWaking": null,
+    "avgSleep": null
   }
 }
