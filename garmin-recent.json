@@ -1,7 +1,42 @@
 {
-  "fetchedAt": "2026-11-25T16:48:09Z",
-  "today": "2026-11-25",
+  "fetchedAt": "2026-11-26T01:33:44Z",
+  "today": "2026-11-26",
   "recentActivities": [
+    {
+      "activityId": 25199742270,
+      "date": "2026-11-25",
+      "type": "indoor_cycling",
+      "name": "Indoor Cycling",
+      "durationMins": 32.1,
+      "distanceMiles": null,
+      "avgHR": 124.0,
+      "maxHR": 148.0,
+      "calories": 349.0,
+      "elevationGain": null,
+      "avgPace": 0.0,
+      "hrZones": [
+        {
+          "zone": 1,
+          "secsInZone": 60.0
+        },
+        {
+          "zone": 2,
+          "secsInZone": 378.001
+        },
+        {
+          "zone": 3,
+          "secsInZone": 969.466
+        },
+        {
+          "zone": 4,
+          "secsInZone": 504.002
+        },
+        {
+          "zone": 5,
+          "secsInZone": 0.0
+        }
+      ]
+    },
     {
       "activityId": 25188895477,
       "date": "2026-11-24",
@@ -153,29 +188,7 @@
       "maxHR": 95.0,
       "calories": 219.0,
       "elevationGain": null,
-      "avgPace": 1.3350000381469724,
-      "hrZones": [
-        {
-          "zone": 1,
-          "secsInZone": 10.185
-        },
-        {
-          "zone": 2,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 3,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 4,
-          "secsInZone": 0.0
-        },
-        {
-          "zone": 5,
-          "secsInZone": 0.0
-        }
-      ]
+      "avgPace": 1.3350000381469724
     },
     {
       "activityId": 25157078814,
@@ -371,68 +384,29 @@
       "calories": 340.0,
       "elevationGain": 11.0,
       "avgPace": 1.3389999866485596
-    },
-    {
-      "activityId": 25050229823,
-      "date": "2026-11-11",
-      "type": "stop_watch",
-      "name": "Stopwatch",
-      "durationMins": 2.2,
-      "distanceMiles": null,
-      "avgHR": null,
-      "maxHR": null,
-      "calories": null,
-      "elevationGain": null,
-      "avgPace": null
-    },
-    {
-      "activityId": 25050071587,
-      "date": "2026-11-11",
-      "type": "walking",
-      "name": "Miami Beach Walking",
-      "durationMins": 73.6,
-      "distanceMiles": 3.98,
-      "avgHR": 94.0,
-      "maxHR": 116.0,
-      "calories": 395.0,
-      "elevationGain": 7.0,
-      "avgPace": 1.4509999752044678
-    },
-    {
-      "activityId": 25046088203,
-      "date": "2026-11-11",
-      "type": "cycling",
-      "name": "Miami Beach Cycling",
-      "durationMins": 48.7,
-      "distanceMiles": 3.96,
-      "avgHR": 83.0,
-      "maxHR": 120.0,
-      "calories": 209.0,
-      "elevationGain": 17.0,
-      "avgPace": 2.180000066757202
     }
   ],
   "todayStats": {
-    "steps": 508,
+    "steps": 1598,
     "floors": 0.0,
     "restingHR": 47,
-    "activeCalories": 4.0,
-    "bodyBattery": 87,
-    "stressAvg": 18,
-    "weeklySteps": 104973
+    "activeCalories": 321.0,
+    "bodyBattery": null,
+    "stressAvg": 20,
+    "weeklySteps": 93266
   },
   "trainingReadiness": {
-    "score": 84,
-    "level": "HIGH",
-    "feedback": "WELL_RECOVERED"
+    "score": null,
+    "level": null,
+    "feedback": null
   },
   "vo2max": {
     "vo2max": 42.0,
     "fitnessAge": null
   },
   "intensityMinutes": {
-    "moderate": 91,
-    "vigorous": 68
+    "moderate": 95,
+    "vigorous": 98
   },
   "hrv": {
     "weeklyAvg": 43,
@@ -450,9 +424,9 @@
     "avgRespirationRate": 14.0,
     "avgSpO2": 95.0
   },
-  "spo2Avg": 94.0,
+  "spo2Avg": null,
   "respiration": {
-    "avgWaking": 13.0,
-    "avgSleep": 14.0
+    "avgWaking": null,
+    "avgSleep": null
   }
 }
