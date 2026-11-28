@@ -1,4 +1,5 @@
 datetime,gym,room,machine,machineId,set,weight,reps,duration,level,incline,hr,notes,zone1,zone2,zone3,zone4,zone5
+2026-11-27 02:10:00 PM,Common Machines,Outdoor Activities,Walk,walk,1,,,27.916666666666668,1.31,,84,Jupiter walk (Garmin 25218742263; 1.31 mi; +2 ft). All Zone 1 - max minute HR ~90 (Karvonen RHR 46 / max 168).,27.916666666666668,,,,
 2026-11-24 11:36:00 AM,Common Machines,Outdoor Activities,Bike Ride,bike-ride,1,,,63.93333333333333,10.22,,96,Miami Beach ride (Garmin 25186470404; 10.22 mi; +39 ft). Karvonen zones from cardio-minutes (RHR 46 / max 168); warmup below Z1 counted in zone1.,62.93333333333334,1,,,
 2026-11-24 03:11:00 PM,Common Machines,Outdoor Activities,Bike Ride,bike-ride,1,,,47.266666666666666,7.21,,98,Miami Beach ride (Garmin 25188895477; 7.21 mi; +21 ft). All Zone 1 - max minute HR ~112 (Karvonen RHR 46 / max 168).,47.18333333333334,,,,
 2026-11-22 08:29:00 PM,Common Machines,Outdoor Activities,Walk,walk,1,,,42.666666666666664,2.17,,90,Miami Beach walk (Garmin 25168462203; 2.17 mi; +9 ft). All Zone 1 - max minute HR ~101 (Karvonen RHR 46 / max 168).,42.66666666666667,,,,
